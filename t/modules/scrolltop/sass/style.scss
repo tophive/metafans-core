@@ -1,0 +1,47 @@
+.scrolltop {
+    position: fixed;
+    bottom: 15px;
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+    cursor: pointer;
+    z-index: 60;
+    transition: opacity .3s ease;
+    visibility: visible;
+    &.hide {
+        opacity: 0;
+    }
+    &.left {
+        left: 15px;
+        .customize-partial-edit-shortcut {
+            margin-left: 100%;
+            button {
+                left: -20px;
+            }
+        }
+    }
+    &.right {
+        right: 15px;
+        .customize-partial-edit-shortcut {
+            margin-left: -20px;
+        }
+    }
+    i {
+        height: 35px;
+        width: 35px;
+        display: block;
+        font-size: 20px;
+        background: #333;
+        color: #fff;
+        position: relative;
+        border-radius: 3px;
+        transition: all .3s linear;
+        &:before {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -51%);
+        }
+    }
+
+}
