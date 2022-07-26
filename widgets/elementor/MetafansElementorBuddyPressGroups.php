@@ -16,7 +16,7 @@ if ( ! class_exists( 'BuddyPress' ) ) {
 class MetafansElementorBuddyPressGroups extends \Elementor\Widget_base
 {
 	public function get_title(){
-		return esc_html__( 'BuddyPress Groups', WP_TH_CORE_SLUG );
+		return esc_html__( 'BuddyPress Groups', WP_MF_CORE_SLUG );
 	}
 	public function get_name(){
 		return 'th-buddypress-groups';
@@ -25,16 +25,16 @@ class MetafansElementorBuddyPressGroups extends \Elementor\Widget_base
 		return 'eicon-time-line';
 	}
 	public function get_categories(){
-        return [ WP_TH_CORE_SLUG ];
+        return [ WP_MF_CORE_SLUG ];
     }
 	public function get_keywords() {
 		return [ 'group' ];
 	}
-	protected function _register_controls(){
+	protected function register_controls(){
 		$this->start_controls_section(
 			'th_adv_tabs_section',
 			[
-				'label' => esc_html__( 'Groups', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Groups', WP_MF_CORE_SLUG ),
 				'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
 			]
 		);			

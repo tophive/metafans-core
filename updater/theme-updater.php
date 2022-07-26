@@ -12,14 +12,14 @@ class MetafansThemeUpdater{
 
 		$update = ( $this->getCurrentVersion() > $this->getInstalledVersion() ) ? true : false;
 
-		wp_enqueue_script( 'th-theme-updater', WP_TH_CORE_URL . 'updater/assets/js/script.js', array('jquery') );
+		wp_enqueue_script( 'th-theme-updater', WP_MF_CORE_URL . 'updater/assets/js/script.js', array('jquery') );
 		wp_localize_script( 'th-theme-updater', 'th_theme_updater_ajax',
 	        array( 
 	            'ajaxurl' => admin_url( 'admin-ajax.php' ),
-	            'btn_text' => esc_html__( 'Update Fundocean', WP_TH_CORE_SLUG ),
-	            'updating' => esc_html__( 'Updating...', WP_TH_CORE_SLUG ),
-	            'update_failed' => esc_html__( 'Theme Update Failed.Please try again after few moments', WP_TH_CORE_SLUG ),
-	            'update_success' => esc_html__( 'Theme Updated Successfully', WP_TH_CORE_SLUG ),
+	            'btn_text' => esc_html__( 'Update Fundocean', WP_MF_CORE_SLUG ),
+	            'updating' => esc_html__( 'Updating...', WP_MF_CORE_SLUG ),
+	            'update_failed' => esc_html__( 'Theme Update Failed.Please try again after few moments', WP_MF_CORE_SLUG ),
+	            'update_success' => esc_html__( 'Theme Updated Successfully', WP_MF_CORE_SLUG ),
 	            'update_available' => $update
 	        )
 	    );
@@ -99,8 +99,8 @@ class MetafansThemeUpdater{
 	public function themePlaceHolder(){
 		if( version_compare( $this->getCurrentVersion(), $this->getInstalledVersion(), '>') ){
 			?>
-				<h3 class="tophive-section-heading"><?php esc_html_e( 'A new version of metafans is available', WP_TH_CORE_SLUG ); ?></h3>
-				<a href="" class="tophive-admin-big-button tophive-update-theme"><?php esc_html_e( 'Update Metafans', WP_TH_CORE_SLUG ); ?></a>
+				<h3 class="tophive-section-heading"><?php esc_html_e( 'A new version of metafans is available', WP_MF_CORE_SLUG ); ?></h3>
+				<a href="" class="tophive-admin-big-button tophive-update-theme"><?php esc_html_e( 'Update Metafans', WP_MF_CORE_SLUG ); ?></a>
 				<span class="tophive-messages"></span>
 			<?php
 		}else{

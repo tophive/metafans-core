@@ -1,12 +1,11 @@
-<?php 
+<?php
 	namespace METAFANSCORE\widgets\elementor;
 	if ( ! defined( 'ABSPATH' ) ) {
 		exit; // Exit if accessed directly
 	}
-
 	/**
 	 **
-	 * Metafans elementor member count class
+	 * Tophive elementor member count class
 	 * Since Version 1.0.0
 	 * @package wordpress
 	 * @subpackage MasterClass
@@ -16,30 +15,25 @@
 	class MetafansElementorMemberCount extends \Elementor\Widget_base
 	{
 		public function get_title(){
-			return esc_html__( 'Member count', WP_TH_CORE_SLUG );
+			return esc_html__( 'Members count', WP_MF_CORE_SLUG );
 		}
-
 		public function get_name(){
 			return 'th-login-member-count-block';
 		}
-
 		public function get_icon(){
 			return 'eicon-user-circle-o';
 		}
-
 		public function get_categories(){
-	        return [ WP_TH_CORE_SLUG ];
+	        return [ WP_MF_CORE_SLUG ];
 	    	}
-
 		public function get_keywords() {
 			return [ 'member', 'count', 'users' ];
 		}
 		protected function register_controls(){
-
 			$this->start_controls_section(
 				'th_member_count_section',
 				[
-					'label' => esc_html__( 'Member Count', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Members Count', WP_MF_CORE_SLUG ),
 					'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
 				]
 			);
@@ -47,7 +41,7 @@
 			       $this->add_control(
 				'th_member_img_size',
 				[
-					'label' => esc_html__( 'Member Image Size', WP_TH_CORE_SLUG),
+					'label' => esc_html__( 'Member Image Size', WP_MF_CORE_SLUG),
 					'type' => \Elementor\Controls_Manager::SLIDER,
 					'size_units' => [ 'px','%' ],
 					'range' => [
@@ -73,7 +67,7 @@
 				$this->add_control(
 					'th_member_img_radius',
 					[
-						'label' => esc_html__( 'Image Border Radius', WP_TH_CORE_SLUG ),
+						'label' => esc_html__( 'Image Border Radius', WP_MF_CORE_SLUG ),
 						'type' => \Elementor\Controls_Manager::DIMENSIONS,
 						'size_units' => [ 'px', '%', 'em' ],
 						'selectors' => [
@@ -85,14 +79,14 @@
 					\Elementor\Group_Control_Border::get_type(),
 					[
 							'name' => 'th_member_img_border',
-							'label' => esc_html__( 'Image Border', WP_TH_CORE_SLUG ),
+							'label' => esc_html__( 'Image Border', WP_MF_CORE_SLUG ),
 							'selector' => '{{WRAPPER}} .members-images figure',
 					]
 				);
 			       $this->add_control(
 				'th_member_img_gap',
 				[
-					'label' => esc_html__( 'Member Image Gap', WP_TH_CORE_SLUG),
+					'label' => esc_html__( 'Member Image Gap', WP_MF_CORE_SLUG),
 					'type' => \Elementor\Controls_Manager::SLIDER,
 					'size_units' => [ 'px','%' ],
 					'range' => [
@@ -118,7 +112,7 @@
 				$this->add_control(
 					'th_member_img_margin',
 					[
-						'label' => esc_html__( 'Image Margin', WP_TH_CORE_SLUG ),
+						'label' => esc_html__( 'Image Margin', WP_MF_CORE_SLUG ),
 						'type' => \Elementor\Controls_Manager::DIMENSIONS,
 						'size_units' => [ 'px', '%', 'em' ],
 						'selectors' => [
@@ -130,34 +124,68 @@
 					\Elementor\Group_Control_Typography::get_type(),
 					[
 						'name' => 'th_member_count_text_typo',
-						'label' => esc_html__( 'Count text typography', WP_TH_CORE_SLUG ),
-						'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
+						'label' => esc_html__( 'Count text typography', WP_MF_CORE_SLUG ),
 						'selector' => '{{WRAPPER}} .member-count span',
 					]
 				);
 				$this->add_control(
 					'th_member_count_text_color',
 					[
-						'label' => esc_html__( 'Count text color', WP_TH_CORE_SLUG ),
+						'label' => esc_html__( 'Count text color', WP_MF_CORE_SLUG ),
 						'type' => \Elementor\Controls_Manager::COLOR,
-						'scheme' => [
-							'type' => \Elementor\Core\Schemes\Color::get_type(),
-							'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-						],
 						'selectors' => [
 							'{{WRAPPER}} .member-count span' => 'color: {{VALUE}}',
 						],
 					]
 				);
-
-
+				$this->add_control(
+					'th_member_box_padding',
+					[
+						'label' => esc_html__( 'Member Box Padding', WP_MF_CORE_SLUG ),
+						'type' => \Elementor\Controls_Manager::DIMENSIONS,
+						'size_units' => [ 'px', '%', 'em' ],
+						'selectors' => [
+							'{{WRAPPER}} .member-count-element' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important;',
+						],
+					]
+				  );
+				$this->add_control(
+					'th_member_box_bg',
+					[
+						'label' => esc_html__( 'Member Box Background', WP_MF_CORE_SLUG ),
+						'type' => \Elementor\Controls_Manager::COLOR,
+						'selectors' => [
+							'{{WRAPPER}} .member-count-element' => 'background-color: {{VALUE}}',
+						],
+					]
+				 );
+				$this->add_control(
+					'th_member_box_margin',
+					[
+						'label' => esc_html__( 'Member Box Margin', WP_MF_CORE_SLUG ),
+						'type' => \Elementor\Controls_Manager::DIMENSIONS,
+						'size_units' => [ 'px', '%', 'em' ],
+						'selectors' => [
+							'{{WRAPPER}} .member-count-element' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important;',
+						],
+					]
+				  );
+				$this->add_control(
+					'th_member_box_radius',
+					[
+						'label' => esc_html__( 'Member Box Radius', WP_MF_CORE_SLUG ),
+						'type' => \Elementor\Controls_Manager::DIMENSIONS,
+						'size_units' => [ 'px', '%', 'em' ],
+						'selectors' => [
+							'{{WRAPPER}} .member-count-element' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important;',
+						],
+					]
+				);
 			$this->end_controls_section();
-
 		}
-
 		protected function render(){
 			$settings = $this->get_settings_for_display();
-			$users = get_users( array( "number" => 5,"fields" => array( "id" ) ) ); 
+			$users = get_users( array( "number" => 5,"fields" => array( "id" ) ) );
 			$user_count = count_users();
 			?>
 			<style>
@@ -198,12 +226,9 @@
 				<?php endforeach; ?>
 			    </div>
 			    <div class="member-count">
-			       <span><?php esc_html_e("Join ",WP_TH_CORE_SLUG); echo $user_count["total_users"];esc_html_e("+ users",WP_TH_CORE_SLUG); ?></span>
+			       <span><?php esc_html_e("Join ",WP_MF_CORE_SLUG); echo $user_count["total_users"];esc_html_e("+ users",WP_MF_CORE_SLUG); ?></span>
 			    </div>
 			</div>
 	<?php }
 		
 	}
-
-?>
-

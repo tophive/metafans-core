@@ -17,7 +17,7 @@
 	class MetafansElementorTeam extends \Elementor\Widget_base
 	{
 		public function get_title(){
-			return esc_html__( 'Team', WP_TH_CORE_SLUG );
+			return esc_html__( 'Team', WP_MF_CORE_SLUG );
 		}
 		public function get_name(){
 			return 'th-team-block';
@@ -26,23 +26,23 @@
 			return 'eicon-person';
 		}
 		public function get_categories(){
-	        return [ WP_TH_CORE_SLUG ];
+	        return [ WP_MF_CORE_SLUG ];
 	    }
 		public function get_keywords() {
 			return [ 'team', 'teachers' ];
 		}
-		protected function _register_controls(){
+		protected function register_controls(){
 
 			/*
 			** Team Content Section
 			*
-			* @_register_controls
+			* @register_controls
 			*/
 
 			$this->start_controls_section(
 				'th_team_section',
 				[
-					'label' => esc_html__( 'Team Content', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Team Content', WP_MF_CORE_SLUG ),
 					'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
 				]
 			);
@@ -50,7 +50,7 @@
 			$this->add_control(
 				'th_team_image',
 				[
-					'label' => esc_html__( 'Choose Image', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Choose Image', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::MEDIA,
 					'default' => [
 						'url' => \Elementor\Utils::get_placeholder_image_src(),
@@ -60,28 +60,28 @@
 			$this->add_control(
 				'th_team_title',
 				[
-					'label' => esc_html__( 'Name', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Name', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::TEXT,
-					'default' => esc_html__( 'John Doe', WP_TH_CORE_SLUG ),
-					'placeholder' => esc_html__( 'Type your name here', WP_TH_CORE_SLUG ),
+					'default' => esc_html__( 'John Doe', WP_MF_CORE_SLUG ),
+					'placeholder' => esc_html__( 'Type your name here', WP_MF_CORE_SLUG ),
 				]
 			);
 			$this->add_control(
 				'th_team_designation',
 				[
-					'label' => esc_html__( 'Designation', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Designation', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::TEXT,
-					'default' => esc_html__( 'Designation', WP_TH_CORE_SLUG ),
-					'placeholder' => esc_html__( 'Designation', WP_TH_CORE_SLUG ),
+					'default' => esc_html__( 'Designation', WP_MF_CORE_SLUG ),
+					'placeholder' => esc_html__( 'Designation', WP_MF_CORE_SLUG ),
 				]
 			);
 			$this->add_control(
 				'th_team_description',
 				[
-					'label' => esc_html__( 'Desription', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Desription', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::TEXTAREA,
-					'default' => esc_html__( 'John Doe Creates Beautiful websites', WP_TH_CORE_SLUG ),
-					'placeholder' => esc_html__( 'Description', WP_TH_CORE_SLUG ),
+					'default' => esc_html__( 'John Doe Creates Beautiful websites', WP_MF_CORE_SLUG ),
+					'placeholder' => esc_html__( 'Description', WP_MF_CORE_SLUG ),
 				]
 			);
 
@@ -92,7 +92,7 @@
 			$repeater->add_control(
 			'th_team_social_icon',
 				[
-					'label' => __( 'Social Icons', WP_TH_CORE_SLUG ),
+					'label' => __( 'Social Icons', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::ICON,
 					'include' => [
 						'fa fa-facebook',
@@ -112,7 +112,7 @@
 			);
 			$repeater->add_control(
 				'th_team_social_link', [
-						'label' => esc_html__( 'Link', WP_TH_CORE_SLUG ),
+						'label' => esc_html__( 'Link', WP_MF_CORE_SLUG ),
 						'type' => \Elementor\Controls_Manager::TEXT,
 						'label_block' => true,
 					]
@@ -121,7 +121,7 @@
 			$this->add_control(
 				'th_team_social_items',
 				[
-					'label' => esc_html__( 'Add Social Profiles', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Add Social Profiles', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::REPEATER,
 					'fields' => $repeater->get_controls(),
 					'default' => [
@@ -138,19 +138,19 @@
 			$this->add_control(
 				'th_team_text_align',
 				[
-					'label' => esc_html__( 'Alignment', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Alignment', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::CHOOSE,
 					'options' => [
 						'th-text-left' => [
-							'title' => esc_html__( 'Left', WP_TH_CORE_SLUG ),
+							'title' => esc_html__( 'Left', WP_MF_CORE_SLUG ),
 							'icon' => 'fa fa-align-left',
 						],
 						'th-text-center' => [
-							'title' => esc_html__( 'Center', WP_TH_CORE_SLUG ),
+							'title' => esc_html__( 'Center', WP_MF_CORE_SLUG ),
 							'icon' => 'fa fa-align-center',
 						],
 						'th-text-right' => [
-							'title' => esc_html__( 'Right', WP_TH_CORE_SLUG ),
+							'title' => esc_html__( 'Right', WP_MF_CORE_SLUG ),
 							'icon' => 'fa fa-align-right',
 						],
 					],
@@ -163,14 +163,14 @@
 			$this->start_controls_section(
 				'th_team_section_style',
 				[
-					'label' => esc_html__( 'Box Styles', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Box Styles', WP_MF_CORE_SLUG ),
 					'tab' => \Elementor\Controls_Manager::TAB_STYLE,
 				]
 			);
 			$this->add_control(
 				'th_team_box',
 				[
-					'label' => esc_html__( 'Border Radius', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Border Radius', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SLIDER,
 					'size_units' => [ 'px', '%' ],
 					'range' => [
@@ -193,7 +193,7 @@
 				\Elementor\Group_Control_Box_Shadow::get_type(),
 				[
 					'name' => 'th_team_box_shadow',
-					'label' => esc_html__( 'Box Shadow', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Box Shadow', WP_MF_CORE_SLUG ),
 					'selector' => '{{WRAPPER}} .th-team-block',
 				]
 			);
@@ -201,14 +201,14 @@
 				\Elementor\Group_Control_Border::get_type(),
 				[
 					'name' => 'th_team_border',
-					'label' => esc_html__( 'Border', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Border', WP_MF_CORE_SLUG ),
 					'selector' => '{{WRAPPER}} .th-team-block',
 				]
 			);
 			$this->add_control(
 				'th_team_color_bg',
 				[
-					'label' => esc_html__( 'Background', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Background', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::COLOR,
 					'scheme' => [
 						'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -223,7 +223,7 @@
 			$this->add_control(
 				'th_team_padding',
 				[
-					'label' => esc_html__( 'Padding', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Padding', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::DIMENSIONS,
 					'size_units' => [ 'px', '%', 'em' ],
 					'selectors' => [
@@ -244,17 +244,17 @@
 			$this->start_controls_section(
 				'th_team_image_style',
 				[
-					'label' => esc_html__( 'Image', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Image', WP_MF_CORE_SLUG ),
 					'tab' => \Elementor\Controls_Manager::TAB_STYLE,
 				]
 			);
 			$this->add_control(
 				'hide_image_overflow',
 				[
-					'label' => esc_html__( 'Hide Image Overflow', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Hide Image Overflow', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SWITCHER,
-					'label_on' => __( 'Show', WP_TH_CORE_SLUG ),
-					'label_off' => __( 'Hide', WP_TH_CORE_SLUG ),
+					'label_on' => __( 'Show', WP_MF_CORE_SLUG ),
+					'label_off' => __( 'Hide', WP_MF_CORE_SLUG ),
 					'return_value' => 'yes',
 					'default' => 'yes',
 				]
@@ -262,7 +262,7 @@
 			$this->add_control(
 				'th_team_image_size',
 				[
-					'label' => esc_html__( 'Image Size', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Image Size', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SLIDER,
 					'size_units' => [ 'px', '%' ],
 					'range' => [
@@ -284,7 +284,7 @@
 			$this->add_control(
 				'th_team_image_margin',
 				[
-					'label' => esc_html__( 'Margin', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Margin', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::DIMENSIONS,
 					'size_units' => [ 'px', '%', 'em' ],
 					'selectors' => [
@@ -295,7 +295,7 @@
 			$this->add_control(
 				'th_team_bor_rad',
 				[
-					'label' => esc_html__( 'Border Radius', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Border Radius', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::DIMENSIONS,
 					'size_units' => [ 'px', '%', 'em' ],
 					'selectors' => [
@@ -318,14 +318,14 @@
 			$this->start_controls_section(
 				'th_team_content_style',
 				[
-					'label' => esc_html__( 'Content', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Content', WP_MF_CORE_SLUG ),
 					'tab' => \Elementor\Controls_Manager::TAB_STYLE,
 				]
 			);
 			$this->add_control(
 				'th_team_title_head',
 				[
-					'label' => esc_html__( 'Title', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Title', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::HEADING,
 					'separator' => 'before',
 				]
@@ -334,7 +334,7 @@
 				\Elementor\Group_Control_Typography::get_type(),
 				[
 					'name' => 'th_team_title_typo',
-					'label' => esc_html__( 'Typography', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Typography', WP_MF_CORE_SLUG ),
 					'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
 					'selector' => '{{WRAPPER}} .th-team-name',
 				]
@@ -342,7 +342,7 @@
 			$this->add_control(
 				'th_team_title_color',
 				[
-					'label' => esc_html__( 'Title Color', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Title Color', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::COLOR,
 					'scheme' => [
 						'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -357,7 +357,7 @@
 			$this->add_control(
 				'th_team_title_margin',
 				[
-					'label' => esc_html__( 'Spacing', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Spacing', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::DIMENSIONS,
 					'size_units' => [ 'px', '%', 'em' ],
 					'selectors' => [
@@ -369,7 +369,7 @@
 			$this->add_control(
 				'th_team_designation_head',
 				[
-					'label' => esc_html__( 'Designation', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Designation', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::HEADING,
 					'separator' => 'before',
 				]
@@ -378,7 +378,7 @@
 				\Elementor\Group_Control_Typography::get_type(),
 				[
 					'name' => 'th_team_designation_typo',
-					'label' => esc_html__( 'Typography', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Typography', WP_MF_CORE_SLUG ),
 					'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
 					'selector' => '{{WRAPPER}} .th-team-designation',
 				]
@@ -386,7 +386,7 @@
 			$this->add_control(
 				'th_team_designation_color',
 				[
-					'label' => esc_html__( 'Color', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Color', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::COLOR,
 					'scheme' => [
 						'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -400,7 +400,7 @@
 			$this->add_control(
 				'th_team_designation_margin',
 				[
-					'label' => esc_html__( 'Spacing', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Spacing', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::DIMENSIONS,
 					'size_units' => [ 'px', '%', 'em' ],
 					'selectors' => [
@@ -412,7 +412,7 @@
 			$this->add_control(
 				'th_team_desc_head',
 				[
-					'label' => esc_html__( 'Description', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Description', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::HEADING,
 					'separator' => 'before',
 				]
@@ -421,7 +421,7 @@
 				\Elementor\Group_Control_Typography::get_type(),
 				[
 					'name' => 'th_team_desc_typo',
-					'label' => esc_html__( 'Typography', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Typography', WP_MF_CORE_SLUG ),
 					'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
 					'selector' => '{{WRAPPER}} .th-team-description',
 				]
@@ -429,7 +429,7 @@
 			$this->add_control(
 				'th_team_desc_color',
 				[
-					'label' => esc_html__( 'Color', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Color', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::COLOR,
 					'scheme' => [
 						'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -443,7 +443,7 @@
 			$this->add_control(
 				'th_team_desc_margin',
 				[
-					'label' => esc_html__( 'Spacing', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Spacing', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::DIMENSIONS,
 					'size_units' => [ 'px', '%', 'em' ],
 					'selectors' => [
@@ -456,7 +456,7 @@
 			$this->start_controls_section(
 				'th_team_social_style',
 				[
-					'label' => esc_html__( 'Social Profiles', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Social Profiles', WP_MF_CORE_SLUG ),
 					'tab' => \Elementor\Controls_Manager::TAB_STYLE,
 				]
 			);
@@ -464,7 +464,7 @@
 			$this->add_control(
 				'th_team_social_link_color',
 				[
-					'label' => esc_html__( 'Color', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Color', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::COLOR,
 					'scheme' => [
 						'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -478,7 +478,7 @@
 			$this->add_control(
 				'th_team_social_link_hover_color',
 				[
-					'label' => esc_html__( 'Hover Color', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Hover Color', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::COLOR,
 					'scheme' => [
 						'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -492,7 +492,7 @@
 			$this->add_control(
 				'th_team_social_bg_color',
 				[
-					'label' => esc_html__( 'background', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'background', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::COLOR,
 					'scheme' => [
 						'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -506,7 +506,7 @@
 			$this->add_control(
 				'th_team_social_font_size',
 				[
-					'label' => esc_html__( 'Font Size', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Font Size', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SLIDER,
 					'size_units' => [ 'px', '%' ],
 					'range' => [
@@ -524,7 +524,7 @@
 			$this->add_control(
 				'th_team_social_br',
 				[
-					'label' => esc_html__( 'Border Radius', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Border Radius', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SLIDER,
 					'size_units' => [ 'px', '%' ],
 					'range' => [
@@ -542,7 +542,7 @@
 			$this->add_control(
 				'th_team_social_items_padding',
 				[
-					'label' => esc_html__( 'Padding', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Padding', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SLIDER,
 					'size_units' => [ 'px', '%' ],
 					'range' => [
@@ -560,7 +560,7 @@
 			$this->add_control(
 				'th_team_social_icons_spacing',
 				[
-					'label' => esc_html__( 'Spacing', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Spacing', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SLIDER,
 					'size_units' => [ 'px', '%' ],
 					'range' => [
@@ -578,7 +578,7 @@
 			$this->add_control(
 				'th_team_social_items_bg',
 				[
-					'label' => esc_html__( 'Container Background', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Container Background', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::COLOR,
 					'scheme' => [
 						'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -592,7 +592,7 @@
 			$this->add_control(
 				'th_team_social_items_con_padding',
 				[
-					'label' => esc_html__( 'Container padding', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Container padding', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::DIMENSIONS,
 					'size_units' => [ 'px', '%', 'em' ],
 					'selectors' => [
@@ -603,7 +603,7 @@
 			$this->add_responsive_control(
 				'th_team_social_border_rad',
 				[
-					'label' => esc_html__( 'Border Radius', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Border Radius', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::DIMENSIONS,
 					'size_units' => [ 'px', '%', 'em' ],
 					'selectors' => [
@@ -615,14 +615,14 @@
 				\Elementor\Group_Control_Box_Shadow::get_type(),
 				[
 					'name' => 'th_team_socails_box_shadow',
-					'label' => esc_html__( 'Box Shadow', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Box Shadow', WP_MF_CORE_SLUG ),
 					'selector' => '{{WRAPPER}} ul.th-team-socials',
 				]
 			);
 			$this->add_responsive_control(
 				'th_team_social_container_vertical_position',
 				[
-					'label' => esc_html__( 'Vertical Position', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Vertical Position', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SLIDER,
 					'size_units' => [ 'px', '%' ],
 					'range' => [
@@ -645,7 +645,7 @@
 			$this->add_responsive_control(
 				'th_team_social_items_horizontal_position',
 				[
-					'label' => esc_html__( 'Horizontal Position', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Horizontal Position', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SLIDER,
 					'size_units' => [ 'px', '%' ],
 					'range' => [
@@ -673,9 +673,9 @@
 			$r->add_control(
 				'th_team_additional_fields',
 				[
-					'label' => esc_html__( 'Additional text', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Additional text', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::TEXT,
-					'default' => esc_html__( 'Default title', WP_TH_CORE_SLUG ),
+					'default' => esc_html__( 'Default title', WP_MF_CORE_SLUG ),
 				]
 			);
 		}

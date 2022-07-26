@@ -5,7 +5,7 @@ class MetafansBPProfileMedia extends WP_Widget {
     public function __construct() {
         $widget_options = array(
             'classname' => 'tophive-mf-profile-media-widget',
-            'description' => esc_html__( 'BuddyPress - Metafans Profile Media', 'WP_TH_CORE_SLUG' )
+            'description' => esc_html__( 'BuddyPress - Metafans Profile Media', 'WP_MF_CORE_SLUG' )
         );
         parent::__construct('buddypress_profile_media', 'Buddypress profile media [metafans]', $widget_options);
     }

@@ -41,23 +41,23 @@ class MetafansCore
 
 	public static function constants()
 	{
-		define( 'WP_TH_CORE_VERSION' , 	'1.0');
-		define( 'WP_TH_CORE_PREFIX' , 	'thcore');
-		define( 'WP_TH_CORE_SLUG' , 	'tophivecore');
+		define( 'WP_MF_CORE_VERSION' , 	'1.0');
+		define( 'WP_MF_CORE_PREFIX' , 	'thcore');
+		define( 'WP_MF_CORE_SLUG' , 	'metafanscore');
 
 		// Need to add extra links on plugin activation
-		define( 'WP_TH_CORE_BASENAME', plugin_basename( __FILE__ ));
+		define( 'WP_MF_CORE_BASENAME', plugin_basename( __FILE__ ));
 
-		define( 'WP_TH_CORE_ROOT', __FILE__);
-		define( 'WP_TH_CORE_ROOT_DIR', dirname(WP_TH_CORE_ROOT));
+		define( 'WP_MF_CORE_ROOT', __FILE__);
+		define( 'WP_MF_CORE_ROOT_DIR', dirname(WP_MF_CORE_ROOT));
 
-		define( 'WP_TH_CORE_PATH', plugin_dir_path(WP_TH_CORE_ROOT));
-		define( 'WP_TH_CORE_URL', plugin_dir_url(WP_TH_CORE_ROOT));
+		define( 'WP_MF_CORE_PATH', plugin_dir_path(WP_MF_CORE_ROOT));
+		define( 'WP_MF_CORE_URL', plugin_dir_url(WP_MF_CORE_ROOT));
 
-		define( 'WP_TH_CORE_JS_URL', 	trailingslashit(WP_TH_CORE_URL . 'js'));
-		define( 'WP_TH_CORE_CSS_URL', 	trailingslashit(WP_TH_CORE_URL . 'css'));
-		define( 'WP_TH_CORE_FONTS_URL', 	trailingslashit(WP_TH_CORE_URL . 'fonts'));
-		define( 'WP_TH_CORE_IMAGES_URL', trailingslashit(WP_TH_CORE_URL . 'images'));
+		define( 'WP_MF_CORE_JS_URL', 	trailingslashit(WP_MF_CORE_URL . 'js'));
+		define( 'WP_MF_CORE_CSS_URL', 	trailingslashit(WP_MF_CORE_URL . 'css'));
+		define( 'WP_MF_CORE_FONTS_URL', 	trailingslashit(WP_MF_CORE_URL . 'fonts'));
+		define( 'WP_MF_CORE_IMAGES_URL', trailingslashit(WP_MF_CORE_URL . 'images'));
 	}
 	public static function init(){
 		self::constants();
@@ -153,13 +153,13 @@ class MetafansCore
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new MetafansElementorBuddyPressGroups() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new MetafansElementorBBPressNewPost() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new MetafansElementorLoginSignup() );
-		//\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new MetafansElementorMemberCount() );
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new MetafansElementorMemberCount() );
 	}
 	public static function MetafansElementorCat( $elements_manager ) {
 		$elements_manager->add_category(
-			WP_TH_CORE_SLUG,
+			WP_MF_CORE_SLUG,
 			[
-				'title' => esc_html__( 'Metafans Widgets', WP_TH_CORE_SLUG ),
+				'title' => esc_html__( 'Metafans Widgets', WP_MF_CORE_SLUG ),
 				'icon' => 'eicon-t-letter',
 			]
 		);
@@ -170,21 +170,21 @@ class MetafansCore
 	public static function frontendassets(){
 		
         wp_register_style( 'th-style', false  );
-		wp_enqueue_script('th-elementor-lazy-js',WP_TH_CORE_URL . 'widgets/elementor/assets/jquery.lazy.min.js',array('jquery')
+		wp_enqueue_script('th-elementor-lazy-js',WP_MF_CORE_URL . 'widgets/elementor/assets/jquery.lazy.min.js',array('jquery')
 		);
-		wp_enqueue_script( 'th-widget-js', WP_TH_CORE_URL . 'widgets/metafanswidgets/assets/js/frontend.js' );
-		wp_enqueue_style( 'th-wp-widget-styles', WP_TH_CORE_URL . 'widgets/wordpress/assets/styles.css' );
-		wp_enqueue_style( 'th-elementor-css', WP_TH_CORE_URL . 'widgets/elementor/assets/style.css' );
-		wp_enqueue_style( 'th-widget-css', WP_TH_CORE_URL . 'widgets/metafanswidgets/assets/css/frontend.css' );
+		wp_enqueue_script( 'th-widget-js', WP_MF_CORE_URL . 'widgets/metafanswidgets/assets/js/frontend.js' );
+		wp_enqueue_style( 'th-wp-widget-styles', WP_MF_CORE_URL . 'widgets/wordpress/assets/styles.css' );
+		wp_enqueue_style( 'th-elementor-css', WP_MF_CORE_URL . 'widgets/elementor/assets/style.css' );
+		wp_enqueue_style( 'th-widget-css', WP_MF_CORE_URL . 'widgets/metafanswidgets/assets/css/frontend.css' );
 		wp_localize_script('th-elementor-js', 'th_elem_ajax_obj', 
 			array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) )
 		);
 		add_action( 'wp_ajax_course_grid_pull_cats', array( MetafansElementorBase::getInstance(), 'AjaxCourseRequest' ) );
 		add_action( 'wp_ajax_nopriv_course_grid_pull_cats', array( MetafansElementorBase::getInstance(), 'AjaxCourseRequest' ) );
-		wp_enqueue_script( 'rich-text-quill', WP_TH_CORE_URL . 'widgets/elementor/assets/quill.min.js', array(), '4.0.6' );
+		wp_enqueue_script( 'rich-text-quill', WP_MF_CORE_URL . 'widgets/elementor/assets/quill.min.js', array(), '4.0.6' );
 
-		wp_enqueue_style( 'rich-text-quill-css', WP_TH_CORE_URL . 'widgets/elementor/assets/quill.snow.css' );
-		wp_enqueue_script('th-elementor-js',WP_TH_CORE_URL . 'widgets/elementor/assets/script.js',array('jquery'));
+		wp_enqueue_style( 'rich-text-quill-css', WP_MF_CORE_URL . 'widgets/elementor/assets/quill.snow.css' );
+		wp_enqueue_script('th-elementor-js',WP_MF_CORE_URL . 'widgets/elementor/assets/script.js',array('jquery'));
 	}
 	public static function widgetRegistrar(){
 		require_once('widgets/metafanswidgets/MetafansRecentPostsWidget.php');
@@ -204,16 +204,16 @@ class MetafansCore
 	public static function adminassets(){
 		wp_enqueue_media();
 	    wp_enqueue_script( 'wp-color-picker' );
-		wp_enqueue_script( 'tophive-select2', WP_TH_CORE_URL . 'widgets/elementor/assets/select2.min.js', array(), '4.0.6' );
+		wp_enqueue_script( 'tophive-select2', WP_MF_CORE_URL . 'widgets/elementor/assets/select2.min.js', array(), '4.0.6' );
 		
-		wp_enqueue_script( 'enhanced-colorpicker', WP_TH_CORE_URL . 'widgets/metafanswidgets/assets/js/colorpicker.js', array( 'wp-color-picker' ), '1.0', true );
-		wp_enqueue_script( 'tophive-widgets-scripts', WP_TH_CORE_URL . 'widgets/metafanswidgets/assets/js/admin.js', array(), '4.0.6' );
-		wp_enqueue_script( 'tophive-elementor', WP_TH_CORE_URL . 'widgets/elementor/assets/script.js', array('jquery'), '1.0.0' );
+		wp_enqueue_script( 'enhanced-colorpicker', WP_MF_CORE_URL . 'widgets/metafanswidgets/assets/js/colorpicker.js', array( 'wp-color-picker' ), '1.0', true );
+		wp_enqueue_script( 'tophive-widgets-scripts', WP_MF_CORE_URL . 'widgets/metafanswidgets/assets/js/admin.js', array(), '4.0.6' );
+		wp_enqueue_script( 'tophive-elementor', WP_MF_CORE_URL . 'widgets/elementor/assets/script.js', array('jquery'), '1.0.0' );
 
 		wp_enqueue_style( 'wp-color-picker' );        
-		wp_enqueue_style( 'enhanced-colorpicker', WP_TH_CORE_URL . 'widgets/metafanswidgets/assets/css/colorpicker.css' );
-		wp_enqueue_style( 'tophive-select2', WP_TH_CORE_URL . 'widgets/elementor/assets/select2.min.css' );
-		wp_enqueue_style( 'tophive-widgets-style', WP_TH_CORE_URL . 'widgets/metafanswidgets/assets/css/admin.css' );
+		wp_enqueue_style( 'enhanced-colorpicker', WP_MF_CORE_URL . 'widgets/metafanswidgets/assets/css/colorpicker.css' );
+		wp_enqueue_style( 'tophive-select2', WP_MF_CORE_URL . 'widgets/elementor/assets/select2.min.css' );
+		wp_enqueue_style( 'tophive-widgets-style', WP_MF_CORE_URL . 'widgets/metafanswidgets/assets/css/admin.css' );
 		
 	}
 	
@@ -223,7 +223,7 @@ class MetafansCore
 	 * @since 1.0.0
 	 */
 	public static function MetafansLoadTextdomain() { 
-	  load_plugin_textdomain( 'tophive-core', false, basename( dirname( __FILE__ ) ) . '/languages' ); 
+	  load_plugin_textdomain( 'metafans-core', false, basename( dirname( __FILE__ ) ) . '/languages' ); 
 	}
 
 	public static function getInstance(){

@@ -7,18 +7,18 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
         return 'thcoursescarousel';
     }
     public function get_title(){
-        return esc_html__( 'LP Course Carousel', WP_TH_CORE_SLUG );
+        return esc_html__( 'LP Course Carousel', WP_MF_CORE_SLUG );
     }
     public function get_icon(){
         return 'eicon-single-post';
     }
     public function get_categories(){
-        return [ WP_TH_CORE_SLUG ];
+        return [ WP_MF_CORE_SLUG ];
     }
     public function get_script_depends() {
 		return [ 'jquery-slick' ];
 	}
-    protected function _register_controls() {
+    protected function register_controls() {
 
     	/*
     	*
@@ -33,7 +33,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 		$this->start_controls_section(
 			'thcoursescarousel_content_section',
 				[
-					'label' => esc_html__( 'Course Carousel', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Course Carousel', WP_MF_CORE_SLUG ),
 					'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
 				]
 			);
@@ -41,10 +41,10 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 			$this->add_control(
 				'thcoursescarousel_thumbnail_show_hide',
 				[
-					'label' => esc_html__( 'Show Image', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Show Image', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SWITCHER,
-					'label_on' => esc_html__( 'Show', WP_TH_CORE_SLUG ),
-					'label_off' => esc_html__( 'Hide', WP_TH_CORE_SLUG ),
+					'label_on' => esc_html__( 'Show', WP_MF_CORE_SLUG ),
+					'label_off' => esc_html__( 'Hide', WP_MF_CORE_SLUG ),
 					'return_value' => 'yes',
 					'default' => 'yes',
 				]
@@ -52,11 +52,11 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 			$this->add_control(
 				'thcoursescarousel_posts_order',
 				[
-					'label' => esc_html__( 'Order by', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Order by', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SELECT,
 					'options' => [
-						'ASC' 	=> esc_html__( 'Ascending', WP_TH_CORE_SLUG ),
-						'DESC' 	=> esc_html__( 'Descending', WP_TH_CORE_SLUG ),
+						'ASC' 	=> esc_html__( 'Ascending', WP_MF_CORE_SLUG ),
+						'DESC' 	=> esc_html__( 'Descending', WP_MF_CORE_SLUG ),
 					],
 					'default' => 'ASC',
 				]
@@ -64,11 +64,11 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 			$this->add_control(
 				'thcoursescarousel_posts_layout',
 				[
-					'label' => esc_html__( 'Layout', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Layout', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SELECT,
 					'options' => [
-						'' 	=> esc_html__( 'Full Width', WP_TH_CORE_SLUG ),
-						' ec-overflow-hidden' 	=> esc_html__( 'Fixed Width', WP_TH_CORE_SLUG ),
+						'' 	=> esc_html__( 'Full Width', WP_MF_CORE_SLUG ),
+						' ec-overflow-hidden' 	=> esc_html__( 'Fixed Width', WP_MF_CORE_SLUG ),
 					],
 					'default' => '',
 				]
@@ -76,17 +76,17 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 			$this->add_control(
 				'thcoursescarousel_select_columns',
 				[
-					'label' => esc_html__( 'Select Columns', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Select Columns', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SELECT,
 					'options' => [
-						'1' 	=> esc_html__( '1 Column', WP_TH_CORE_SLUG ),
-						'2' 	=> esc_html__( '2 Columns', WP_TH_CORE_SLUG ),
-						'3'  	=> esc_html__( '3 Columns', WP_TH_CORE_SLUG ),
-						'4' 	=> esc_html__( '4 Columns', WP_TH_CORE_SLUG ),
-						'5' 	=> esc_html__( '5 Columns', WP_TH_CORE_SLUG ),
-						'6' 	=> esc_html__( '6 Columns', WP_TH_CORE_SLUG ),
-						'7' 	=> esc_html__( '7 Columns', WP_TH_CORE_SLUG ),
-						'8' 	=> esc_html__( '8 Columns', WP_TH_CORE_SLUG ),
+						'1' 	=> esc_html__( '1 Column', WP_MF_CORE_SLUG ),
+						'2' 	=> esc_html__( '2 Columns', WP_MF_CORE_SLUG ),
+						'3'  	=> esc_html__( '3 Columns', WP_MF_CORE_SLUG ),
+						'4' 	=> esc_html__( '4 Columns', WP_MF_CORE_SLUG ),
+						'5' 	=> esc_html__( '5 Columns', WP_MF_CORE_SLUG ),
+						'6' 	=> esc_html__( '6 Columns', WP_MF_CORE_SLUG ),
+						'7' 	=> esc_html__( '7 Columns', WP_MF_CORE_SLUG ),
+						'8' 	=> esc_html__( '8 Columns', WP_MF_CORE_SLUG ),
 					],
 					'default' => '4',
 				]
@@ -94,16 +94,16 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 			$this->add_control(
 				'thcoursescarousel_courses_count',
 				[
-					'label' => esc_html__( 'Courses Count', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Courses Count', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::TEXT,
-					'description' => esc_html__('-1 For showing all', WP_TH_CORE_SLUG),
+					'description' => esc_html__('-1 For showing all', WP_MF_CORE_SLUG),
 					'default' => 4,
 				]
 	        );
 	        $this->add_control(
 	        	'thcoursescarousel_word_count',
 	        	[
-	        		'label' => esc_html__( 'Word Count for description', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Word Count for description', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::NUMBER,
 	        		'min' => 2,
 	        		'max' => 30,
@@ -114,10 +114,10 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 	        $this->add_control(
 	        	'thcoursescarousel_cat_display',
 	        	[
-	        		'label' => esc_html__('Show Category', WP_TH_CORE_SLUG),
+	        		'label' => esc_html__('Show Category', WP_MF_CORE_SLUG),
 	        		'type' => \Elementor\Controls_Manager::SWITCHER,
-					'label_on' => esc_html__( 'Show', WP_TH_CORE_SLUG ),
-					'label_off' => esc_html__( 'Hide', WP_TH_CORE_SLUG ),
+					'label_on' => esc_html__( 'Show', WP_MF_CORE_SLUG ),
+					'label_off' => esc_html__( 'Hide', WP_MF_CORE_SLUG ),
 					'return_value' => 'yes',
 					'default' => 'yes',
 	        	]
@@ -125,10 +125,10 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 	        $this->add_control(
 	        	'thcoursescarousel_show_tags',
 	        	[
-	        		'label' => esc_html__( 'Show tags', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Show tags', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::SWITCHER,
-	        		'label_on' => __( 'Show', WP_TH_CORE_SLUG ),
-	        		'label_off' => __( 'Hide', WP_TH_CORE_SLUG ),
+	        		'label_on' => __( 'Show', WP_MF_CORE_SLUG ),
+	        		'label_off' => __( 'Hide', WP_MF_CORE_SLUG ),
 	        		'return_value' => 'yes',
 	        		'default' => 'no',
 	        	]
@@ -136,10 +136,10 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 	        $this->add_control(
 	        	'thcoursescarousel_show_desc',
 	        	[
-	        		'label' => esc_html__( 'Show Description', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Show Description', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::SWITCHER,
-	        		'label_on' => esc_html__( 'Show', WP_TH_CORE_SLUG ),
-	        		'label_off' => esc_html__( 'Hide', WP_TH_CORE_SLUG ),
+	        		'label_on' => esc_html__( 'Show', WP_MF_CORE_SLUG ),
+	        		'label_off' => esc_html__( 'Hide', WP_MF_CORE_SLUG ),
 	        		'return_value' => 'yes',
 	        		'default' => 'yes',
 	        	]
@@ -147,10 +147,10 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 	        $this->add_control(
 	        	'thcoursescarousel_show_pricing',
 	        	[
-	        		'label' => esc_html__( 'Show Price', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Show Price', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::SWITCHER,
-	        		'label_on' => esc_html__( 'Show', WP_TH_CORE_SLUG ),
-	        		'label_off' => esc_html__( 'Hide', WP_TH_CORE_SLUG ),
+	        		'label_on' => esc_html__( 'Show', WP_MF_CORE_SLUG ),
+	        		'label_off' => esc_html__( 'Hide', WP_MF_CORE_SLUG ),
 	        		'return_value' => 'yes',
 	        		'default' => 'yes',
 	        	]
@@ -158,10 +158,10 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 	        $this->add_control(
 	        	'thcoursescarousel_show_pricing_prev',
 	        	[
-	        		'label' => esc_html__( 'Show Previous Pricing', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Show Previous Pricing', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::SWITCHER,
-	        		'label_on' => esc_html__( 'Show', WP_TH_CORE_SLUG ),
-	        		'label_off' => esc_html__( 'Hide', WP_TH_CORE_SLUG ),
+	        		'label_on' => esc_html__( 'Show', WP_MF_CORE_SLUG ),
+	        		'label_off' => esc_html__( 'Hide', WP_MF_CORE_SLUG ),
 	        		'return_value' => 'yes',
 	        		'default' => 'yes',
 	        	]
@@ -169,10 +169,10 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 	        $this->add_control(
 	        	'thcoursescarousel_show_author',
 	        	[
-	        		'label' => esc_html__( 'Show Author', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Show Author', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::SWITCHER,
-	        		'label_on' => esc_html__( 'Show', WP_TH_CORE_SLUG ),
-	        		'label_off' => esc_html__( 'Hide', WP_TH_CORE_SLUG ),
+	        		'label_on' => esc_html__( 'Show', WP_MF_CORE_SLUG ),
+	        		'label_off' => esc_html__( 'Hide', WP_MF_CORE_SLUG ),
 	        		'return_value' => 'yes',
 	        		'default' => 'yes',
 	        	]
@@ -180,10 +180,10 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 	        $this->add_control(
 	        	'thcoursescarousel_show_lessons',
 	        	[
-	        		'label' => esc_html__( 'Show Lessons', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Show Lessons', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::SWITCHER,
-	        		'label_on' => esc_html__( 'Show', WP_TH_CORE_SLUG ),
-	        		'label_off' => esc_html__( 'Hide', WP_TH_CORE_SLUG ),
+	        		'label_on' => esc_html__( 'Show', WP_MF_CORE_SLUG ),
+	        		'label_off' => esc_html__( 'Hide', WP_MF_CORE_SLUG ),
 	        		'return_value' => 'yes',
 	        		'default' => 'no',
 	        	]
@@ -191,10 +191,10 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 	        $this->add_control(
 	        	'thcoursescarousel_show_level',
 	        	[
-	        		'label' => esc_html__( 'Show Level', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Show Level', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::SWITCHER,
-	        		'label_on' => esc_html__( 'Show', WP_TH_CORE_SLUG ),
-	        		'label_off' => esc_html__( 'Hide', WP_TH_CORE_SLUG ),
+	        		'label_on' => esc_html__( 'Show', WP_MF_CORE_SLUG ),
+	        		'label_off' => esc_html__( 'Hide', WP_MF_CORE_SLUG ),
 	        		'return_value' => 'yes',
 	        		'default' => 'no',
 	        	]
@@ -202,10 +202,10 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
        		$this->add_control(
 	        	'thcoursescarousel_show_rating',
 	        	[
-	        		'label' => esc_html__( 'Show Rating', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Show Rating', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::SWITCHER,
-	        		'label_on' => esc_html__( 'Show', WP_TH_CORE_SLUG ),
-	        		'label_off' => esc_html__( 'Hide', WP_TH_CORE_SLUG ),
+	        		'label_on' => esc_html__( 'Show', WP_MF_CORE_SLUG ),
+	        		'label_off' => esc_html__( 'Hide', WP_MF_CORE_SLUG ),
 	        		'return_value' => 'yes',
 	        		'default' => 'yes',
 	        	]
@@ -214,17 +214,17 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 		$this->start_controls_section(
 			'thcoursescarousel_carousel_options',
 				[
-					'label' => esc_html__( 'Carousel Options', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Carousel Options', WP_MF_CORE_SLUG ),
 					'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
 				]
 			);
 			$this->add_control(
 				'thcoursescarousel_autoplay',
 				[
-					'label' => esc_html__( 'Autoplay', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Autoplay', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SWITCHER,
-					'label_on' => __( 'Yes', WP_TH_CORE_SLUG ),
-					'label_off' => __( 'No', WP_TH_CORE_SLUG ),
+					'label_on' => __( 'Yes', WP_MF_CORE_SLUG ),
+					'label_off' => __( 'No', WP_MF_CORE_SLUG ),
 					'return_value' => 'yes',
 					'default' => 'yes',
 				]
@@ -232,22 +232,22 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 			$this->add_control(
 				'thcoursescarousel_autoplay_delay',
 				[
-					'label' => esc_html__( 'Autoplay Delay', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Autoplay Delay', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SELECT,
 					'default' => 1000,
 					'options' => [
-						300  => esc_html__( '300ms', WP_TH_CORE_SLUG),
-						400  => esc_html__( '400ms', WP_TH_CORE_SLUG),
-						500  => esc_html__( '500ms', WP_TH_CORE_SLUG),
-						600  => esc_html__( '600ms', WP_TH_CORE_SLUG),
-						700  => esc_html__( '700ms', WP_TH_CORE_SLUG),
-						800  => esc_html__( '800ms', WP_TH_CORE_SLUG),
-						900  => esc_html__( '900ms', WP_TH_CORE_SLUG),
-						1000  => esc_html__( '1s', WP_TH_CORE_SLUG),
-						1500  => esc_html__( '1.5s', WP_TH_CORE_SLUG),
-						2000  => esc_html__( '2s', WP_TH_CORE_SLUG),
-						2500  => esc_html__( '2.5s', WP_TH_CORE_SLUG),
-						3000  => esc_html__( '3s', WP_TH_CORE_SLUG),
+						300  => esc_html__( '300ms', WP_MF_CORE_SLUG),
+						400  => esc_html__( '400ms', WP_MF_CORE_SLUG),
+						500  => esc_html__( '500ms', WP_MF_CORE_SLUG),
+						600  => esc_html__( '600ms', WP_MF_CORE_SLUG),
+						700  => esc_html__( '700ms', WP_MF_CORE_SLUG),
+						800  => esc_html__( '800ms', WP_MF_CORE_SLUG),
+						900  => esc_html__( '900ms', WP_MF_CORE_SLUG),
+						1000  => esc_html__( '1s', WP_MF_CORE_SLUG),
+						1500  => esc_html__( '1.5s', WP_MF_CORE_SLUG),
+						2000  => esc_html__( '2s', WP_MF_CORE_SLUG),
+						2500  => esc_html__( '2.5s', WP_MF_CORE_SLUG),
+						3000  => esc_html__( '3s', WP_MF_CORE_SLUG),
 					],
 					'condition' => ['thcoursescarousel_autoplay' => 'yes']
 				]
@@ -255,44 +255,44 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 			$this->add_control(
 				'thcoursescarousel_play_speed',
 				[
-					'label' => esc_html__( 'Play Speed', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Play Speed', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SELECT,
 					'default' => 500,
 					'options' => [
-						100  => esc_html__( '100ms', WP_TH_CORE_SLUG),
-						200  => esc_html__( '200ms', WP_TH_CORE_SLUG),
-						300  => esc_html__( '300ms', WP_TH_CORE_SLUG),
-						400  => esc_html__( '400ms', WP_TH_CORE_SLUG),
-						500  => esc_html__( '500ms', WP_TH_CORE_SLUG),
-						600  => esc_html__( '600ms', WP_TH_CORE_SLUG),
-						700  => esc_html__( '700ms', WP_TH_CORE_SLUG),
-						800  => esc_html__( '800ms', WP_TH_CORE_SLUG),
-						900  => esc_html__( '900ms', WP_TH_CORE_SLUG),
-						1000  => esc_html__( '1s', WP_TH_CORE_SLUG),
-						1500  => esc_html__( '1.5s', WP_TH_CORE_SLUG),
-						2000  => esc_html__( '2s', WP_TH_CORE_SLUG),
-						2500  => esc_html__( '2.5s', WP_TH_CORE_SLUG),
-						3000  => esc_html__( '3s', WP_TH_CORE_SLUG),
+						100  => esc_html__( '100ms', WP_MF_CORE_SLUG),
+						200  => esc_html__( '200ms', WP_MF_CORE_SLUG),
+						300  => esc_html__( '300ms', WP_MF_CORE_SLUG),
+						400  => esc_html__( '400ms', WP_MF_CORE_SLUG),
+						500  => esc_html__( '500ms', WP_MF_CORE_SLUG),
+						600  => esc_html__( '600ms', WP_MF_CORE_SLUG),
+						700  => esc_html__( '700ms', WP_MF_CORE_SLUG),
+						800  => esc_html__( '800ms', WP_MF_CORE_SLUG),
+						900  => esc_html__( '900ms', WP_MF_CORE_SLUG),
+						1000  => esc_html__( '1s', WP_MF_CORE_SLUG),
+						1500  => esc_html__( '1.5s', WP_MF_CORE_SLUG),
+						2000  => esc_html__( '2s', WP_MF_CORE_SLUG),
+						2500  => esc_html__( '2.5s', WP_MF_CORE_SLUG),
+						3000  => esc_html__( '3s', WP_MF_CORE_SLUG),
 					],
 				]
 			);
 			$this->add_control(
 				'thcoursescarousel_per_slide',
 				[
-					'label' => esc_html__( 'Course Per Slide', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Course Per Slide', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SELECT,
 					'default' => 2,
 					'options' => [
-						1  => esc_html__( '1', WP_TH_CORE_SLUG),
-						2  => esc_html__( '2', WP_TH_CORE_SLUG),
-						3  => esc_html__( '3', WP_TH_CORE_SLUG),
-						4  => esc_html__( '4', WP_TH_CORE_SLUG),
-						5  => esc_html__( '5', WP_TH_CORE_SLUG),
-						6  => esc_html__( '6', WP_TH_CORE_SLUG),
-						7  => esc_html__( '7', WP_TH_CORE_SLUG),
-						8  => esc_html__( '8', WP_TH_CORE_SLUG),
-						9  => esc_html__( '9', WP_TH_CORE_SLUG),
-						10  => esc_html__( '10', WP_TH_CORE_SLUG),
+						1  => esc_html__( '1', WP_MF_CORE_SLUG),
+						2  => esc_html__( '2', WP_MF_CORE_SLUG),
+						3  => esc_html__( '3', WP_MF_CORE_SLUG),
+						4  => esc_html__( '4', WP_MF_CORE_SLUG),
+						5  => esc_html__( '5', WP_MF_CORE_SLUG),
+						6  => esc_html__( '6', WP_MF_CORE_SLUG),
+						7  => esc_html__( '7', WP_MF_CORE_SLUG),
+						8  => esc_html__( '8', WP_MF_CORE_SLUG),
+						9  => esc_html__( '9', WP_MF_CORE_SLUG),
+						10  => esc_html__( '10', WP_MF_CORE_SLUG),
 					],
 				]
 			);
@@ -307,17 +307,17 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 		$this->start_controls_section(
 			'thcoursescarousel_category_filter_section',
 				[
-					'label' => esc_html__( 'Course Category', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Course Category', WP_MF_CORE_SLUG ),
 					'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
 				]
 			);
 			// $this->add_control(
 			// 	'thcoursescarousel_show_category_filter',
 			// 	[
-			// 		'label' => esc_html__( 'Show Category Filter', WP_TH_CORE_SLUG ),
+			// 		'label' => esc_html__( 'Show Category Filter', WP_MF_CORE_SLUG ),
 			// 		'type' => \Elementor\Controls_Manager::SWITCHER,
-			// 		'label_on' => esc_html__( 'Show', WP_TH_CORE_SLUG ),
-			// 		'label_off' => esc_html__( 'Hide', WP_TH_CORE_SLUG ),
+			// 		'label_on' => esc_html__( 'Show', WP_MF_CORE_SLUG ),
+			// 		'label_off' => esc_html__( 'Hide', WP_MF_CORE_SLUG ),
 			// 		'return_value' => 'yes',
 			// 		'default' => 'no',
 			// 	]
@@ -325,20 +325,20 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 			// $this->add_control(
 			// 	'thcoursescarousel_filter_position',
 			// 	[
-			// 		'label' => esc_html__( 'Filter Position', WP_TH_CORE_SLUG ),
+			// 		'label' => esc_html__( 'Filter Position', WP_MF_CORE_SLUG ),
 			// 		'type' => \Elementor\Controls_Manager::SELECT,
 			// 		'default' => 'solid',
 			// 		'options' => [
-			// 			'top'  => esc_html__( 'Top', WP_TH_CORE_SLUG ),
-			// 			'v-left'  => esc_html__( 'Left Side', WP_TH_CORE_SLUG ),
-			// 			'v-right'  => esc_html__( 'Right Side', WP_TH_CORE_SLUG ),
+			// 			'top'  => esc_html__( 'Top', WP_MF_CORE_SLUG ),
+			// 			'v-left'  => esc_html__( 'Left Side', WP_MF_CORE_SLUG ),
+			// 			'v-right'  => esc_html__( 'Right Side', WP_MF_CORE_SLUG ),
 			// 		],
 			// 	]
 			// );
 			// $this->add_control(
 			// 	'thcoursescarousel_filter_nav_width',
 			// 	[
-			// 		'label' => esc_html__( 'Width', WP_TH_CORE_SLUG ),
+			// 		'label' => esc_html__( 'Width', WP_MF_CORE_SLUG ),
 			// 		'type' => \Elementor\Controls_Manager::SLIDER,
 			// 		'size_units' => [ 'px', '%' ],
 			// 		'range' => [
@@ -356,7 +356,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 			$this->add_control(
 				'thcoursescarousel_select_categories',
 				[
-					'label' => esc_html__( 'Select Categories', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Select Categories', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SELECT2,
 					'multiple' => true,
 					'options' => $this->parse_filter_categories(),
@@ -366,19 +366,19 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 			// $this->add_control(
 			// 	'thcoursescarousel_filter_text_align',
 			// 	[
-			// 		'label' => esc_html__( 'Alignment', WP_TH_CORE_SLUG ),
+			// 		'label' => esc_html__( 'Alignment', WP_MF_CORE_SLUG ),
 			// 		'type' => \Elementor\Controls_Manager::CHOOSE,
 			// 		'options' => [
 			// 			'ec-text-left' => [
-			// 				'title' => esc_html__( 'Left', WP_TH_CORE_SLUG ),
+			// 				'title' => esc_html__( 'Left', WP_MF_CORE_SLUG ),
 			// 				'icon' => 'fa fa-align-left',
 			// 			],
 			// 			'ec-text-center' => [
-			// 				'title' => esc_html__( 'Center', WP_TH_CORE_SLUG ),
+			// 				'title' => esc_html__( 'Center', WP_MF_CORE_SLUG ),
 			// 				'icon' => 'fa fa-align-center',
 			// 			],
 			// 			'ec-text-right' => [
-			// 				'title' => esc_html__( 'Right', WP_TH_CORE_SLUG ),
+			// 				'title' => esc_html__( 'Right', WP_MF_CORE_SLUG ),
 			// 				'icon' => 'fa fa-align-right',
 			// 			],
 			// 		],
@@ -409,7 +409,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 			// 			\Elementor\Group_Control_Border::get_type(),
 			// 			[
 			// 				'name' => 'thcoursescarousel_filter_border',
-			// 				'label' => esc_html__( 'Filter Border', WP_TH_CORE_SLUG ),
+			// 				'label' => esc_html__( 'Filter Border', WP_MF_CORE_SLUG ),
 			// 				'selector' => '{{WRAPPER}} ul.th-course-categories-filter li',
 			// 			]
 			// 		);
@@ -424,7 +424,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 			// 		$this->add_control(
 			// 			'thcoursescarousel_filter_bg_color',
 			// 			[
-			// 				'label' => esc_html__( 'Background Color', WP_TH_CORE_SLUG ),
+			// 				'label' => esc_html__( 'Background Color', WP_MF_CORE_SLUG ),
 			// 				'type' => \Elementor\Controls_Manager::COLOR,
 			// 				'scheme' => [
 			// 					'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -439,7 +439,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 			// 		$this->add_control(
 			// 			'thcoursescarousel_filter_text_color',
 			// 			[
-			// 				'label' => esc_html__( 'Text Color', WP_TH_CORE_SLUG ),
+			// 				'label' => esc_html__( 'Text Color', WP_MF_CORE_SLUG ),
 			// 				'type' => \Elementor\Controls_Manager::COLOR,
 			// 				'scheme' => [
 			// 					'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -454,7 +454,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 			// 		$this->add_control(
 			// 			'thcoursescarousel_filter_text_bg_color',
 			// 			[
-			// 				'label' => esc_html__( 'Item Background', WP_TH_CORE_SLUG ),
+			// 				'label' => esc_html__( 'Item Background', WP_MF_CORE_SLUG ),
 			// 				'type' => \Elementor\Controls_Manager::COLOR,
 			// 				'scheme' => [
 			// 					'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -477,7 +477,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 			// 		$this->add_control(
 			// 			'thcoursescarousel_filter_box_margin',
 			// 			[
-			// 				'label' => esc_html__( 'Filter Box Margin', WP_TH_CORE_SLUG ),
+			// 				'label' => esc_html__( 'Filter Box Margin', WP_MF_CORE_SLUG ),
 			// 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
 			// 				'size_units' => [ 'px', '%', 'em' ],
 			// 				'selectors' => [
@@ -488,7 +488,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 			// 		$this->add_control(
 			// 			'thcoursescarousel_filter_items_padding',
 			// 			[
-			// 				'label' => esc_html__( 'Filter Items Padding', WP_TH_CORE_SLUG ),
+			// 				'label' => esc_html__( 'Filter Items Padding', WP_MF_CORE_SLUG ),
 			// 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
 			// 				'size_units' => [ 'px', '%', 'em' ],
 			// 				'selectors' => [
@@ -499,7 +499,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 			// 		$this->add_control(
 			// 			'thcoursescarousel_filter_gap_between',
 			// 			[
-			// 				'label' => esc_html__( 'Gap Between Items', WP_TH_CORE_SLUG ),
+			// 				'label' => esc_html__( 'Gap Between Items', WP_MF_CORE_SLUG ),
 			// 				'type' => \Elementor\Controls_Manager::SLIDER,
 			// 				'size_units' => [ 'px' ],
 			// 				'range' => [
@@ -519,7 +519,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 			// 			\Elementor\Group_Control_Typography::get_type(),
 			// 			[
 			// 				'name' => 'thcoursescarousel_filter_text_typo',
-			// 				'label' => esc_html__( 'Text Typography', WP_TH_CORE_SLUG ),
+			// 				'label' => esc_html__( 'Text Typography', WP_MF_CORE_SLUG ),
 			// 				'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
 			// 				'selector' => '{{WRAPPER}} .th-course-categories-filter li',
 			// 			]
@@ -537,7 +537,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 			// 		$this->add_control(
 			// 			'thcoursescarousel_filter_border_rad',
 			// 			[
-			// 				'label' => esc_html__( 'Border Radius', WP_TH_CORE_SLUG ),
+			// 				'label' => esc_html__( 'Border Radius', WP_MF_CORE_SLUG ),
 			// 				'type' => \Elementor\Controls_Manager::SLIDER,
 			// 				'size_units' => [ 'px', '%' ],
 			// 				'range' => [
@@ -556,7 +556,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 			// 			\Elementor\Group_Control_Box_Shadow::get_type(),
 			// 			[
 			// 				'name' => 'thcoursescarousel_filter_box_shadow',
-			// 				'label' => esc_html__( 'Box Shadow', WP_TH_CORE_SLUG ),
+			// 				'label' => esc_html__( 'Box Shadow', WP_MF_CORE_SLUG ),
 			// 				'selector' => '{{WRAPPER}} .th-course-categories-filter li',
 			// 			]
 			// 		);
@@ -573,7 +573,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 			// 		$this->add_control(
 			// 			'thcoursescarousel_filter_text_color_hover',
 			// 			[
-			// 				'label' => esc_html__( 'Hover Text Color', WP_TH_CORE_SLUG ),
+			// 				'label' => esc_html__( 'Hover Text Color', WP_MF_CORE_SLUG ),
 			// 				'type' => \Elementor\Controls_Manager::COLOR,
 			// 				'scheme' => [
 			// 					'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -589,7 +589,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 			// 		$this->add_control(
 			// 			'thcoursescarousel_filter_text_hover_bg',
 			// 			[
-			// 				'label' => esc_html__( 'Text Background Color on Hover', WP_TH_CORE_SLUG ),
+			// 				'label' => esc_html__( 'Text Background Color on Hover', WP_MF_CORE_SLUG ),
 			// 				'type' => \Elementor\Controls_Manager::COLOR,
 			// 				'scheme' => [
 			// 					'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -606,7 +606,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 			// 			\Elementor\Group_Control_Border::get_type(),
 			// 			[
 			// 				'name' => 'thcoursescarousel_filter_border_hover',
-			// 				'label' => esc_html__( 'Filter Border', WP_TH_CORE_SLUG ),
+			// 				'label' => esc_html__( 'Filter Border', WP_MF_CORE_SLUG ),
 			// 				'selector' => '{{WRAPPER}} ul.th-course-categories-filter li:hover, {{WRAPPER}} ul.th-course-categories-filter li:focus, {{WRAPPER}} ul.th-course-categories-filter li.active',
 			// 			]
 			// 		);
@@ -615,7 +615,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 			// 			\Elementor\Group_Control_Box_Shadow::get_type(),
 			// 			[
 			// 				'name' => 'thcoursescarousel_filter_box_shadow_hover',
-			// 				'label' => esc_html__( 'Box Shadow', WP_TH_CORE_SLUG ),
+			// 				'label' => esc_html__( 'Box Shadow', WP_MF_CORE_SLUG ),
 			// 				'selector' => '{{WRAPPER}} .th-course-categories-filter li:hover, {{WRAPPER}} .th-course-categories-filter li:focus, {{WRAPPER}} .th-course-categories-filter li.active',
 			// 			]
 			// 		);
@@ -628,17 +628,17 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 		$this->start_controls_section(
 			'thcoursescarousel_treanding_filter_section',
 				[
-					'label' => esc_html__( 'Filter Tabs', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Filter Tabs', WP_MF_CORE_SLUG ),
 					'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
 				]
 			);
 			$this->add_control(
 				'thcoursescarousel_show_latest_filter_tabs',
 				[
-					'label' => esc_html__( 'Show Latest Filter tab', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Show Latest Filter tab', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SWITCHER,
-					'label_on' => esc_html__( 'Show', WP_TH_CORE_SLUG ),
-					'label_off' => esc_html__( 'Hide', WP_TH_CORE_SLUG ),
+					'label_on' => esc_html__( 'Show', WP_MF_CORE_SLUG ),
+					'label_off' => esc_html__( 'Hide', WP_MF_CORE_SLUG ),
 					'return_value' => 'yes',
 					'default' => 'yes',
 				]
@@ -646,10 +646,10 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 			$this->add_control(
 				'thcoursescarousel_show_treanding_filter_tabs',
 				[
-					'label' => esc_html__( 'Show Treanding Filter tab', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Show Treanding Filter tab', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SWITCHER,
-					'label_on' => esc_html__( 'Show', WP_TH_CORE_SLUG ),
-					'label_off' => esc_html__( 'Hide', WP_TH_CORE_SLUG ),
+					'label_on' => esc_html__( 'Show', WP_MF_CORE_SLUG ),
+					'label_off' => esc_html__( 'Hide', WP_MF_CORE_SLUG ),
 					'return_value' => 'yes',
 					'default' => 'yes',
 				]
@@ -657,10 +657,10 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 			$this->add_control(
 				'thcoursescarousel_show_popular_filter_tabs',
 				[
-					'label' => esc_html__( 'Show Popular Filter tab', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Show Popular Filter tab', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SWITCHER,
-					'label_on' => esc_html__( 'Show', WP_TH_CORE_SLUG ),
-					'label_off' => esc_html__( 'Hide', WP_TH_CORE_SLUG ),
+					'label_on' => esc_html__( 'Show', WP_MF_CORE_SLUG ),
+					'label_off' => esc_html__( 'Hide', WP_MF_CORE_SLUG ),
 					'return_value' => 'yes',
 					'default' => 'yes',
 				]
@@ -668,19 +668,19 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 			$this->add_control(
 			'filter_text_align',
 				[
-					'label' => __( 'Alignment', WP_TH_CORE_SLUG ),
+					'label' => __( 'Alignment', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::CHOOSE,
 					'options' => [
 						'ec-text-left' => [
-							'title' => __( 'Left', WP_TH_CORE_SLUG ),
+							'title' => __( 'Left', WP_MF_CORE_SLUG ),
 							'icon' => 'fa fa-align-left',
 						],
 						'ec-text-center' => [
-							'title' => __( 'Center', WP_TH_CORE_SLUG ),
+							'title' => __( 'Center', WP_MF_CORE_SLUG ),
 							'icon' => 'fa fa-align-center',
 						],
 						'ec-text-right' => [
-							'title' => __( 'Right', WP_TH_CORE_SLUG ),
+							'title' => __( 'Right', WP_MF_CORE_SLUG ),
 							'icon' => 'fa fa-align-right',
 						],
 					],
@@ -691,7 +691,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 			$this->add_control(
 				'thcoursescarousel_show_popular_filter_margin',
 				[
-					'label' => esc_html__( 'Margin', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Margin', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::DIMENSIONS,
 					'size_units' => [ 'px', '%', 'em' ],
 					'selectors' => [
@@ -703,7 +703,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 				\Elementor\Group_Control_Border::get_type(),
 				[
 					'name' => 'thcoursescarousel_show_popular_filter_border',
-					'label' => __( 'Border', WP_TH_CORE_SLUG ),
+					'label' => __( 'Border', WP_MF_CORE_SLUG ),
 					'selector' => '{{WRAPPER}} ul.th-course-trending-popular-filter',
 				]
 			);
@@ -729,7 +729,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 						\Elementor\Group_Control_Border::get_type(),
 						[
 							'name' => 'thcoursescarousel_filter_border',
-							'label' => esc_html__( 'Filter Border', WP_TH_CORE_SLUG ),
+							'label' => esc_html__( 'Filter Border', WP_MF_CORE_SLUG ),
 							'selector' => '{{WRAPPER}} ul.th-course-trending-popular-filter li',
 						]
 					);
@@ -744,7 +744,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 					$this->add_control(
 						'thcoursescarousel_filter_bg_color',
 						[
-							'label' => esc_html__( 'Background Color', WP_TH_CORE_SLUG ),
+							'label' => esc_html__( 'Background Color', WP_MF_CORE_SLUG ),
 							'type' => \Elementor\Controls_Manager::COLOR,
 							'scheme' => [
 								'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -759,7 +759,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 					$this->add_control(
 						'thcoursescarousel_filter_text_color',
 						[
-							'label' => esc_html__( 'Text Color', WP_TH_CORE_SLUG ),
+							'label' => esc_html__( 'Text Color', WP_MF_CORE_SLUG ),
 							'type' => \Elementor\Controls_Manager::COLOR,
 							'scheme' => [
 								'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -774,7 +774,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 					$this->add_control(
 						'thcoursescarousel_filter_text_bg_color',
 						[
-							'label' => esc_html__( 'Item Background', WP_TH_CORE_SLUG ),
+							'label' => esc_html__( 'Item Background', WP_MF_CORE_SLUG ),
 							'type' => \Elementor\Controls_Manager::COLOR,
 							'scheme' => [
 								'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -797,7 +797,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 					$this->add_control(
 						'thcoursescarousel_filter_box_margin',
 						[
-							'label' => esc_html__( 'Filter Box Margin', WP_TH_CORE_SLUG ),
+							'label' => esc_html__( 'Filter Box Margin', WP_MF_CORE_SLUG ),
 							'type' => \Elementor\Controls_Manager::DIMENSIONS,
 							'size_units' => [ 'px', '%', 'em' ],
 							'selectors' => [
@@ -808,7 +808,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 					$this->add_control(
 						'thcoursescarousel_filter_items_padding',
 						[
-							'label' => esc_html__( 'Filter Items Padding', WP_TH_CORE_SLUG ),
+							'label' => esc_html__( 'Filter Items Padding', WP_MF_CORE_SLUG ),
 							'type' => \Elementor\Controls_Manager::DIMENSIONS,
 							'size_units' => [ 'px', '%', 'em' ],
 							'selectors' => [
@@ -819,7 +819,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 					$this->add_control(
 						'thcoursescarousel_filter_gap_between',
 						[
-							'label' => esc_html__( 'Gap Between Items', WP_TH_CORE_SLUG ),
+							'label' => esc_html__( 'Gap Between Items', WP_MF_CORE_SLUG ),
 							'type' => \Elementor\Controls_Manager::SLIDER,
 							'size_units' => [ 'px' ],
 							'range' => [
@@ -839,7 +839,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 						\Elementor\Group_Control_Typography::get_type(),
 						[
 							'name' => 'thcoursescarousel_filter_text_typo',
-							'label' => esc_html__( 'Text Typography', WP_TH_CORE_SLUG ),
+							'label' => esc_html__( 'Text Typography', WP_MF_CORE_SLUG ),
 							'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
 							'selector' => '{{WRAPPER}} .th-course-trending-popular-filter li',
 						]
@@ -857,7 +857,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 					$this->add_control(
 						'thcoursescarousel_filter_border_rad',
 						[
-							'label' => esc_html__( 'Border Radius', WP_TH_CORE_SLUG ),
+							'label' => esc_html__( 'Border Radius', WP_MF_CORE_SLUG ),
 							'type' => \Elementor\Controls_Manager::SLIDER,
 							'size_units' => [ 'px', '%' ],
 							'range' => [
@@ -876,7 +876,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 						\Elementor\Group_Control_Box_Shadow::get_type(),
 						[
 							'name' => 'thcoursescarousel_filter_box_shadow',
-							'label' => esc_html__( 'Box Shadow', WP_TH_CORE_SLUG ),
+							'label' => esc_html__( 'Box Shadow', WP_MF_CORE_SLUG ),
 							'selector' => '{{WRAPPER}} .th-course-trending-popular-filter li',
 						]
 					);
@@ -893,7 +893,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 					$this->add_control(
 						'thcoursescarousel_filter_text_color_hover',
 						[
-							'label' => esc_html__( 'Hover Text Color', WP_TH_CORE_SLUG ),
+							'label' => esc_html__( 'Hover Text Color', WP_MF_CORE_SLUG ),
 							'type' => \Elementor\Controls_Manager::COLOR,
 							'scheme' => [
 								'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -909,7 +909,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 					$this->add_control(
 						'thcoursescarousel_filter_text_hover_bg',
 						[
-							'label' => esc_html__( 'Text Background Color on Hover', WP_TH_CORE_SLUG ),
+							'label' => esc_html__( 'Text Background Color on Hover', WP_MF_CORE_SLUG ),
 							'type' => \Elementor\Controls_Manager::COLOR,
 							'scheme' => [
 								'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -926,7 +926,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 						\Elementor\Group_Control_Border::get_type(),
 						[
 							'name' => 'thcoursescarousel_filter_border_hover',
-							'label' => esc_html__( 'Filter Border', WP_TH_CORE_SLUG ),
+							'label' => esc_html__( 'Filter Border', WP_MF_CORE_SLUG ),
 							'selector' => '{{WRAPPER}} ul.th-course-trending-popular-filter li:hover, {{WRAPPER}} ul.th-course-trending-popular-filter li:focus, {{WRAPPER}} ul.th-course-trending-popular-filter li.active',
 						]
 					);
@@ -935,7 +935,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 						\Elementor\Group_Control_Box_Shadow::get_type(),
 						[
 							'name' => 'thcoursescarousel_filter_box_shadow_hover',
-							'label' => esc_html__( 'Box Shadow', WP_TH_CORE_SLUG ),
+							'label' => esc_html__( 'Box Shadow', WP_MF_CORE_SLUG ),
 							'selector' => '{{WRAPPER}} .th-course-trending-popular-filter li:hover, {{WRAPPER}} .th-course-trending-popular-filter li:focus, {{WRAPPER}} .th-course-categories-filter li.active',
 						]
 					);
@@ -954,17 +954,17 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 		// $this->start_controls_section(
 		// 	'thcoursescarousel_hover_info',
 		// 		[
-		// 			'label' => esc_html__( 'Hover Information', WP_TH_CORE_SLUG ),
+		// 			'label' => esc_html__( 'Hover Information', WP_MF_CORE_SLUG ),
 		// 			'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
 		// 		]
 		// 	);
 		// 	$this->add_control(
 		// 		'thcoursescarousel_show_hover_info',
 		// 		[
-		// 			'label' => esc_html__( 'Show Hover Info', WP_TH_CORE_SLUG ),
+		// 			'label' => esc_html__( 'Show Hover Info', WP_MF_CORE_SLUG ),
 		// 			'type' => \Elementor\Controls_Manager::SWITCHER,
-		// 			'label_on' => esc_html__( 'Show', WP_TH_CORE_SLUG ),
-		// 			'label_off' => esc_html__( 'Hide', WP_TH_CORE_SLUG ),
+		// 			'label_on' => esc_html__( 'Show', WP_MF_CORE_SLUG ),
+		// 			'label_off' => esc_html__( 'Hide', WP_MF_CORE_SLUG ),
 		// 			'return_value' => 'yes',
 		// 			'default' => 'no',
 		// 		]
@@ -972,7 +972,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 		// 	$this->add_control(
 		// 		'thcoursescarousel_hover_info_top',
 		// 		[
-		// 			'label' => esc_html__( 'Top', WP_TH_CORE_SLUG ),
+		// 			'label' => esc_html__( 'Top', WP_MF_CORE_SLUG ),
 		// 			'type' => \Elementor\Controls_Manager::SLIDER,
 		// 			'size_units' => [ 'px', '%' ],
 		// 			'range' => [
@@ -1002,7 +1002,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 		// 	$this->add_control(
 		// 		'thcoursescarousel_hover_info_bg_color',
 		// 		[
-		// 			'label' => esc_html__( 'Background Color', WP_TH_CORE_SLUG ),
+		// 			'label' => esc_html__( 'Background Color', WP_MF_CORE_SLUG ),
 		// 			'type' => \Elementor\Controls_Manager::COLOR,
 		// 			'scheme' => [
 		// 				'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -1018,7 +1018,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 		// 	$this->add_control(
 		// 		'thcoursescarousel_hover_info_border_rad',
 		// 		[
-		// 			'label' => esc_html__( 'Border Radius', WP_TH_CORE_SLUG ),
+		// 			'label' => esc_html__( 'Border Radius', WP_MF_CORE_SLUG ),
 		// 			'type' => \Elementor\Controls_Manager::SLIDER,
 		// 			'size_units' => [ 'px' ],
 		// 			'range' => [
@@ -1037,7 +1037,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 		// 	$this->add_control(
 		// 		'thcoursescarousel_hover_info_padding',
 		// 		[
-		// 			'label' => esc_html__( 'Padding', WP_TH_CORE_SLUG ),
+		// 			'label' => esc_html__( 'Padding', WP_MF_CORE_SLUG ),
 		// 			'type' => \Elementor\Controls_Manager::DIMENSIONS,
 		// 			'size_units' => [ 'px', '%', 'em' ],
 		// 			'selectors' => [
@@ -1050,7 +1050,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 		// 		\Elementor\Group_Control_Box_Shadow::get_type(),
 		// 		[
 		// 			'name' => 'thcoursescarousel_hover_info_box_shadow',
-		// 			'label' => esc_html__( 'Box Shadow', WP_TH_CORE_SLUG ),
+		// 			'label' => esc_html__( 'Box Shadow', WP_MF_CORE_SLUG ),
 		// 			'selector' => '{{WRAPPER}} .hover-section',
 		// 			'condition' => ['show_hover_info' => 'yes']
 		// 		]
@@ -1065,10 +1065,10 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 		// 	$this->add_control(
 		// 		'thcoursescarousel_show_hi_title',
 		// 		[
-		// 			'label' => esc_html__( 'Show Title', WP_TH_CORE_SLUG ),
+		// 			'label' => esc_html__( 'Show Title', WP_MF_CORE_SLUG ),
 		// 			'type' => \Elementor\Controls_Manager::SWITCHER,
-		// 			'label_on' => esc_html__( 'Show', WP_TH_CORE_SLUG ),
-		// 			'label_off' => esc_html__( 'Hide', WP_TH_CORE_SLUG ),
+		// 			'label_on' => esc_html__( 'Show', WP_MF_CORE_SLUG ),
+		// 			'label_off' => esc_html__( 'Hide', WP_MF_CORE_SLUG ),
 		// 			'return_value' => 'yes',
 		// 			'default' => 'no',
 		// 			'condition' => ['show_hover_info' => 'yes']
@@ -1077,10 +1077,10 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 		// 	$this->add_control(
 		// 		'thcoursescarousel_show_hi_cat',
 		// 		[
-		// 			'label' => esc_html__( 'Show category', WP_TH_CORE_SLUG ),
+		// 			'label' => esc_html__( 'Show category', WP_MF_CORE_SLUG ),
 		// 			'type' => \Elementor\Controls_Manager::SWITCHER,
-		// 			'label_on' => esc_html__( 'Show', WP_TH_CORE_SLUG ),
-		// 			'label_off' => esc_html__( 'Hide', WP_TH_CORE_SLUG ),
+		// 			'label_on' => esc_html__( 'Show', WP_MF_CORE_SLUG ),
+		// 			'label_off' => esc_html__( 'Hide', WP_MF_CORE_SLUG ),
 		// 			'return_value' => 'yes',
 		// 			'default' => 'no',
 		// 			'condition' => ['show_hover_info' => 'yes']
@@ -1089,10 +1089,10 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 		// 	$this->add_control(
 		// 		'thcoursescarousel_show_hi_lessons',
 		// 		[
-		// 			'label' => esc_html__( 'Show Number Of Chapters/lessons', WP_TH_CORE_SLUG ),
+		// 			'label' => esc_html__( 'Show Number Of Chapters/lessons', WP_MF_CORE_SLUG ),
 		// 			'type' => \Elementor\Controls_Manager::SWITCHER,
-		// 			'label_on' => esc_html__( 'Show', WP_TH_CORE_SLUG ),
-		// 			'label_off' => esc_html__( 'Hide', WP_TH_CORE_SLUG ),
+		// 			'label_on' => esc_html__( 'Show', WP_MF_CORE_SLUG ),
+		// 			'label_off' => esc_html__( 'Hide', WP_MF_CORE_SLUG ),
 		// 			'return_value' => 'yes',
 		// 			'default' => 'no',
 		// 			'condition' => ['show_hover_info' => 'yes']
@@ -1101,10 +1101,10 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 		// 	$this->add_control(
 		// 		'thcoursescarousel_show_hi_course_duration',
 		// 		[
-		// 			'label' => esc_html__( 'Show Course Duration', WP_TH_CORE_SLUG ),
+		// 			'label' => esc_html__( 'Show Course Duration', WP_MF_CORE_SLUG ),
 		// 			'type' => \Elementor\Controls_Manager::SWITCHER,
-		// 			'label_on' => esc_html__( 'Show', WP_TH_CORE_SLUG ),
-		// 			'label_off' => esc_html__( 'Hide', WP_TH_CORE_SLUG ),
+		// 			'label_on' => esc_html__( 'Show', WP_MF_CORE_SLUG ),
+		// 			'label_off' => esc_html__( 'Hide', WP_MF_CORE_SLUG ),
 		// 			'return_value' => 'yes',
 		// 			'default' => 'no',
 		// 			'condition' => ['show_hover_info' => 'yes']
@@ -1113,10 +1113,10 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 		// 	$this->add_control(
 		// 		'thcoursescarousel_show_hi_course_details',
 		// 		[
-		// 			'label' => esc_html__( 'Show Details', WP_TH_CORE_SLUG ),
+		// 			'label' => esc_html__( 'Show Details', WP_MF_CORE_SLUG ),
 		// 			'type' => \Elementor\Controls_Manager::SWITCHER,
-		// 			'label_on' => esc_html__( 'Show', WP_TH_CORE_SLUG ),
-		// 			'label_off' => esc_html__( 'Hide', WP_TH_CORE_SLUG ),
+		// 			'label_on' => esc_html__( 'Show', WP_MF_CORE_SLUG ),
+		// 			'label_off' => esc_html__( 'Hide', WP_MF_CORE_SLUG ),
 		// 			'return_value' => 'yes',
 		// 			'default' => 'no',
 		// 			'condition' => ['show_hover_info' => 'yes']
@@ -1125,10 +1125,10 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 		// 	$this->add_control(
 		// 		'thcoursescarousel_show_hi_add_to_cart',
 		// 		[
-		// 			'label' => esc_html__( 'Show Add To Cart', WP_TH_CORE_SLUG ),
+		// 			'label' => esc_html__( 'Show Add To Cart', WP_MF_CORE_SLUG ),
 		// 			'type' => \Elementor\Controls_Manager::SWITCHER,
-		// 			'label_on' => esc_html__( 'Show', WP_TH_CORE_SLUG ),
-		// 			'label_off' => esc_html__( 'Hide', WP_TH_CORE_SLUG ),
+		// 			'label_on' => esc_html__( 'Show', WP_MF_CORE_SLUG ),
+		// 			'label_off' => esc_html__( 'Hide', WP_MF_CORE_SLUG ),
 		// 			'return_value' => 'yes',
 		// 			'default' => 'no',
 		// 			'condition' => ['show_hover_info' => 'yes']
@@ -1137,10 +1137,10 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 		// 	$this->add_control(
 		// 		'thcoursescarousel_show_hi_wishlist',
 		// 		[
-		// 			'label' => esc_html__( 'Show Wishlist', WP_TH_CORE_SLUG ),
+		// 			'label' => esc_html__( 'Show Wishlist', WP_MF_CORE_SLUG ),
 		// 			'type' => \Elementor\Controls_Manager::SWITCHER,
-		// 			'label_on' => esc_html__( 'Show', WP_TH_CORE_SLUG ),
-		// 			'label_off' => esc_html__( 'Hide', WP_TH_CORE_SLUG ),
+		// 			'label_on' => esc_html__( 'Show', WP_MF_CORE_SLUG ),
+		// 			'label_off' => esc_html__( 'Hide', WP_MF_CORE_SLUG ),
 		// 			'return_value' => 'yes',
 		// 			'default' => 'no',
 		// 			'condition' => ['show_hover_info' => 'yes']
@@ -1156,7 +1156,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 		// 	$this->add_control(
 		// 		'thcoursescarousel_hi_title_opt',
 		// 		[
-		// 			'label' => esc_html__( 'Title', WP_TH_CORE_SLUG ),
+		// 			'label' => esc_html__( 'Title', WP_MF_CORE_SLUG ),
 		// 			'type' => \Elementor\Controls_Manager::HEADING,
 		// 			'separator' => 'none',
 		// 		]
@@ -1165,7 +1165,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 		// 		\Elementor\Group_Control_Typography::get_type(),
 		// 		[
 		// 			'name' => 'hi_title_typography',
-		// 			'label' => esc_html__( 'Title Typography', WP_TH_CORE_SLUG ),
+		// 			'label' => esc_html__( 'Title Typography', WP_MF_CORE_SLUG ),
 		// 			'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
 		// 			'selector' => '{{WRAPPER}} .hover-info-title',
 		// 			'condition' => ['show_hi_title' => 'yes']
@@ -1174,7 +1174,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 		// 	$this->add_control(
 		// 		'thcoursescarousel_hi_title_color',
 		// 		[
-		// 			'label' => esc_html__( 'Title Color', WP_TH_CORE_SLUG ),
+		// 			'label' => esc_html__( 'Title Color', WP_MF_CORE_SLUG ),
 		// 			'type' => \Elementor\Controls_Manager::COLOR,
 		// 			'scheme' => [
 		// 				'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -1196,7 +1196,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 		// 	$this->add_control(
 		// 		'thcoursescarousel_hi_desc',
 		// 		[
-		// 			'label' => esc_html__( 'Description', WP_TH_CORE_SLUG ),
+		// 			'label' => esc_html__( 'Description', WP_MF_CORE_SLUG ),
 		// 			'type' => \Elementor\Controls_Manager::HEADING,
 		// 			'separator' => 'none',
 		// 		]
@@ -1205,7 +1205,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 		// 		\Elementor\Group_Control_Typography::get_type(),
 		// 		[
 		// 			'name' => 'hi_desc_typo',
-		// 			'label' => esc_html__( 'Description Typography', WP_TH_CORE_SLUG ),
+		// 			'label' => esc_html__( 'Description Typography', WP_MF_CORE_SLUG ),
 		// 			'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
 		// 			'selector' => '{{WRAPPER}} .hover-info-desc',
 		// 			'condition' => ['show_hi_course_details' => 'yes']
@@ -1214,7 +1214,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 		// 	$this->add_control(
 		// 		'thcoursescarousel_hi_desc_excerpt',
 		// 		[
-		// 			'label' => esc_html__( 'Description Word Count', WP_TH_CORE_SLUG ),
+		// 			'label' => esc_html__( 'Description Word Count', WP_MF_CORE_SLUG ),
 		// 			'type' => \Elementor\Controls_Manager::NUMBER,
 		// 			'min' => 5,
 		// 			'max' => 30,
@@ -1226,7 +1226,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 		// 	$this->add_control(
 		// 		'thcoursescarousel_hi_desc_padding',
 		// 		[
-		// 			'label' => esc_html__( 'Padding', WP_TH_CORE_SLUG ),
+		// 			'label' => esc_html__( 'Padding', WP_MF_CORE_SLUG ),
 		// 			'type' => \Elementor\Controls_Manager::DIMENSIONS,
 		// 			'size_units' => [ 'px', '%', 'em' ],
 		// 			'selectors' => [
@@ -1248,7 +1248,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 		// 	$this->add_control(
 		// 		'thcoursescarousel_hi_cart_button',
 		// 		[
-		// 			'label' => esc_html__( 'Cart Button', WP_TH_CORE_SLUG ),
+		// 			'label' => esc_html__( 'Cart Button', WP_MF_CORE_SLUG ),
 		// 			'type' => \Elementor\Controls_Manager::HEADING,
 		// 			'separator' => 'none',
 		// 			'condition' => ['show_hi_add_to_cart' => 'yes']
@@ -1260,7 +1260,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 		// 		\Elementor\Group_Control_Typography::get_type(),
 		// 		[
 		// 			'name' => 'thcoursescarousel_hi_cart_button',
-		// 			'label' => esc_html__( 'Typography', WP_TH_CORE_SLUG ),
+		// 			'label' => esc_html__( 'Typography', WP_MF_CORE_SLUG ),
 		// 			'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
 		// 			'selector' => '{{WRAPPER}} .hover-info-add-cart',
 		// 			'condition' => ['show_hi_add_to_cart' => 'yes']
@@ -1269,7 +1269,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 		// 	$this->add_control(
 		// 		'thcoursescarousel_hi_cart_btn_color',
 		// 		[
-		// 			'label' => esc_html__( 'Color', WP_TH_CORE_SLUG ),
+		// 			'label' => esc_html__( 'Color', WP_MF_CORE_SLUG ),
 		// 			'type' => \Elementor\Controls_Manager::COLOR,
 		// 			'scheme' => [
 		// 				'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -1285,7 +1285,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 		// 	$this->add_control(
 		// 		'thcoursescarousel_hi_cart_btn_color_bg',
 		// 		[
-		// 			'label' => esc_html__( 'Background', WP_TH_CORE_SLUG ),
+		// 			'label' => esc_html__( 'Background', WP_MF_CORE_SLUG ),
 		// 			'type' => \Elementor\Controls_Manager::COLOR,
 		// 			'scheme' => [
 		// 				'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -1301,7 +1301,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 		// 	$this->add_control(
 		// 		'thcoursescarousel_hi_cart_btn_br',
 		// 		[
-		// 			'label' => esc_html__( 'Border Radius', WP_TH_CORE_SLUG ),
+		// 			'label' => esc_html__( 'Border Radius', WP_MF_CORE_SLUG ),
 		// 			'type' => \Elementor\Controls_Manager::SLIDER,
 		// 			'size_units' => [ 'px', '%' ],
 		// 			'range' => [
@@ -1320,7 +1320,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 		// 		\Elementor\Group_Control_Border::get_type(),
 		// 		[
 		// 			'name' => 'thcoursescarousel_cart_buttonborder',
-		// 			'label' => esc_html__( 'Border', WP_TH_CORE_SLUG ),
+		// 			'label' => esc_html__( 'Border', WP_MF_CORE_SLUG ),
 		// 			'selector' => '{{WRAPPER}} .hover-info-add-cart',
 		// 			'condition' => ['show_hi_add_to_cart' => 'yes']
 		// 		]
@@ -1328,7 +1328,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 		// 	$this->add_control(
 		// 		'thcoursescarousel_padding_hi',
 		// 		[
-		// 			'label' => esc_html__( 'Padding', WP_TH_CORE_SLUG ),
+		// 			'label' => esc_html__( 'Padding', WP_MF_CORE_SLUG ),
 		// 			'type' => \Elementor\Controls_Manager::DIMENSIONS,
 		// 			'size_units' => [ 'px', '%', 'em' ],
 		// 			'selectors' => [
@@ -1343,7 +1343,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 		// 	$this->add_control(
 		// 		'thcoursescarousel_hi_cart_btn_color_hover',
 		// 		[
-		// 			'label' => esc_html__( 'Color', WP_TH_CORE_SLUG ),
+		// 			'label' => esc_html__( 'Color', WP_MF_CORE_SLUG ),
 		// 			'type' => \Elementor\Controls_Manager::COLOR,
 		// 			'scheme' => [
 		// 				'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -1359,7 +1359,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 		// 	$this->add_control(
 		// 		'thcoursescarousel_hi_cart_btn_color_bg_hover',
 		// 		[
-		// 			'label' => esc_html__( 'Background', WP_TH_CORE_SLUG ),
+		// 			'label' => esc_html__( 'Background', WP_MF_CORE_SLUG ),
 		// 			'type' => \Elementor\Controls_Manager::COLOR,
 		// 			'scheme' => [
 		// 				'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -1376,7 +1376,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 		// 		\Elementor\Group_Control_Border::get_type(),
 		// 		[
 		// 			'name' => 'thcoursescarousel_cart_buttonborder_hover',
-		// 			'label' => esc_html__( 'Border', WP_TH_CORE_SLUG ),
+		// 			'label' => esc_html__( 'Border', WP_MF_CORE_SLUG ),
 		// 			'selector' => '{{WRAPPER}} .hover-info-add-cart:hover',
 		// 			'condition' => ['show_hi_add_to_cart' => 'yes']
 		// 		]
@@ -1389,7 +1389,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 		// 	$this->add_control(
 		// 		'thcoursescarousel_wishl_header',
 		// 		[
-		// 			'label' => esc_html__( 'Wishlist', WP_TH_CORE_SLUG ),
+		// 			'label' => esc_html__( 'Wishlist', WP_MF_CORE_SLUG ),
 		// 			'type' => \Elementor\Controls_Manager::HEADING,
 		// 			'separator' => 'before',
 		// 			'condition' => ['show_hi_wishlist' => 'yes']
@@ -1398,7 +1398,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 		// 	$this->add_control(
 		// 		'thcoursescarousel_wishlist_icon',
 		// 		[
-		// 			'label' => esc_html__( 'Wishlist Icon', WP_TH_CORE_SLUG ),
+		// 			'label' => esc_html__( 'Wishlist Icon', WP_MF_CORE_SLUG ),
 		// 			'type' => \Elementor\Controls_Manager::ICON,
 		// 			'default' => 'fa fa-heart-o',
 		// 			'condition' => ['show_hi_wishlist' => 'yes']
@@ -1407,7 +1407,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 		// 	$this->add_control(
 		// 		'thcoursescarousel_wishlist_icon_br',
 		// 		[
-		// 			'label' => esc_html__( 'Border Radius', WP_TH_CORE_SLUG ),
+		// 			'label' => esc_html__( 'Border Radius', WP_MF_CORE_SLUG ),
 		// 			'type' => \Elementor\Controls_Manager::SLIDER,
 		// 			'size_units' => [ 'px', '%' ],
 		// 			'range' => [
@@ -1426,7 +1426,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 		// 		\Elementor\Group_Control_Typography::get_type(),
 		// 		[
 		// 			'name' => 'thcoursescarousel_hi_wish_list_button',
-		// 			'label' => esc_html__( 'Typography', WP_TH_CORE_SLUG ),
+		// 			'label' => esc_html__( 'Typography', WP_MF_CORE_SLUG ),
 		// 			'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
 		// 			'selector' => '{{WRAPPER}} .hover-info-wishlist a',
 		// 			'condition' => ['show_hi_wishlist' => 'yes']
@@ -1435,7 +1435,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 		// 	$this->add_control(
 		// 		'thcoursescarousel_hi_wish_list_btn_color',
 		// 		[
-		// 			'label' => esc_html__( 'Color', WP_TH_CORE_SLUG ),
+		// 			'label' => esc_html__( 'Color', WP_MF_CORE_SLUG ),
 		// 			'type' => \Elementor\Controls_Manager::COLOR,
 		// 			'scheme' => [
 		// 				'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -1451,7 +1451,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 		// 	$this->add_control(
 		// 		'thcoursescarousel_hi_wish_list_btn_color_bg',
 		// 		[
-		// 			'label' => esc_html__( 'Background', WP_TH_CORE_SLUG ),
+		// 			'label' => esc_html__( 'Background', WP_MF_CORE_SLUG ),
 		// 			'type' => \Elementor\Controls_Manager::COLOR,
 		// 			'scheme' => [
 		// 				'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -1468,7 +1468,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 		// 		\Elementor\Group_Control_Border::get_type(),
 		// 		[
 		// 			'name' => 'thcoursescarousel_wishlist_buttonborder',
-		// 			'label' => esc_html__( 'Border', WP_TH_CORE_SLUG ),
+		// 			'label' => esc_html__( 'Border', WP_MF_CORE_SLUG ),
 		// 			'selector' => '{{WRAPPER}} .hover-info-wishlist a',
 		// 			'condition' => ['show_hi_wishlist' => 'yes']
 		// 		]
@@ -1476,7 +1476,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 		// 	$this->add_control(
 		// 		'thcoursescarousel_padding_hi_wl',
 		// 		[
-		// 			'label' => esc_html__( 'Padding', WP_TH_CORE_SLUG ),
+		// 			'label' => esc_html__( 'Padding', WP_MF_CORE_SLUG ),
 		// 			'type' => \Elementor\Controls_Manager::DIMENSIONS,
 		// 			'size_units' => [ 'px', '%', 'em' ],
 		// 			'selectors' => [
@@ -1488,7 +1488,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 		// 	$this->add_control(
 		// 		'thcoursescarousel_hi_wish_list_hover',
 		// 		[
-		// 			'label' => esc_html__( 'Hover', WP_TH_CORE_SLUG ),
+		// 			'label' => esc_html__( 'Hover', WP_MF_CORE_SLUG ),
 		// 			'type' => \Elementor\Controls_Manager::HEADING,
 		// 			'separator' => 'none',
 		// 			'condition' => ['show_hi_wishlist' => 'yes']
@@ -1497,7 +1497,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 		// 	$this->add_control(
 		// 		'thcoursescarousel_hi_wishlist_btn_color_hover',
 		// 		[
-		// 			'label' => esc_html__( 'Color', WP_TH_CORE_SLUG ),
+		// 			'label' => esc_html__( 'Color', WP_MF_CORE_SLUG ),
 		// 			'type' => \Elementor\Controls_Manager::COLOR,
 		// 			'scheme' => [
 		// 				'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -1513,7 +1513,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 		// 	$this->add_control(
 		// 		'thcoursescarousel_hi_wishlist_color_bg_hover',
 		// 		[
-		// 			'label' => esc_html__( 'Background', WP_TH_CORE_SLUG ),
+		// 			'label' => esc_html__( 'Background', WP_MF_CORE_SLUG ),
 		// 			'type' => \Elementor\Controls_Manager::COLOR,
 		// 			'scheme' => [
 		// 				'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -1530,7 +1530,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 		// 		\Elementor\Group_Control_Border::get_type(),
 		// 		[
 		// 			'name' => 'thcoursescarousel_wishlist_border_hover',
-		// 			'label' => esc_html__( 'Border', WP_TH_CORE_SLUG ),
+		// 			'label' => esc_html__( 'Border', WP_MF_CORE_SLUG ),
 		// 			'selector' => '{{WRAPPER}} .hover-info-wishlist a:hover, {{WRAPPER}} .hover-info-wishlist a.on',
 		// 			'condition' => ['show_hi_wishlist' => 'yes']
 		// 		]
@@ -1544,24 +1544,24 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 	    $this->start_controls_section(
             'thcoursescarousel_carousel_navigation',
 	            [
-	                'label' => esc_html__( 'Navigation', WP_TH_CORE_SLUG ),
+	                'label' => esc_html__( 'Navigation', WP_MF_CORE_SLUG ),
 	                'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
 	            ]
 	        );
     		$this->add_control(
 				'thcoursescarousel_carousel_arrow_section',
 				[
-					'label' => esc_html__( 'Arrow', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Arrow', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::HEADING,
 				]
 			);
 		    $this->add_control(
 		    	'thcoursescarousel_hide_arrow',
 		    	[
-		    		'label' 		=> esc_html__( 'Hide Arrow', WP_TH_CORE_SLUG ),
+		    		'label' 		=> esc_html__( 'Hide Arrow', WP_MF_CORE_SLUG ),
 		    		'type' 			=> \Elementor\Controls_Manager::SWITCHER,
-		    		'label_on' 		=> __( 'Show', WP_TH_CORE_SLUG ),
-		    		'label_off' 	=> __( 'Hide', WP_TH_CORE_SLUG ),
+		    		'label_on' 		=> __( 'Show', WP_MF_CORE_SLUG ),
+		    		'label_off' 	=> __( 'Hide', WP_MF_CORE_SLUG ),
 		    		'return_value' 	=> 'yes',
 		    		'default' 		=> 'no',
 		    	]
@@ -1570,13 +1570,13 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 			$this->add_control(
 				'thcoursescarousel_arrow_position',
 				[
-					'label' => esc_html__( 'Select arrow position', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Select arrow position', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SELECT,
 					'default' => 4,
 					'options' => [
-						'ec-text-center'  => esc_html__( 'Center', WP_TH_CORE_SLUG ),
-						'ec-text-right'  => esc_html__( 'Top Right', WP_TH_CORE_SLUG ),
-						'ec-text-left'  => esc_html__( 'Top Left', WP_TH_CORE_SLUG ),
+						'ec-text-center'  => esc_html__( 'Center', WP_MF_CORE_SLUG ),
+						'ec-text-right'  => esc_html__( 'Top Right', WP_MF_CORE_SLUG ),
+						'ec-text-left'  => esc_html__( 'Top Left', WP_MF_CORE_SLUG ),
 					],
 					'default' => 'ec-text-center'
 				]
@@ -1588,14 +1588,14 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 			$this->start_controls_tab(
 				'thcoursescarousel_arrow_normal_tab',
 				[
-					'label' => esc_html__( 'Normal', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Normal', WP_MF_CORE_SLUG ),
 
 				]
 			);
 			$this->add_control(
 				'thcoursescarousel_more_btn_background_color',
 				[
-					'label' => esc_html__( 'Background Color', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Background Color', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::COLOR,
 					'scheme' => [
 						'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -1610,7 +1610,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 			$this->add_control(
 				'thcoursescarousel_more_btn_color',
 				[
-					'label' => esc_html__( 'Color', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Color', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::COLOR,
 					'scheme' => [
 						'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -1625,7 +1625,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 			$this->add_control(
 				'thcoursescarousel_arrow_width',
 				[
-					'label' => esc_html__( 'Width', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Width', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SLIDER,
 					'size_units' => [ 'px', '%' ],
 					'range' => [
@@ -1643,7 +1643,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 			$this->add_control(
 				'thcoursescarousel_arrow_height',
 				[
-					'label' => esc_html__( 'Height', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Height', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SLIDER,
 					'size_units' => [ 'px', '%' ],
 					'range' => [
@@ -1661,7 +1661,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 			$this->add_control(
 				'thcoursescarousel_arrow_size',
 				[
-					'label' => esc_html__( 'Arrow Size', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Arrow Size', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SLIDER,
 					'size_units' => [ 'px', '%' ],
 					'range' => [
@@ -1679,7 +1679,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 			$this->add_control(
 				'thcoursescarousel_more_btn_margin',
 				[
-					'label' => esc_html__( 'Margin', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Margin', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::DIMENSIONS,
 					'size_units' => [ 'px', '%', 'em' ],
 					'selectors' => [
@@ -1691,7 +1691,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 				\Elementor\Group_Control_Box_Shadow::get_type(),
 				[
 					'name' => 'thcoursescarousel_more_btn_box_shadow',
-					'label' => esc_html__( 'Box Shadow', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Box Shadow', WP_MF_CORE_SLUG ),
 					'selector' => '{{WRAPPER}} .ec-swiper-button-prev, {{WRAPPER}} .ec-swiper-button-next',
 				]
 			);
@@ -1699,7 +1699,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 				\Elementor\Group_Control_Border::get_type(),
 				[
 					'name' => 'thcoursescarousel_more_btn_border',
-					'label' => __( 'Border', WP_TH_CORE_SLUG ),
+					'label' => __( 'Border', WP_MF_CORE_SLUG ),
 					'selector' => '{{WRAPPER}} .ec-swiper-button-prev, {{WRAPPER}} .ec-swiper-button-next',
 				]
 			);
@@ -1707,7 +1707,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 			$this->add_control(
 				'thcoursescarousel_more_btn_border_rad',
 				[
-					'label' => esc_html__( 'Border Radius', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Border Radius', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SLIDER,
 					'size_units' => [ 'px'],
 					'range' => [
@@ -1728,14 +1728,14 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 			$this->start_controls_tab(
 				'arrow_hover_tab',
 				[
-					'label' => esc_html__( 'Hover', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Hover', WP_MF_CORE_SLUG ),
 				]
 			);
 
 			$this->add_control(
 				'thcoursescarousel_more_btn_background_color_hover',
 				[
-					'label' => esc_html__( 'Background Color', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Background Color', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::COLOR,
 					'scheme' => [
 						'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -1750,7 +1750,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 			$this->add_control(
 				'thcoursescarousel_more_btn_color_hover',
 				[
-					'label' => esc_html__( 'Color', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Color', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::COLOR,
 					'scheme' => [
 						'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -1766,7 +1766,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 			$this->add_control(
 				'thcoursescarousel_more_btn_margin_hover',
 				[
-					'label' => esc_html__( 'Margin', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Margin', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::DIMENSIONS,
 					'size_units' => [ 'px', '%', 'em' ],
 					'selectors' => [
@@ -1778,14 +1778,14 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 				\Elementor\Group_Control_Box_Shadow::get_type(),
 				[
 					'name' => 'thcoursescarousel_more_btn_box_shadow_hover',
-					'label' => esc_html__( 'Box Shadow', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Box Shadow', WP_MF_CORE_SLUG ),
 					'selector' => '{{WRAPPER}} .ec-swiper-button-prev:hover, {{WRAPPER}} .ec-swiper-button-next:hover',
 				]
 			);
 			$this->add_control(
 				'thcoursescarousel_more_btn_border_rad_hover',
 				[
-					'label' => esc_html__( 'Border Radius', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Border Radius', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SLIDER,
 					'size_units' => [ 'px'],
 					'range' => [
@@ -1807,17 +1807,17 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 			$this->add_control(
 				'thcoursescarousel_carousel_dot_nav_section',
 				[
-					'label' => esc_html__( 'Navigation', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Navigation', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::HEADING,
 				]
 			);
 			$this->add_control(
 		    	'thcoursescarousel_hide_navigation',
 		    	[
-		    		'label' 		=> esc_html__( 'Hide Dot Navigation', WP_TH_CORE_SLUG ),
+		    		'label' 		=> esc_html__( 'Hide Dot Navigation', WP_MF_CORE_SLUG ),
 		    		'type' 			=> \Elementor\Controls_Manager::SWITCHER,
-		    		'label_on' 		=> __( 'Show', WP_TH_CORE_SLUG ),
-		    		'label_off' 	=> __( 'Hide', WP_TH_CORE_SLUG ),
+		    		'label_on' 		=> __( 'Show', WP_MF_CORE_SLUG ),
+		    		'label_off' 	=> __( 'Hide', WP_MF_CORE_SLUG ),
 		    		'return_value' 	=> 'yes',
 		    		'default' 		=> 'no',
 		    	]
@@ -1829,14 +1829,14 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 				$this->start_controls_tab(
 					'thcoursescarousel_dot_nav_normal_tab',
 					[
-						'label' => esc_html__( 'Normal', WP_TH_CORE_SLUG ),
+						'label' => esc_html__( 'Normal', WP_MF_CORE_SLUG ),
 
 					]
 				);
 				$this->add_control(
 					'thcoursescarousel_dot_nav_background_color',
 					[
-						'label' => esc_html__( 'Color', WP_TH_CORE_SLUG ),
+						'label' => esc_html__( 'Color', WP_MF_CORE_SLUG ),
 						'type' => \Elementor\Controls_Manager::COLOR,
 						'scheme' => [
 							'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -1851,7 +1851,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 				$this->add_control(
 					'widthcoursescarousel_dot_nav_background_opacity',
 					[
-						'label' => esc_html__( 'Opacity', WP_TH_CORE_SLUG ),
+						'label' => esc_html__( 'Opacity', WP_MF_CORE_SLUG ),
 						'type' => \Elementor\Controls_Manager::SLIDER,
 						'size_units' => [ '%' ],
 						'range' => [
@@ -1869,7 +1869,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 				$this->add_control(
 					'thcoursescarousel_dot_nav_width',
 					[
-						'label' => esc_html__( 'Width', WP_TH_CORE_SLUG ),
+						'label' => esc_html__( 'Width', WP_MF_CORE_SLUG ),
 						'type' => \Elementor\Controls_Manager::SLIDER,
 						'size_units' => [ 'px', '%' ],
 						'range' => [
@@ -1887,7 +1887,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 				$this->add_control(
 					'thcoursescarousel_dot_nav_height',
 					[
-						'label' => esc_html__( 'Height', WP_TH_CORE_SLUG ),
+						'label' => esc_html__( 'Height', WP_MF_CORE_SLUG ),
 						'type' => \Elementor\Controls_Manager::SLIDER,
 						'size_units' => [ 'px', '%' ],
 						'range' => [
@@ -1905,7 +1905,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 				$this->add_control(
 					'thcoursescarousel_dot_nav_margin',
 					[
-						'label' => esc_html__( 'Margin', WP_TH_CORE_SLUG ),
+						'label' => esc_html__( 'Margin', WP_MF_CORE_SLUG ),
 						'type' => \Elementor\Controls_Manager::DIMENSIONS,
 						'size_units' => [ 'px', '%', 'em' ],
 						'selectors' => [
@@ -1917,7 +1917,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 				$this->add_control(
 					'thcoursescarousel_dot_nav_border_rad',
 					[
-						'label' => esc_html__( 'Border Radius', WP_TH_CORE_SLUG ),
+						'label' => esc_html__( 'Border Radius', WP_MF_CORE_SLUG ),
 						'type' => \Elementor\Controls_Manager::SLIDER,
 						'size_units' => [ 'px'],
 						'range' => [
@@ -1938,14 +1938,14 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 				$this->start_controls_tab(
 					'thcoursescarousel_dot_nav_hover_tab',
 					[
-						'label' => esc_html__( 'Active', WP_TH_CORE_SLUG ),
+						'label' => esc_html__( 'Active', WP_MF_CORE_SLUG ),
 					]
 				);
 
 				$this->add_control(
 					'widthcoursescarousel_dot_nav_background_opacity_active',
 					[
-						'label' => esc_html__( 'Opacity', WP_TH_CORE_SLUG ),
+						'label' => esc_html__( 'Opacity', WP_MF_CORE_SLUG ),
 						'type' => \Elementor\Controls_Manager::SLIDER,
 						'size_units' => [ '%' ],
 						'range' => [
@@ -1963,7 +1963,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 				$this->add_control(
 					'thcoursescarousel_dot_nav_background_color_hover',
 					[
-						'label' => esc_html__( 'Color', WP_TH_CORE_SLUG ),
+						'label' => esc_html__( 'Color', WP_MF_CORE_SLUG ),
 						'type' => \Elementor\Controls_Manager::COLOR,
 						'scheme' => [
 							'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -1978,7 +1978,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 				$this->add_control(
 					'thcoursescarousel_dot_nav_width_hover',
 					[
-						'label' => esc_html__( 'Width', WP_TH_CORE_SLUG ),
+						'label' => esc_html__( 'Width', WP_MF_CORE_SLUG ),
 						'type' => \Elementor\Controls_Manager::SLIDER,
 						'size_units' => [ 'px', '%' ],
 						'range' => [
@@ -1996,7 +1996,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 				$this->add_control(
 					'thcoursescarousel_dot_nav_height_hover',
 					[
-						'label' => esc_html__( 'Height', WP_TH_CORE_SLUG ),
+						'label' => esc_html__( 'Height', WP_MF_CORE_SLUG ),
 						'type' => \Elementor\Controls_Manager::SLIDER,
 						'size_units' => [ 'px', '%' ],
 						'range' => [
@@ -2015,7 +2015,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 				$this->add_control(
 					'thcoursescarousel_dot_nav_rad_hover',
 					[
-						'label' => esc_html__( 'Border Radius', WP_TH_CORE_SLUG ),
+						'label' => esc_html__( 'Border Radius', WP_MF_CORE_SLUG ),
 						'type' => \Elementor\Controls_Manager::SLIDER,
 						'size_units' => [ 'px'],
 						'range' => [
@@ -2051,7 +2051,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 	    $this->start_controls_section(
             'thcoursescarousel_box_style_section',
 	            [
-	                'label' => esc_html__( 'Box Style', WP_TH_CORE_SLUG ),
+	                'label' => esc_html__( 'Box Style', WP_MF_CORE_SLUG ),
 	                'tab' => \Elementor\Controls_Manager::TAB_STYLE,
 	            ]
 	        );
@@ -2059,7 +2059,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
         		\Elementor\Group_Control_Border::get_type(),
         		[
         			'name' => 'thcoursescarousel_border',
-        			'label' => esc_html__( 'Box Border', WP_TH_CORE_SLUG ),
+        			'label' => esc_html__( 'Box Border', WP_MF_CORE_SLUG ),
         			'selector' => '{{WRAPPER}} .th-course-block',
         		]
         	);
@@ -2072,20 +2072,20 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
         	$this->add_control(
 				'thcoursescarousel_select_layout',
 				[
-					'label' => esc_html__( 'Select Layout', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Select Layout', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SELECT,
 					'default' => 'top',
 					'options' => [
-						'top'  		=> esc_html__( 'Image Top', WP_TH_CORE_SLUG ),
-						'thumb-left'  	=> esc_html__( 'Image Left', WP_TH_CORE_SLUG ),
-						'thumb-right'  	=> esc_html__( 'Image Right', WP_TH_CORE_SLUG ),
+						'top'  		=> esc_html__( 'Image Top', WP_MF_CORE_SLUG ),
+						'thumb-left'  	=> esc_html__( 'Image Left', WP_MF_CORE_SLUG ),
+						'thumb-right'  	=> esc_html__( 'Image Right', WP_MF_CORE_SLUG ),
 					],
 				]
 			);
 			$this->add_responsive_control(
 				'thcoursescarousel_thumb_width',
 				[
-					'label' => esc_html__( 'Thumbnail Width', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Thumbnail Width', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SLIDER,
 					'size_units' => [ 'px', '%' ],
 					'range' => [
@@ -2113,7 +2113,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
         	$this->add_responsive_control(
         		'thcoursescarousel_thumb_height',
         		[
-        			'label' => esc_html__( 'Thumbnail Height', WP_TH_CORE_SLUG ),
+        			'label' => esc_html__( 'Thumbnail Height', WP_MF_CORE_SLUG ),
         			'type' => \Elementor\Controls_Manager::SLIDER,
         			'size_units' => [ 'px' ],
         			'range' => [
@@ -2135,7 +2135,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
         	$this->add_responsive_control(
         		'thcoursescarousel_thumb_top_spacing',
         		[
-        			'label' => esc_html__( 'Thumbnail Top Spacing', WP_TH_CORE_SLUG ),
+        			'label' => esc_html__( 'Thumbnail Top Spacing', WP_MF_CORE_SLUG ),
         			'type' => \Elementor\Controls_Manager::SLIDER,
         			'size_units' => [ 'px' ],
         			'range' => [
@@ -2158,7 +2158,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
         	$this->add_responsive_control(
         		'thcoursescarousel_box_margin',
         		[
-        			'label' => esc_html__( 'Box margin', WP_TH_CORE_SLUG ),
+        			'label' => esc_html__( 'Box margin', WP_MF_CORE_SLUG ),
         			'type' => \Elementor\Controls_Manager::DIMENSIONS,
         			'size_units' => [ 'px' ],
         			'selectors' => [
@@ -2177,7 +2177,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
         	$this->add_responsive_control(
         		'thcoursescarousel_box_padding',
         		[
-        			'label' => esc_html__( 'Box Padding', WP_TH_CORE_SLUG ),
+        			'label' => esc_html__( 'Box Padding', WP_MF_CORE_SLUG ),
         			'type' => \Elementor\Controls_Manager::DIMENSIONS,
         			'size_units' => [ 'px' ],
         			'selectors' => [
@@ -2188,7 +2188,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
         	$this->add_responsive_control(
         		'thcoursescarousel_content_padding',
         		[
-        			'label' => esc_html__( 'Content Padding', WP_TH_CORE_SLUG ),
+        			'label' => esc_html__( 'Content Padding', WP_MF_CORE_SLUG ),
         			'type' => \Elementor\Controls_Manager::DIMENSIONS,
         			'size_units' => [ 'px' ],
         			'selectors' => [
@@ -2206,7 +2206,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
         	$this->add_responsive_control(
         		'thcoursescarousel_image_border_radius',
         		[
-        			'label' => esc_html__( 'Image Border Radius', WP_TH_CORE_SLUG ),
+        			'label' => esc_html__( 'Image Border Radius', WP_MF_CORE_SLUG ),
         			'type' => \Elementor\Controls_Manager::DIMENSIONS,
         			'size_units' => [ 'px' ],
         			
@@ -2218,7 +2218,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
         	$this->add_control(
         		'thcoursescarousel_box_border_radius',
         		[
-        			'label' => esc_html__( 'Box Border Radius', WP_TH_CORE_SLUG ),
+        			'label' => esc_html__( 'Box Border Radius', WP_MF_CORE_SLUG ),
         			'type' => \Elementor\Controls_Manager::SLIDER,
         			'size_units' => [ 'px', '%' ],
         			'range' => [
@@ -2245,7 +2245,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
         		\Elementor\Group_Control_Box_Shadow::get_type(),
         		[
         			'name' => 'thcoursescarousel_course_box_shadow',
-        			'label' => esc_html__( 'Box Shadow', WP_TH_CORE_SLUG ),
+        			'label' => esc_html__( 'Box Shadow', WP_MF_CORE_SLUG ),
         			'selector' => '{{WRAPPER}} .th-course-block',
         		]
         	);
@@ -2253,14 +2253,14 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
         		\Elementor\Group_Control_Box_Shadow::get_type(),
         		[
         			'name' => 'thcoursescarousel_course_box_shadow_hover',
-        			'label' => esc_html__( 'Box Shadow on hover', WP_TH_CORE_SLUG ),
+        			'label' => esc_html__( 'Box Shadow on hover', WP_MF_CORE_SLUG ),
         			'selector' => '{{WRAPPER}} .th-course-block:hover',
         		]
         	);
         	$this->add_control(
         		'thcoursescarousel_course_block_bg',
         		[
-        			'label' => esc_html__( 'Background', WP_TH_CORE_SLUG ),
+        			'label' => esc_html__( 'Background', WP_MF_CORE_SLUG ),
         			'type' => \Elementor\Controls_Manager::COLOR,
         			'scheme' => [
         				'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -2284,14 +2284,14 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
         $this->start_controls_section(
             'thcoursescarousel_cat_style_section',
 	            [
-	                'label' => esc_html__( 'Content', WP_TH_CORE_SLUG ),
+	                'label' => esc_html__( 'Content', WP_MF_CORE_SLUG ),
 	                'tab' => \Elementor\Controls_Manager::TAB_STYLE,
 	            ]
 	        );
 	        $this->add_control(
 	        	'thcoursescarousel_category_heading',
 	        	[
-	        		'label' => esc_html__('Catogory', WP_TH_CORE_SLUG),
+	        		'label' => esc_html__('Catogory', WP_MF_CORE_SLUG),
 	        		'type' => \Elementor\Controls_Manager::HEADING
 	        	]
 	        );
@@ -2305,10 +2305,10 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 	        $this->add_control(
 	        	'thcoursescarousel_show_cat_bg',
 	        	[
-	        		'label' => esc_html__( 'Show Category Background', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Show Category Background', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::SWITCHER,
-	        		'label_on' => esc_html__( 'Yes', WP_TH_CORE_SLUG ),
-	        		'label_off' => esc_html__( 'No', WP_TH_CORE_SLUG ),
+	        		'label_on' => esc_html__( 'Yes', WP_MF_CORE_SLUG ),
+	        		'label_off' => esc_html__( 'No', WP_MF_CORE_SLUG ),
 	        		'return_value' => 'yes',
 	        		'default' => 'yes',
 	        	]
@@ -2316,7 +2316,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 	        $this->add_control(
 	        	'thcoursescarousel_cat_padding',
 	        	[
-	        		'label' => esc_html__( 'Padding', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Padding', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::DIMENSIONS,
 	        		'size_units' => [ 'px', '%', 'em' ],
 	        		'selectors' => [
@@ -2334,7 +2334,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 	        $this->add_control(
 	        	'thcoursescarousel_cat_margin',
 	        	[
-	        		'label' => esc_html__( 'Margin', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Margin', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::DIMENSIONS,
 	        		'size_units' => [ 'px', '%', 'em' ],
 	        		'selectors' => [
@@ -2352,7 +2352,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 	        $this->add_control(
 	        	'thcoursescarousel_cat_br',
 	        	[
-	        		'label' => esc_html__( 'Border Radius', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Border Radius', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::SLIDER,
 	        		'size_units' => [ 'px', '%' ],
 	        		'range' => [
@@ -2380,7 +2380,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 	        $this->add_control(
 	        	'thcoursescarousel_title_header',
 	        	[
-	        		'label' => esc_html__('Title', WP_TH_CORE_SLUG),
+	        		'label' => esc_html__('Title', WP_MF_CORE_SLUG),
 	        		'type' => \Elementor\Controls_Manager::HEADING,
 	        		'seperator' => 'before'
 	        	]
@@ -2390,14 +2390,14 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 	        	\Elementor\Group_Control_Typography::get_type(),
 	        	[
 	        		'name' => 'thcoursescarousel_title_typo',
-	        		'label' => esc_html__( 'Typography', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Typography', WP_MF_CORE_SLUG ),
 	        		'selector' => '{{WRAPPER}} .course-block-title',
 	        	]
 	        );
 	        $this->add_control(
 	        	'thcoursescarousel_title_color',
 	        	[
-	        		'label' => esc_html__( 'Title Color', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Title Color', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::COLOR,
 	        		'scheme' => [
 	        			'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -2411,7 +2411,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 	        $this->add_control(
 	        	'thcoursescarousel_title_hover_color',
 	        	[
-	        		'label' => esc_html__( 'Title Hover Color', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Title Hover Color', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::COLOR,
 	        		'scheme' => [
 	        			'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -2425,7 +2425,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 	        $this->add_control(
 	        	'thcoursescarousel_title_margin',
 	        	[
-	        		'label' => esc_html__( 'Title Margin', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Title Margin', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::DIMENSIONS,
 	        		'size_units' => [ 'px' ],
 	        		'selectors' => [
@@ -2443,7 +2443,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 	        $this->add_control(
 	        	'thcoursescarousel_tag_header',
 	        	[
-	        		'label' => esc_html__('Course tag', WP_TH_CORE_SLUG),
+	        		'label' => esc_html__('Course tag', WP_MF_CORE_SLUG),
 	        		'type' => \Elementor\Controls_Manager::HEADING,
 	        		'seperator' => 'before'
 	        	]
@@ -2452,7 +2452,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 	        	\Elementor\Group_Control_Typography::get_type(),
 	        	[
 	        		'name' => 'thcoursescarousel_tag_typography',
-	        		'label' => esc_html__( 'Typography', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Typography', WP_MF_CORE_SLUG ),
 	        		'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
 	        		'selector' => '{{WRAPPER}} .course-tags',
 	        	]
@@ -2460,7 +2460,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 	        $this->add_responsive_control(
 	        	'thcoursescarousel_tags_vertical_position',
 	        	[
-	        		'label' => esc_html__( 'Vertical Position', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Vertical Position', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::SLIDER,
 	        		'size_units' => [ 'px', '%' ],
 	        		'range' => [
@@ -2478,7 +2478,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 	        $this->add_responsive_control(
 	        	'thcoursescarousel_tags_horizontal_position',
 	        	[
-	        		'label' => esc_html__( 'Horizontal Position', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Horizontal Position', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::SLIDER,
 	        		'size_units' => [ 'px', '%' ],
 	        		'range' => [
@@ -2497,7 +2497,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 	        $this->add_responsive_control(
 	        	'thcoursescarousel_course_tag_padding',
 	        	[
-	        		'label' => esc_html__( 'Padding', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Padding', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::DIMENSIONS,
 	        		'size_units' => [ 'px', '%', 'em' ],
 	        		'selectors' => [
@@ -2514,7 +2514,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 	        $this->add_control(
 	        	'thcoursescarousel_desc_header',
 	        	[
-	        		'label' => esc_html__('Description', WP_TH_CORE_SLUG),
+	        		'label' => esc_html__('Description', WP_MF_CORE_SLUG),
 	        		'type' => \Elementor\Controls_Manager::HEADING,
 	        		'seperator' => 'before'
 	        	]
@@ -2523,14 +2523,14 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 	        	\Elementor\Group_Control_Typography::get_type(),
 	        	[
 	        		'name' => 'thcoursescarousel_desc_typography',
-	        		'label' => esc_html__( 'Typography', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Typography', WP_MF_CORE_SLUG ),
 	        		'selector' => '{{WRAPPER}} .th-description',
 	        	]
 	        );
 	        $this->add_control(
 				'thcoursescarousel_th_course_item_desc_color',
 				[
-					'label' => esc_html__( 'Color', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Color', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::COLOR,
 					'scheme' => [
 						'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -2545,7 +2545,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 	        $this->add_control(
 	        	'thcoursescarousel_desc_margin',
 	        	[
-	        		'label' => esc_html__( 'Description Margin', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Description Margin', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::DIMENSIONS,
 	        		'size_units' => [ 'px'],
 	        		'selectors' => [
@@ -2563,7 +2563,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 	        $this->add_control(
 	        	'thcoursescarousel_pricing_header',
 	        	[
-	        		'label' => esc_html__('Pricing', WP_TH_CORE_SLUG),
+	        		'label' => esc_html__('Pricing', WP_MF_CORE_SLUG),
 	        		'type' => \Elementor\Controls_Manager::HEADING,
 	        		'seperator' => 'before'
 	        	]
@@ -2573,14 +2573,14 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 	        	\Elementor\Group_Control_Typography::get_type(),
 	        	[
 	        		'name' => 'thcoursescarousel_pricing_typo',
-	        		'label' => esc_html__( 'Pricing Typography', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Pricing Typography', WP_MF_CORE_SLUG ),
 	        		'selector' => '{{WRAPPER}} .th-sale-price',
 	        	]
 	        );
 	        $this->add_control(
 	        	'thcoursescarousel_price_color',
 	        	[
-	        		'label' => esc_html__( 'Price Color', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Price Color', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::COLOR,
 	        		'scheme' => [
 	        			'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -2595,7 +2595,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 	        $this->add_control(
 	        	'thcoursescarousel_price_color_bg',
 	        	[
-	        		'label' => esc_html__( 'Price Color Background', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Price Color Background', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::COLOR,
 	        		'scheme' => [
 	        			'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -2609,7 +2609,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 	        $this->add_control(
 				'thcoursescarousel_price_border_rad',
 				[
-					'label' => esc_html__( 'Pricing Border Radius', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Pricing Border Radius', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SLIDER,
 					'size_units' => [ 'px', '%' ],
 					'range' => [
@@ -2631,7 +2631,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 			$this->add_control(
 				'thcoursescarousel_price_section_padding',
 				[
-					'label' => esc_html__( 'Price Section Padding', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Price Section Padding', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::DIMENSIONS,
 					'size_units' => [ 'px', '%', 'em' ],
 					'selectors' => [
@@ -2649,7 +2649,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 			$this->add_responsive_control(
 				'thcoursescarousel_price_pos_top',
 				[
-					'label' => esc_html__( 'Position Top', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Position Top', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SLIDER,
 					'size_units' => [ 'px', '%' ],
 					'range' => [
@@ -2676,7 +2676,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 			$this->add_responsive_control(
 				'thcoursescarousel_price_pos_rt',
 				[
-					'label' => esc_html__( 'Position Right', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Position Right', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SLIDER,
 					'size_units' => [ 'px', '%' ],
 					'range' => [
@@ -2703,7 +2703,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 			$this->add_responsive_control(
 				'thcoursescarousel_price_section_width',
 				[
-					'label' => esc_html__( 'Width', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Width', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SLIDER,
 					'size_units' => [ 'px' ],
 					'range' => [
@@ -2726,14 +2726,14 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 	        	\Elementor\Group_Control_Typography::get_type(),
 	        	[
 	        		'name' => 'thcoursescarousel_prev_pricing_typo',
-	        		'label' => esc_html__( 'Previous Pricing Typography', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Previous Pricing Typography', WP_MF_CORE_SLUG ),
 	        		'selector' => '{{WRAPPER}} .th-original-price',
 	        	]
 	        );
 	        $this->add_control(
 	        	'thcoursescarousel_prev_price_color',
 	        	[
-	        		'label' => esc_html__( 'Original Pricing Color', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Original Pricing Color', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::COLOR,
 	        		'scheme' => [
 	        			'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -2754,14 +2754,14 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
         $this->start_controls_section(
 			'thcoursescarousel_footer_section',
 				[
-					'label' => esc_html__( 'Footer', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Footer', WP_MF_CORE_SLUG ),
 					'tab' => \Elementor\Controls_Manager::TAB_STYLE,
 				]
 			);
         	$this->add_control(
 	        	'thcoursescarousel_footer_header',
 	        	[
-	        		'label' => esc_html__('Footer', WP_TH_CORE_SLUG),
+	        		'label' => esc_html__('Footer', WP_MF_CORE_SLUG),
 	        		'type' => \Elementor\Controls_Manager::HEADING,
 	        		'seperator' => 'before'
 	        	]
@@ -2770,7 +2770,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 				\Elementor\Group_Control_Border::get_type(),
 				[
 					'name' => 'thcoursescarousel_footer_border',
-					'label' => esc_html__( 'Footer Border', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Footer Border', WP_MF_CORE_SLUG ),
 					'selector' => '{{WRAPPER}} .th-course-footer'
 				]
 			);
@@ -2778,7 +2778,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 			$this->add_control(
 				'thcoursescarousel_footer_padding',
 				[
-					'label' => esc_html__( 'Footer Padding', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Footer Padding', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::DIMENSIONS,
 					'size_units' => [ 'px', '%', 'em' ],
 					'selectors' => [
@@ -2797,7 +2797,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 	        $this->add_control(
 	        	'thcoursescarousel_author_header',
 	        	[
-	        		'label' => esc_html__('Author', WP_TH_CORE_SLUG),
+	        		'label' => esc_html__('Author', WP_MF_CORE_SLUG),
 	        		'type' => \Elementor\Controls_Manager::HEADING,
 	        		'seperator' => 'before'
 	        	]
@@ -2807,14 +2807,14 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 	        	\Elementor\Group_Control_Typography::get_type(),
 	        	[
 	        		'name' => 'thcoursescarousel_author_typography',
-	        		'label' => esc_html__( 'Author Typography', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Author Typography', WP_MF_CORE_SLUG ),
 	        		'selector' => '{{WRAPPER}} .course-author a',
 	        	]
 	        );
 	        $this->add_control(
 	        	'thcoursescarousel_author_color',
 	        	[
-	        		'label' => esc_html__( 'Author Color', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Author Color', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::COLOR,
 	        		'scheme' => [
 	        			'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -2834,7 +2834,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 	        $this->add_control(
 	        	'thcoursescarousel_level_header',
 	        	[
-	        		'label' => esc_html__('Course Level', WP_TH_CORE_SLUG),
+	        		'label' => esc_html__('Course Level', WP_MF_CORE_SLUG),
 	        		'type' => \Elementor\Controls_Manager::HEADING,
 	        		'seperator' => 'before'
 	        	]
@@ -2844,14 +2844,14 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 	        	\Elementor\Group_Control_Typography::get_type(),
 	        	[
 	        		'name' => 'thcoursescarousel_course_level_typography',
-	        		'label' => esc_html__( 'Course Level Typography', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Course Level Typography', WP_MF_CORE_SLUG ),
 	        		'selector' => '{{WRAPPER}} .course-level',
 	        	]
 	        );
 	        $this->add_control(
 	        	'thcoursescarousel_Course_Level_color',
 	        	[
-	        		'label' => esc_html__( 'Course Level Color', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Course Level Color', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::COLOR,
 	        		'scheme' => [
 	        			'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -2865,7 +2865,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 	        $this->add_control(
 	        	'thcoursescarousel_Course_Level_img_width',
 	        	[
-	        		'label' => esc_html__( 'Level Icon size', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Level Icon size', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::SLIDER,
 	        		'size_units' => [ 'px', '%' ],
 	        		'range' => [
@@ -2889,7 +2889,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 	        $this->add_control(
 	        	'thcoursescarousel_lessons_header',
 	        	[
-	        		'label' => esc_html__('Lessons', WP_TH_CORE_SLUG),
+	        		'label' => esc_html__('Lessons', WP_MF_CORE_SLUG),
 	        		'type' => \Elementor\Controls_Manager::HEADING,
 	        		'seperator' => 'before'
 	        	]
@@ -2899,14 +2899,14 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 	        	\Elementor\Group_Control_Typography::get_type(),
 	        	[
 	        		'name' => 'thcoursescarousel_lessons_typography',
-	        		'label' => esc_html__( 'Lessons Typography', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Lessons Typography', WP_MF_CORE_SLUG ),
 	        		'selector' => '{{WRAPPER}} .course-lessons',
 	        	]
 	        );
 	        $this->add_control(
 	        	'thcoursescarousel_lessons_color',
 	        	[
-	        		'label' => esc_html__( 'Lessons color', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Lessons color', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::COLOR,
 	        		'scheme' => [
 	        			'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -2920,19 +2920,19 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 	        $this->add_control(
 			'thcoursescarousel_lessons_align',
 				[
-					'label' => esc_html__( 'Alignment', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Alignment', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::CHOOSE,
 					'options' => [
 						'ec-text-left' => [
-							'title' => esc_html__( 'Left', WP_TH_CORE_SLUG ),
+							'title' => esc_html__( 'Left', WP_MF_CORE_SLUG ),
 							'icon' => 'fa fa-align-left',
 						],
 						'ec-text-center' => [
-							'title' => esc_html__( 'Center', WP_TH_CORE_SLUG ),
+							'title' => esc_html__( 'Center', WP_MF_CORE_SLUG ),
 							'icon' => 'fa fa-align-center',
 						],
 						'ec-text-right' => [
-							'title' => esc_html__( 'Right', WP_TH_CORE_SLUG ),
+							'title' => esc_html__( 'Right', WP_MF_CORE_SLUG ),
 							'icon' => 'fa fa-align-right',
 						],
 					],
@@ -2949,7 +2949,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 	        $this->add_control(
 	        	'thcoursescarousel_rating_header',
 	        	[
-	        		'label' => esc_html__('Ratings', WP_TH_CORE_SLUG),
+	        		'label' => esc_html__('Ratings', WP_MF_CORE_SLUG),
 	        		'type' => \Elementor\Controls_Manager::HEADING,
 	        		'seperator' => 'before'
 	        	]
@@ -2957,7 +2957,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 	        $this->add_control(
 	        	'thcoursescarousel_rating_font_size',
 	        	[
-	        		'label' => esc_html__( 'Size', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Size', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::SLIDER,
 	        		'size_units' => [ 'px' ],
 	        		'range' => [
@@ -2980,7 +2980,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 	        $this->add_control(
 	        	'thcoursescarousel_rating_position',
 	        	[
-	        		'label' => esc_html__( 'Vertical Position', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Vertical Position', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::SLIDER,
 	        		'size_units' => [ 'px' ],
 	        		'range' => [
@@ -3002,7 +3002,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 	        $this->add_control(
 			'thcoursescarousel_star_color',
 				[
-					'label' => esc_html__( 'Rating Color', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Rating Color', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::COLOR,
 					'scheme' => [
 						'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -3074,13 +3074,13 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 		<div class="ec-filtering-section">
 			<ul class="th-course-trending-popular-filter <?php echo $settings['filter_text_align'] ?>" data-settings="<?php echo htmlspecialchars(json_encode($json_settings)) ?>">
 				<?php if( $settings['thcoursescarousel_show_latest_filter_tabs'] ): ?>
-					<li data-id="ec-swiper-container-<?php echo $slider_sl?>" data-cat="<?php echo htmlspecialchars(json_encode($settings['thcoursescarousel_select_categories'])); ?>" data-sort="latest"><?php echo esc_html__('Latest', WP_TH_CORE_SLUG); ?></li>
+					<li data-id="ec-swiper-container-<?php echo $slider_sl?>" data-cat="<?php echo htmlspecialchars(json_encode($settings['thcoursescarousel_select_categories'])); ?>" data-sort="latest"><?php echo esc_html__('Latest', WP_MF_CORE_SLUG); ?></li>
 				<?php endif; ?>
 				<?php if( $settings['thcoursescarousel_show_popular_filter_tabs'] ): ?>
-					<li data-id="ec-swiper-container-<?php echo $slider_sl?>" data-cat="<?php echo htmlspecialchars(json_encode($settings['thcoursescarousel_select_categories'])); ?>" data-sort="popular"><?php echo esc_html__('Most Popular', WP_TH_CORE_SLUG); ?></li>
+					<li data-id="ec-swiper-container-<?php echo $slider_sl?>" data-cat="<?php echo htmlspecialchars(json_encode($settings['thcoursescarousel_select_categories'])); ?>" data-sort="popular"><?php echo esc_html__('Most Popular', WP_MF_CORE_SLUG); ?></li>
 				<?php endif; ?>
 				<?php if( $settings['thcoursescarousel_show_treanding_filter_tabs'] ): ?>
-					<li data-id="ec-swiper-container-<?php echo $slider_sl?>" data-cat="<?php echo htmlspecialchars(json_encode($settings['thcoursescarousel_select_categories'])); ?>" data-sort="treanding"><?php echo esc_html__('Treanding', WP_TH_CORE_SLUG); ?></li>
+					<li data-id="ec-swiper-container-<?php echo $slider_sl?>" data-cat="<?php echo htmlspecialchars(json_encode($settings['thcoursescarousel_select_categories'])); ?>" data-sort="treanding"><?php echo esc_html__('Treanding', WP_MF_CORE_SLUG); ?></li>
 				<?php endif; ?>
 			</ul>
 		</div>	
@@ -3188,7 +3188,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
     	$categories_count = count($categories);
     	$html = '';
     	if( $categories_count > 1 ){
-	    	$html .= '<li data-id="'. $id .'" data-cat="all">'. esc_html__('All', WP_TH_CORE_SLUG) .'</li>';
+	    	$html .= '<li data-id="'. $id .'" data-cat="all">'. esc_html__('All', WP_MF_CORE_SLUG) .'</li>';
 	    	foreach ($categories as $key => $value) {
 	    		$html .= '<li data-id="'. $id .'" data-cat="'. $value .'">'. $value .'</li>';
 	    	}

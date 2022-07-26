@@ -8,15 +8,15 @@ class MetafansElementorAdvanceFilter extends \Elementor\Widget_Base {
         return 'thcoursesadvancedfilter';
     }
     public function get_title(){
-        return esc_html__( 'Advanced Course Filter', WP_TH_CORE_SLUG );
+        return esc_html__( 'Advanced Course Filter', WP_MF_CORE_SLUG );
     }
     public function get_icon(){
         return 'eicon-search-results';
     }
     public function get_categories(){
-        return [ WP_TH_CORE_SLUG ];
+        return [ WP_MF_CORE_SLUG ];
     }
-    protected function _register_controls() {
+    protected function register_controls() {
 
     	/*
     	*
@@ -31,17 +31,17 @@ class MetafansElementorAdvanceFilter extends \Elementor\Widget_Base {
 		$this->start_controls_section(
 			'filter_content_section',
 				[
-					'label' => esc_html__( 'Advanced Filter', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Advanced Filter', WP_MF_CORE_SLUG ),
 					'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
 				]
 			);
 			$this->add_control(
 				'filter_show_count',
 				[
-					'label' => esc_html__( 'Show Filter Count', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Show Filter Count', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SWITCHER,
-					'label_on' => __( 'Show', WP_TH_CORE_SLUG ),
-					'label_off' => __( 'Hide', WP_TH_CORE_SLUG ),
+					'label_on' => __( 'Show', WP_MF_CORE_SLUG ),
+					'label_off' => __( 'Hide', WP_MF_CORE_SLUG ),
 					'return_value' => 'yes',
 					'default' => 'no',
 				]
@@ -49,10 +49,10 @@ class MetafansElementorAdvanceFilter extends \Elementor\Widget_Base {
 			$this->add_control(
 				'filter_show_sort',
 				[
-					'label' => esc_html__( 'Show Sort By Filter', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Show Sort By Filter', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SWITCHER,
-					'label_on' => __( 'Show', WP_TH_CORE_SLUG ),
-					'label_off' => __( 'Hide', WP_TH_CORE_SLUG ),
+					'label_on' => __( 'Show', WP_MF_CORE_SLUG ),
+					'label_off' => __( 'Hide', WP_MF_CORE_SLUG ),
 					'return_value' => 'yes',
 					'default' => 'no',
 				]
@@ -60,10 +60,10 @@ class MetafansElementorAdvanceFilter extends \Elementor\Widget_Base {
 			$this->add_control(
 				'filter_show_categories',
 				[
-					'label' => esc_html__( 'Show Category Filter', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Show Category Filter', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SWITCHER,
-					'label_on' => __( 'Show', WP_TH_CORE_SLUG ),
-					'label_off' => __( 'Hide', WP_TH_CORE_SLUG ),
+					'label_on' => __( 'Show', WP_MF_CORE_SLUG ),
+					'label_off' => __( 'Hide', WP_MF_CORE_SLUG ),
 					'return_value' => 'yes',
 					'default' => 'no',
 				]
@@ -71,10 +71,10 @@ class MetafansElementorAdvanceFilter extends \Elementor\Widget_Base {
 			$this->add_control(
 				'filter_show_level',
 				[
-					'label' => esc_html__( 'Show Level Filter', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Show Level Filter', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SWITCHER,
-					'label_on' => __( 'Show', WP_TH_CORE_SLUG ),
-					'label_off' => __( 'Hide', WP_TH_CORE_SLUG ),
+					'label_on' => __( 'Show', WP_MF_CORE_SLUG ),
+					'label_off' => __( 'Hide', WP_MF_CORE_SLUG ),
 					'return_value' => 'yes',
 					'default' => 'no',
 				]
@@ -82,10 +82,10 @@ class MetafansElementorAdvanceFilter extends \Elementor\Widget_Base {
 			$this->add_control(
 				'filter_show_skills',
 				[
-					'label' => esc_html__( 'Show Skills FIlter', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Show Skills FIlter', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SWITCHER,
-					'label_on' => __( 'Show', WP_TH_CORE_SLUG ),
-					'label_off' => __( 'Hide', WP_TH_CORE_SLUG ),
+					'label_on' => __( 'Show', WP_MF_CORE_SLUG ),
+					'label_off' => __( 'Hide', WP_MF_CORE_SLUG ),
 					'return_value' => 'yes',
 					'default' => 'no',
 				]
@@ -93,10 +93,10 @@ class MetafansElementorAdvanceFilter extends \Elementor\Widget_Base {
 			$this->add_control(
 				'filter_show_price',
 				[
-					'label' => esc_html__( 'Show Price Filter', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Show Price Filter', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SWITCHER,
-					'label_on' => __( 'Show', WP_TH_CORE_SLUG ),
-					'label_off' => __( 'Hide', WP_TH_CORE_SLUG ),
+					'label_on' => __( 'Show', WP_MF_CORE_SLUG ),
+					'label_off' => __( 'Hide', WP_MF_CORE_SLUG ),
 					'return_value' => 'yes',
 					'default' => 'no',
 				]
@@ -104,10 +104,10 @@ class MetafansElementorAdvanceFilter extends \Elementor\Widget_Base {
 			$this->add_control(
 				'filter_show_rating',
 				[
-					'label' => esc_html__( 'Show Rating Filter', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Show Rating Filter', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SWITCHER,
-					'label_on' => __( 'Show', WP_TH_CORE_SLUG ),
-					'label_off' => __( 'Hide', WP_TH_CORE_SLUG ),
+					'label_on' => __( 'Show', WP_MF_CORE_SLUG ),
+					'label_off' => __( 'Hide', WP_MF_CORE_SLUG ),
 					'return_value' => 'yes',
 					'default' => 'no',
 				]
@@ -124,7 +124,7 @@ class MetafansElementorAdvanceFilter extends \Elementor\Widget_Base {
 	    $this->start_controls_section(
             'dd_btn_style_section',
 	            [
-	                'label' => esc_html__( 'Dropdown Button Style', WP_TH_CORE_SLUG ),
+	                'label' => esc_html__( 'Dropdown Button Style', WP_MF_CORE_SLUG ),
 	                'tab' => \Elementor\Controls_Manager::TAB_STYLE,
 	            ]
 	        );
@@ -242,7 +242,7 @@ class MetafansElementorAdvanceFilter extends \Elementor\Widget_Base {
 	    $this->start_controls_section(
             'dd_btn_select_style_section',
 	            [
-	                'label' => esc_html__( 'Dropdown Select Style', WP_TH_CORE_SLUG ),
+	                'label' => esc_html__( 'Dropdown Select Style', WP_MF_CORE_SLUG ),
 	                'tab' => \Elementor\Controls_Manager::TAB_STYLE,
 	            ]
 	        );

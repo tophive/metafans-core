@@ -1,34 +1,25 @@
 <?php
 
-class MetafansBPGroupMembers extends WP_Widget {
+class MetafansBPGroupsInfo extends WP_Widget {
  
     public function __construct() {
         $widget_options = array(
-            'classname' => 'tophive-mf-groups-members-widget',
-            'description' => esc_html__( 'BuddyPress - Metafans Groups members lists', 'WP_TH_CORE_SLUG' )
+            'classname' => 'tophive-mf-groups-info-widget',
+            'description' => esc_html__( 'BuddyPress - Metafans Profile descriptions', 'WP_MF_CORE_SLUG' )
         );
-        parent::__construct('buddypress_groups_members', 'BuddyPress Group Members', $widget_options);
+        parent::__construct('buddypress_groups_desc', 'Buddypress about group [metafans]', $widget_options);
     }
     public function widget( $args, $instance ) {
-        global $wpdb;
     	if (bp_is_groups_component() && bp_is_single_item() ) {
 	        $html = $args['before_widget'];
+	        $html .= '<div>';
 	        $html .= '<h4 class="widget-title">'. $instance['title'] .'</h4>';
-	        $group_id =  bp_get_group_id();
-            
-            $members_query = $wpdb->get_results("SELECT user_id from {$wpdb->base_prefix}bp_groups_members where group_id={$group_id}");
-
-            if(!empty( $members_query )){
-                $html .= '<div class="avatar-block">';
-                    foreach( $members_query as $val ){
-                        $html .= '<div class="item-avatar">';
-                        $html .= '<a href="'. bp_core_get_user_domain( $val->user_id ) .'">';
-                        $html .= get_avatar( $val->user_id, 50 );
-                        $html .= '</a>';
-                        $html .= '</div>';
-                    }
-                $html .= '</div>';
-            }
+	        
+	        	$group = groups_get_group( array( 'group_id' => bp_get_group_id()) );	
+	        	
+			$html .= '<p>' . $group->description . '</p>';	
+	        $html .= '<p></p>';
+	        $html .= '</div>';
 	        $html .= $args['after_widget'];
 		}
         echo $html;

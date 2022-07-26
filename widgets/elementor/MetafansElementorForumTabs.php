@@ -16,7 +16,7 @@ if ( ! class_exists( 'bbPress' ) ) {
 class MetafansElementorForumTabs extends \Elementor\Widget_base
 {
 	public function get_title(){
-		return esc_html__( 'BBPress Forum', WP_TH_CORE_SLUG );
+		return esc_html__( 'BBPress Forum', WP_MF_CORE_SLUG );
 	}
 	public function get_name(){
 		return 'th-forum-tabs';
@@ -25,26 +25,26 @@ class MetafansElementorForumTabs extends \Elementor\Widget_base
 		return 'eicon-tabs';
 	}
 	public function get_categories(){
-        return [ WP_TH_CORE_SLUG ];
+        return [ WP_MF_CORE_SLUG ];
     }
 	public function get_keywords() {
 		return [ 'tabs', 'forum' ];
 	}
-	protected function _register_controls(){
+	protected function register_controls(){
 		$this->start_controls_section(
 			'th_adv_tabs_section',
 			[
-				'label' => esc_html__( 'Activity Tab', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Activity Tab', WP_MF_CORE_SLUG ),
 				'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
 			]
 		);			
 		$this->add_control(
 			'tab_show_activities',
 			[
-				'label' => esc_html__( 'Show Latest Activities', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Show Latest Activities', WP_MF_CORE_SLUG ),
 				'type' => \Elementor\Controls_Manager::SWITCHER,
-				'label_on' => __( 'Show', WP_TH_CORE_SLUG ),
-				'label_off' => __( 'Hide', WP_TH_CORE_SLUG ),
+				'label_on' => __( 'Show', WP_MF_CORE_SLUG ),
+				'label_off' => __( 'Hide', WP_MF_CORE_SLUG ),
 				'return_value' => 'yes',
 				'default' => 'yes',
 			]
@@ -52,10 +52,10 @@ class MetafansElementorForumTabs extends \Elementor\Widget_base
 		$this->add_control(
 			'tab_show_forums',
 			[
-				'label' => esc_html__( 'Show Forums', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Show Forums', WP_MF_CORE_SLUG ),
 				'type' => \Elementor\Controls_Manager::SWITCHER,
-				'label_on' => __( 'Show', WP_TH_CORE_SLUG ),
-				'label_off' => __( 'Hide', WP_TH_CORE_SLUG ),
+				'label_on' => __( 'Show', WP_MF_CORE_SLUG ),
+				'label_off' => __( 'Hide', WP_MF_CORE_SLUG ),
 				'return_value' => 'yes',
 				'default' => 'yes',
 			]
@@ -86,8 +86,8 @@ class MetafansElementorForumTabs extends \Elementor\Widget_base
 				<div class="tophive-forum-tabs">
 					<?php if( 'yes' == $settings['tab_show_activities'] && 'yes' == $settings['tab_show_forums'] ){ ?>
 						<ul>
-							<li class="active"><a href="#th_topics"><?php echo esc_html__( 'Recent Activity', WP_TH_CORE_SLUG ); ?></a></li>
-							<li><a href="#th_forums"><?php echo esc_html__( 'Forums', WP_TH_CORE_SLUG ); ?></a></li>
+							<li class="active"><a href="#th_topics"><?php echo esc_html__( 'Recent Activity', WP_MF_CORE_SLUG ); ?></a></li>
+							<li><a href="#th_forums"><?php echo esc_html__( 'Forums', WP_MF_CORE_SLUG ); ?></a></li>
 						</ul>
 					<?php } ?>
 				</div>
@@ -137,7 +137,7 @@ class MetafansElementorForumTabs extends \Elementor\Widget_base
 														<span class="replies"><svg width="0.9em" height="0.9em" viewBox="0 0 16 16" class="bi bi-chat-right-dots" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
 														  <path fill-rule="evenodd" d="M2 1h12a1 1 0 0 1 1 1v11.586l-2-2A2 2 0 0 0 11.586 11H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zm12-1a2 2 0 0 1 2 2v12.793a.5.5 0 0 1-.854.353l-2.853-2.853a1 1 0 0 0-.707-.293H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12z"/>
 														  <path d="M5 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
-														</svg> <?php echo bbp_topic_reply_count(get_the_ID()) . esc_html__( ' Replies', WP_TH_CORE_SLUG ); ?></span>
+														</svg> <?php echo bbp_topic_reply_count(get_the_ID()) . esc_html__( ' Replies', WP_MF_CORE_SLUG ); ?></span>
 														<span class="last-active-time">
 															<?php echo $last_updated_by . $last_active; ?>
 														</span>
@@ -202,14 +202,14 @@ class MetafansElementorForumTabs extends \Elementor\Widget_base
 																			$results = $wpdb->get_results("SELECT * FROM {$wpdb->prefix}posts WHERE post_parent={$post_ide} and post_type='topic'");
 																			echo count($results);
 																			echo '</span>';
-																			esc_html_e( ' Topics', WP_TH_CORE_SLUG ); ?>
+																			esc_html_e( ' Topics', WP_MF_CORE_SLUG ); ?>
 																	</div>
 																	<div class="meta-item last-active-time">
 																		<?php 
 																			echo '<span>';
 																			echo bbp_forum_reply_count(get_the_ID());
 																			echo '</span>';
-																			esc_html_e( ' Replies', WP_TH_CORE_SLUG ); ?>
+																			esc_html_e( ' Replies', WP_MF_CORE_SLUG ); ?>
 																	</div>
 																</div>
 																<div class="tophive-forum-last-topic">
@@ -264,14 +264,14 @@ class MetafansElementorForumTabs extends \Elementor\Widget_base
 																			
 																			echo count($results);
 																			echo '</span>';
-																			esc_html_e( ' Topics', WP_TH_CORE_SLUG ); ?>
+																			esc_html_e( ' Topics', WP_MF_CORE_SLUG ); ?>
 																	</div>
 																	<div class="meta-item last-active-time">
 																		<?php 
 																			echo '<span>';
 																			echo bbp_forum_reply_count(get_the_ID());
 																			echo '</span>';
-																			esc_html_e( ' Replies', WP_TH_CORE_SLUG ); ?>
+																			esc_html_e( ' Replies', WP_MF_CORE_SLUG ); ?>
 																	</div>
 																</div>
 																<div class="tophive-forum-last-topic">

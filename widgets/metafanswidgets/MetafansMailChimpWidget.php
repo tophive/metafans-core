@@ -5,7 +5,7 @@ class MetafansMailChimpWidget extends WP_Widget {
     public function __construct() {
         $widget_options = array(
             'classname' => 'tophive-mc-mchimp-subs-widget',
-            'description' => esc_html__( 'Fundocean Mailchimp Widget', 'WP_TH_CORE_SLUG' )
+            'description' => esc_html__( 'Fundocean Mailchimp Widget', 'WP_MF_CORE_SLUG' )
         );
         parent::__construct('mchimp-subs', 'MC MailChimp Widget', $widget_options);
         add_filter( 'tophive/customizer/config', array( $this, 'config' ) );
@@ -17,7 +17,7 @@ class MetafansMailChimpWidget extends WP_Widget {
             'name'           => 'tophive_mailchimp_panel',
             'type'           => 'panel',
             'priority'       => 100,
-            'title'          => esc_html__( 'Mailchimp', WP_TH_CORE_SLUG ),
+            'title'          => esc_html__( 'Mailchimp', WP_MF_CORE_SLUG ),
         );
         $configs[] = array(
             'name'     => 'tophive_mailchimp_panel_api_key_settings',
@@ -29,15 +29,15 @@ class MetafansMailChimpWidget extends WP_Widget {
             'name' => 'tophive_mailchimp_api_key',
             'type' => 'text',
             'section' => 'tophive_mailchimp_panel_api_key_settings',
-            'label' => esc_html__( 'MailChimp Api Key', WP_TH_CORE_SLUG ),
-            'description' => sprintf(esc_html__( 'How Can I get My %sApi Key?%s', WP_TH_CORE_SLUG ), '<a href="'. $api_url_help .'" target="_blank">', '</a>'),
+            'label' => esc_html__( 'MailChimp Api Key', WP_MF_CORE_SLUG ),
+            'description' => sprintf(esc_html__( 'How Can I get My %sApi Key?%s', WP_MF_CORE_SLUG ), '<a href="'. $api_url_help .'" target="_blank">', '</a>'),
         );
         $configs[] = array(
             'name' => 'tophive_mailchimp_list_id',
             'type' => 'text',
             'section' => 'tophive_mailchimp_panel_api_key_settings',
-            'label' => esc_html__( 'MailChimp List ID', WP_TH_CORE_SLUG ),
-            'description' => sprintf(esc_html__( 'How Can I get My %sList ID?%s', WP_TH_CORE_SLUG ), '<a href="'. $list_url_help .'" target="_blank">', '</a>'),
+            'label' => esc_html__( 'MailChimp List ID', WP_MF_CORE_SLUG ),
+            'description' => sprintf(esc_html__( 'How Can I get My %sList ID?%s', WP_MF_CORE_SLUG ), '<a href="'. $list_url_help .'" target="_blank">', '</a>'),
         );
         return $configs;
     }

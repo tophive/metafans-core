@@ -8,15 +8,15 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
         return 'thcoursesgrid';
     }
     public function get_title(){
-        return esc_html__( 'LP Course Grid', WP_TH_CORE_SLUG );
+        return esc_html__( 'LP Course Grid', WP_MF_CORE_SLUG );
     }
     public function get_icon(){
         return 'eicon-single-post';
     }
     public function get_categories(){
-        return [ WP_TH_CORE_SLUG ];
+        return [ WP_MF_CORE_SLUG ];
     }
-    protected function _register_controls() {
+    protected function register_controls() {
 
     	/*
     	*
@@ -31,7 +31,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 		$this->start_controls_section(
 			'content_section',
 				[
-					'label' => esc_html__( 'Course Grid', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Course Grid', WP_MF_CORE_SLUG ),
 					'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
 				]
 			);
@@ -39,10 +39,10 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 			$this->add_control(
 				'thumbnail_show_hide',
 				[
-					'label' => esc_html__( 'Show Image', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Show Image', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SWITCHER,
-					'label_on' => esc_html__( 'Show', WP_TH_CORE_SLUG ),
-					'label_off' => esc_html__( 'Hide', WP_TH_CORE_SLUG ),
+					'label_on' => esc_html__( 'Show', WP_MF_CORE_SLUG ),
+					'label_off' => esc_html__( 'Hide', WP_MF_CORE_SLUG ),
 					'return_value' => 'yes',
 					'default' => 'yes',
 				]
@@ -50,10 +50,10 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 			$this->add_control(
 				'use_advanced_filter',
 				[
-					'label' => esc_html__( 'Use As Advanced Filter Layout', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Use As Advanced Filter Layout', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SWITCHER,
-					'label_on' => __( 'Yes', WP_TH_CORE_SLUG ),
-					'label_off' => __( 'No', WP_TH_CORE_SLUG ),
+					'label_on' => __( 'Yes', WP_MF_CORE_SLUG ),
+					'label_off' => __( 'No', WP_MF_CORE_SLUG ),
 					'return_value' => 'yes',
 					'default' => 'no',
 				]
@@ -61,11 +61,11 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 			$this->add_control(
 				'posts_order',
 				[
-					'label' => esc_html__( 'Order by', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Order by', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SELECT,
 					'options' => [
-						'ASC' 	=> esc_html__( 'Ascending', WP_TH_CORE_SLUG ),
-						'DESC' 	=> esc_html__( 'Descending', WP_TH_CORE_SLUG ),
+						'ASC' 	=> esc_html__( 'Ascending', WP_MF_CORE_SLUG ),
+						'DESC' 	=> esc_html__( 'Descending', WP_MF_CORE_SLUG ),
 					],
 					'default' => 'ASC',
 				]
@@ -73,15 +73,15 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 			$this->add_control(
 				'select_columns',
 				[
-					'label' => esc_html__( 'Select Columns', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Select Columns', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SELECT,
 					'options' => [
-						'ec-col-md-12' 	=> esc_html__( '1 Column', WP_TH_CORE_SLUG ),
-						'ec-col-md-6' 	=> esc_html__( '2 Columns', WP_TH_CORE_SLUG ),
-						'ec-col-lg-4 ec-col-md-6 ec-col-12'  	=> esc_html__( '3 Columns', WP_TH_CORE_SLUG ),
-						'ec-col-lg-3 ec-col-md-6 ec-col-12' 	=> esc_html__( '4 Columns', WP_TH_CORE_SLUG ),
-						'ec-col-lg-2 ec-col-md-6 ec-col-12' 	=> esc_html__( '5 Columns', WP_TH_CORE_SLUG ),
-						'ec-col-lg-2 ec-col-md-6 ec-col-12' 	=> esc_html__( '6 Columns', WP_TH_CORE_SLUG ),
+						'ec-col-md-12' 	=> esc_html__( '1 Column', WP_MF_CORE_SLUG ),
+						'ec-col-md-6' 	=> esc_html__( '2 Columns', WP_MF_CORE_SLUG ),
+						'ec-col-lg-4 ec-col-md-6 ec-col-12'  	=> esc_html__( '3 Columns', WP_MF_CORE_SLUG ),
+						'ec-col-lg-3 ec-col-md-6 ec-col-12' 	=> esc_html__( '4 Columns', WP_MF_CORE_SLUG ),
+						'ec-col-lg-2 ec-col-md-6 ec-col-12' 	=> esc_html__( '5 Columns', WP_MF_CORE_SLUG ),
+						'ec-col-lg-2 ec-col-md-6 ec-col-12' 	=> esc_html__( '6 Columns', WP_MF_CORE_SLUG ),
 					],
 					'default' => 'ec-col-lg-4 ec-col-md-6 ec-col-12',
 				]
@@ -89,16 +89,16 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 			$this->add_control(
 				'courses_count',
 				[
-					'label' => esc_html__( 'Courses Count', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Courses Count', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::TEXT,
-					'description' => esc_html__('-1 For showing all', WP_TH_CORE_SLUG),
+					'description' => esc_html__('-1 For showing all', WP_MF_CORE_SLUG),
 					'default' => 4,
 				]
 	        );
 	        $this->add_control(
 	        	'word_count',
 	        	[
-	        		'label' => esc_html__( 'Word Count for description', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Word Count for description', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::NUMBER,
 	        		'min' => 2,
 	        		'max' => 30,
@@ -109,10 +109,10 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 	        $this->add_control(
 	        	'cat_display',
 	        	[
-	        		'label' => esc_html__('Show Category', WP_TH_CORE_SLUG),
+	        		'label' => esc_html__('Show Category', WP_MF_CORE_SLUG),
 	        		'type' => \Elementor\Controls_Manager::SWITCHER,
-					'label_on' => esc_html__( 'Show', WP_TH_CORE_SLUG ),
-					'label_off' => esc_html__( 'Hide', WP_TH_CORE_SLUG ),
+					'label_on' => esc_html__( 'Show', WP_MF_CORE_SLUG ),
+					'label_off' => esc_html__( 'Hide', WP_MF_CORE_SLUG ),
 					'return_value' => 'yes',
 					'default' => 'yes',
 	        	]
@@ -120,10 +120,10 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 	        $this->add_control(
 	        	'show_desc',
 	        	[
-	        		'label' => esc_html__( 'Show Description', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Show Description', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::SWITCHER,
-	        		'label_on' => esc_html__( 'Show', WP_TH_CORE_SLUG ),
-	        		'label_off' => esc_html__( 'Hide', WP_TH_CORE_SLUG ),
+	        		'label_on' => esc_html__( 'Show', WP_MF_CORE_SLUG ),
+	        		'label_off' => esc_html__( 'Hide', WP_MF_CORE_SLUG ),
 	        		'return_value' => 'yes',
 	        		'default' => 'yes',
 	        	]
@@ -131,10 +131,10 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 	        $this->add_control(
 	        	'show_pricing',
 	        	[
-	        		'label' => esc_html__( 'Show Price', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Show Price', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::SWITCHER,
-	        		'label_on' => esc_html__( 'Show', WP_TH_CORE_SLUG ),
-	        		'label_off' => esc_html__( 'Hide', WP_TH_CORE_SLUG ),
+	        		'label_on' => esc_html__( 'Show', WP_MF_CORE_SLUG ),
+	        		'label_off' => esc_html__( 'Hide', WP_MF_CORE_SLUG ),
 	        		'return_value' => 'yes',
 	        		'default' => 'yes',
 	        	]
@@ -142,10 +142,10 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 	        $this->add_control(
 	        	'show_pricing_prev',
 	        	[
-	        		'label' => esc_html__( 'Show Previous Pricing', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Show Previous Pricing', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::SWITCHER,
-	        		'label_on' => esc_html__( 'Show', WP_TH_CORE_SLUG ),
-	        		'label_off' => esc_html__( 'Hide', WP_TH_CORE_SLUG ),
+	        		'label_on' => esc_html__( 'Show', WP_MF_CORE_SLUG ),
+	        		'label_off' => esc_html__( 'Hide', WP_MF_CORE_SLUG ),
 	        		'return_value' => 'yes',
 	        		'default' => 'yes',
 	        	]
@@ -153,10 +153,10 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 	        $this->add_control(
 	        	'show_author',
 	        	[
-	        		'label' => esc_html__( 'Show Author', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Show Author', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::SWITCHER,
-	        		'label_on' => esc_html__( 'Show', WP_TH_CORE_SLUG ),
-	        		'label_off' => esc_html__( 'Hide', WP_TH_CORE_SLUG ),
+	        		'label_on' => esc_html__( 'Show', WP_MF_CORE_SLUG ),
+	        		'label_off' => esc_html__( 'Hide', WP_MF_CORE_SLUG ),
 	        		'return_value' => 'yes',
 	        		'default' => 'yes',
 	        	]
@@ -164,10 +164,10 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 	        $this->add_control(
 	        	'show_lessons',
 	        	[
-	        		'label' => esc_html__( 'Show Lessons', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Show Lessons', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::SWITCHER,
-	        		'label_on' => esc_html__( 'Show', WP_TH_CORE_SLUG ),
-	        		'label_off' => esc_html__( 'Hide', WP_TH_CORE_SLUG ),
+	        		'label_on' => esc_html__( 'Show', WP_MF_CORE_SLUG ),
+	        		'label_off' => esc_html__( 'Hide', WP_MF_CORE_SLUG ),
 	        		'return_value' => 'yes',
 	        		'default' => 'no',
 	        	]
@@ -175,10 +175,10 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 	        $this->add_control(
 	        	'show_level',
 	        	[
-	        		'label' => esc_html__( 'Show Level', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Show Level', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::SWITCHER,
-	        		'label_on' => esc_html__( 'Show', WP_TH_CORE_SLUG ),
-	        		'label_off' => esc_html__( 'Hide', WP_TH_CORE_SLUG ),
+	        		'label_on' => esc_html__( 'Show', WP_MF_CORE_SLUG ),
+	        		'label_off' => esc_html__( 'Hide', WP_MF_CORE_SLUG ),
 	        		'return_value' => 'yes',
 	        		'default' => 'no',
 	        	]
@@ -187,10 +187,10 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
        		$this->add_control(
 	        	'show_rating',
 	        	[
-	        		'label' => esc_html__( 'Show Rating', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Show Rating', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::SWITCHER,
-	        		'label_on' => esc_html__( 'Show', WP_TH_CORE_SLUG ),
-	        		'label_off' => esc_html__( 'Hide', WP_TH_CORE_SLUG ),
+	        		'label_on' => esc_html__( 'Show', WP_MF_CORE_SLUG ),
+	        		'label_off' => esc_html__( 'Hide', WP_MF_CORE_SLUG ),
 	        		'return_value' => 'yes',
 	        		'default' => 'yes',
 	        	]
@@ -207,17 +207,17 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 		$this->start_controls_section(
 			'category_filter_section',
 				[
-					'label' => esc_html__( 'Course Category Filter', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Course Category Filter', WP_MF_CORE_SLUG ),
 					'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
 				]
 			);
 			$this->add_control(
 				'show_category_filter',
 				[
-					'label' => esc_html__( 'Show Category Filter', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Show Category Filter', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SWITCHER,
-					'label_on' => esc_html__( 'Show', WP_TH_CORE_SLUG ),
-					'label_off' => esc_html__( 'Hide', WP_TH_CORE_SLUG ),
+					'label_on' => esc_html__( 'Show', WP_MF_CORE_SLUG ),
+					'label_off' => esc_html__( 'Hide', WP_MF_CORE_SLUG ),
 					'return_value' => 'yes',
 					'default' => 'no',
 				]
@@ -225,13 +225,13 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 			$this->add_control(
 				'filter_position',
 				[
-					'label' => esc_html__( 'Filter Position', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Filter Position', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SELECT,
 					'default' => 'solid',
 					'options' => [
-						'top'  => esc_html__( 'Top', WP_TH_CORE_SLUG ),
-						'v-left'  => esc_html__( 'Left Side', WP_TH_CORE_SLUG ),
-						'v-right'  => esc_html__( 'Right Side', WP_TH_CORE_SLUG ),
+						'top'  => esc_html__( 'Top', WP_MF_CORE_SLUG ),
+						'v-left'  => esc_html__( 'Left Side', WP_MF_CORE_SLUG ),
+						'v-right'  => esc_html__( 'Right Side', WP_MF_CORE_SLUG ),
 					],
 					'condition' => ['show_category_filter' => 'yes']
 				]
@@ -239,7 +239,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 			$this->add_control(
 				'filter_nav_width',
 				[
-					'label' => esc_html__( 'Width', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Width', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SLIDER,
 					'size_units' => [ 'px', '%' ],
 					'range' => [
@@ -257,7 +257,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 			$this->add_control(
 				'select_categories',
 				[
-					'label' => esc_html__( 'Select Categories', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Select Categories', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SELECT2,
 					'multiple' => true,
 					'options' => $this->parse_filter_categories(),
@@ -268,19 +268,19 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 			$this->add_control(
 				'filter_text_align',
 				[
-					'label' => esc_html__( 'Alignment', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Alignment', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::CHOOSE,
 					'options' => [
 						'ec-text-left' => [
-							'title' => esc_html__( 'Left', WP_TH_CORE_SLUG ),
+							'title' => esc_html__( 'Left', WP_MF_CORE_SLUG ),
 							'icon' => 'fa fa-align-left',
 						],
 						'ec-text-center' => [
-							'title' => esc_html__( 'Center', WP_TH_CORE_SLUG ),
+							'title' => esc_html__( 'Center', WP_MF_CORE_SLUG ),
 							'icon' => 'fa fa-align-center',
 						],
 						'ec-text-right' => [
-							'title' => esc_html__( 'Right', WP_TH_CORE_SLUG ),
+							'title' => esc_html__( 'Right', WP_MF_CORE_SLUG ),
 							'icon' => 'fa fa-align-right',
 						],
 					],
@@ -312,7 +312,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 						\Elementor\Group_Control_Border::get_type(),
 						[
 							'name' => 'filter_border',
-							'label' => esc_html__( 'Filter Border', WP_TH_CORE_SLUG ),
+							'label' => esc_html__( 'Filter Border', WP_MF_CORE_SLUG ),
 							'selector' => '{{WRAPPER}} ul.th-course-categories-filter li',
 							'condition' => ['show_category_filter' => 'yes']
 						]
@@ -328,7 +328,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 					$this->add_control(
 						'filter_bg_color',
 						[
-							'label' => esc_html__( 'Background Color', WP_TH_CORE_SLUG ),
+							'label' => esc_html__( 'Background Color', WP_MF_CORE_SLUG ),
 							'type' => \Elementor\Controls_Manager::COLOR,
 							'scheme' => [
 								'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -344,7 +344,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 					$this->add_control(
 						'filter_text_color',
 						[
-							'label' => esc_html__( 'Text Color', WP_TH_CORE_SLUG ),
+							'label' => esc_html__( 'Text Color', WP_MF_CORE_SLUG ),
 							'type' => \Elementor\Controls_Manager::COLOR,
 							'scheme' => [
 								'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -360,7 +360,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 					$this->add_control(
 						'filter_text_bg_color',
 						[
-							'label' => esc_html__( 'Item Background', WP_TH_CORE_SLUG ),
+							'label' => esc_html__( 'Item Background', WP_MF_CORE_SLUG ),
 							'type' => \Elementor\Controls_Manager::COLOR,
 							'scheme' => [
 								'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -384,7 +384,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 					$this->add_control(
 						'filter_box_margin',
 						[
-							'label' => esc_html__( 'Filter Box Margin', WP_TH_CORE_SLUG ),
+							'label' => esc_html__( 'Filter Box Margin', WP_MF_CORE_SLUG ),
 							'type' => \Elementor\Controls_Manager::DIMENSIONS,
 							'size_units' => [ 'px', '%', 'em' ],
 							'selectors' => [
@@ -396,7 +396,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 					$this->add_control(
 						'filter_items_padding',
 						[
-							'label' => esc_html__( 'Filter Items Padding', WP_TH_CORE_SLUG ),
+							'label' => esc_html__( 'Filter Items Padding', WP_MF_CORE_SLUG ),
 							'type' => \Elementor\Controls_Manager::DIMENSIONS,
 							'size_units' => [ 'px', '%', 'em' ],
 							'selectors' => [
@@ -408,7 +408,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 					$this->add_control(
 						'filter_gap_between',
 						[
-							'label' => esc_html__( 'Gap Between Items', WP_TH_CORE_SLUG ),
+							'label' => esc_html__( 'Gap Between Items', WP_MF_CORE_SLUG ),
 							'type' => \Elementor\Controls_Manager::SLIDER,
 							'size_units' => [ 'px' ],
 							'range' => [
@@ -429,7 +429,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 						\Elementor\Group_Control_Typography::get_type(),
 						[
 							'name' => 'filter_text_typo',
-							'label' => esc_html__( 'Text Typography', WP_TH_CORE_SLUG ),
+							'label' => esc_html__( 'Text Typography', WP_MF_CORE_SLUG ),
 							'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
 							'selector' => '{{WRAPPER}} .th-course-categories-filter li',
 							'condition' => ['show_category_filter' => 'yes']
@@ -448,7 +448,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 					$this->add_control(
 						'filter_border_rad',
 						[
-							'label' => esc_html__( 'Border Radius', WP_TH_CORE_SLUG ),
+							'label' => esc_html__( 'Border Radius', WP_MF_CORE_SLUG ),
 							'type' => \Elementor\Controls_Manager::SLIDER,
 							'size_units' => [ 'px', '%' ],
 							'range' => [
@@ -468,7 +468,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 						\Elementor\Group_Control_Box_Shadow::get_type(),
 						[
 							'name' => 'filter_box_shadow',
-							'label' => esc_html__( 'Box Shadow', WP_TH_CORE_SLUG ),
+							'label' => esc_html__( 'Box Shadow', WP_MF_CORE_SLUG ),
 							'selector' => '{{WRAPPER}} .th-course-categories-filter li',
 							'condition' => ['show_category_filter' => 'yes']
 						]
@@ -486,7 +486,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 					$this->add_control(
 						'filter_text_color_hover',
 						[
-							'label' => esc_html__( 'Hover Text Color', WP_TH_CORE_SLUG ),
+							'label' => esc_html__( 'Hover Text Color', WP_MF_CORE_SLUG ),
 							'type' => \Elementor\Controls_Manager::COLOR,
 							'scheme' => [
 								'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -503,7 +503,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 					$this->add_control(
 						'filter_text_hover_bg',
 						[
-							'label' => esc_html__( 'Text Background Color on Hover', WP_TH_CORE_SLUG ),
+							'label' => esc_html__( 'Text Background Color on Hover', WP_MF_CORE_SLUG ),
 							'type' => \Elementor\Controls_Manager::COLOR,
 							'scheme' => [
 								'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -521,7 +521,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 						\Elementor\Group_Control_Border::get_type(),
 						[
 							'name' => 'filter_border_hover',
-							'label' => esc_html__( 'Filter Border', WP_TH_CORE_SLUG ),
+							'label' => esc_html__( 'Filter Border', WP_MF_CORE_SLUG ),
 							'selector' => '{{WRAPPER}} ul.th-course-categories-filter li:hover, {{WRAPPER}} ul.th-course-categories-filter li:focus, {{WRAPPER}} ul.th-course-categories-filter li.active',
 							'condition' => ['show_category_filter' => 'yes']
 						]
@@ -531,7 +531,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 						\Elementor\Group_Control_Box_Shadow::get_type(),
 						[
 							'name' => 'filter_box_shadow_hover',
-							'label' => esc_html__( 'Box Shadow', WP_TH_CORE_SLUG ),
+							'label' => esc_html__( 'Box Shadow', WP_MF_CORE_SLUG ),
 							'selector' => '{{WRAPPER}} .th-course-categories-filter li:hover, {{WRAPPER}} .th-course-categories-filter li:focus, {{WRAPPER}} .th-course-categories-filter li.active',
 							'condition' => ['show_category_filter' => 'yes']
 						]
@@ -553,17 +553,17 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 		$this->start_controls_section(
 			'hover_info',
 				[
-					'label' => esc_html__( 'Hover Information', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Hover Information', WP_MF_CORE_SLUG ),
 					'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
 				]
 			);
 			$this->add_control(
 				'show_hover_info',
 				[
-					'label' => esc_html__( 'Show Hover Info', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Show Hover Info', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SWITCHER,
-					'label_on' => esc_html__( 'Show', WP_TH_CORE_SLUG ),
-					'label_off' => esc_html__( 'Hide', WP_TH_CORE_SLUG ),
+					'label_on' => esc_html__( 'Show', WP_MF_CORE_SLUG ),
+					'label_off' => esc_html__( 'Hide', WP_MF_CORE_SLUG ),
 					'return_value' => 'yes',
 					'default' => 'no',
 				]
@@ -571,7 +571,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 			$this->add_control(
 				'hover_info_width',
 				[
-					'label' => esc_html__( 'Width', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Width', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SLIDER,
 					'size_units' => [ 'px' ],
 					'range' => [
@@ -589,7 +589,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 			$this->add_control(
 				'hover_info_top',
 				[
-					'label' => esc_html__( 'Top', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Top', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SLIDER,
 					'size_units' => [ 'px', '%' ],
 					'range' => [
@@ -619,7 +619,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 			$this->add_control(
 				'hover_info_bg_color',
 				[
-					'label' => esc_html__( 'Background Color', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Background Color', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::COLOR,
 					'scheme' => [
 						'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -635,7 +635,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 			$this->add_control(
 				'hover_info_border_rad',
 				[
-					'label' => esc_html__( 'Border Radius', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Border Radius', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SLIDER,
 					'size_units' => [ 'px' ],
 					'range' => [
@@ -654,7 +654,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 			$this->add_control(
 				'hover_info_padding',
 				[
-					'label' => esc_html__( 'Padding', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Padding', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::DIMENSIONS,
 					'size_units' => [ 'px', '%', 'em' ],
 					'selectors' => [
@@ -667,7 +667,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 				\Elementor\Group_Control_Box_Shadow::get_type(),
 				[
 					'name' => 'hover_info_box_shadow',
-					'label' => esc_html__( 'Box Shadow', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Box Shadow', WP_MF_CORE_SLUG ),
 					'selector' => '{{WRAPPER}} .hover-section',
 					'condition' => ['show_hover_info' => 'yes']
 				]
@@ -682,10 +682,10 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 			$this->add_control(
 				'show_hi_title',
 				[
-					'label' => esc_html__( 'Show Title', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Show Title', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SWITCHER,
-					'label_on' => esc_html__( 'Show', WP_TH_CORE_SLUG ),
-					'label_off' => esc_html__( 'Hide', WP_TH_CORE_SLUG ),
+					'label_on' => esc_html__( 'Show', WP_MF_CORE_SLUG ),
+					'label_off' => esc_html__( 'Hide', WP_MF_CORE_SLUG ),
 					'return_value' => 'yes',
 					'default' => 'no',
 					'condition' => ['show_hover_info' => 'yes']
@@ -694,10 +694,10 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 			$this->add_control(
 				'show_hi_level',
 				[
-					'label' => esc_html__( 'Show Level', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Show Level', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SWITCHER,
-					'label_on' => esc_html__( 'Show', WP_TH_CORE_SLUG ),
-					'label_off' => esc_html__( 'Hide', WP_TH_CORE_SLUG ),
+					'label_on' => esc_html__( 'Show', WP_MF_CORE_SLUG ),
+					'label_off' => esc_html__( 'Hide', WP_MF_CORE_SLUG ),
 					'return_value' => 'yes',
 					'default' => 'yes',
 					'condition' => ['show_hover_info' => 'yes']
@@ -706,10 +706,10 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 			$this->add_control(
 	        	'show_learning_points',
 	        	[
-	        		'label' => esc_html__( 'Show learning points', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Show learning points', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::SWITCHER,
-	        		'label_on' => esc_html__( 'Show', WP_TH_CORE_SLUG ),
-	        		'label_off' => esc_html__( 'Hide', WP_TH_CORE_SLUG ),
+	        		'label_on' => esc_html__( 'Show', WP_MF_CORE_SLUG ),
+	        		'label_off' => esc_html__( 'Hide', WP_MF_CORE_SLUG ),
 	        		'return_value' => 'yes',
 	        		'default' => 'yes',
 	        	]
@@ -717,10 +717,10 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 			$this->add_control(
 				'show_hi_lessons',
 				[
-					'label' => esc_html__( 'Show Number Of Chapters/lessons', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Show Number Of Chapters/lessons', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SWITCHER,
-					'label_on' => esc_html__( 'Show', WP_TH_CORE_SLUG ),
-					'label_off' => esc_html__( 'Hide', WP_TH_CORE_SLUG ),
+					'label_on' => esc_html__( 'Show', WP_MF_CORE_SLUG ),
+					'label_off' => esc_html__( 'Hide', WP_MF_CORE_SLUG ),
 					'return_value' => 'yes',
 					'default' => 'no',
 					'condition' => ['show_hover_info' => 'yes']
@@ -729,10 +729,10 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 			$this->add_control(
 				'show_hi_course_duration',
 				[
-					'label' => esc_html__( 'Show Course Duration', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Show Course Duration', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SWITCHER,
-					'label_on' => esc_html__( 'Show', WP_TH_CORE_SLUG ),
-					'label_off' => esc_html__( 'Hide', WP_TH_CORE_SLUG ),
+					'label_on' => esc_html__( 'Show', WP_MF_CORE_SLUG ),
+					'label_off' => esc_html__( 'Hide', WP_MF_CORE_SLUG ),
 					'return_value' => 'yes',
 					'default' => 'no',
 					'condition' => ['show_hover_info' => 'yes']
@@ -741,10 +741,10 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 			$this->add_control(
 				'show_hi_course_details',
 				[
-					'label' => esc_html__( 'Show Details', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Show Details', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SWITCHER,
-					'label_on' => esc_html__( 'Show', WP_TH_CORE_SLUG ),
-					'label_off' => esc_html__( 'Hide', WP_TH_CORE_SLUG ),
+					'label_on' => esc_html__( 'Show', WP_MF_CORE_SLUG ),
+					'label_off' => esc_html__( 'Hide', WP_MF_CORE_SLUG ),
 					'return_value' => 'yes',
 					'default' => 'no',
 					'condition' => ['show_hover_info' => 'yes']
@@ -753,10 +753,10 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 			$this->add_control(
 				'show_hi_add_to_cart',
 				[
-					'label' => esc_html__( 'Show Add To Cart', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Show Add To Cart', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SWITCHER,
-					'label_on' => esc_html__( 'Show', WP_TH_CORE_SLUG ),
-					'label_off' => esc_html__( 'Hide', WP_TH_CORE_SLUG ),
+					'label_on' => esc_html__( 'Show', WP_MF_CORE_SLUG ),
+					'label_off' => esc_html__( 'Hide', WP_MF_CORE_SLUG ),
 					'return_value' => 'yes',
 					'default' => 'no',
 					'condition' => ['show_hover_info' => 'yes']
@@ -765,10 +765,10 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 			$this->add_control(
 				'show_hi_wishlist',
 				[
-					'label' => esc_html__( 'Show Wishlist', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Show Wishlist', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SWITCHER,
-					'label_on' => esc_html__( 'Show', WP_TH_CORE_SLUG ),
-					'label_off' => esc_html__( 'Hide', WP_TH_CORE_SLUG ),
+					'label_on' => esc_html__( 'Show', WP_MF_CORE_SLUG ),
+					'label_off' => esc_html__( 'Hide', WP_MF_CORE_SLUG ),
 					'return_value' => 'yes',
 					'default' => 'no',
 					'condition' => ['show_hover_info' => 'yes']
@@ -784,7 +784,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 			$this->add_control(
 				'hi_title_opt',
 				[
-					'label' => esc_html__( 'Title', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Title', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::HEADING,
 					'separator' => 'none',
 				]
@@ -793,7 +793,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 				\Elementor\Group_Control_Typography::get_type(),
 				[
 					'name' => 'hi_title_typography',
-					'label' => esc_html__( 'Title Typography', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Title Typography', WP_MF_CORE_SLUG ),
 					'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
 					'selector' => '{{WRAPPER}} .hover-info-title',
 					'condition' => ['show_hi_title' => 'yes']
@@ -802,7 +802,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 			$this->add_control(
 				'hi_title_color',
 				[
-					'label' => esc_html__( 'Title Color', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Title Color', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::COLOR,
 					'scheme' => [
 						'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -824,7 +824,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 			$this->add_control(
 				'hi_desc',
 				[
-					'label' => esc_html__( 'Description', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Description', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::HEADING,
 					'separator' => 'none',
 				]
@@ -833,7 +833,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 				\Elementor\Group_Control_Typography::get_type(),
 				[
 					'name' => 'hi_desc_typo',
-					'label' => esc_html__( 'Description Typography', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Description Typography', WP_MF_CORE_SLUG ),
 					'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
 					'selector' => '{{WRAPPER}} .hover-info-desc',
 					'condition' => ['show_hi_course_details' => 'yes']
@@ -843,7 +843,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 			$this->add_control(
 				'hi_desc_excerpt',
 				[
-					'label' => esc_html__( 'Description Word Count', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Description Word Count', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::NUMBER,
 					'min' => 5,
 					'max' => 30,
@@ -855,7 +855,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 			$this->add_control(
 				'hi_desc_padding',
 				[
-					'label' => esc_html__( 'Padding', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Padding', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::DIMENSIONS,
 					'size_units' => [ 'px', '%', 'em' ],
 					'selectors' => [
@@ -874,7 +874,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 			$this->add_control(
 				'hi_learning_points',
 				[
-					'label' => esc_html__( 'Learning Points', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Learning Points', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::HEADING,
 					'separator' => 'none',
 					'condition' => ['show_learning_points' => 'yes']
@@ -884,7 +884,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 				\Elementor\Group_Control_Typography::get_type(),
 				[
 					'name' => 'hi_learning_points_typo',
-					'label' => esc_html__( 'Learning points typography', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Learning points typography', WP_MF_CORE_SLUG ),
 					'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
 					'selector' => '{{WRAPPER}} .hover-section .learning-points',
 					'condition' => ['show_learning_points' => 'yes']
@@ -893,7 +893,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 			$this->add_control(
 				'hi_learning_points_margin',
 				[
-					'label' => esc_html__( 'Spacing', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Spacing', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::DIMENSIONS,
 					'size_units' => [ 'px', '%', 'em' ],
 					'selectors' => [
@@ -907,7 +907,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 			$this->add_control(
 				'hi_date',
 				[
-					'label' => esc_html__( 'Date', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Date', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::HEADING,
 					'separator' => 'none',
 				]
@@ -915,7 +915,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 			$this->add_control(
 				'hi_date_color',
 				[
-					'label' => esc_html__( 'Color', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Color', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::COLOR,
 					'scheme' => [
 						'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -930,7 +930,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 				\Elementor\Group_Control_Typography::get_type(),
 				[
 					'name' => 'hi_date_typography',
-					'label' => esc_html__( 'Typography', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Typography', WP_MF_CORE_SLUG ),
 					'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
 					'selector' => '{{WRAPPER}} .hover-section .hover-info-date',
 				]
@@ -940,7 +940,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 			$this->add_control(
 				'hi_cart_button',
 				[
-					'label' => esc_html__( 'Cart Button', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Cart Button', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::HEADING,
 					'separator' => 'none',
 					'condition' => ['show_hi_add_to_cart' => 'yes']
@@ -952,7 +952,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 				\Elementor\Group_Control_Typography::get_type(),
 				[
 					'name' => 'hi_cart_button',
-					'label' => esc_html__( 'Typography', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Typography', WP_MF_CORE_SLUG ),
 					'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
 					'selector' => '{{WRAPPER}} .hover-info-add-cart',
 					'condition' => ['show_hi_add_to_cart' => 'yes']
@@ -961,7 +961,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 			$this->add_control(
 				'hi_cart_btn_color',
 				[
-					'label' => esc_html__( 'Color', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Color', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::COLOR,
 					'scheme' => [
 						'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -977,7 +977,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 			$this->add_control(
 				'hi_cart_btn_color_bg',
 				[
-					'label' => esc_html__( 'Background', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Background', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::COLOR,
 					'scheme' => [
 						'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -993,7 +993,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 			$this->add_control(
 				'hi_cart_btn_br',
 				[
-					'label' => esc_html__( 'Border Radius', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Border Radius', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SLIDER,
 					'size_units' => [ 'px', '%' ],
 					'range' => [
@@ -1012,7 +1012,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 				\Elementor\Group_Control_Border::get_type(),
 				[
 					'name' => 'cart_buttonborder',
-					'label' => esc_html__( 'Border', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Border', WP_MF_CORE_SLUG ),
 					'selector' => '{{WRAPPER}} .hover-info-add-cart',
 					'condition' => ['show_hi_add_to_cart' => 'yes']
 				]
@@ -1020,7 +1020,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 			$this->add_control(
 				'padding_hi',
 				[
-					'label' => esc_html__( 'Padding', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Padding', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::DIMENSIONS,
 					'size_units' => [ 'px', '%', 'em' ],
 					'selectors' => [
@@ -1035,7 +1035,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 			$this->add_control(
 				'hi_cart_btn_color_hover',
 				[
-					'label' => esc_html__( 'Color', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Color', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::COLOR,
 					'scheme' => [
 						'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -1051,7 +1051,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 			$this->add_control(
 				'hi_cart_btn_color_bg_hover',
 				[
-					'label' => esc_html__( 'Background', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Background', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::COLOR,
 					'scheme' => [
 						'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -1068,7 +1068,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 				\Elementor\Group_Control_Border::get_type(),
 				[
 					'name' => 'cart_buttonborder_hover',
-					'label' => esc_html__( 'Border', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Border', WP_MF_CORE_SLUG ),
 					'selector' => '{{WRAPPER}} .hover-info-add-cart:hover',
 					'condition' => ['show_hi_add_to_cart' => 'yes']
 				]
@@ -1081,7 +1081,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 			$this->add_control(
 				'wishl_header',
 				[
-					'label' => esc_html__( 'Wishlist', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Wishlist', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::HEADING,
 					'separator' => 'before',
 					'condition' => ['show_hi_wishlist' => 'yes']
@@ -1090,7 +1090,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 			$this->add_control(
 				'wishlist_icon',
 				[
-					'label' => esc_html__( 'Wishlist Icon', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Wishlist Icon', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::ICON,
 					'default' => 'fa fa-heart-o',
 					'condition' => ['show_hi_wishlist' => 'yes']
@@ -1099,7 +1099,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 			$this->add_control(
 				'wishlist_icon_br',
 				[
-					'label' => esc_html__( 'Border Radius', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Border Radius', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SLIDER,
 					'size_units' => [ 'px', '%' ],
 					'range' => [
@@ -1118,7 +1118,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 				\Elementor\Group_Control_Typography::get_type(),
 				[
 					'name' => 'hi_wish_list_button',
-					'label' => esc_html__( 'Typography', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Typography', WP_MF_CORE_SLUG ),
 					'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
 					'selector' => '{{WRAPPER}} .hover-info-wishlist a',
 					'condition' => ['show_hi_wishlist' => 'yes']
@@ -1127,7 +1127,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 			$this->add_control(
 				'hi_wish_list_btn_color',
 				[
-					'label' => esc_html__( 'Color', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Color', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::COLOR,
 					'scheme' => [
 						'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -1143,7 +1143,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 			$this->add_control(
 				'hi_wish_list_btn_color_bg',
 				[
-					'label' => esc_html__( 'Background', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Background', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::COLOR,
 					'scheme' => [
 						'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -1160,7 +1160,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 				\Elementor\Group_Control_Border::get_type(),
 				[
 					'name' => 'wishlist_buttonborder',
-					'label' => esc_html__( 'Border', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Border', WP_MF_CORE_SLUG ),
 					'selector' => '{{WRAPPER}} .hover-info-wishlist a',
 					'condition' => ['show_hi_wishlist' => 'yes']
 				]
@@ -1168,7 +1168,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 			$this->add_control(
 				'padding_hi_wl',
 				[
-					'label' => esc_html__( 'Padding', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Padding', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::DIMENSIONS,
 					'size_units' => [ 'px', '%', 'em' ],
 					'selectors' => [
@@ -1180,7 +1180,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 			$this->add_control(
 				'hi_wish_list_hover',
 				[
-					'label' => esc_html__( 'Hover', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Hover', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::HEADING,
 					'separator' => 'none',
 					'condition' => ['show_hi_wishlist' => 'yes']
@@ -1189,7 +1189,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 			$this->add_control(
 				'hi_wishlist_btn_color_hover',
 				[
-					'label' => esc_html__( 'Color', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Color', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::COLOR,
 					'scheme' => [
 						'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -1205,7 +1205,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 			$this->add_control(
 				'hi_wishlist_color_bg_hover',
 				[
-					'label' => esc_html__( 'Background', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Background', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::COLOR,
 					'scheme' => [
 						'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -1222,7 +1222,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 				\Elementor\Group_Control_Border::get_type(),
 				[
 					'name' => 'wishlist_border_hover',
-					'label' => esc_html__( 'Border', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Border', WP_MF_CORE_SLUG ),
 					'selector' => '{{WRAPPER}} .hover-info-wishlist a:hover, {{WRAPPER}} .hover-info-wishlist a.on',
 					'condition' => ['show_hi_wishlist' => 'yes']
 				]
@@ -1236,27 +1236,27 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 	    $this->start_controls_section(
             'carousel_navigation',
 	            [
-	                'label' => esc_html__( 'Navigation', WP_TH_CORE_SLUG ),
+	                'label' => esc_html__( 'Navigation', WP_MF_CORE_SLUG ),
 	                'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
 	            ]
 	        );
 		    $this->add_control(
 		    	'thcoursegrid_select_nav_type',
 		    	[
-		    		'label' => esc_html__( 'Select Navigation Type', WP_TH_CORE_SLUG ),
+		    		'label' => esc_html__( 'Select Navigation Type', WP_MF_CORE_SLUG ),
 		    		'type' => \Elementor\Controls_Manager::SELECT,
 		    		'default' => 'load_more',
 		    		'options' => [
-		    			''  => esc_html__( 'Hide Navigation', WP_TH_CORE_SLUG ),
-		    			'load_more'  => esc_html__( 'Load More', WP_TH_CORE_SLUG ),
-		    			'arrow'  => esc_html__( 'Arrow', WP_TH_CORE_SLUG ),
+		    			''  => esc_html__( 'Hide Navigation', WP_MF_CORE_SLUG ),
+		    			'load_more'  => esc_html__( 'Load More', WP_MF_CORE_SLUG ),
+		    			'arrow'  => esc_html__( 'Arrow', WP_MF_CORE_SLUG ),
 		    		],
 		    	]
 		    );
     		$this->add_control(
 				'carousel_arrow_section',
 				[
-					'label' => esc_html__( 'Arrow', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Arrow', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::HEADING,
 					'condition' => ['thcoursegrid_select_nav_type' => 'arrow']
 				]
@@ -1264,7 +1264,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
     		$this->add_control(
 				'carousel_load_more_section',
 				[
-					'label' => esc_html__( 'Load More', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Load More', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::HEADING,
 					'condition' => ['thcoursegrid_select_nav_type' => 'load_more']
 				]
@@ -1272,23 +1272,23 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 			$this->add_control(
 				'load_more_text',
 				[
-					'label' => esc_html__( 'Load More Text', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Load More Text', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::TEXT,
-					'default' => esc_html__( 'Show More', WP_TH_CORE_SLUG ),
-					'placeholder' => esc_html__( 'Load More', WP_TH_CORE_SLUG ),
+					'default' => esc_html__( 'Show More', WP_MF_CORE_SLUG ),
+					'placeholder' => esc_html__( 'Load More', WP_MF_CORE_SLUG ),
 					'condition' => ['thcoursegrid_select_nav_type' => 'load_more']
 				]
 			);
 			$this->add_control(
 				'Load_more_btn_position',
 				[
-					'label' => esc_html__( 'Load More Button position', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Load More Button position', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SELECT,
 					'default' => 4,
 					'options' => [
-						'ec-text-center'  => esc_html__( 'Center', WP_TH_CORE_SLUG ),
-						'ec-text-right'  => esc_html__( 'Right', WP_TH_CORE_SLUG ),
-						'ec-text-left'  => esc_html__( 'Left', WP_TH_CORE_SLUG ),
+						'ec-text-center'  => esc_html__( 'Center', WP_MF_CORE_SLUG ),
+						'ec-text-right'  => esc_html__( 'Right', WP_MF_CORE_SLUG ),
+						'ec-text-left'  => esc_html__( 'Left', WP_MF_CORE_SLUG ),
 					],
 					'default' => 'ec-text-center',
 					'condition' => ['thcoursegrid_select_nav_type' => 'load_more']
@@ -1297,13 +1297,13 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 			$this->add_control(
 				'arrow_position',
 				[
-					'label' => esc_html__( 'Select arrow position', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Select arrow position', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SELECT,
 					'default' => 4,
 					'options' => [
-						''  => esc_html__( 'Center', WP_TH_CORE_SLUG ),
-						'top-right'  => esc_html__( 'Top Right', WP_TH_CORE_SLUG ),
-						'top-left'  => esc_html__( 'Top Left', WP_TH_CORE_SLUG ),
+						''  => esc_html__( 'Center', WP_MF_CORE_SLUG ),
+						'top-right'  => esc_html__( 'Top Right', WP_MF_CORE_SLUG ),
+						'top-left'  => esc_html__( 'Top Left', WP_MF_CORE_SLUG ),
 					],
 					'default' => '',
 					'condition' => ['thcoursegrid_select_nav_type' => 'arrow']
@@ -1316,7 +1316,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 			$this->start_controls_tab(
 				'arrow_normal_tab',
 				[
-					'label' => esc_html__( 'Normal', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Normal', WP_MF_CORE_SLUG ),
 
 				]
 			);
@@ -1324,7 +1324,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 				\Elementor\Group_Control_Typography::get_type(),
 				[
 					'name' => 'more_btn_content_typography',
-					'label' => esc_html__( 'Typography', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Typography', WP_MF_CORE_SLUG ),
 					'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
 					'selector' => '{{WRAPPER}} button.ec-switch-button-next, {{WRAPPER}} button.ec-switch-button-prev',
 				]
@@ -1332,7 +1332,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 			$this->add_control(
 				'more_btn_background_color',
 				[
-					'label' => esc_html__( 'Background Color', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Background Color', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::COLOR,
 					'scheme' => [
 						'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -1347,7 +1347,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 			$this->add_control(
 				'more_btn_color',
 				[
-					'label' => esc_html__( 'Text Color', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Text Color', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::COLOR,
 					'scheme' => [
 						'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -1362,7 +1362,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 			$this->add_control(
 				'more_btn_padding',
 				[
-					'label' => esc_html__( 'Padding', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Padding', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::DIMENSIONS,
 					'size_units' => [ 'px', '%', 'em' ],
 					'selectors' => [
@@ -1373,7 +1373,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 			$this->add_control(
 				'more_btn_margin',
 				[
-					'label' => esc_html__( 'Margin', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Margin', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::DIMENSIONS,
 					'size_units' => [ 'px', '%', 'em' ],
 					'selectors' => [
@@ -1385,7 +1385,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 				\Elementor\Group_Control_Box_Shadow::get_type(),
 				[
 					'name' => 'more_btn_box_shadow',
-					'label' => esc_html__( 'Box Shadow', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Box Shadow', WP_MF_CORE_SLUG ),
 					'selector' => '{{WRAPPER}} button.ec-switch-button-next, {{WRAPPER}} button.ec-switch-button-prev',
 				]
 			);
@@ -1393,7 +1393,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 				\Elementor\Group_Control_Border::get_type(),
 				[
 					'name' => 'more_btn_border',
-					'label' => __( 'Border', WP_TH_CORE_SLUG ),
+					'label' => __( 'Border', WP_MF_CORE_SLUG ),
 					'selector' => '{{WRAPPER}} button.ec-switch-button-next, {{WRAPPER}} button.ec-switch-button-prev',
 				]
 			);
@@ -1401,7 +1401,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 			$this->add_control(
 				'more_btn_border_rad',
 				[
-					'label' => esc_html__( 'Border Radius', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Border Radius', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SLIDER,
 					'size_units' => [ 'px'],
 					'range' => [
@@ -1422,14 +1422,14 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 			$this->start_controls_tab(
 				'arrow_hover_tab',
 				[
-					'label' => esc_html__( 'Hover', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Hover', WP_MF_CORE_SLUG ),
 				]
 			);
 
 			$this->add_control(
 				'more_btn_background_color_hover',
 				[
-					'label' => esc_html__( 'Background Color', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Background Color', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::COLOR,
 					'scheme' => [
 						'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -1444,7 +1444,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 			$this->add_control(
 				'more_btn_color_hover',
 				[
-					'label' => esc_html__( 'Text Color', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Text Color', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::COLOR,
 					'scheme' => [
 						'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -1460,7 +1460,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 			$this->add_control(
 				'more_btn_margin_hover',
 				[
-					'label' => esc_html__( 'Margin', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Margin', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::DIMENSIONS,
 					'size_units' => [ 'px', '%', 'em' ],
 					'selectors' => [
@@ -1472,14 +1472,14 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 				\Elementor\Group_Control_Box_Shadow::get_type(),
 				[
 					'name' => 'more_btn_box_shadow_hover',
-					'label' => esc_html__( 'Box Shadow', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Box Shadow', WP_MF_CORE_SLUG ),
 					'selector' => '{{WRAPPER}} button.ec-switch-button-next:hover, {{WRAPPER}} button.ec-switch-button-prev:hover',
 				]
 			);
 			$this->add_control(
 				'more_btn_border_rad_hover',
 				[
-					'label' => esc_html__( 'Border Radius', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Border Radius', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SLIDER,
 					'size_units' => [ 'px'],
 					'range' => [
@@ -1513,7 +1513,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 	    $this->start_controls_section(
             'box_style_section',
 	            [
-	                'label' => esc_html__( 'Box Style', WP_TH_CORE_SLUG ),
+	                'label' => esc_html__( 'Box Style', WP_MF_CORE_SLUG ),
 	                'tab' => \Elementor\Controls_Manager::TAB_STYLE,
 	            ]
 	        );
@@ -1521,7 +1521,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
         		\Elementor\Group_Control_Border::get_type(),
         		[
         			'name' => 'border',
-        			'label' => esc_html__( 'Box Border', WP_TH_CORE_SLUG ),
+        			'label' => esc_html__( 'Box Border', WP_MF_CORE_SLUG ),
         			'selector' => '{{WRAPPER}} .th-course-block',
         		]
         	);
@@ -1534,20 +1534,20 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
         	$this->add_control(
 				'select_layout',
 				[
-					'label' => esc_html__( 'Select Layout', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Select Layout', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SELECT,
 					'default' => 'top',
 					'options' => [
-						'top'  		=> esc_html__( 'Image Top', WP_TH_CORE_SLUG ),
-						'thumb-left'  	=> esc_html__( 'Image Left', WP_TH_CORE_SLUG ),
-						'thumb-right'  	=> esc_html__( 'Image Right', WP_TH_CORE_SLUG ),
+						'top'  		=> esc_html__( 'Image Top', WP_MF_CORE_SLUG ),
+						'thumb-left'  	=> esc_html__( 'Image Left', WP_MF_CORE_SLUG ),
+						'thumb-right'  	=> esc_html__( 'Image Right', WP_MF_CORE_SLUG ),
 					],
 				]
 			);
 			$this->add_responsive_control(
 				'thumb_width',
 				[
-					'label' => esc_html__( 'Thumbnail Width', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Thumbnail Width', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SLIDER,
 					'size_units' => [ 'px', '%' ],
 					'range' => [
@@ -1575,7 +1575,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
         	$this->add_responsive_control(
         		'thumb_height',
         		[
-        			'label' => esc_html__( 'Thumbnail Height', WP_TH_CORE_SLUG ),
+        			'label' => esc_html__( 'Thumbnail Height', WP_MF_CORE_SLUG ),
         			'type' => \Elementor\Controls_Manager::SLIDER,
         			'size_units' => [ 'px' ],
         			'range' => [
@@ -1597,7 +1597,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
         	$this->add_responsive_control(
         		'thumb_top_spacing',
         		[
-        			'label' => esc_html__( 'Thumbnail Top Spacing', WP_TH_CORE_SLUG ),
+        			'label' => esc_html__( 'Thumbnail Top Spacing', WP_MF_CORE_SLUG ),
         			'type' => \Elementor\Controls_Manager::SLIDER,
         			'size_units' => [ 'px' ],
         			'range' => [
@@ -1620,7 +1620,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
         	$this->add_responsive_control(
         		'box_margin',
         		[
-        			'label' => esc_html__( 'Box margin', WP_TH_CORE_SLUG ),
+        			'label' => esc_html__( 'Box margin', WP_MF_CORE_SLUG ),
         			'type' => \Elementor\Controls_Manager::DIMENSIONS,
         			'size_units' => [ 'px' ],
         			'selectors' => [
@@ -1639,7 +1639,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
         	$this->add_responsive_control(
         		'box_padding',
         		[
-        			'label' => esc_html__( 'Box Padding', WP_TH_CORE_SLUG ),
+        			'label' => esc_html__( 'Box Padding', WP_MF_CORE_SLUG ),
         			'type' => \Elementor\Controls_Manager::DIMENSIONS,
         			'size_units' => [ 'px' ],
         			'selectors' => [
@@ -1650,7 +1650,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
         	$this->add_responsive_control(
         		'content_padding',
         		[
-        			'label' => esc_html__( 'Content Padding', WP_TH_CORE_SLUG ),
+        			'label' => esc_html__( 'Content Padding', WP_MF_CORE_SLUG ),
         			'type' => \Elementor\Controls_Manager::DIMENSIONS,
         			'size_units' => [ 'px' ],
         			'selectors' => [
@@ -1668,7 +1668,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
         	$this->add_responsive_control(
         		'image_border_radius',
         		[
-        			'label' => esc_html__( 'Image Border Radius', WP_TH_CORE_SLUG ),
+        			'label' => esc_html__( 'Image Border Radius', WP_MF_CORE_SLUG ),
         			'type' => \Elementor\Controls_Manager::DIMENSIONS,
         			'size_units' => [ 'px' ],
         			
@@ -1680,7 +1680,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
         	$this->add_control(
         		'box_border_radius',
         		[
-        			'label' => esc_html__( 'Box Border Radius', WP_TH_CORE_SLUG ),
+        			'label' => esc_html__( 'Box Border Radius', WP_MF_CORE_SLUG ),
         			'type' => \Elementor\Controls_Manager::SLIDER,
         			'size_units' => [ 'px', '%' ],
         			'range' => [
@@ -1707,7 +1707,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
         		\Elementor\Group_Control_Box_Shadow::get_type(),
         		[
         			'name' => 'course_box_shadow',
-        			'label' => esc_html__( 'Box Shadow', WP_TH_CORE_SLUG ),
+        			'label' => esc_html__( 'Box Shadow', WP_MF_CORE_SLUG ),
         			'selector' => '{{WRAPPER}} .th-course-block',
         		]
         	);
@@ -1715,14 +1715,14 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
         		\Elementor\Group_Control_Box_Shadow::get_type(),
         		[
         			'name' => 'course_box_shadow_hover',
-        			'label' => esc_html__( 'Box Shadow on hover', WP_TH_CORE_SLUG ),
+        			'label' => esc_html__( 'Box Shadow on hover', WP_MF_CORE_SLUG ),
         			'selector' => '{{WRAPPER}} .th-course-block:hover',
         		]
         	);
         	$this->add_control(
         		'course_block_bg',
         		[
-        			'label' => esc_html__( 'Background', WP_TH_CORE_SLUG ),
+        			'label' => esc_html__( 'Background', WP_MF_CORE_SLUG ),
         			'type' => \Elementor\Controls_Manager::COLOR,
         			'scheme' => [
         				'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -1746,14 +1746,14 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
         $this->start_controls_section(
             'cat_style_section',
 	            [
-	                'label' => esc_html__( 'Content', WP_TH_CORE_SLUG ),
+	                'label' => esc_html__( 'Content', WP_MF_CORE_SLUG ),
 	                'tab' => \Elementor\Controls_Manager::TAB_STYLE,
 	            ]
 	        );
 	        $this->add_control(
 	        	'category_heading',
 	        	[
-	        		'label' => esc_html__('Catogory', WP_TH_CORE_SLUG),
+	        		'label' => esc_html__('Catogory', WP_MF_CORE_SLUG),
 	        		'type' => \Elementor\Controls_Manager::HEADING
 	        	]
 	        );
@@ -1767,10 +1767,10 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 	        $this->add_control(
 	        	'show_cat_bg',
 	        	[
-	        		'label' => esc_html__( 'Show Category Background', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Show Category Background', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::SWITCHER,
-	        		'label_on' => esc_html__( 'Yes', WP_TH_CORE_SLUG ),
-	        		'label_off' => esc_html__( 'No', WP_TH_CORE_SLUG ),
+	        		'label_on' => esc_html__( 'Yes', WP_MF_CORE_SLUG ),
+	        		'label_off' => esc_html__( 'No', WP_MF_CORE_SLUG ),
 	        		'return_value' => 'yes',
 	        		'default' => 'yes',
 	        	]
@@ -1778,7 +1778,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 	        $this->add_control(
 	        	'cat_padding',
 	        	[
-	        		'label' => esc_html__( 'Padding', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Padding', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::DIMENSIONS,
 	        		'size_units' => [ 'px', '%', 'em' ],
 	        		'selectors' => [
@@ -1796,7 +1796,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 	        $this->add_control(
 	        	'cat_margin',
 	        	[
-	        		'label' => esc_html__( 'Margin', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Margin', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::DIMENSIONS,
 	        		'size_units' => [ 'px', '%', 'em' ],
 	        		'selectors' => [
@@ -1807,7 +1807,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 	        $this->add_control(
 	        	'cat_br',
 	        	[
-	        		'label' => esc_html__( 'Border Radius', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Border Radius', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::SLIDER,
 	        		'size_units' => [ 'px', '%' ],
 	        		'range' => [
@@ -1835,7 +1835,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 	        $this->add_control(
 	        	'title_header',
 	        	[
-	        		'label' => esc_html__('Title', WP_TH_CORE_SLUG),
+	        		'label' => esc_html__('Title', WP_MF_CORE_SLUG),
 	        		'type' => \Elementor\Controls_Manager::HEADING,
 	        		'seperator' => 'before'
 	        	]
@@ -1845,14 +1845,14 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 	        	\Elementor\Group_Control_Typography::get_type(),
 	        	[
 	        		'name' => 'title_typo',
-	        		'label' => esc_html__( 'Typography', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Typography', WP_MF_CORE_SLUG ),
 	        		'selector' => '{{WRAPPER}} .course-block-title',
 	        	]
 	        );
 	        $this->add_control(
 	        	'title_color',
 	        	[
-	        		'label' => esc_html__( 'Title Color', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Title Color', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::COLOR,
 	        		'scheme' => [
 	        			'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -1866,7 +1866,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 	        $this->add_control(
 	        	'title_hover_color',
 	        	[
-	        		'label' => esc_html__( 'Title Hover Color', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Title Hover Color', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::COLOR,
 	        		'scheme' => [
 	        			'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -1880,7 +1880,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 	        $this->add_control(
 	        	'title_margin',
 	        	[
-	        		'label' => esc_html__( 'Title Margin', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Title Margin', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::DIMENSIONS,
 	        		'size_units' => [ 'px' ],
 	        		'selectors' => [
@@ -1898,7 +1898,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 	        $this->add_control(
 	        	'tag_header',
 	        	[
-	        		'label' => esc_html__('Course tag', WP_TH_CORE_SLUG),
+	        		'label' => esc_html__('Course tag', WP_MF_CORE_SLUG),
 	        		'type' => \Elementor\Controls_Manager::HEADING,
 	        		'seperator' => 'before'
 	        	]
@@ -1907,7 +1907,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 	        	\Elementor\Group_Control_Typography::get_type(),
 	        	[
 	        		'name' => 'tag_typography',
-	        		'label' => esc_html__( 'Typography', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Typography', WP_MF_CORE_SLUG ),
 	        		'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
 	        		'selector' => '{{WRAPPER}} .course-tags',
 	        	]
@@ -1915,7 +1915,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 	        $this->add_responsive_control(
 	        	'tags_vertical_position',
 	        	[
-	        		'label' => esc_html__( 'Vertical Position', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Vertical Position', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::SLIDER,
 	        		'size_units' => [ 'px', '%' ],
 	        		'range' => [
@@ -1937,7 +1937,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 	        $this->add_responsive_control(
 	        	'tags_horizontal_position',
 	        	[
-	        		'label' => esc_html__( 'Horizontal Position', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Horizontal Position', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::SLIDER,
 	        		'size_units' => [ 'px', '%' ],
 	        		'range' => [
@@ -1959,10 +1959,10 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 	        $this->add_control(
 	        	'show_tags',
 	        	[
-	        		'label' => esc_html__( 'Show tags', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Show tags', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::SWITCHER,
-	        		'label_on' => __( 'Show', WP_TH_CORE_SLUG ),
-	        		'label_off' => __( 'Hide', WP_TH_CORE_SLUG ),
+	        		'label_on' => __( 'Show', WP_MF_CORE_SLUG ),
+	        		'label_off' => __( 'Hide', WP_MF_CORE_SLUG ),
 	        		'return_value' => 'yes',
 	        		'default' => 'yes',
 	        	]
@@ -1970,7 +1970,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 	        $this->add_responsive_control(
 	        	'course_tag_padding',
 	        	[
-	        		'label' => esc_html__( 'Padding', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Padding', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::DIMENSIONS,
 	        		'size_units' => [ 'px', '%', 'em' ],
 	        		'selectors' => [
@@ -1987,7 +1987,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 	        $this->add_control(
 	        	'desc_header',
 	        	[
-	        		'label' => esc_html__('Description', WP_TH_CORE_SLUG),
+	        		'label' => esc_html__('Description', WP_MF_CORE_SLUG),
 	        		'type' => \Elementor\Controls_Manager::HEADING,
 	        		'seperator' => 'before'
 	        	]
@@ -1996,14 +1996,14 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 	        	\Elementor\Group_Control_Typography::get_type(),
 	        	[
 	        		'name' => 'desc_typography',
-	        		'label' => esc_html__( 'Typography', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Typography', WP_MF_CORE_SLUG ),
 	        		'selector' => '{{WRAPPER}} .th-description',
 	        	]
 	        );
 	        $this->add_control(
 				'th_course_item_desc_color',
 				[
-					'label' => esc_html__( 'Color', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Color', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::COLOR,
 					'scheme' => [
 						'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -2018,7 +2018,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 	        $this->add_control(
 	        	'desc_margin',
 	        	[
-	        		'label' => esc_html__( 'Description Margin', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Description Margin', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::DIMENSIONS,
 	        		'size_units' => [ 'px'],
 	        		'selectors' => [
@@ -2036,7 +2036,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 	        $this->add_control(
 	        	'pricing_header',
 	        	[
-	        		'label' => esc_html__('Pricing', WP_TH_CORE_SLUG),
+	        		'label' => esc_html__('Pricing', WP_MF_CORE_SLUG),
 	        		'type' => \Elementor\Controls_Manager::HEADING,
 	        		'seperator' => 'before'
 	        	]
@@ -2046,14 +2046,14 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 	        	\Elementor\Group_Control_Typography::get_type(),
 	        	[
 	        		'name' => 'pricing_typo',
-	        		'label' => esc_html__( 'Pricing Typography', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Pricing Typography', WP_MF_CORE_SLUG ),
 	        		'selector' => '{{WRAPPER}} .th-sale-price',
 	        	]
 	        );
 	        $this->add_control(
 	        	'price_color',
 	        	[
-	        		'label' => esc_html__( 'Price Color', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Price Color', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::COLOR,
 	        		'scheme' => [
 	        			'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -2068,7 +2068,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 	        $this->add_control(
 	        	'price_color_bg',
 	        	[
-	        		'label' => esc_html__( 'Price Color Background', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Price Color Background', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::COLOR,
 	        		'scheme' => [
 	        			'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -2082,7 +2082,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 	        $this->add_control(
 				'price_border_rad',
 				[
-					'label' => esc_html__( 'Pricing Border Radius', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Pricing Border Radius', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SLIDER,
 					'size_units' => [ 'px', '%' ],
 					'range' => [
@@ -2104,7 +2104,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 			$this->add_control(
 				'price_section_padding',
 				[
-					'label' => esc_html__( 'Price Section Padding', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Price Section Padding', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::DIMENSIONS,
 					'size_units' => [ 'px', '%', 'em' ],
 					'selectors' => [
@@ -2122,7 +2122,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 			$this->add_responsive_control(
 				'price_pos_top',
 				[
-					'label' => esc_html__( 'Position Top', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Position Top', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SLIDER,
 					'size_units' => [ 'px', '%' ],
 					'range' => [
@@ -2149,7 +2149,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 			$this->add_responsive_control(
 				'price_pos_rt',
 				[
-					'label' => esc_html__( 'Position Right', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Position Right', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SLIDER,
 					'size_units' => [ 'px', '%' ],
 					'range' => [
@@ -2176,7 +2176,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 			$this->add_responsive_control(
 				'price_section_width',
 				[
-					'label' => esc_html__( 'Width', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Width', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SLIDER,
 					'size_units' => [ 'px' ],
 					'range' => [
@@ -2199,14 +2199,14 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 	        	\Elementor\Group_Control_Typography::get_type(),
 	        	[
 	        		'name' => 'prev_pricing_typo',
-	        		'label' => esc_html__( 'Previous Pricing Typography', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Previous Pricing Typography', WP_MF_CORE_SLUG ),
 	        		'selector' => '{{WRAPPER}} .th-original-price',
 	        	]
 	        );
 	        $this->add_control(
 	        	'prev_price_color',
 	        	[
-	        		'label' => esc_html__( 'Original Pricing Color', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Original Pricing Color', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::COLOR,
 	        		'scheme' => [
 	        			'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -2227,14 +2227,14 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
         $this->start_controls_section(
 			'footer_section',
 				[
-					'label' => esc_html__( 'Footer', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Footer', WP_MF_CORE_SLUG ),
 					'tab' => \Elementor\Controls_Manager::TAB_STYLE,
 				]
 			);
         	$this->add_control(
 	        	'footer_header',
 	        	[
-	        		'label' => esc_html__('Footer', WP_TH_CORE_SLUG),
+	        		'label' => esc_html__('Footer', WP_MF_CORE_SLUG),
 	        		'type' => \Elementor\Controls_Manager::HEADING,
 	        		'seperator' => 'before'
 	        	]
@@ -2243,7 +2243,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 				\Elementor\Group_Control_Border::get_type(),
 				[
 					'name' => 'footer_border',
-					'label' => esc_html__( 'Footer Border', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Footer Border', WP_MF_CORE_SLUG ),
 					'selector' => '{{WRAPPER}} .th-course-footer'
 				]
 			);
@@ -2251,7 +2251,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 			$this->add_control(
 				'footer_padding',
 				[
-					'label' => esc_html__( 'Footer Padding', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Footer Padding', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::DIMENSIONS,
 					'size_units' => [ 'px', '%', 'em' ],
 					'selectors' => [
@@ -2270,7 +2270,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 	        $this->add_control(
 	        	'author_header',
 	        	[
-	        		'label' => esc_html__('Author', WP_TH_CORE_SLUG),
+	        		'label' => esc_html__('Author', WP_MF_CORE_SLUG),
 	        		'type' => \Elementor\Controls_Manager::HEADING,
 	        		'seperator' => 'before'
 	        	]
@@ -2280,14 +2280,14 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 	        	\Elementor\Group_Control_Typography::get_type(),
 	        	[
 	        		'name' => 'author_typography',
-	        		'label' => esc_html__( 'Author Typography', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Author Typography', WP_MF_CORE_SLUG ),
 	        		'selector' => '{{WRAPPER}} .course-author a',
 	        	]
 	        );
 	        $this->add_control(
 	        	'author_color',
 	        	[
-	        		'label' => esc_html__( 'Author Color', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Author Color', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::COLOR,
 	        		'scheme' => [
 	        			'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -2307,7 +2307,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 	        $this->add_control(
 	        	'level_header',
 	        	[
-	        		'label' => esc_html__('Course Level', WP_TH_CORE_SLUG),
+	        		'label' => esc_html__('Course Level', WP_MF_CORE_SLUG),
 	        		'type' => \Elementor\Controls_Manager::HEADING,
 	        		'seperator' => 'before'
 	        	]
@@ -2317,14 +2317,14 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 	        	\Elementor\Group_Control_Typography::get_type(),
 	        	[
 	        		'name' => 'course_level_typography',
-	        		'label' => esc_html__( 'Course Level Typography', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Course Level Typography', WP_MF_CORE_SLUG ),
 	        		'selector' => '{{WRAPPER}} .course-level',
 	        	]
 	        );
 	        $this->add_control(
 	        	'Course_Level_color',
 	        	[
-	        		'label' => esc_html__( 'Course Level Color', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Course Level Color', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::COLOR,
 	        		'scheme' => [
 	        			'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -2338,7 +2338,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 	        $this->add_control(
 	        	'Course_Level_img_width',
 	        	[
-	        		'label' => esc_html__( 'Level Icon size', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Level Icon size', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::SLIDER,
 	        		'size_units' => [ 'px', '%' ],
 	        		'range' => [
@@ -2362,7 +2362,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 	        $this->add_control(
 	        	'lessons_header',
 	        	[
-	        		'label' => esc_html__('Lessons', WP_TH_CORE_SLUG),
+	        		'label' => esc_html__('Lessons', WP_MF_CORE_SLUG),
 	        		'type' => \Elementor\Controls_Manager::HEADING,
 	        		'seperator' => 'before'
 	        	]
@@ -2372,14 +2372,14 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 	        	\Elementor\Group_Control_Typography::get_type(),
 	        	[
 	        		'name' => 'lessons_typography',
-	        		'label' => esc_html__( 'Lessons Typography', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Lessons Typography', WP_MF_CORE_SLUG ),
 	        		'selector' => '{{WRAPPER}} .course-lessons',
 	        	]
 	        );
 	        $this->add_control(
 	        	'lessons_color',
 	        	[
-	        		'label' => esc_html__( 'Lessons color', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Lessons color', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::COLOR,
 	        		'scheme' => [
 	        			'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -2399,7 +2399,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 	        $this->add_control(
 	        	'rating_header',
 	        	[
-	        		'label' => esc_html__('Ratings', WP_TH_CORE_SLUG),
+	        		'label' => esc_html__('Ratings', WP_MF_CORE_SLUG),
 	        		'type' => \Elementor\Controls_Manager::HEADING,
 	        		'seperator' => 'before'
 	        	]
@@ -2407,7 +2407,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 	        $this->add_control(
 	        	'rating_font_size',
 	        	[
-	        		'label' => esc_html__( 'Size', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Size', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::SLIDER,
 	        		'size_units' => [ 'px' ],
 	        		'range' => [
@@ -2430,7 +2430,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 	        $this->add_control(
 	        	'rating_position',
 	        	[
-	        		'label' => esc_html__( 'Vertical Position', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Vertical Position', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::SLIDER,
 	        		'size_units' => [ 'px' ],
 	        		'range' => [
@@ -2452,7 +2452,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
 	        $this->add_control(
 			'star_color',
 				[
-					'label' => esc_html__( 'Rating Color', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Rating Color', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::COLOR,
 					'scheme' => [
 						'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -2612,7 +2612,7 @@ class MetafansElementorCoursesGrid extends \Elementor\Widget_Base {
     	$categories_count = count($categories);
     	$html = '';
     	if( $categories_count > 1 ){
-	    	$html .= '<li data-id="'. $id .'" data-cat="all">'. esc_html__('All', WP_TH_CORE_SLUG) .'</li>';
+	    	$html .= '<li data-id="'. $id .'" data-cat="all">'. esc_html__('All', WP_MF_CORE_SLUG) .'</li>';
 	    	foreach ($categories as $key => $value) {
 	    		$value = urldecode($value);
 	    		$html .= '<li data-id="'. $id .'" data-cat="'. $value .'">'. str_replace('-', ' ', $value) .'</li>';

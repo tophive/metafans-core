@@ -19,24 +19,24 @@ class MetafansElementorImageCarousel extends \Elementor\Widget_Base {
 	}
 
 	public function get_title() {
-		return esc_html__( 'Image Carousel', WP_TH_CORE_SLUG );
+		return esc_html__( 'Image Carousel', WP_MF_CORE_SLUG );
 	}
 
 	public function get_icon() {
 		return 'eicon-image-rollover';
 	}
 	public function get_categories(){
-        return [ WP_TH_CORE_SLUG ];
+        return [ WP_MF_CORE_SLUG ];
     }
 	public function get_keywords() {
 		return [ 'picture', 'carousel', 'image' ];
 	}
 
-	protected function _register_controls() {
+	protected function register_controls() {
 		$this->start_controls_section(
 			'th_image_carousel_section_slides',
 			[
-				'label' => esc_html__( 'Slides', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Slides', WP_MF_CORE_SLUG ),
 				'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
 			]
 		);
@@ -48,7 +48,7 @@ class MetafansElementorImageCarousel extends \Elementor\Widget_Base {
 		$this->add_control(
 			'slides',
 			[
-				'label' => esc_html__( 'Slides', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Slides', WP_MF_CORE_SLUG ),
 				'type' => \Elementor\Controls_Manager::REPEATER,
 				'fields' => $repeater->get_controls(),
 				'default' => $this->get_repeater_defaults(),
@@ -63,8 +63,8 @@ class MetafansElementorImageCarousel extends \Elementor\Widget_Base {
 			'slides_per_view',
 			[
 				'type' => \Elementor\Controls_Manager::SELECT,
-				'label' => esc_html__( 'Slides Per View', WP_TH_CORE_SLUG ),
-				'options' => [ '' => esc_html__( 'Default', WP_TH_CORE_SLUG ) ] + $slides_per_view,
+				'label' => esc_html__( 'Slides Per View', WP_MF_CORE_SLUG ),
+				'options' => [ '' => esc_html__( 'Default', WP_MF_CORE_SLUG ) ] + $slides_per_view,
 				'condition' => [
 					'effect' => 'slide',
 				],
@@ -77,9 +77,9 @@ class MetafansElementorImageCarousel extends \Elementor\Widget_Base {
 			'slides_to_scroll',
 			[
 				'type' => \Elementor\Controls_Manager::SELECT,
-				'label' => esc_html__( 'Slides to Scroll', WP_TH_CORE_SLUG ),
-				'description' => esc_html__( 'Set how many slides are scrolled per swipe.', WP_TH_CORE_SLUG ),
-				'options' => [ '' => esc_html__( 'Default', WP_TH_CORE_SLUG ) ] + $slides_per_view,
+				'label' => esc_html__( 'Slides to Scroll', WP_MF_CORE_SLUG ),
+				'description' => esc_html__( 'Set how many slides are scrolled per swipe.', WP_MF_CORE_SLUG ),
+				'options' => [ '' => esc_html__( 'Default', WP_MF_CORE_SLUG ) ] + $slides_per_view,
 				'condition' => [
 					'effect' => 'slide',
 				],
@@ -92,7 +92,7 @@ class MetafansElementorImageCarousel extends \Elementor\Widget_Base {
 			'height',
 			[
 				'type' => \Elementor\Controls_Manager::SLIDER,
-				'label' => esc_html__( 'Height', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Height', WP_MF_CORE_SLUG ),
 				'size_units' => [ 'px', 'vh' ],
 				'range' => [
 					'px' => [
@@ -113,7 +113,7 @@ class MetafansElementorImageCarousel extends \Elementor\Widget_Base {
 			'width',
 			[
 				'type' => \Elementor\Controls_Manager::SLIDER,
-				'label' => esc_html__( 'Width', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Width', WP_MF_CORE_SLUG ),
 				'range' => [
 					'px' => [
 						'min' => 100,
@@ -138,7 +138,7 @@ class MetafansElementorImageCarousel extends \Elementor\Widget_Base {
 		$this->start_controls_section(
 			'section_additional_options',
 			[
-				'label' => esc_html__( 'Additional Options', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Additional Options', WP_MF_CORE_SLUG ),
 			]
 		);
 
@@ -146,10 +146,10 @@ class MetafansElementorImageCarousel extends \Elementor\Widget_Base {
 			'show_arrows',
 			[
 				'type' => \Elementor\Controls_Manager::SWITCHER,
-				'label' => esc_html__( 'Arrows', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Arrows', WP_MF_CORE_SLUG ),
 				'default' => 'yes',
-				'label_off' => esc_html__( 'Hide', WP_TH_CORE_SLUG ),
-				'label_on' => esc_html__( 'Show', WP_TH_CORE_SLUG ),
+				'label_off' => esc_html__( 'Hide', WP_MF_CORE_SLUG ),
+				'label_on' => esc_html__( 'Show', WP_MF_CORE_SLUG ),
 				'prefix_class' => 'tophive-arrows-',
 				'render_type' => 'template',
 				'frontend_available' => true,
@@ -158,12 +158,12 @@ class MetafansElementorImageCarousel extends \Elementor\Widget_Base {
 		$this->add_control(
 			'arrows_position',
 			[
-				'label' => esc_html__( 'Arrow Position', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Arrow Position', WP_MF_CORE_SLUG ),
 				'type' => \Elementor\Controls_Manager::SELECT,
 				'default' => 'inside',
 				'options' => [
-					'inside'  => esc_html__( 'Inside', WP_TH_CORE_SLUG ),
-					'outside'  => esc_html__( 'Outside', WP_TH_CORE_SLUG ),
+					'inside'  => esc_html__( 'Inside', WP_MF_CORE_SLUG ),
+					'outside'  => esc_html__( 'Outside', WP_MF_CORE_SLUG ),
 				],
 			]
 		);
@@ -171,14 +171,14 @@ class MetafansElementorImageCarousel extends \Elementor\Widget_Base {
 		$this->add_control(
 			'pagination',
 			[
-				'label' => esc_html__( 'Pagination', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Pagination', WP_MF_CORE_SLUG ),
 				'type' => \Elementor\Controls_Manager::SELECT,
 				'default' => 'bullets',
 				'options' => [
-					'' => esc_html__( 'None', WP_TH_CORE_SLUG ),
-					'bullets' => esc_html__( 'Dots', WP_TH_CORE_SLUG ),
-					'fraction' => esc_html__( 'Fraction', WP_TH_CORE_SLUG ),
-					'progressbar' => esc_html__( 'Progress', WP_TH_CORE_SLUG ),
+					'' => esc_html__( 'None', WP_MF_CORE_SLUG ),
+					'bullets' => esc_html__( 'Dots', WP_MF_CORE_SLUG ),
+					'fraction' => esc_html__( 'Fraction', WP_MF_CORE_SLUG ),
+					'progressbar' => esc_html__( 'Progress', WP_MF_CORE_SLUG ),
 				],
 				'prefix_class' => 'tophive-pagination-type-',
 				'render_type' => 'template',
@@ -189,7 +189,7 @@ class MetafansElementorImageCarousel extends \Elementor\Widget_Base {
 		$this->add_control(
 			'speed',
 			[
-				'label' => esc_html__( 'Transition Duration', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Transition Duration', WP_MF_CORE_SLUG ),
 				'type' => \Elementor\Controls_Manager::NUMBER,
 				'default' => 500,
 				'frontend_available' => true,
@@ -199,7 +199,7 @@ class MetafansElementorImageCarousel extends \Elementor\Widget_Base {
 		$this->add_control(
 			'autoplay',
 			[
-				'label' => esc_html__( 'Autoplay', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Autoplay', WP_MF_CORE_SLUG ),
 				'type' => \Elementor\Controls_Manager::SWITCHER,
 				'default' => 'yes',
 				'separator' => 'before',
@@ -210,7 +210,7 @@ class MetafansElementorImageCarousel extends \Elementor\Widget_Base {
 		$this->add_control(
 			'autoplay_speed',
 			[
-				'label' => esc_html__( 'Autoplay Speed', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Autoplay Speed', WP_MF_CORE_SLUG ),
 				'type' => \Elementor\Controls_Manager::NUMBER,
 				'default' => 5000,
 				'condition' => [
@@ -223,7 +223,7 @@ class MetafansElementorImageCarousel extends \Elementor\Widget_Base {
 		$this->add_control(
 			'loop',
 			[
-				'label' => esc_html__( 'Infinite Loop', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Infinite Loop', WP_MF_CORE_SLUG ),
 				'type' => \Elementor\Controls_Manager::SWITCHER,
 				'default' => 'yes',
 				'frontend_available' => true,
@@ -233,7 +233,7 @@ class MetafansElementorImageCarousel extends \Elementor\Widget_Base {
 		$this->add_control(
 			'pause_on_interaction',
 			[
-				'label' => esc_html__( 'Pause on Interaction', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Pause on Interaction', WP_MF_CORE_SLUG ),
 				'type' => \Elementor\Controls_Manager::SWITCHER,
 				'default' => 'yes',
 				'condition' => [
@@ -257,7 +257,7 @@ class MetafansElementorImageCarousel extends \Elementor\Widget_Base {
 		$this->start_controls_section(
 			'section_slides_style',
 			[
-				'label' => esc_html__( 'Slides', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Slides', WP_MF_CORE_SLUG ),
 				'tab' => \Elementor\Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -265,7 +265,7 @@ class MetafansElementorImageCarousel extends \Elementor\Widget_Base {
 		$this->add_control(
 			'space_between',
 			[
-				'label' => esc_html__( 'Space Between items', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Space Between items', WP_MF_CORE_SLUG ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => [ 'px', '%' ],
 				'range' => [
@@ -285,7 +285,7 @@ class MetafansElementorImageCarousel extends \Elementor\Widget_Base {
 		$this->add_control(
 			'slide_background_color',
 			[
-				'label' => esc_html__( 'Background Color', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Background Color', WP_MF_CORE_SLUG ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .tophive-main-swiper .swiper-slide' => 'background-color: {{VALUE}}',
@@ -297,7 +297,7 @@ class MetafansElementorImageCarousel extends \Elementor\Widget_Base {
 			\Elementor\Group_Control_Border::get_type(),
 			[
 				'name' => 'testimonial_border',
-				'label' => esc_html__( 'Border', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Border', WP_MF_CORE_SLUG ),
 				'selector' => '{{WRAPPER}} .tophive-main-swiper .swiper-slide',
 			]
 		);
@@ -305,7 +305,7 @@ class MetafansElementorImageCarousel extends \Elementor\Widget_Base {
 		$this->add_control(
 			'slide_border_radius',
 			[
-				'label' => esc_html__( 'Border Radius', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Border Radius', WP_MF_CORE_SLUG ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => [ 'px', '%' ],
 				'range' => [
@@ -321,7 +321,7 @@ class MetafansElementorImageCarousel extends \Elementor\Widget_Base {
 		$this->add_control(
 			'slide_padding',
 			[
-				'label' => esc_html__( 'Padding', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Padding', WP_MF_CORE_SLUG ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
 				'selectors' => [
 					'{{WRAPPER}} .tophive-main-swiper .swiper-slide' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
@@ -334,7 +334,7 @@ class MetafansElementorImageCarousel extends \Elementor\Widget_Base {
 			\Elementor\Group_Control_Box_Shadow::get_type(),
 			[
 				'name' => 'th_tstml_box_shadow',
-				'label' => esc_html__( 'Box Shadow', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Box Shadow', WP_MF_CORE_SLUG ),
 				'selector' => '{{WRAPPER}} .tophive-main-swiper .swiper-slide',
 			]
 		);
@@ -344,7 +344,7 @@ class MetafansElementorImageCarousel extends \Elementor\Widget_Base {
 		$this->start_controls_section(
 			'section_navigation',
 			[
-				'label' => esc_html__( 'Navigation', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Navigation', WP_MF_CORE_SLUG ),
 				'tab' => \Elementor\Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -352,7 +352,7 @@ class MetafansElementorImageCarousel extends \Elementor\Widget_Base {
 		$this->add_control(
 			'heading_arrows',
 			[
-				'label' => esc_html__( 'Arrows', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Arrows', WP_MF_CORE_SLUG ),
 				'type' => \Elementor\Controls_Manager::HEADING,
 				'separator' => 'none',
 			]
@@ -361,7 +361,7 @@ class MetafansElementorImageCarousel extends \Elementor\Widget_Base {
 		$this->add_control(
 			'arrows_size',
 			[
-				'label' => esc_html__( 'Size', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Size', WP_MF_CORE_SLUG ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'default' => [
 					'size' => 20,
@@ -380,7 +380,7 @@ class MetafansElementorImageCarousel extends \Elementor\Widget_Base {
 		$this->add_control(
 			'arrows_color',
 			[
-				'label' => esc_html__( 'Color', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Color', WP_MF_CORE_SLUG ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .tophive-swiper-button' => 'color: {{VALUE}}',
@@ -391,7 +391,7 @@ class MetafansElementorImageCarousel extends \Elementor\Widget_Base {
 			\Elementor\Group_Control_Background::get_type(),
 			[
 				'name' => 'arrow_background',
-				'label' => esc_html__( 'Background', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Background', WP_MF_CORE_SLUG ),
 				'types' => [ 'classic'],
 				'selector' => '{{WRAPPER}} .tophive-swiper-button',
 			]
@@ -399,7 +399,7 @@ class MetafansElementorImageCarousel extends \Elementor\Widget_Base {
 		$this->add_control(
 			'arrow_width',
 			[
-				'label' => esc_html__( 'Width', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Width', WP_MF_CORE_SLUG ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => [ 'px', '%' ],
 				'range' => [
@@ -417,7 +417,7 @@ class MetafansElementorImageCarousel extends \Elementor\Widget_Base {
 		$this->add_control(
 			'arrow_height',
 			[
-				'label' => esc_html__( 'Height', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Height', WP_MF_CORE_SLUG ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => [ 'px', '%' ],
 				'range' => [
@@ -435,7 +435,7 @@ class MetafansElementorImageCarousel extends \Elementor\Widget_Base {
 		$this->add_control(
 			'arrow_border_radius',
 			[
-				'label' => esc_html__( 'Border Radius', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Border Radius', WP_MF_CORE_SLUG ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => [ 'px', '%' ],
 				'range' => [
@@ -454,7 +454,7 @@ class MetafansElementorImageCarousel extends \Elementor\Widget_Base {
 			\Elementor\Group_Control_Border::get_type(),
 			[
 				'name' => 'border_arrows',
-				'label' => __( 'Border', WP_TH_CORE_SLUG ),
+				'label' => __( 'Border', WP_MF_CORE_SLUG ),
 				'selector' => '{{WRAPPER}} .tophive-swiper-button',
 			]
 		);
@@ -462,7 +462,7 @@ class MetafansElementorImageCarousel extends \Elementor\Widget_Base {
 		$this->add_control(
 			'heading_pagination',
 			[
-				'label' => esc_html__( 'Pagination', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Pagination', WP_MF_CORE_SLUG ),
 				'type' => \Elementor\Controls_Manager::HEADING,
 				'condition' => [
 					'pagination!' => '',
@@ -473,12 +473,12 @@ class MetafansElementorImageCarousel extends \Elementor\Widget_Base {
 		$this->add_control(
 			'pagination_position',
 			[
-				'label' => esc_html__( 'Position', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Position', WP_MF_CORE_SLUG ),
 				'type' => \Elementor\Controls_Manager::SELECT,
 				'default' => 'outside',
 				'options' => [
-					'outside' => esc_html__( 'Outside', WP_TH_CORE_SLUG ),
-					'inside' => esc_html__( 'Inside', WP_TH_CORE_SLUG ),
+					'outside' => esc_html__( 'Outside', WP_MF_CORE_SLUG ),
+					'inside' => esc_html__( 'Inside', WP_MF_CORE_SLUG ),
 				],
 				'prefix_class' => 'tophive-pagination-position-',
 				'condition' => [
@@ -490,7 +490,7 @@ class MetafansElementorImageCarousel extends \Elementor\Widget_Base {
 		$this->add_control(
 			'pagination_size',
 			[
-				'label' => esc_html__( 'Size', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Size', WP_MF_CORE_SLUG ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -511,7 +511,7 @@ class MetafansElementorImageCarousel extends \Elementor\Widget_Base {
 		$this->add_control(
 			'pagination_color',
 			[
-				'label' => esc_html__( 'Color', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Color', WP_MF_CORE_SLUG ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .swiper-pagination-bullet-active, {{WRAPPER}} .swiper-pagination-progressbar-fill' => 'background-color: {{VALUE}}',
@@ -526,7 +526,7 @@ class MetafansElementorImageCarousel extends \Elementor\Widget_Base {
 		$this->add_control(
 			'pagination_top_margin',
 			[
-				'label' => esc_html__( 'Pagination Margin Top', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Pagination Margin Top', WP_MF_CORE_SLUG ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => [ 'px', '%' ],
 				'range' => [
@@ -551,12 +551,12 @@ class MetafansElementorImageCarousel extends \Elementor\Widget_Base {
 		$this->add_control(
 			'skin',
 			[
-				'label' => esc_html__( 'Skin', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Skin', WP_MF_CORE_SLUG ),
 				'type' => \Elementor\Controls_Manager::SELECT,
 				'default' => 'default',
 				'options' => [
-					'default' => esc_html__( 'Default', WP_TH_CORE_SLUG ),
-					'bubble' => esc_html__( 'Bubble', WP_TH_CORE_SLUG ),
+					'default' => esc_html__( 'Default', WP_MF_CORE_SLUG ),
+					'bubble' => esc_html__( 'Bubble', WP_MF_CORE_SLUG ),
 				],
 				'prefix_class' => 'tophive-testimonial--skin-',
 				'render_type' => 'template',
@@ -566,15 +566,15 @@ class MetafansElementorImageCarousel extends \Elementor\Widget_Base {
 		$this->add_control(
 			'layout',
 			[
-				'label' => esc_html__( 'Layout', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Layout', WP_MF_CORE_SLUG ),
 				'type' => \Elementor\Controls_Manager::SELECT,
 				'default' => 'image_inline',
 				'options' => [
-					'image_inline' => esc_html__( 'Image Inline', WP_TH_CORE_SLUG ),
-					'image_stacked' => esc_html__( 'Image Stacked', WP_TH_CORE_SLUG ),
-					'image_above' => esc_html__( 'Image Above', WP_TH_CORE_SLUG ),
-					'image_left' => esc_html__( 'Image Left', WP_TH_CORE_SLUG ),
-					'image_right' => esc_html__( 'Image Right', WP_TH_CORE_SLUG ),
+					'image_inline' => esc_html__( 'Image Inline', WP_MF_CORE_SLUG ),
+					'image_stacked' => esc_html__( 'Image Stacked', WP_MF_CORE_SLUG ),
+					'image_above' => esc_html__( 'Image Above', WP_MF_CORE_SLUG ),
+					'image_left' => esc_html__( 'Image Left', WP_MF_CORE_SLUG ),
+					'image_right' => esc_html__( 'Image Right', WP_MF_CORE_SLUG ),
 				],
 				'prefix_class' => 'tophive-testimonial--layout-',
 				'render_type' => 'template',
@@ -584,21 +584,21 @@ class MetafansElementorImageCarousel extends \Elementor\Widget_Base {
 		$this->add_control(
 			'alignment',
 			[
-				'label' => esc_html__( 'Alignment', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Alignment', WP_MF_CORE_SLUG ),
 				'type' => \Elementor\Controls_Manager::CHOOSE,
 				'label_block' => false,
 				'default' => 'center',
 				'options' => [
 					'left' => [
-						'title' => esc_html__( 'Left', WP_TH_CORE_SLUG ),
+						'title' => esc_html__( 'Left', WP_MF_CORE_SLUG ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => esc_html__( 'Center', WP_TH_CORE_SLUG ),
+						'title' => esc_html__( 'Center', WP_MF_CORE_SLUG ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => esc_html__( 'Right', WP_TH_CORE_SLUG ),
+						'title' => esc_html__( 'Right', WP_MF_CORE_SLUG ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],
@@ -611,7 +611,7 @@ class MetafansElementorImageCarousel extends \Elementor\Widget_Base {
 		$this->start_controls_section(
 			'section_skin_style',
 			[
-				'label' => esc_html__( 'Bubble', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Bubble', WP_MF_CORE_SLUG ),
 				'tab' => \Elementor\Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'skin' => 'bubble',
@@ -622,7 +622,7 @@ class MetafansElementorImageCarousel extends \Elementor\Widget_Base {
 		$this->add_control(
 			'background_color',
 			[
-				'label' => esc_html__( 'Background Color', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Background Color', WP_MF_CORE_SLUG ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'alpha' => false,
 				'selectors' => [
@@ -634,7 +634,7 @@ class MetafansElementorImageCarousel extends \Elementor\Widget_Base {
 		$this->add_responsive_control(
 			'text_padding',
 			[
-				'label' => esc_html__( 'Padding', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Padding', WP_MF_CORE_SLUG ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%', 'em' ],
 				'default' => [
@@ -658,7 +658,7 @@ class MetafansElementorImageCarousel extends \Elementor\Widget_Base {
 		$this->add_responsive_control(
 			'border_radius',
 			[
-				'label' => esc_html__( 'Border Radius', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Border Radius', WP_MF_CORE_SLUG ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%', 'em' ],
 				'selectors' => [
@@ -670,7 +670,7 @@ class MetafansElementorImageCarousel extends \Elementor\Widget_Base {
 		$this->add_control(
 			'border',
 			[
-				'label' => esc_html__( 'Border', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Border', WP_MF_CORE_SLUG ),
 				'type' => \Elementor\Controls_Manager::SWITCHER,
 				'selectors' => [
 					'{{WRAPPER}} .tophive-testimonial__content, {{WRAPPER}} .tophive-testimonial__content:after' => 'border-style: solid',
@@ -681,7 +681,7 @@ class MetafansElementorImageCarousel extends \Elementor\Widget_Base {
 		$this->add_control(
 			'border_color',
 			[
-				'label' => esc_html__( 'Border Color', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Border Color', WP_MF_CORE_SLUG ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'default' => '#000',
 				'selectors' => [
@@ -697,7 +697,7 @@ class MetafansElementorImageCarousel extends \Elementor\Widget_Base {
 		$this->add_responsive_control(
 			'border_width',
 			[
-				'label' => esc_html__( 'Border Width', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Border Width', WP_MF_CORE_SLUG ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -727,7 +727,7 @@ class MetafansElementorImageCarousel extends \Elementor\Widget_Base {
 		$this->start_controls_section(
 			'section_content_style',
 			[
-				'label' => esc_html__( 'Content', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Content', WP_MF_CORE_SLUG ),
 				'tab' => \Elementor\Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -735,7 +735,7 @@ class MetafansElementorImageCarousel extends \Elementor\Widget_Base {
 		$this->add_responsive_control(
 			'content_gap',
 			[
-				'label' => esc_html__( 'Gap', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Gap', WP_MF_CORE_SLUG ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -756,7 +756,7 @@ class MetafansElementorImageCarousel extends \Elementor\Widget_Base {
 		$this->add_control(
 			'content_color',
 			[
-				'label' => esc_html__( 'Text Color', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Text Color', WP_MF_CORE_SLUG ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .tophive-testimonial__text' => 'color: {{VALUE}}',
@@ -780,7 +780,7 @@ class MetafansElementorImageCarousel extends \Elementor\Widget_Base {
 		$this->add_control(
 			'name_title_style',
 			[
-				'label' => esc_html__( 'Name', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Name', WP_MF_CORE_SLUG ),
 				'type' => \Elementor\Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -789,7 +789,7 @@ class MetafansElementorImageCarousel extends \Elementor\Widget_Base {
 		$this->add_control(
 			'name_color',
 			[
-				'label' => esc_html__( 'Text Color', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Text Color', WP_MF_CORE_SLUG ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .tophive-testimonial__name' => 'color: {{VALUE}}',
@@ -813,7 +813,7 @@ class MetafansElementorImageCarousel extends \Elementor\Widget_Base {
 		$this->add_control(
 			'heading_title_style',
 			[
-				'label' => esc_html__( 'Title', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Title', WP_MF_CORE_SLUG ),
 				'type' => \Elementor\Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -822,7 +822,7 @@ class MetafansElementorImageCarousel extends \Elementor\Widget_Base {
 		$this->add_control(
 			'title_color',
 			[
-				'label' => esc_html__( 'Text Color', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Text Color', WP_MF_CORE_SLUG ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .tophive-testimonial__title' => 'color: {{VALUE}}',
@@ -848,7 +848,7 @@ class MetafansElementorImageCarousel extends \Elementor\Widget_Base {
 		$this->start_controls_section(
 			'section_image_style',
 			[
-				'label' => esc_html__( 'Image', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Image', WP_MF_CORE_SLUG ),
 				'tab' => \Elementor\Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -856,7 +856,7 @@ class MetafansElementorImageCarousel extends \Elementor\Widget_Base {
 		$this->add_responsive_control(
 			'image_size',
 			[
-				'label' => esc_html__( 'Size', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Size', WP_MF_CORE_SLUG ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -895,7 +895,7 @@ class MetafansElementorImageCarousel extends \Elementor\Widget_Base {
 		$this->add_responsive_control(
 			'image_gap',
 			[
-				'label' => esc_html__( 'Gap', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Gap', WP_MF_CORE_SLUG ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -924,7 +924,7 @@ class MetafansElementorImageCarousel extends \Elementor\Widget_Base {
 		$this->add_control(
 			'image_border',
 			[
-				'label' => esc_html__( 'Border', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Border', WP_MF_CORE_SLUG ),
 				'type' => \Elementor\Controls_Manager::SWITCHER,
 				'selectors' => [
 					'{{WRAPPER}} .tophive-testimonial__image img' => 'border-style: solid',
@@ -935,7 +935,7 @@ class MetafansElementorImageCarousel extends \Elementor\Widget_Base {
 		$this->add_control(
 			'image_border_color',
 			[
-				'label' => esc_html__( 'Border Color', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Border Color', WP_MF_CORE_SLUG ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'default' => '#000',
 				'selectors' => [
@@ -950,7 +950,7 @@ class MetafansElementorImageCarousel extends \Elementor\Widget_Base {
 		$this->add_responsive_control(
 			'image_border_width',
 			[
-				'label' => esc_html__( 'Border Width', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Border Width', WP_MF_CORE_SLUG ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -970,7 +970,7 @@ class MetafansElementorImageCarousel extends \Elementor\Widget_Base {
 		$this->add_control(
 			'image_border_radius',
 			[
-				'label' => esc_html__( 'Border Radius', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Border Radius', WP_MF_CORE_SLUG ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'selectors' => [
 					'{{WRAPPER}} .tophive-testimonial__image img' => 'border-radius: {{SIZE}}{{UNIT}}',
@@ -1015,7 +1015,7 @@ class MetafansElementorImageCarousel extends \Elementor\Widget_Base {
 		$repeater->add_control(
 			'th_image_carousel_image',
 			[
-				'label' => esc_html__( 'Image', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Image', WP_MF_CORE_SLUG ),
 				'type' => \Elementor\Controls_Manager::MEDIA,
 				'default' => [
 					'url' => \Elementor\Utils::get_placeholder_image_src(),
@@ -1026,9 +1026,9 @@ class MetafansElementorImageCarousel extends \Elementor\Widget_Base {
 		$repeater->add_control(
 			'th_image_carousel_caption',
 			[
-				'label' => esc_html__( 'Caption', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Caption', WP_MF_CORE_SLUG ),
 				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => esc_html__( 'John Doe', WP_TH_CORE_SLUG ),
+				'default' => esc_html__( 'John Doe', WP_MF_CORE_SLUG ),
 			]
 		);
 	}
@@ -1038,13 +1038,13 @@ class MetafansElementorImageCarousel extends \Elementor\Widget_Base {
 
 		return [
 			[
-				'th_image_carousel_caption' => esc_html__( 'I am image caption. Click edit button to change this text.', WP_TH_CORE_SLUG ),
+				'th_image_carousel_caption' => esc_html__( 'I am image caption. Click edit button to change this text.', WP_MF_CORE_SLUG ),
 				'th_image_carousel_image' => [
 					'url' => $placeholder_image_src,
 				],
 			],
 			[
-				'th_image_carousel_caption' => esc_html__( 'I am image caption. Click edit button to change this text.', WP_TH_CORE_SLUG ),
+				'th_image_carousel_caption' => esc_html__( 'I am image caption. Click edit button to change this text.', WP_MF_CORE_SLUG ),
 				'th_image_carousel_image' => [
 					'url' => $placeholder_image_src,
 				],

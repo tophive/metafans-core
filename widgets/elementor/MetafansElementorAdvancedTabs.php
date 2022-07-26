@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 class MetafansElementorAdvancedTabs extends \Elementor\Widget_base
 {
 	public function get_title(){
-		return esc_html__( 'Advanced Tabs', WP_TH_CORE_SLUG );
+		return esc_html__( 'Advanced Tabs', WP_MF_CORE_SLUG );
 	}
 	public function get_name(){
 		return 'th-team-advanced-tabs';
@@ -26,17 +26,17 @@ class MetafansElementorAdvancedTabs extends \Elementor\Widget_base
 		return 'eicon-tabs';
 	}
 	public function get_categories(){
-        return [ WP_TH_CORE_SLUG ];
+        return [ WP_MF_CORE_SLUG ];
     }
 	public function get_keywords() {
 		return [ 'tabs' ];
 	}
-	protected function _register_controls(){
+	protected function register_controls(){
 
 		$this->start_controls_section(
 				'th_adv_tabs_section',
 				[
-					'label' => esc_html__( 'Advanced tabs', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Advanced tabs', WP_MF_CORE_SLUG ),
 					'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
 				]
 			);
@@ -45,12 +45,12 @@ class MetafansElementorAdvancedTabs extends \Elementor\Widget_base
 			$this->add_control(
 				'th_adv_tabs_layout',
 				[
-					'label' => esc_html__( 'Layout', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Layout', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SELECT,
 					'options' => [
-						'nav-top' 	=> esc_html__( 'Navigation Top', WP_TH_CORE_SLUG ),
-						'nav-left' 	=> esc_html__( 'Navigation Left', WP_TH_CORE_SLUG ),
-						'nav-right' 	=> esc_html__( 'Navigation Right', WP_TH_CORE_SLUG ),
+						'nav-top' 	=> esc_html__( 'Navigation Top', WP_MF_CORE_SLUG ),
+						'nav-left' 	=> esc_html__( 'Navigation Left', WP_MF_CORE_SLUG ),
+						'nav-right' 	=> esc_html__( 'Navigation Right', WP_MF_CORE_SLUG ),
 					],
 					'default' => 'nav-top',
 				]
@@ -58,32 +58,32 @@ class MetafansElementorAdvancedTabs extends \Elementor\Widget_base
 			$repeater->add_control(
 				'th_adv_tabs_icon',
 				[
-					'label' => esc_html__( 'Choose Icon', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Choose Icon', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::ICONS
 				]
 			);
 			$repeater->add_control(
 				'th_adv_tabs_title',
 				[
-					'label' => esc_html__( 'Tab Title', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Tab Title', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::TEXT,
-					'default' => esc_html__( 'This is title', WP_TH_CORE_SLUG ),
-					'placeholder' => esc_html__( 'Type your title here', WP_TH_CORE_SLUG ),
+					'default' => esc_html__( 'This is title', WP_MF_CORE_SLUG ),
+					'placeholder' => esc_html__( 'Type your title here', WP_MF_CORE_SLUG ),
 				]
 			);
 			$repeater->add_control(
 				'th_adv_tabs_desc',
 				[
-					'label' => esc_html__( 'Tab title description', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Tab title description', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::TEXT,
-					'default' => esc_html__( 'Description', WP_TH_CORE_SLUG ),
-					'default' => esc_html__( 'Description text goes here', WP_TH_CORE_SLUG ),
+					'default' => esc_html__( 'Description', WP_MF_CORE_SLUG ),
+					'default' => esc_html__( 'Description text goes here', WP_MF_CORE_SLUG ),
 				]
 			);
 			$repeater->add_control(
 				'th_adv_tabs_content_image',
 				[
-					'label' => esc_html__( 'Tab Content Image', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Tab Content Image', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::MEDIA,
 					'default' => [
 						'url' => \Elementor\Utils::get_placeholder_image_src(),
@@ -93,7 +93,7 @@ class MetafansElementorAdvancedTabs extends \Elementor\Widget_base
 			$repeater->add_control(
 				'th_adv_tabs_content_text',
 				[
-					'label' => esc_html__( 'Tab Content Text', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Tab Content Text', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::TEXTAREA
 				]
 			);
@@ -101,12 +101,12 @@ class MetafansElementorAdvancedTabs extends \Elementor\Widget_base
 			$this->add_control(
 				'th_adv_tabs_items',
 				[
-					'label' => esc_html__( 'Add New Tab', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Add New Tab', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::REPEATER,
 					'fields' => $repeater->get_controls(),
 					'default' => [
 						[
-							'th_adv_tabs_title' => esc_html__( 'New Tab Title', WP_TH_CORE_SLUG )
+							'th_adv_tabs_title' => esc_html__( 'New Tab Title', WP_MF_CORE_SLUG )
 						]
 					],
 				]
@@ -116,17 +116,17 @@ class MetafansElementorAdvancedTabs extends \Elementor\Widget_base
 		$this->start_controls_section(
 			'th_adv_tabs_carousel_options',
 				[
-					'label' => esc_html__( 'Tab Options', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Tab Options', WP_MF_CORE_SLUG ),
 					'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
 				]
 			);
 			$this->add_control(
 				'th_adv_tabs_autoplay',
 				[
-					'label' => esc_html__( 'Autoplay', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Autoplay', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SWITCHER,
-					'label_on' => __( 'Yes', WP_TH_CORE_SLUG ),
-					'label_off' => __( 'No', WP_TH_CORE_SLUG ),
+					'label_on' => __( 'Yes', WP_MF_CORE_SLUG ),
+					'label_off' => __( 'No', WP_MF_CORE_SLUG ),
 					'return_value' => 'yes',
 					'default' => 'yes',
 				]
@@ -134,22 +134,22 @@ class MetafansElementorAdvancedTabs extends \Elementor\Widget_base
 			$this->add_control(
 				'th_adv_tabs_autoplay_delay',
 				[
-					'label' => esc_html__( 'Autoplay Delay', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Autoplay Delay', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SELECT,
 					'default' => 1000,
 					'options' => [
-						300  => esc_html__( '300ms', WP_TH_CORE_SLUG),
-						400  => esc_html__( '400ms', WP_TH_CORE_SLUG),
-						500  => esc_html__( '500ms', WP_TH_CORE_SLUG),
-						600  => esc_html__( '600ms', WP_TH_CORE_SLUG),
-						700  => esc_html__( '700ms', WP_TH_CORE_SLUG),
-						800  => esc_html__( '800ms', WP_TH_CORE_SLUG),
-						900  => esc_html__( '900ms', WP_TH_CORE_SLUG),
-						1000  => esc_html__( '1s', WP_TH_CORE_SLUG),
-						1500  => esc_html__( '1.5s', WP_TH_CORE_SLUG),
-						2000  => esc_html__( '2s', WP_TH_CORE_SLUG),
-						2500  => esc_html__( '2.5s', WP_TH_CORE_SLUG),
-						3000  => esc_html__( '3s', WP_TH_CORE_SLUG),
+						300  => esc_html__( '300ms', WP_MF_CORE_SLUG),
+						400  => esc_html__( '400ms', WP_MF_CORE_SLUG),
+						500  => esc_html__( '500ms', WP_MF_CORE_SLUG),
+						600  => esc_html__( '600ms', WP_MF_CORE_SLUG),
+						700  => esc_html__( '700ms', WP_MF_CORE_SLUG),
+						800  => esc_html__( '800ms', WP_MF_CORE_SLUG),
+						900  => esc_html__( '900ms', WP_MF_CORE_SLUG),
+						1000  => esc_html__( '1s', WP_MF_CORE_SLUG),
+						1500  => esc_html__( '1.5s', WP_MF_CORE_SLUG),
+						2000  => esc_html__( '2s', WP_MF_CORE_SLUG),
+						2500  => esc_html__( '2.5s', WP_MF_CORE_SLUG),
+						3000  => esc_html__( '3s', WP_MF_CORE_SLUG),
 					],
 					'condition' => ['th_adv_tabs_autoplay' => 'yes']
 				]
@@ -160,7 +160,7 @@ class MetafansElementorAdvancedTabs extends \Elementor\Widget_base
 			$this->start_controls_section(
 				'th_adv_tabs_main_style',
 				[
-					'label' => esc_html__( 'Tabs Style', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Tabs Style', WP_MF_CORE_SLUG ),
 					'tab' => \Elementor\Controls_Manager::TAB_STYLE,
 				]
 			);
@@ -222,7 +222,7 @@ class MetafansElementorAdvancedTabs extends \Elementor\Widget_base
 		$this->start_controls_section(
 				'th_adv_tabs_nav_style',
 				[
-					'label' => esc_html__( 'Nav Tab Style', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Nav Tab Style', WP_MF_CORE_SLUG ),
 					'tab' => \Elementor\Controls_Manager::TAB_STYLE,
 				]
 			);
@@ -290,15 +290,15 @@ class MetafansElementorAdvancedTabs extends \Elementor\Widget_base
 			$this->add_control(
 				'th_adv_tabs_nav_icon_position',
 				[
-					'label' => esc_html__( 'Icon Position', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Icon Position', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::CHOOSE,
 					'options' => [
 						'icon-left' => [
-							'title' => esc_html__( 'Left', WP_TH_CORE_SLUG ),
+							'title' => esc_html__( 'Left', WP_MF_CORE_SLUG ),
 							'icon' => 'eicon-h-align-left',
 						],
 						'icon-right' => [
-							'title' => esc_html__( 'Right', WP_TH_CORE_SLUG ),
+							'title' => esc_html__( 'Right', WP_MF_CORE_SLUG ),
 							'icon' => 'eicon-h-align-right',
 						],
 					],
@@ -339,19 +339,19 @@ class MetafansElementorAdvancedTabs extends \Elementor\Widget_base
 			$this->add_control(
 				'th_adv_tabs_nav_text_align',
 				[
-					'label' => esc_html__( 'Text Alignment', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Text Alignment', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::CHOOSE,
 					'options' => [
 						'ec-text-left' => [
-							'title' => esc_html__( 'Left', WP_TH_CORE_SLUG ),
+							'title' => esc_html__( 'Left', WP_MF_CORE_SLUG ),
 							'icon' => 'fa fa-align-left',
 						],
 						'ec-text-center' => [
-							'title' => esc_html__( 'Center', WP_TH_CORE_SLUG ),
+							'title' => esc_html__( 'Center', WP_MF_CORE_SLUG ),
 							'icon' => 'fa fa-align-center',
 						],
 						'ec-text-right' => [
-							'title' => esc_html__( 'Right', WP_TH_CORE_SLUG ),
+							'title' => esc_html__( 'Right', WP_MF_CORE_SLUG ),
 							'icon' => 'fa fa-align-right',
 						],
 					],
@@ -375,7 +375,7 @@ class MetafansElementorAdvancedTabs extends \Elementor\Widget_base
 					$this->start_controls_tab(
 							'th_adv_tabs_nav_items_normal_tab',
 							[
-								'label' => esc_html__( 'Normal', WP_TH_CORE_SLUG ),
+								'label' => esc_html__( 'Normal', WP_MF_CORE_SLUG ),
 							]
 						);
 						$this->add_group_control(
@@ -458,7 +458,7 @@ class MetafansElementorAdvancedTabs extends \Elementor\Widget_base
 					$this->start_controls_tab(
 							'th_adv_tabs_nav_items_active_tab',
 							[
-								'label' => esc_html__( 'Active', WP_TH_CORE_SLUG ),
+								'label' => esc_html__( 'Active', WP_MF_CORE_SLUG ),
 							]
 						);
 
@@ -527,7 +527,7 @@ class MetafansElementorAdvancedTabs extends \Elementor\Widget_base
 			$this->start_controls_section(
 				'th_adv_tabs_content_style',
 					[
-						'label' => esc_html__( 'Tab Content', WP_TH_CORE_SLUG ),
+						'label' => esc_html__( 'Tab Content', WP_MF_CORE_SLUG ),
 						'tab' => \Elementor\Controls_Manager::TAB_STYLE,
 					]
 				);

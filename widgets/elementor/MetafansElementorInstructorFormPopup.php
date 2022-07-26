@@ -9,7 +9,7 @@ class MetafansElementorInstructorFormPopup extends \Elementor\Widget_Base {
 	}
 
 	public function get_title() {
-		return esc_html__( 'Instructor Form Popup', WP_TH_CORE_SLUG );
+		return esc_html__( 'Instructor Form Popup', WP_MF_CORE_SLUG );
 	}
 
 	public function get_icon() {
@@ -17,39 +17,39 @@ class MetafansElementorInstructorFormPopup extends \Elementor\Widget_Base {
 	}
 
 	public function get_categories() {
-		return [ WP_TH_CORE_SLUG ];
+		return [ WP_MF_CORE_SLUG ];
 	}
 
 	public static function get_button_sizes() {
 		return [
-			'xs' => esc_html__( 'Extra Small', WP_TH_CORE_SLUG ),
-			'sm' => esc_html__( 'Small', WP_TH_CORE_SLUG ),
-			'md' => esc_html__( 'Medium', WP_TH_CORE_SLUG ),
-			'lg' => esc_html__( 'Large', WP_TH_CORE_SLUG ),
-			'xl' => esc_html__( 'Extra Large', WP_TH_CORE_SLUG ),
+			'xs' => esc_html__( 'Extra Small', WP_MF_CORE_SLUG ),
+			'sm' => esc_html__( 'Small', WP_MF_CORE_SLUG ),
+			'md' => esc_html__( 'Medium', WP_MF_CORE_SLUG ),
+			'lg' => esc_html__( 'Large', WP_MF_CORE_SLUG ),
+			'xl' => esc_html__( 'Extra Large', WP_MF_CORE_SLUG ),
 		];
 	}
 
-	protected function _register_controls() {
+	protected function register_controls() {
 		$this->start_controls_section(
 			'instructor_btn_section_button',
 			[
-				'label' => esc_html__( 'Button', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Button', WP_MF_CORE_SLUG ),
 			]
 		);
 
 		$this->add_control(
 			'instructor_btn_button_type',
 			[
-				'label' => esc_html__( 'Type', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Type', WP_MF_CORE_SLUG ),
 				'type' => \Elementor\Controls_Manager::SELECT,
 				'default' => '',
 				'options' => [
-					'' => esc_html__( 'Default', WP_TH_CORE_SLUG ),
-					'info' => esc_html__( 'Info', WP_TH_CORE_SLUG ),
-					'success' => esc_html__( 'Success', WP_TH_CORE_SLUG ),
-					'warning' => esc_html__( 'Warning', WP_TH_CORE_SLUG ),
-					'danger' => esc_html__( 'Danger', WP_TH_CORE_SLUG ),
+					'' => esc_html__( 'Default', WP_MF_CORE_SLUG ),
+					'info' => esc_html__( 'Info', WP_MF_CORE_SLUG ),
+					'success' => esc_html__( 'Success', WP_MF_CORE_SLUG ),
+					'warning' => esc_html__( 'Warning', WP_MF_CORE_SLUG ),
+					'danger' => esc_html__( 'Danger', WP_MF_CORE_SLUG ),
 				],
 				'prefix_class' => 'elementor-button-',
 			]
@@ -58,25 +58,25 @@ class MetafansElementorInstructorFormPopup extends \Elementor\Widget_Base {
 		$this->add_control(
 			'instructor_btn_text',
 			[
-				'label' => esc_html__( 'Text', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Text', WP_MF_CORE_SLUG ),
 				'type' => \Elementor\Controls_Manager::TEXT,
 				'dynamic' => [
 					'active' => true,
 				],
-				'default' => esc_html__( 'Click here', WP_TH_CORE_SLUG ),
-				'placeholder' => esc_html__( 'Click here', WP_TH_CORE_SLUG ),
+				'default' => esc_html__( 'Click here', WP_MF_CORE_SLUG ),
+				'placeholder' => esc_html__( 'Click here', WP_MF_CORE_SLUG ),
 			]
 		);
 
 		$this->add_control(
 			'instructor_btn_link',
 			[
-				'label' => esc_html__( 'Link', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Link', WP_MF_CORE_SLUG ),
 				'type' => \Elementor\Controls_Manager::URL,
 				'dynamic' => [
 					'active' => true,
 				],
-				'placeholder' => esc_html__( 'https://your-link.com', WP_TH_CORE_SLUG ),
+				'placeholder' => esc_html__( 'https://your-link.com', WP_MF_CORE_SLUG ),
 				'default' => [
 					'url' => '#',
 				],
@@ -86,23 +86,23 @@ class MetafansElementorInstructorFormPopup extends \Elementor\Widget_Base {
 		$this->add_responsive_control(
 			'instructor_btn_align',
 			[
-				'label' => esc_html__( 'Alignment', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Alignment', WP_MF_CORE_SLUG ),
 				'type' => \Elementor\Controls_Manager::CHOOSE,
 				'options' => [
 					'left'    => [
-						'title' => esc_html__( 'Left', WP_TH_CORE_SLUG ),
+						'title' => esc_html__( 'Left', WP_MF_CORE_SLUG ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => esc_html__( 'Center', WP_TH_CORE_SLUG ),
+						'title' => esc_html__( 'Center', WP_MF_CORE_SLUG ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => esc_html__( 'Right', WP_TH_CORE_SLUG ),
+						'title' => esc_html__( 'Right', WP_MF_CORE_SLUG ),
 						'icon' => 'eicon-text-align-right',
 					],
 					'justify' => [
-						'title' => esc_html__( 'Justified', WP_TH_CORE_SLUG ),
+						'title' => esc_html__( 'Justified', WP_MF_CORE_SLUG ),
 						'icon' => 'eicon-text-align-justify',
 					],
 				],
@@ -114,7 +114,7 @@ class MetafansElementorInstructorFormPopup extends \Elementor\Widget_Base {
 		$this->add_control(
 			'instructor_btn_size',
 			[
-				'label' => esc_html__( 'Size', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Size', WP_MF_CORE_SLUG ),
 				'type' => \Elementor\Controls_Manager::SELECT,
 				'default' => 'sm',
 				'options' => self::get_button_sizes(),
@@ -125,7 +125,7 @@ class MetafansElementorInstructorFormPopup extends \Elementor\Widget_Base {
 		$this->add_control(
 			'instructor_btn_selected_icon',
 			[
-				'label' => esc_html__( 'Icon', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Icon', WP_MF_CORE_SLUG ),
 				'type' => \Elementor\Controls_Manager::ICONS,
 				'fa4compatibility' => 'icon',
 			]
@@ -134,12 +134,12 @@ class MetafansElementorInstructorFormPopup extends \Elementor\Widget_Base {
 		$this->add_control(
 			'instructor_btn_icon_align',
 			[
-				'label' => esc_html__( 'Icon Position', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Icon Position', WP_MF_CORE_SLUG ),
 				'type' => \Elementor\Controls_Manager::SELECT,
 				'default' => 'left',
 				'options' => [
-					'left' => esc_html__( 'Before', WP_TH_CORE_SLUG ),
-					'right' => esc_html__( 'After', WP_TH_CORE_SLUG ),
+					'left' => esc_html__( 'Before', WP_MF_CORE_SLUG ),
+					'right' => esc_html__( 'After', WP_MF_CORE_SLUG ),
 				],
 				'condition' => [
 					'selected_icon[value]!' => '',
@@ -150,7 +150,7 @@ class MetafansElementorInstructorFormPopup extends \Elementor\Widget_Base {
 		$this->add_control(
 			'instructor_btn_icon_indent',
 			[
-				'label' => esc_html__( 'Icon Spacing', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Icon Spacing', WP_MF_CORE_SLUG ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -167,7 +167,7 @@ class MetafansElementorInstructorFormPopup extends \Elementor\Widget_Base {
 		$this->add_control(
 			'instructor_btn_view',
 			[
-				'label' => esc_html__( 'View', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'View', WP_MF_CORE_SLUG ),
 				'type' => \Elementor\Controls_Manager::HIDDEN,
 				'default' => 'traditional',
 			]
@@ -176,14 +176,14 @@ class MetafansElementorInstructorFormPopup extends \Elementor\Widget_Base {
 		$this->add_control(
 			'instructor_btn_button_css_id',
 			[
-				'label' => esc_html__( 'Button ID', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Button ID', WP_MF_CORE_SLUG ),
 				'type' => \Elementor\Controls_Manager::TEXT,
 				'dynamic' => [
 					'active' => true,
 				],
 				'default' => '',
-				'title' => esc_html__( 'Add your custom id WITHOUT the Pound key. e.g: my-id', WP_TH_CORE_SLUG ),
-				'description' => esc_html__( 'Please make sure the ID is unique and not used elsewhere on the page this form is displayed. This field allows <code>A-z 0-9</code> & underscore chars without spaces.', WP_TH_CORE_SLUG ),
+				'title' => esc_html__( 'Add your custom id WITHOUT the Pound key. e.g: my-id', WP_MF_CORE_SLUG ),
+				'description' => esc_html__( 'Please make sure the ID is unique and not used elsewhere on the page this form is displayed. This field allows <code>A-z 0-9</code> & underscore chars without spaces.', WP_MF_CORE_SLUG ),
 				'separator' => 'before',
 
 			]
@@ -194,7 +194,7 @@ class MetafansElementorInstructorFormPopup extends \Elementor\Widget_Base {
 		$this->start_controls_section(
 			'instructor_btn_section_style',
 			[
-				'label' => esc_html__( 'Button', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Button', WP_MF_CORE_SLUG ),
 				'tab' => \Elementor\Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -221,14 +221,14 @@ class MetafansElementorInstructorFormPopup extends \Elementor\Widget_Base {
 		$this->start_controls_tab(
 			'instructor_btn_tab_button_normal',
 			[
-				'label' => esc_html__( 'Normal', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Normal', WP_MF_CORE_SLUG ),
 			]
 		);
 
 		$this->add_control(
 			'instructor_btn_button_text_color',
 			[
-				'label' => esc_html__( 'Text Color', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Text Color', WP_MF_CORE_SLUG ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -240,7 +240,7 @@ class MetafansElementorInstructorFormPopup extends \Elementor\Widget_Base {
 		$this->add_control(
 			'instructor_btn_background_color',
 			[
-				'label' => esc_html__( 'Background Color', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Background Color', WP_MF_CORE_SLUG ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'scheme' => [
 					'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -257,14 +257,14 @@ class MetafansElementorInstructorFormPopup extends \Elementor\Widget_Base {
 		$this->start_controls_tab(
 			'instructor_btn_tab_button_hover',
 			[
-				'label' => esc_html__( 'Hover', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Hover', WP_MF_CORE_SLUG ),
 			]
 		);
 
 		$this->add_control(
 			'instructor_btn_hover_color',
 			[
-				'label' => esc_html__( 'Text Color', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Text Color', WP_MF_CORE_SLUG ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .elementor-button:hover, {{WRAPPER}} .elementor-button:focus' => 'color: {{VALUE}};',
@@ -276,7 +276,7 @@ class MetafansElementorInstructorFormPopup extends \Elementor\Widget_Base {
 		$this->add_control(
 			'instructor_btn_button_background_hover_color',
 			[
-				'label' => esc_html__( 'Background Color', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Background Color', WP_MF_CORE_SLUG ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .elementor-button:hover, {{WRAPPER}} .elementor-button:focus' => 'background-color: {{VALUE}};',
@@ -287,7 +287,7 @@ class MetafansElementorInstructorFormPopup extends \Elementor\Widget_Base {
 		$this->add_control(
 			'instructor_btn_button_hover_border_color',
 			[
-				'label' => esc_html__( 'Border Color', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Border Color', WP_MF_CORE_SLUG ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'condition' => [
 					'border_border!' => '',
@@ -301,7 +301,7 @@ class MetafansElementorInstructorFormPopup extends \Elementor\Widget_Base {
 		$this->add_control(
 			'instructor_btn_hover_animation',
 			[
-				'label' => esc_html__( 'Hover Animation', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Hover Animation', WP_MF_CORE_SLUG ),
 				'type' => \Elementor\Controls_Manager::HOVER_ANIMATION,
 			]
 		);
@@ -322,7 +322,7 @@ class MetafansElementorInstructorFormPopup extends \Elementor\Widget_Base {
 		$this->add_control(
 			'instructor_btn_border_radius',
 			[
-				'label' => esc_html__( 'Border Radius', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Border Radius', WP_MF_CORE_SLUG ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -342,7 +342,7 @@ class MetafansElementorInstructorFormPopup extends \Elementor\Widget_Base {
 		$this->add_responsive_control(
 			'instructor_btn_text_padding',
 			[
-				'label' => esc_html__( 'Padding', WP_TH_CORE_SLUG ),
+				'label' => esc_html__( 'Padding', WP_MF_CORE_SLUG ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', 'em', '%' ],
 				'selectors' => [

@@ -8,15 +8,15 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
         return 'thelemblog-carousel';
     }
     public function get_title(){
-        return esc_html__( 'Blog Carousel', WP_TH_CORE_SLUG );
+        return esc_html__( 'Blog Carousel', WP_MF_CORE_SLUG );
     }
     public function get_icon(){
         return 'eicon-post-content';
     }
     public function get_categories(){
-        return [ WP_TH_CORE_SLUG ];
+        return [ WP_MF_CORE_SLUG ];
     }
-    protected function _register_controls() {
+    protected function register_controls() {
 
     	/*
     	*
@@ -31,30 +31,30 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
 		$this->start_controls_section(
 			'th_blog_carousel_blog_content_section',
 				[
-					'label' => esc_html__( 'Blog Carousel', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Blog Carousel', WP_MF_CORE_SLUG ),
 					'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
 				]
 			);
 			$this->add_control(
 				'th_blog_carousel_blog_post_order',
 				[
-					'label' => esc_html__( 'Order Posts by', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Order Posts by', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SELECT,
 					'default' => 'recent',
 					'options' => [
-						'recent'  		=> esc_html__( 'Recently Published', WP_TH_CORE_SLUG ),
-						'popularity'  	=> esc_html__( 'Popular', WP_TH_CORE_SLUG ),
+						'recent'  		=> esc_html__( 'Recently Published', WP_MF_CORE_SLUG ),
+						'popularity'  	=> esc_html__( 'Popular', WP_MF_CORE_SLUG ),
 					],
 				]
 			);
 			$this->add_control(
 				'th_blog_carousel_posts_layout',
 				[
-					'label' => esc_html__( 'Layout', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Layout', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SELECT,
 					'options' => [
-						'' 	=> esc_html__( 'Full Width', WP_TH_CORE_SLUG ),
-						' ec-overflow-hidden' 	=> esc_html__( 'Fixed Width', WP_TH_CORE_SLUG ),
+						'' 	=> esc_html__( 'Full Width', WP_MF_CORE_SLUG ),
+						' ec-overflow-hidden' 	=> esc_html__( 'Fixed Width', WP_MF_CORE_SLUG ),
 					],
 					'default' => '',
 				]
@@ -62,15 +62,15 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
 			$this->add_control(
 				'th_blog_carousel_select_blog_columns',
 				[
-					'label' => esc_html__( 'Select Columns', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Select Columns', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SELECT,
 					'options' => [
-						'1' 	=> esc_html__( '1 Column', WP_TH_CORE_SLUG ),
-						'2' 	=> esc_html__( '2 Columns', WP_TH_CORE_SLUG ),
-						'3'  	=> esc_html__( '3 Columns', WP_TH_CORE_SLUG ),
-						'4' 	=> esc_html__( '4 Columns', WP_TH_CORE_SLUG ),
-						'5' 	=> esc_html__( '5 Columns', WP_TH_CORE_SLUG ),
-						'6' 	=> esc_html__( '6 Columns', WP_TH_CORE_SLUG ),
+						'1' 	=> esc_html__( '1 Column', WP_MF_CORE_SLUG ),
+						'2' 	=> esc_html__( '2 Columns', WP_MF_CORE_SLUG ),
+						'3'  	=> esc_html__( '3 Columns', WP_MF_CORE_SLUG ),
+						'4' 	=> esc_html__( '4 Columns', WP_MF_CORE_SLUG ),
+						'5' 	=> esc_html__( '5 Columns', WP_MF_CORE_SLUG ),
+						'6' 	=> esc_html__( '6 Columns', WP_MF_CORE_SLUG ),
 					],
 					'default' => '3',
 				]
@@ -78,25 +78,25 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
 			$this->add_control(
 				'th_blog_carousel_blog_post_count',
 				[
-					'label' => esc_html__( 'Post Count', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Post Count', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::TEXT,
-					'description' => esc_html__('-1 For showing all', WP_TH_CORE_SLUG),
+					'description' => esc_html__('-1 For showing all', WP_MF_CORE_SLUG),
 					'default' => 4,
 				]
 	        );
 			$this->add_control(
 				'th_blog_carousel_blog_post_offset',
 				[
-					'label' => esc_html__( 'Post Offset', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Post Offset', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::TEXT,
-					'description' => esc_html__('This number of posts will be excluded from first', WP_TH_CORE_SLUG),
+					'description' => esc_html__('This number of posts will be excluded from first', WP_MF_CORE_SLUG),
 					'default' => 0,
 				]
 	        );
 	        $this->add_control(
 	        	'th_blog_carousel_blog_word_count',
 	        	[
-	        		'label' => esc_html__( 'Word Count for description', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Word Count for description', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::NUMBER,
 	        		'min' => 2,
 	        		'max' => 30,
@@ -108,10 +108,10 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
 	        $this->add_control(
 	        	'th_blog_carousel_blog_show_desc',
 	        	[
-	        		'label' => esc_html__( 'Show Description', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Show Description', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::SWITCHER,
-	        		'label_on' => esc_html__( 'Show', WP_TH_CORE_SLUG ),
-	        		'label_off' => esc_html__( 'Hide', WP_TH_CORE_SLUG ),
+	        		'label_on' => esc_html__( 'Show', WP_MF_CORE_SLUG ),
+	        		'label_off' => esc_html__( 'Hide', WP_MF_CORE_SLUG ),
 	        		'return_value' => 'yes',
 	        		'default' => 'no',
 	        	]
@@ -121,17 +121,17 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
 		$this->start_controls_section(
 			'th_blog_carousel_carousel_options',
 				[
-					'label' => esc_html__( 'Carousel Options', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Carousel Options', WP_MF_CORE_SLUG ),
 					'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
 				]
 			);
 			$this->add_control(
 				'th_blog_carousel_autoplay',
 				[
-					'label' => esc_html__( 'Autoplay', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Autoplay', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SWITCHER,
-					'label_on' => __( 'Yes', WP_TH_CORE_SLUG ),
-					'label_off' => __( 'No', WP_TH_CORE_SLUG ),
+					'label_on' => __( 'Yes', WP_MF_CORE_SLUG ),
+					'label_off' => __( 'No', WP_MF_CORE_SLUG ),
 					'return_value' => 'yes',
 					'default' => 'yes',
 				]
@@ -139,22 +139,22 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
 			$this->add_control(
 				'th_blog_carousel_autoplay_delay',
 				[
-					'label' => esc_html__( 'Autoplay Delay', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Autoplay Delay', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SELECT,
 					'default' => 1000,
 					'options' => [
-						300  => esc_html__( '300ms', WP_TH_CORE_SLUG),
-						400  => esc_html__( '400ms', WP_TH_CORE_SLUG),
-						500  => esc_html__( '500ms', WP_TH_CORE_SLUG),
-						600  => esc_html__( '600ms', WP_TH_CORE_SLUG),
-						700  => esc_html__( '700ms', WP_TH_CORE_SLUG),
-						800  => esc_html__( '800ms', WP_TH_CORE_SLUG),
-						900  => esc_html__( '900ms', WP_TH_CORE_SLUG),
-						1000  => esc_html__( '1s', WP_TH_CORE_SLUG),
-						1500  => esc_html__( '1.5s', WP_TH_CORE_SLUG),
-						2000  => esc_html__( '2s', WP_TH_CORE_SLUG),
-						2500  => esc_html__( '2.5s', WP_TH_CORE_SLUG),
-						3000  => esc_html__( '3s', WP_TH_CORE_SLUG),
+						300  => esc_html__( '300ms', WP_MF_CORE_SLUG),
+						400  => esc_html__( '400ms', WP_MF_CORE_SLUG),
+						500  => esc_html__( '500ms', WP_MF_CORE_SLUG),
+						600  => esc_html__( '600ms', WP_MF_CORE_SLUG),
+						700  => esc_html__( '700ms', WP_MF_CORE_SLUG),
+						800  => esc_html__( '800ms', WP_MF_CORE_SLUG),
+						900  => esc_html__( '900ms', WP_MF_CORE_SLUG),
+						1000  => esc_html__( '1s', WP_MF_CORE_SLUG),
+						1500  => esc_html__( '1.5s', WP_MF_CORE_SLUG),
+						2000  => esc_html__( '2s', WP_MF_CORE_SLUG),
+						2500  => esc_html__( '2.5s', WP_MF_CORE_SLUG),
+						3000  => esc_html__( '3s', WP_MF_CORE_SLUG),
 					],
 					'condition' => ['th_blog_carousel_autoplay' => 'yes']
 				]
@@ -162,44 +162,44 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
 			$this->add_control(
 				'th_blog_carousel_play_speed',
 				[
-					'label' => esc_html__( 'Play Speed', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Play Speed', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SELECT,
 					'default' => 500,
 					'options' => [
-						100  => esc_html__( '100ms', WP_TH_CORE_SLUG),
-						200  => esc_html__( '200ms', WP_TH_CORE_SLUG),
-						300  => esc_html__( '300ms', WP_TH_CORE_SLUG),
-						400  => esc_html__( '400ms', WP_TH_CORE_SLUG),
-						500  => esc_html__( '500ms', WP_TH_CORE_SLUG),
-						600  => esc_html__( '600ms', WP_TH_CORE_SLUG),
-						700  => esc_html__( '700ms', WP_TH_CORE_SLUG),
-						800  => esc_html__( '800ms', WP_TH_CORE_SLUG),
-						900  => esc_html__( '900ms', WP_TH_CORE_SLUG),
-						1000  => esc_html__( '1s', WP_TH_CORE_SLUG),
-						1500  => esc_html__( '1.5s', WP_TH_CORE_SLUG),
-						2000  => esc_html__( '2s', WP_TH_CORE_SLUG),
-						2500  => esc_html__( '2.5s', WP_TH_CORE_SLUG),
-						3000  => esc_html__( '3s', WP_TH_CORE_SLUG),
+						100  => esc_html__( '100ms', WP_MF_CORE_SLUG),
+						200  => esc_html__( '200ms', WP_MF_CORE_SLUG),
+						300  => esc_html__( '300ms', WP_MF_CORE_SLUG),
+						400  => esc_html__( '400ms', WP_MF_CORE_SLUG),
+						500  => esc_html__( '500ms', WP_MF_CORE_SLUG),
+						600  => esc_html__( '600ms', WP_MF_CORE_SLUG),
+						700  => esc_html__( '700ms', WP_MF_CORE_SLUG),
+						800  => esc_html__( '800ms', WP_MF_CORE_SLUG),
+						900  => esc_html__( '900ms', WP_MF_CORE_SLUG),
+						1000  => esc_html__( '1s', WP_MF_CORE_SLUG),
+						1500  => esc_html__( '1.5s', WP_MF_CORE_SLUG),
+						2000  => esc_html__( '2s', WP_MF_CORE_SLUG),
+						2500  => esc_html__( '2.5s', WP_MF_CORE_SLUG),
+						3000  => esc_html__( '3s', WP_MF_CORE_SLUG),
 					],
 				]
 			);
 			$this->add_control(
 				'th_blog_carousel_per_slide',
 				[
-					'label' => esc_html__( 'Posts Per Slide', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Posts Per Slide', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SELECT,
 					'default' => 2,
 					'options' => [
-						1  => esc_html__( '1', WP_TH_CORE_SLUG),
-						2  => esc_html__( '2', WP_TH_CORE_SLUG),
-						3  => esc_html__( '3', WP_TH_CORE_SLUG),
-						4  => esc_html__( '4', WP_TH_CORE_SLUG),
-						5  => esc_html__( '5', WP_TH_CORE_SLUG),
-						6  => esc_html__( '6', WP_TH_CORE_SLUG),
-						7  => esc_html__( '7', WP_TH_CORE_SLUG),
-						8  => esc_html__( '8', WP_TH_CORE_SLUG),
-						9  => esc_html__( '9', WP_TH_CORE_SLUG),
-						10  => esc_html__( '10', WP_TH_CORE_SLUG),
+						1  => esc_html__( '1', WP_MF_CORE_SLUG),
+						2  => esc_html__( '2', WP_MF_CORE_SLUG),
+						3  => esc_html__( '3', WP_MF_CORE_SLUG),
+						4  => esc_html__( '4', WP_MF_CORE_SLUG),
+						5  => esc_html__( '5', WP_MF_CORE_SLUG),
+						6  => esc_html__( '6', WP_MF_CORE_SLUG),
+						7  => esc_html__( '7', WP_MF_CORE_SLUG),
+						8  => esc_html__( '8', WP_MF_CORE_SLUG),
+						9  => esc_html__( '9', WP_MF_CORE_SLUG),
+						10  => esc_html__( '10', WP_MF_CORE_SLUG),
 					],
 				]
 			);
@@ -210,24 +210,24 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
 	    $this->start_controls_section(
             'th_blog_carousel_carousel_navigation',
 	            [
-	                'label' => esc_html__( 'Navigation', WP_TH_CORE_SLUG ),
+	                'label' => esc_html__( 'Navigation', WP_MF_CORE_SLUG ),
 	                'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
 	            ]
 	        );
     		$this->add_control(
 				'th_blog_carousel_carousel_arrow_section',
 				[
-					'label' => esc_html__( 'Arrow', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Arrow', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::HEADING,
 				]
 			);
 		    $this->add_control(
 		    	'th_blog_carousel_hide_arrow',
 		    	[
-		    		'label' 		=> esc_html__( 'Hide Arrow', WP_TH_CORE_SLUG ),
+		    		'label' 		=> esc_html__( 'Hide Arrow', WP_MF_CORE_SLUG ),
 		    		'type' 			=> \Elementor\Controls_Manager::SWITCHER,
-		    		'label_on' 		=> __( 'Show', WP_TH_CORE_SLUG ),
-		    		'label_off' 	=> __( 'Hide', WP_TH_CORE_SLUG ),
+		    		'label_on' 		=> __( 'Show', WP_MF_CORE_SLUG ),
+		    		'label_off' 	=> __( 'Hide', WP_MF_CORE_SLUG ),
 		    		'return_value' 	=> 'yes',
 		    		'default' 		=> 'no',
 		    	]
@@ -236,13 +236,13 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
 			$this->add_control(
 				'th_blog_carousel_arrow_position',
 				[
-					'label' => esc_html__( 'Select arrow position', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Select arrow position', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SELECT,
 					'default' => 4,
 					'options' => [
-						'ec-text-center'  => esc_html__( 'Center', WP_TH_CORE_SLUG ),
-						'ec-text-right'  => esc_html__( 'Top Right', WP_TH_CORE_SLUG ),
-						'ec-text-left'  => esc_html__( 'Top Left', WP_TH_CORE_SLUG ),
+						'ec-text-center'  => esc_html__( 'Center', WP_MF_CORE_SLUG ),
+						'ec-text-right'  => esc_html__( 'Top Right', WP_MF_CORE_SLUG ),
+						'ec-text-left'  => esc_html__( 'Top Left', WP_MF_CORE_SLUG ),
 					],
 					'default' => 'ec-text-center'
 				]
@@ -254,14 +254,14 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
 			$this->start_controls_tab(
 				'th_blog_carousel_arrow_normal_tab',
 				[
-					'label' => esc_html__( 'Normal', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Normal', WP_MF_CORE_SLUG ),
 
 				]
 			);
 			$this->add_control(
 				'th_blog_carousel_more_btn_background_color',
 				[
-					'label' => esc_html__( 'Background Color', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Background Color', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::COLOR,
 					'scheme' => [
 						'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -276,7 +276,7 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
 			$this->add_control(
 				'th_blog_carousel_more_btn_color',
 				[
-					'label' => esc_html__( 'Color', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Color', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::COLOR,
 					'scheme' => [
 						'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -291,7 +291,7 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
 			$this->add_control(
 				'th_blog_carousel_arrow_width',
 				[
-					'label' => esc_html__( 'Width', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Width', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SLIDER,
 					'size_units' => [ 'px', '%' ],
 					'range' => [
@@ -309,7 +309,7 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
 			$this->add_control(
 				'th_blog_carousel_arrow_height',
 				[
-					'label' => esc_html__( 'Height', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Height', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SLIDER,
 					'size_units' => [ 'px', '%' ],
 					'range' => [
@@ -327,7 +327,7 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
 			$this->add_control(
 				'th_blog_carousel_arrow_size',
 				[
-					'label' => esc_html__( 'Arrow Size', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Arrow Size', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SLIDER,
 					'size_units' => [ 'px', '%' ],
 					'range' => [
@@ -345,7 +345,7 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
 			$this->add_control(
 				'th_blog_carousel_more_btn_margin',
 				[
-					'label' => esc_html__( 'Margin', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Margin', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::DIMENSIONS,
 					'size_units' => [ 'px', '%', 'em' ],
 					'selectors' => [
@@ -357,7 +357,7 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
 				\Elementor\Group_Control_Box_Shadow::get_type(),
 				[
 					'name' => 'th_blog_carousel_more_btn_box_shadow',
-					'label' => esc_html__( 'Box Shadow', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Box Shadow', WP_MF_CORE_SLUG ),
 					'selector' => '{{WRAPPER}} .ec-swiper-button-prev, {{WRAPPER}} .ec-swiper-button-next',
 				]
 			);
@@ -365,7 +365,7 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
 				\Elementor\Group_Control_Border::get_type(),
 				[
 					'name' => 'th_blog_carousel_more_btn_border',
-					'label' => __( 'Border', WP_TH_CORE_SLUG ),
+					'label' => __( 'Border', WP_MF_CORE_SLUG ),
 					'selector' => '{{WRAPPER}} .ec-swiper-button-prev, {{WRAPPER}} .ec-swiper-button-next',
 				]
 			);
@@ -373,7 +373,7 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
 			$this->add_control(
 				'th_blog_carousel_more_btn_border_rad',
 				[
-					'label' => esc_html__( 'Border Radius', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Border Radius', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SLIDER,
 					'size_units' => [ 'px'],
 					'range' => [
@@ -394,14 +394,14 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
 			$this->start_controls_tab(
 				'arrow_hover_tab',
 				[
-					'label' => esc_html__( 'Hover', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Hover', WP_MF_CORE_SLUG ),
 				]
 			);
 
 			$this->add_control(
 				'th_blog_carousel_more_btn_background_color_hover',
 				[
-					'label' => esc_html__( 'Background Color', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Background Color', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::COLOR,
 					'scheme' => [
 						'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -416,7 +416,7 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
 			$this->add_control(
 				'th_blog_carousel_more_btn_color_hover',
 				[
-					'label' => esc_html__( 'Color', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Color', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::COLOR,
 					'scheme' => [
 						'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -432,7 +432,7 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
 			$this->add_control(
 				'th_blog_carousel_more_btn_margin_hover',
 				[
-					'label' => esc_html__( 'Margin', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Margin', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::DIMENSIONS,
 					'size_units' => [ 'px', '%', 'em' ],
 					'selectors' => [
@@ -444,14 +444,14 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
 				\Elementor\Group_Control_Box_Shadow::get_type(),
 				[
 					'name' => 'th_blog_carousel_more_btn_box_shadow_hover',
-					'label' => esc_html__( 'Box Shadow', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Box Shadow', WP_MF_CORE_SLUG ),
 					'selector' => '{{WRAPPER}} .ec-swiper-button-prev:hover, {{WRAPPER}} .ec-swiper-button-next:hover',
 				]
 			);
 			$this->add_control(
 				'th_blog_carousel_more_btn_border_rad_hover',
 				[
-					'label' => esc_html__( 'Border Radius', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Border Radius', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SLIDER,
 					'size_units' => [ 'px'],
 					'range' => [
@@ -473,17 +473,17 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
 			$this->add_control(
 				'th_blog_carousel_carousel_dot_nav_section',
 					[
-						'label' => esc_html__( 'Navigation', WP_TH_CORE_SLUG ),
+						'label' => esc_html__( 'Navigation', WP_MF_CORE_SLUG ),
 						'type' => \Elementor\Controls_Manager::HEADING,
 					]
 				);
 				$this->add_control(
 			    	'th_blog_carousel_hide_navigation',
 			    	[
-			    		'label' 		=> esc_html__( 'Hide Dot Navigation', WP_TH_CORE_SLUG ),
+			    		'label' 		=> esc_html__( 'Hide Dot Navigation', WP_MF_CORE_SLUG ),
 			    		'type' 			=> \Elementor\Controls_Manager::SWITCHER,
-			    		'label_on' 		=> __( 'Show', WP_TH_CORE_SLUG ),
-			    		'label_off' 	=> __( 'Hide', WP_TH_CORE_SLUG ),
+			    		'label_on' 		=> __( 'Show', WP_MF_CORE_SLUG ),
+			    		'label_off' 	=> __( 'Hide', WP_MF_CORE_SLUG ),
 			    		'return_value' 	=> 'yes',
 			    		'default' 		=> 'no',
 			    	]
@@ -495,14 +495,14 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
 					$this->start_controls_tab(
 						'th_blog_carousel_dot_nav_normal_tab',
 						[
-							'label' => esc_html__( 'Normal', WP_TH_CORE_SLUG ),
+							'label' => esc_html__( 'Normal', WP_MF_CORE_SLUG ),
 
 						]
 					);
 					$this->add_control(
 						'th_blog_carousel_dot_nav_background_color',
 						[
-							'label' => esc_html__( 'Color', WP_TH_CORE_SLUG ),
+							'label' => esc_html__( 'Color', WP_MF_CORE_SLUG ),
 							'type' => \Elementor\Controls_Manager::COLOR,
 							'scheme' => [
 								'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -517,7 +517,7 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
 					$this->add_control(
 						'width_blog_carousel_dot_nav_background_opacity',
 						[
-							'label' => esc_html__( 'Opacity', WP_TH_CORE_SLUG ),
+							'label' => esc_html__( 'Opacity', WP_MF_CORE_SLUG ),
 							'type' => \Elementor\Controls_Manager::SLIDER,
 							'size_units' => [ '%' ],
 							'range' => [
@@ -535,7 +535,7 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
 					$this->add_control(
 						'th_blog_carousel_dot_nav_width',
 						[
-							'label' => esc_html__( 'Width', WP_TH_CORE_SLUG ),
+							'label' => esc_html__( 'Width', WP_MF_CORE_SLUG ),
 							'type' => \Elementor\Controls_Manager::SLIDER,
 							'size_units' => [ 'px', '%' ],
 							'range' => [
@@ -553,7 +553,7 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
 					$this->add_control(
 						'th_blog_carousel_dot_nav_height',
 						[
-							'label' => esc_html__( 'Height', WP_TH_CORE_SLUG ),
+							'label' => esc_html__( 'Height', WP_MF_CORE_SLUG ),
 							'type' => \Elementor\Controls_Manager::SLIDER,
 							'size_units' => [ 'px', '%' ],
 							'range' => [
@@ -571,7 +571,7 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
 					$this->add_control(
 						'th_blog_carousel_dot_nav_margin',
 						[
-							'label' => esc_html__( 'Margin', WP_TH_CORE_SLUG ),
+							'label' => esc_html__( 'Margin', WP_MF_CORE_SLUG ),
 							'type' => \Elementor\Controls_Manager::DIMENSIONS,
 							'size_units' => [ 'px', '%', 'em' ],
 							'selectors' => [
@@ -583,7 +583,7 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
 					$this->add_control(
 						'th_blog_carousel_dot_nav_border_rad',
 						[
-							'label' => esc_html__( 'Border Radius', WP_TH_CORE_SLUG ),
+							'label' => esc_html__( 'Border Radius', WP_MF_CORE_SLUG ),
 							'type' => \Elementor\Controls_Manager::SLIDER,
 							'size_units' => [ 'px'],
 							'range' => [
@@ -604,14 +604,14 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
 					$this->start_controls_tab(
 						'th_blog_carousel_dot_nav_hover_tab',
 						[
-							'label' => esc_html__( 'Active', WP_TH_CORE_SLUG ),
+							'label' => esc_html__( 'Active', WP_MF_CORE_SLUG ),
 						]
 					);
 
 					$this->add_control(
 						'width_blog_carousel_dot_nav_background_opacity_active',
 						[
-							'label' => esc_html__( 'Opacity', WP_TH_CORE_SLUG ),
+							'label' => esc_html__( 'Opacity', WP_MF_CORE_SLUG ),
 							'type' => \Elementor\Controls_Manager::SLIDER,
 							'size_units' => [ '%' ],
 							'range' => [
@@ -629,7 +629,7 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
 					$this->add_control(
 						'th_blog_carousel_dot_nav_background_color_hover',
 						[
-							'label' => esc_html__( 'Color', WP_TH_CORE_SLUG ),
+							'label' => esc_html__( 'Color', WP_MF_CORE_SLUG ),
 							'type' => \Elementor\Controls_Manager::COLOR,
 							'scheme' => [
 								'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -644,7 +644,7 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
 					$this->add_control(
 						'th_blog_carousel_dot_nav_width_hover',
 						[
-							'label' => esc_html__( 'Width', WP_TH_CORE_SLUG ),
+							'label' => esc_html__( 'Width', WP_MF_CORE_SLUG ),
 							'type' => \Elementor\Controls_Manager::SLIDER,
 							'size_units' => [ 'px', '%' ],
 							'range' => [
@@ -662,7 +662,7 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
 					$this->add_control(
 						'th_blog_carousel_dot_nav_height_hover',
 						[
-							'label' => esc_html__( 'Height', WP_TH_CORE_SLUG ),
+							'label' => esc_html__( 'Height', WP_MF_CORE_SLUG ),
 							'type' => \Elementor\Controls_Manager::SLIDER,
 							'size_units' => [ 'px', '%' ],
 							'range' => [
@@ -681,7 +681,7 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
 					$this->add_control(
 						'th_blog_carousel_dot_nav_rad_hover',
 						[
-							'label' => esc_html__( 'Border Radius', WP_TH_CORE_SLUG ),
+							'label' => esc_html__( 'Border Radius', WP_MF_CORE_SLUG ),
 							'type' => \Elementor\Controls_Manager::SLIDER,
 							'size_units' => [ 'px'],
 							'range' => [
@@ -711,7 +711,7 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
 		$this->start_controls_section(
 			'th_blog_carousel_blog_filter_category',
 				[
-					'label' => esc_html__( 'Blog Category', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Blog Category', WP_MF_CORE_SLUG ),
 					'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
 				]
 			);
@@ -719,7 +719,7 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
 			$this->add_control(
 				'th_blog_carousel_select_blog_categories',
 				[
-					'label' => esc_html__( 'Select Categories', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Select Categories', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SELECT2,
 					'multiple' => true,
 					'options' => $this->parse_filter_categories(),
@@ -731,29 +731,29 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
 		$this->start_controls_section(
 			'th_blog_carousel_blog_meta_section',
 				[
-					'label' => esc_html__( 'Meta Data', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Meta Data', WP_MF_CORE_SLUG ),
 					'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
 				]
 			);
 			$this->add_control(
 				'th_blog_carousel_meta_position',
 				[
-					'label' => esc_html__( 'Select Meta Data Position', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Select Meta Data Position', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SELECT,
 					'default' => 'before-title',
 					'options' => [
-						'before-title'  => esc_html__( 'Before Title', WP_TH_CORE_SLUG ),
-						'after-title'  => esc_html__( 'After Title', WP_TH_CORE_SLUG ),
+						'before-title'  => esc_html__( 'Before Title', WP_MF_CORE_SLUG ),
+						'after-title'  => esc_html__( 'After Title', WP_MF_CORE_SLUG ),
 					],
 				]
 			);
 			$this->add_control(
 	        	'th_blog_carousel_display_category',
 	        	[
-	        		'label' => esc_html__('Show category', WP_TH_CORE_SLUG),
+	        		'label' => esc_html__('Show category', WP_MF_CORE_SLUG),
 	        		'type' => \Elementor\Controls_Manager::SWITCHER,
-					'label_on' => esc_html__( 'Show', WP_TH_CORE_SLUG ),
-					'label_off' => esc_html__( 'Hide', WP_TH_CORE_SLUG ),
+					'label_on' => esc_html__( 'Show', WP_MF_CORE_SLUG ),
+					'label_off' => esc_html__( 'Hide', WP_MF_CORE_SLUG ),
 					'return_value' => 'yes',
 					'default' => 'yes',
 	        	]
@@ -761,10 +761,10 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
 			$this->add_control(
 	        	'th_blog_carousel_display_comments',
 	        	[
-	        		'label' => esc_html__('Show comments', WP_TH_CORE_SLUG),
+	        		'label' => esc_html__('Show comments', WP_MF_CORE_SLUG),
 	        		'type' => \Elementor\Controls_Manager::SWITCHER,
-					'label_on' => esc_html__( 'Show', WP_TH_CORE_SLUG ),
-					'label_off' => esc_html__( 'Hide', WP_TH_CORE_SLUG ),
+					'label_on' => esc_html__( 'Show', WP_MF_CORE_SLUG ),
+					'label_off' => esc_html__( 'Hide', WP_MF_CORE_SLUG ),
 					'return_value' => 'yes',
 					'default' => 'no',
 	        	]
@@ -772,10 +772,10 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
 			$this->add_control(
 	        	'th_blog_carousel_display_author',
 	        	[
-	        		'label' => esc_html__('Show author', WP_TH_CORE_SLUG),
+	        		'label' => esc_html__('Show author', WP_MF_CORE_SLUG),
 	        		'type' => \Elementor\Controls_Manager::SWITCHER,
-					'label_on' => esc_html__( 'Show', WP_TH_CORE_SLUG ),
-					'label_off' => esc_html__( 'Hide', WP_TH_CORE_SLUG ),
+					'label_on' => esc_html__( 'Show', WP_MF_CORE_SLUG ),
+					'label_off' => esc_html__( 'Hide', WP_MF_CORE_SLUG ),
 					'return_value' => 'yes',
 					'default' => 'yes',
 	        	]
@@ -783,10 +783,10 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
 			$this->add_control(
 	        	'th_blog_carousel_display_views',
 	        	[
-	        		'label' => esc_html__('Show views', WP_TH_CORE_SLUG),
+	        		'label' => esc_html__('Show views', WP_MF_CORE_SLUG),
 	        		'type' => \Elementor\Controls_Manager::SWITCHER,
-					'label_on' => esc_html__( 'Show', WP_TH_CORE_SLUG ),
-					'label_off' => esc_html__( 'Hide', WP_TH_CORE_SLUG ),
+					'label_on' => esc_html__( 'Show', WP_MF_CORE_SLUG ),
+					'label_off' => esc_html__( 'Hide', WP_MF_CORE_SLUG ),
 					'return_value' => 'yes',
 					'default' => 'no',
 	        	]
@@ -794,10 +794,10 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
 			$this->add_control(
 	        	'th_blog_carousel_display_date_meta',
 	        	[
-	        		'label' => esc_html__('Show date', WP_TH_CORE_SLUG),
+	        		'label' => esc_html__('Show date', WP_MF_CORE_SLUG),
 	        		'type' => \Elementor\Controls_Manager::SWITCHER,
-					'label_on' => esc_html__( 'Show', WP_TH_CORE_SLUG ),
-					'label_off' => esc_html__( 'Hide', WP_TH_CORE_SLUG ),
+					'label_on' => esc_html__( 'Show', WP_MF_CORE_SLUG ),
+					'label_off' => esc_html__( 'Hide', WP_MF_CORE_SLUG ),
 					'return_value' => 'yes',
 					'default' => 'yes',
 	        	]
@@ -810,24 +810,24 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
 	    $this->start_controls_section(
             'th_blog_carousel_blog_carousel_navigation',
 	            [
-	                'label' => esc_html__( 'Navigation', WP_TH_CORE_SLUG ),
+	                'label' => esc_html__( 'Navigation', WP_MF_CORE_SLUG ),
 	                'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
 	            ]
 	        );
     		$this->add_control(
 				'th_blog_carousel_blog_carousel_arrow_section',
 				[
-					'label' => esc_html__( 'Arrow', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Arrow', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::HEADING,
 				]
 			);
     		$this->add_control(
 				'th_blog_carousel_blog_carousel_arrow',
 				[
-					'label' => esc_html__( 'Show Arrow', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Show Arrow', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SWITCHER,
-					'label_on' => esc_html__( 'Show', WP_TH_CORE_SLUG ),
-					'label_off' => esc_html__( 'Hide', WP_TH_CORE_SLUG ),
+					'label_on' => esc_html__( 'Show', WP_MF_CORE_SLUG ),
+					'label_off' => esc_html__( 'Hide', WP_MF_CORE_SLUG ),
 					'return_value' => 'yes',
 					'default' => 'no',
 				]
@@ -835,7 +835,7 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
 			$this->add_control(
 				'th_blog_carousel_blog_arrow_button',
 				[
-					'label' => esc_html__( 'Arrow Color', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Arrow Color', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::COLOR,
 					'scheme' => [
 						'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -850,7 +850,7 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
 			$this->add_control(
 				'th_blog_carousel_blog_arrow_button_bg',
 				[
-					'label' => esc_html__( 'Arrow Background', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Arrow Background', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::COLOR,
 					'scheme' => [
 						'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -865,7 +865,7 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
 			$this->add_control(
 				'th_blog_carousel_blog_arrow_slider',
 				[
-					'label' => esc_html__( 'Border Radius', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Border Radius', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SLIDER,
 					'size_units' => [ 'px', '%' ],
 					'range' => [
@@ -883,18 +883,18 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
 			$this->add_control(
 				'th_blog_carousel_blog_arrow_position',
 				[
-					'label' => esc_html__( 'Select arrow position', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Select arrow position', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SELECT,
 					'default' => 4,
 					'options' => [
-						'default'  => esc_html__( 'Default', WP_TH_CORE_SLUG ),
-						'top-right'  => esc_html__( 'Top right', WP_TH_CORE_SLUG ),
-						'top-left'  => esc_html__( 'Top left', WP_TH_CORE_SLUG ),
-						'top-center'  => esc_html__( 'Top center', WP_TH_CORE_SLUG ),
+						'default'  => esc_html__( 'Default', WP_MF_CORE_SLUG ),
+						'top-right'  => esc_html__( 'Top right', WP_MF_CORE_SLUG ),
+						'top-left'  => esc_html__( 'Top left', WP_MF_CORE_SLUG ),
+						'top-center'  => esc_html__( 'Top center', WP_MF_CORE_SLUG ),
 
-						'bottom-right'  => esc_html__( 'bottom right', WP_TH_CORE_SLUG ),
-						'bottom-left'  => esc_html__( 'bottom left', WP_TH_CORE_SLUG ),
-						'bottom-center'  => esc_html__( 'bottom center', WP_TH_CORE_SLUG ),
+						'bottom-right'  => esc_html__( 'bottom right', WP_MF_CORE_SLUG ),
+						'bottom-left'  => esc_html__( 'bottom left', WP_MF_CORE_SLUG ),
+						'bottom-center'  => esc_html__( 'bottom center', WP_MF_CORE_SLUG ),
 					],
 					'default' => 'bottom-center'
 				]
@@ -906,7 +906,7 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
 			$this->start_controls_tab(
 				'th_blog_carousel_blog_arrow_normal_tab',
 				[
-					'label' => esc_html__( 'Normal', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Normal', WP_MF_CORE_SLUG ),
 
 				]
 			);
@@ -914,7 +914,7 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
 			$this->add_control(
 				'th_blog_carousel_blog_arrow_background_color',
 				[
-					'label' => esc_html__( 'Background Color', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Background Color', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::COLOR,
 					'scheme' => [
 						'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -930,7 +930,7 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
 			$this->add_control(
 				'th_blog_carousel_blog_arrow_icon_color',
 				[
-					'label' => esc_html__( 'Icon Color', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Icon Color', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::COLOR,
 					'scheme' => [
 						'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -947,14 +947,14 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
 				\Elementor\Group_Control_Border::get_type(),
 				[
 					'name' => 'th_blog_carousel_blog_arrow_border_control',
-					'label' => esc_html__( 'Border', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Border', WP_MF_CORE_SLUG ),
 					'selector' => '{{WRAPPER}} .ec-switch-button-next i, {{WRAPPER}} .ec-switch-button-prev i'
 				]
 			);
 			$this->add_control(
 				'th_blog_carousel_blog_arrow_border_rad',
 				[
-					'label' => esc_html__( 'Border Radius', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Border Radius', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SLIDER,
 					'size_units' => [ 'px'],
 					'range' => [
@@ -975,14 +975,14 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
 			$this->start_controls_tab(
 				'th_blog_carousel_blog_arrow_hover_tab',
 				[
-					'label' => esc_html__( 'Hover', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Hover', WP_MF_CORE_SLUG ),
 				]
 			);
 
 			$this->add_control(
 				'th_blog_carousel_blog_arrow_background_color_hover',
 				[
-					'label' => esc_html__( 'Background Color', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Background Color', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::COLOR,
 					'scheme' => [
 						'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -998,7 +998,7 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
 			$this->add_control(
 				'th_blog_carousel_blog_arrow_icon_color_hover',
 				[
-					'label' => esc_html__( 'Icon Color', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Icon Color', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::COLOR,
 					'scheme' => [
 						'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -1015,7 +1015,7 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
 				\Elementor\Group_Control_Border::get_type(),
 				[
 					'name' => 'blog_arrow_border_control_hover',
-					'label' => esc_html__( 'Border', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Border', WP_MF_CORE_SLUG ),
 					'selector' => '{{WRAPPER}} .ec-switch-button-next i:hover, {{WRAPPER}} .ec-switch-button-prev i:hover'
 				]
 			);
@@ -1024,14 +1024,14 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
 			$this->start_controls_tab(
 				'th_blog_carousel_arrow_inactive_tab',
 				[
-					'label' => esc_html__( 'Inactive', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Inactive', WP_MF_CORE_SLUG ),
 
 				]
 			);
 			$this->add_control(
 				'th_blog_carousel_blog_arrow_background_color_inactive',
 				[
-					'label' => esc_html__( 'Background Color', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Background Color', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::COLOR,
 					'scheme' => [
 						'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -1046,7 +1046,7 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
 			$this->add_control(
 				'th_blog_carousel_blog_arrow_icon_color_inactive',
 				[
-					'label' => esc_html__( 'Icon Color', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Icon Color', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::COLOR,
 					'scheme' => [
 						'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -1062,7 +1062,7 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
 				\Elementor\Group_Control_Border::get_type(),
 				[
 					'name' => 'blog_arrow_border_control_inactive',
-					'label' => esc_html__( 'Border', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Border', WP_MF_CORE_SLUG ),
 					'selector' => '{{WRAPPER}} .ec-switch-button.disabled i, 
 					{{WRAPPER}} .ec-switch-button.disabled i:hover'
 				]
@@ -1087,7 +1087,7 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
 	    $this->start_controls_section(
             'th_blog_carousel_blog_box_style_section',
 	            [
-	                'label' => esc_html__( 'Box Style', WP_TH_CORE_SLUG ),
+	                'label' => esc_html__( 'Box Style', WP_MF_CORE_SLUG ),
 	                'tab' => \Elementor\Controls_Manager::TAB_STYLE,
 	            ]
 	        );
@@ -1095,7 +1095,7 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
         		\Elementor\Group_Control_Border::get_type(),
         		[
         			'name' => 'th_blog_carousel_blog_border',
-        			'label' => esc_html__( 'Box Border', WP_TH_CORE_SLUG ),
+        			'label' => esc_html__( 'Box Border', WP_MF_CORE_SLUG ),
         			'selector' => '{{WRAPPER}} .th-blog-block',
         		]
         	);
@@ -1108,13 +1108,13 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
         	$this->add_control(
 				'th_blog_carousel_select_blog_layout',
 				[
-					'label' => esc_html__( 'Select Blog Layout', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Select Blog Layout', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SELECT,
 					'default' => 'top',
 					'options' => [
-						'top'  		=> esc_html__( 'Image Top', WP_TH_CORE_SLUG ),
-						'thumb-left'  	=> esc_html__( 'Image Left', WP_TH_CORE_SLUG ),
-						'thumb-right'  	=> esc_html__( 'Image Right', WP_TH_CORE_SLUG ),
+						'top'  		=> esc_html__( 'Image Top', WP_MF_CORE_SLUG ),
+						'thumb-left'  	=> esc_html__( 'Image Left', WP_MF_CORE_SLUG ),
+						'thumb-right'  	=> esc_html__( 'Image Right', WP_MF_CORE_SLUG ),
 					],
 					'default' => 'thumb-right'
 				]
@@ -1122,7 +1122,7 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
         	$this->add_responsive_control(
         		'th_blog_carousel_blog_box_margin',
         		[
-        			'label' => esc_html__( 'Box margin', WP_TH_CORE_SLUG ),
+        			'label' => esc_html__( 'Box margin', WP_MF_CORE_SLUG ),
         			'type' => \Elementor\Controls_Manager::DIMENSIONS,
         			'size_units' => [ 'px' ],
         			'selectors' => [
@@ -1141,7 +1141,7 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
         	$this->add_responsive_control(
         		'th_blog_carousel_blog_box_padding',
         		[
-        			'label' => esc_html__( 'Box Padding', WP_TH_CORE_SLUG ),
+        			'label' => esc_html__( 'Box Padding', WP_MF_CORE_SLUG ),
         			'type' => \Elementor\Controls_Manager::DIMENSIONS,
         			'size_units' => [ 'px' ],
         			'selectors' => [
@@ -1152,7 +1152,7 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
         	$this->add_responsive_control(
         		'th_blog_carousel_blog_content_padding',
         		[
-        			'label' => esc_html__( 'Content Padding', WP_TH_CORE_SLUG ),
+        			'label' => esc_html__( 'Content Padding', WP_MF_CORE_SLUG ),
         			'type' => \Elementor\Controls_Manager::DIMENSIONS,
         			'size_units' => [ 'px' ],
         			'selectors' => [
@@ -1170,7 +1170,7 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
         	$this->add_responsive_control(
         		'th_blog_carousel_blog_box_border_radius',
         		[
-        			'label' => esc_html__( 'Box Border Radius', WP_TH_CORE_SLUG ),
+        			'label' => esc_html__( 'Box Border Radius', WP_MF_CORE_SLUG ),
         			'type' => \Elementor\Controls_Manager::SLIDER,
         			'size_units' => [ 'px', '%' ],
         			'range' => [
@@ -1197,7 +1197,7 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
         		\Elementor\Group_Control_Box_Shadow::get_type(),
         		[
         			'name' => 'th_blog_carousel_blog_course_box_shadow',
-        			'label' => esc_html__( 'Box Shadow', WP_TH_CORE_SLUG ),
+        			'label' => esc_html__( 'Box Shadow', WP_MF_CORE_SLUG ),
         			'selector' => '{{WRAPPER}} .th-blog-block',
         		]
         	);
@@ -1205,14 +1205,14 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
         		\Elementor\Group_Control_Box_Shadow::get_type(),
         		[
         			'name' => 'th_blog_carousel_blog_course_box_shadow_hover',
-        			'label' => esc_html__( 'Box Shadow on hover', WP_TH_CORE_SLUG ),
+        			'label' => esc_html__( 'Box Shadow on hover', WP_MF_CORE_SLUG ),
         			'selector' => '{{WRAPPER}} .th-blog-block:hover',
         		]
         	);
         	$this->add_control(
         		'th_blog_carousel_blog_block_bg',
         		[
-        			'label' => esc_html__( 'Background', WP_TH_CORE_SLUG ),
+        			'label' => esc_html__( 'Background', WP_MF_CORE_SLUG ),
         			'type' => \Elementor\Controls_Manager::COLOR,
         			'scheme' => [
         				'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -1235,7 +1235,7 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
 	    $this->start_controls_section(
             'th_blog_carousel_blog_thumb_style_section',
 	            [
-	                'label' => esc_html__( 'Thumbnail', WP_TH_CORE_SLUG ),
+	                'label' => esc_html__( 'Thumbnail', WP_MF_CORE_SLUG ),
 	                'tab' => \Elementor\Controls_Manager::TAB_STYLE,
 	            ]
 	        );
@@ -1243,10 +1243,10 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
 			$this->add_control(
 				'th_blog_carousel_show_blog_thumb',
 				[
-					'label' => esc_html__( 'Show thumbnail', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Show thumbnail', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SWITCHER,
-					'label_on' => esc_html__( 'Show', WP_TH_CORE_SLUG ),
-					'label_off' => esc_html__( 'Hide', WP_TH_CORE_SLUG ),
+					'label_on' => esc_html__( 'Show', WP_MF_CORE_SLUG ),
+					'label_off' => esc_html__( 'Hide', WP_MF_CORE_SLUG ),
 					'return_value' => 'yes',
 					'default' => 'yes',
 				]
@@ -1254,7 +1254,7 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
 			$this->add_control(
 				'th_blog_carousel_thumb_width',
 				[
-					'label' => esc_html__( 'Thumbnail Width', WP_TH_CORE_SLUG ),
+					'label' => esc_html__( 'Thumbnail Width', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::SLIDER,
 					'size_units' => [ 'px', '%' ],
 					'range' => [
@@ -1286,7 +1286,7 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
         	$this->add_control(
         		'th_blog_carousel_blog_thumb_height',
         		[
-        			'label' => esc_html__( 'Thumbnail Height', WP_TH_CORE_SLUG ),
+        			'label' => esc_html__( 'Thumbnail Height', WP_MF_CORE_SLUG ),
         			'type' => \Elementor\Controls_Manager::SLIDER,
         			'size_units' => [ 'px' ],
         			'range' => [
@@ -1308,7 +1308,7 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
         	$this->add_responsive_control(
         		'th_blog_carousel_blog_image_border_radius',
         		[
-        			'label' => esc_html__( 'Image Border Radius', WP_TH_CORE_SLUG ),
+        			'label' => esc_html__( 'Image Border Radius', WP_MF_CORE_SLUG ),
         			'type' => \Elementor\Controls_Manager::DIMENSIONS,
         			'size_units' => [ 'px' ],
         			
@@ -1336,7 +1336,7 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
         $this->start_controls_section(
             'th_blog_carousel_blog_desc_style_section',
 	            [
-	                'label' => esc_html__( 'Content style', WP_TH_CORE_SLUG ),
+	                'label' => esc_html__( 'Content style', WP_MF_CORE_SLUG ),
 	                'tab' => \Elementor\Controls_Manager::TAB_STYLE,
 	            ]
 	        );
@@ -1344,7 +1344,7 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
 	        $this->add_control(
 	        	'th_blog_carousel_th_blog_carousel_title_header_blog',
 	        	[
-	        		'label' => esc_html__('Title', WP_TH_CORE_SLUG),
+	        		'label' => esc_html__('Title', WP_MF_CORE_SLUG),
 	        		'type' => \Elementor\Controls_Manager::HEADING,
 	        		'seperator' => 'before'
 	        	]
@@ -1354,14 +1354,14 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
 	        	\Elementor\Group_Control_Typography::get_type(),
 	        	[
 	        		'name' => 'th_blog_carousel_blog_title_typo',
-	        		'label' => esc_html__( 'Typography', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Typography', WP_MF_CORE_SLUG ),
 	        		'selector' => '{{WRAPPER}} .blog-block-title',
 	        	]
 	        );
 	        $this->add_control(
 	        	'th_blog_carousel_blog_title_color',
 	        	[
-	        		'label' => esc_html__( 'Title Color', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Title Color', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::COLOR,
 	        		'scheme' => [
 	        			'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -1376,7 +1376,7 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
 	        $this->add_control(
 	        	'th_blog_carousel_blog_title_hover_color',
 	        	[
-	        		'label' => esc_html__( 'Title Hover Color', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Title Hover Color', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::COLOR,
 	        		'scheme' => [
 	        			'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -1390,7 +1390,7 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
 	        $this->add_control(
 	        	'th_blog_carousel_blog_title_margin',
 	        	[
-	        		'label' => esc_html__( 'Title Margin', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Title Margin', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::DIMENSIONS,
 	        		'size_units' => [ 'px' ],
 	        		'selectors' => [
@@ -1408,7 +1408,7 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
 	        $this->add_control(
 	        	'th_blog_carousel_desc_header',
 	        	[
-	        		'label' => esc_html__('Description', WP_TH_CORE_SLUG),
+	        		'label' => esc_html__('Description', WP_MF_CORE_SLUG),
 	        		'type' => \Elementor\Controls_Manager::HEADING,
 	        		'seperator' => 'before'
 	        	]
@@ -1417,14 +1417,14 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
 	        	\Elementor\Group_Control_Typography::get_type(),
 	        	[
 	        		'name' => 'th_blog_carousel_blog_desc_typography',
-	        		'label' => esc_html__( 'Typography', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Typography', WP_MF_CORE_SLUG ),
 	        		'selector' => '{{WRAPPER}} .th-description',
 	        	]
 	        );
 	        $this->add_control(
 	        	'th_blog_carousel_blog_desc_typography_color',
 	        	[
-	        		'label' => esc_html__( 'Color', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Color', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::COLOR,
 	        		'scheme' => [
 	        			'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -1438,7 +1438,7 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
 	        $this->add_control(
 	        	'th_blog_carousel_blog_desc_margin',
 	        	[
-	        		'label' => esc_html__( 'Description Margin', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Description Margin', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::DIMENSIONS,
 	        		'size_units' => [ 'px'],
 	        		'selectors' => [
@@ -1464,14 +1464,14 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
         $this->start_controls_section(
             'th_blog_carousel_blog_meta_style_section',
 	            [
-	                'label' => esc_html__( 'Meta Data', WP_TH_CORE_SLUG ),
+	                'label' => esc_html__( 'Meta Data', WP_MF_CORE_SLUG ),
 	                'tab' => \Elementor\Controls_Manager::TAB_STYLE,
 	            ]
 	        );
         	$this->add_control(
         		'th_blog_carousel_blog_meta_spacing',
         		[
-        			'label' => esc_html__( 'Spacing', WP_TH_CORE_SLUG ),
+        			'label' => esc_html__( 'Spacing', WP_MF_CORE_SLUG ),
         			'type' => \Elementor\Controls_Manager::DIMENSIONS,
         			'size_units' => [ 'px', '%', 'em' ],
         			'selectors' => [
@@ -1483,7 +1483,7 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
 	        	\Elementor\Group_Control_Typography::get_type(),
 	        	[
 	        		'name' => 'th_blog_carousel_blog_meta_content_typography',
-	        		'label' => esc_html__( 'Typography', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Typography', WP_MF_CORE_SLUG ),
 	        		'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
 	        		'selector' => '{{WRAPPER}} .th-blog-details .th-elem-blog-meta i,{{WRAPPER}} .th-blog-details .th-elem-blog-meta a, {{WRAPPER}} .th-blog-details .th-elem-blog-meta span',
 	        	]
@@ -1491,7 +1491,7 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
 	        $this->add_control(
 	        	'th_blog_carousel_blog_meta_content_colors',
 	        	[
-	        		'label' => esc_html__( 'Color', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Color', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::COLOR,
 	        		'scheme' => [
 	        			'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -1506,7 +1506,7 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
 	        $this->add_control(
 	        	'th_blog_carousel_blog_meta_spacing_between',
 	        	[
-	        		'label' => esc_html__( 'Space between items', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Space between items', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::SLIDER,
 	        		'size_units' => [ 'px', '%' ],
 	        		'range' => [
@@ -1534,14 +1534,14 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
 	        $this->add_control(
 	        	'th_blog_carousel_blog_date_format',
 	        	[
-	        		'label' => esc_html__( 'Select Date Format', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Select Date Format', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::SELECT,
 	        		'default' => 'solid',
 	        		'options' => [
-	        			'FjY'  => esc_html__( 'i.e: January 11,2020', WP_TH_CORE_SLUG ),
-	        			'DMj'  => esc_html__( 'i.e: Wed Jan 9', WP_TH_CORE_SLUG ),
-	        			'dSMY'  => esc_html__( 'i.e: 15th Jan 2020', WP_TH_CORE_SLUG ),
-	        			'FY'  => esc_html__( 'i.e: January 2020', WP_TH_CORE_SLUG ),
+	        			'FjY'  => esc_html__( 'i.e: January 11,2020', WP_MF_CORE_SLUG ),
+	        			'DMj'  => esc_html__( 'i.e: Wed Jan 9', WP_MF_CORE_SLUG ),
+	        			'dSMY'  => esc_html__( 'i.e: 15th Jan 2020', WP_MF_CORE_SLUG ),
+	        			'FY'  => esc_html__( 'i.e: January 2020', WP_MF_CORE_SLUG ),
 	        		],
 	        	]
 	        );
@@ -1549,14 +1549,14 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
         $this->start_controls_section(
             'th_blog_carousel_blog_footer_style_section',
 	            [
-	                'label' => esc_html__( 'Footer', WP_TH_CORE_SLUG ),
+	                'label' => esc_html__( 'Footer', WP_MF_CORE_SLUG ),
 	                'tab' => \Elementor\Controls_Manager::TAB_STYLE,
 	            ]
 	        );
         	$this->add_responsive_control(
         		'th_blog_carousel_footerpadding',
         		[
-        			'label' => esc_html__( 'Padding', WP_TH_CORE_SLUG ),
+        			'label' => esc_html__( 'Padding', WP_MF_CORE_SLUG ),
         			'type' => \Elementor\Controls_Manager::DIMENSIONS,
         			'size_units' => [ 'px', '%', 'em' ],
         			'selectors' => [
@@ -1574,10 +1574,10 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
         	$this->add_control(
         		'th_blog_carousel_display_footer_view',
         		[
-        			'label' => esc_html__( 'Show views', WP_TH_CORE_SLUG ),
+        			'label' => esc_html__( 'Show views', WP_MF_CORE_SLUG ),
         			'type' => \Elementor\Controls_Manager::SWITCHER,
-        			'label_on' => __( 'Show', WP_TH_CORE_SLUG ),
-        			'label_off' => __( 'Hide', WP_TH_CORE_SLUG ),
+        			'label_on' => __( 'Show', WP_MF_CORE_SLUG ),
+        			'label_off' => __( 'Hide', WP_MF_CORE_SLUG ),
         			'return_value' => 'yes',
         			'default' => 'no',
         		]
@@ -1585,10 +1585,10 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
         	$this->add_control(
         		'th_blog_carousel_display_footer_author',
         		[
-        			'label' => esc_html__( 'Show author', WP_TH_CORE_SLUG ),
+        			'label' => esc_html__( 'Show author', WP_MF_CORE_SLUG ),
         			'type' => \Elementor\Controls_Manager::SWITCHER,
-        			'label_on' => __( 'Show', WP_TH_CORE_SLUG ),
-        			'label_off' => __( 'Hide', WP_TH_CORE_SLUG ),
+        			'label_on' => __( 'Show', WP_MF_CORE_SLUG ),
+        			'label_off' => __( 'Hide', WP_MF_CORE_SLUG ),
         			'return_value' => 'yes',
         			'default' => 'yes',
         		]
@@ -1596,7 +1596,7 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
 	        $this->add_control(
 	        	'th_blog_carousel_read_more_header',
 	        	[
-	        		'label' => esc_html__('Read more', WP_TH_CORE_SLUG),
+	        		'label' => esc_html__('Read more', WP_MF_CORE_SLUG),
 	        		'type' => \Elementor\Controls_Manager::HEADING,
 	        		'seperator' => 'before'
 	        	]
@@ -1604,7 +1604,7 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
 	        $this->add_control(
 	        	'th_blog_carousel_blog_read_more_text',
 	        	[
-	        		'label' => esc_html__( 'Read more text', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Read more text', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::TEXT,
 	        		'default' => '',
 	        	]
@@ -1613,14 +1613,14 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
 	        	\Elementor\Group_Control_Typography::get_type(),
 	        	[
 	        		'name' => 'th_blog_carousel_blog_read_more_typo',
-	        		'label' => esc_html__( 'Read More Typography', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Read More Typography', WP_MF_CORE_SLUG ),
 	        		'selector' => '{{WRAPPER}} .blog-read-more',
 	        	]
 	        );
 	        $this->add_control(
 	        	'th_blog_carousel_blog_read_more',
 	        	[
-	        		'label' => esc_html__( 'Readmore Color', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Readmore Color', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::COLOR,
 	        		'scheme' => [
 	        			'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -1635,7 +1635,7 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
 	        $this->add_control(
 	        	'th_blog_carousel_footer_auther_header',
 	        	[
-	        		'label' => esc_html__('Author', WP_TH_CORE_SLUG),
+	        		'label' => esc_html__('Author', WP_MF_CORE_SLUG),
 	        		'type' => \Elementor\Controls_Manager::HEADING,
 	        		'seperator' => 'before'
 	        	]
@@ -1644,14 +1644,14 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
 	        	\Elementor\Group_Control_Typography::get_type(),
 	        	[
 	        		'name' => 'th_blog_carousel_blog_author_typography',
-	        		'label' => esc_html__( 'Author Typography', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Author Typography', WP_MF_CORE_SLUG ),
 	        		'selector' => '{{WRAPPER}} .blog-author a',
 	        	]
 	        );
 	        $this->add_control(
 	        	'th_blog_carousel_author_color',
 	        	[
-	        		'label' => esc_html__( 'Author Color', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'Author Color', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::COLOR,
 	        		'scheme' => [
 	        			'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -1666,7 +1666,7 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
 	        $this->add_control(
 	        	'th_blog_carousel_view_count_header',
 	        	[
-	        		'label' => esc_html__('View Count', WP_TH_CORE_SLUG),
+	        		'label' => esc_html__('View Count', WP_MF_CORE_SLUG),
 	        		'type' => \Elementor\Controls_Manager::HEADING,
 	        		'seperator' => 'before'
 	        	]
@@ -1675,14 +1675,14 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
 	        	\Elementor\Group_Control_Typography::get_type(),
 	        	[
 	        		'name' => 'th_blog_carousel_blog_footer_view_typo',
-	        		'label' => esc_html__( 'View Typography', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'View Typography', WP_MF_CORE_SLUG ),
 	        		'selector' => '{{WRAPPER}} .blog-view',
 	        	]
 	        );
 	        $this->add_control(
 	        	'th_blog_carousel_blog_view_color',
 	        	[
-	        		'label' => esc_html__( 'View Color', WP_TH_CORE_SLUG ),
+	        		'label' => esc_html__( 'View Color', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::COLOR,
 	        		'scheme' => [
 	        			'type' => \Elementor\Core\Schemes\Color::get_type(),
@@ -1877,7 +1877,7 @@ class MetafansElementorBlogCarousel extends \Elementor\Widget_Base {
     	$categories_count = count($categories);
     	$html = '';
     	if( $categories_count > 1 ){
-	    	$html .= '<li data-id="'. $id .'" data-cat="all">'. esc_html__('All', WP_TH_CORE_SLUG) .'</li>';
+	    	$html .= '<li data-id="'. $id .'" data-cat="all">'. esc_html__('All', WP_MF_CORE_SLUG) .'</li>';
 	    	foreach ($categories as $key => $value) {
 	    		$html .= '<li data-id="'. $id .'" data-cat="'. $value .'">'. $value .'</li>';
 	    	}
