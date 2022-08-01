@@ -286,6 +286,17 @@
 				],
 			  ]
 		    );
+			 $this->add_control(
+				'btn_padding',
+				[
+					'label' => esc_html__( 'Button Padding', WP_MF_CORE_SLUG ),
+					'type' => \Elementor\Controls_Manager::DIMENSIONS,
+					'size_units' => [ 'px', '%', 'em' ],
+					'selectors' => [
+						'{{WRAPPER}} #tophive-signin-signup button[type="submit"]' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					],
+				]
+			);
 			$this->add_control(
 				  'btn_border_radius',
 				   [
