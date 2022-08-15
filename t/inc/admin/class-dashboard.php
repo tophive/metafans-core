@@ -5,20 +5,11 @@ if ( is_admin() ) {
 		public $doing;
 
 		function __construct() {
-			add_action( 'wp_ajax_tophive_pro_module', array( $this, 'ajax' ) );
+			// add_action( 'wp_ajax_tophive_pro_module', array( $this, 'ajax' ) );
 			if ( is_admin() ) {
 				add_action( 'tophive/dashboard/main', array( $this, 'box_modules' ) );
 				add_action( 'tophive/backend/admin/theme-page', array( $this, 'box_assets' ) );
 				add_action( 'admin_enqueue_scripts', array( $this, 'scripts' ) );
-				// Remove Module box in free.
-				// remove_action(
-				// 	'tophive/dashboard/main',
-				// 	array(
-				// 		Metafans_Dashboard::get_instance(),
-				// 		'pro_modules_box',
-				// 	),
-				// 	15
-				// );
 			}
 			$this->url = admin_url( 'admin.php?page=tophive' );
 			// Setting area.
@@ -343,7 +334,7 @@ if ( is_admin() ) {
 
 		function box_assets() {
 
-			$is_writable = is_writable( MetafansCoreCustomizer_Assets::get_instance()->save_dir );
+			$is_writable = true;
 			$save_value  = get_option( 'tophive_pro_assets_compress', 'on' );
 			if ( ! $is_writable ) {
 				$save_value = '';
