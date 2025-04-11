@@ -133,7 +133,7 @@ class MetafansElementorAdvanceFilter extends \Elementor\Widget_Base {
 		    	[
 		    		'name' => 'filter_dd_typo',
 		    		'label' => esc_html__( 'Typography', 'plugin-domain' ),
-		    		'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
+		    		
 		    		'selector' => '{{WRAPPER}} .tophive-advanced-filter.tophive-advanced-filter-dropdown button.th-exclusive-course-filter-toggle',
 		    	]
 		    );
@@ -142,10 +142,7 @@ class MetafansElementorAdvanceFilter extends \Elementor\Widget_Base {
 		    	[
 		    		'label' => esc_html__( 'Color', 'plugin-domain' ),
 		    		'type' => \Elementor\Controls_Manager::COLOR,
-		    		'scheme' => [
-		    			'type' => \Elementor\Core\Schemes\Color::get_type(),
-		    			'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-		    		],
+		    		
 		    		'selectors' => [
 		    			'{{WRAPPER}} .tophive-advanced-filter.tophive-advanced-filter-dropdown button.th-exclusive-course-filter-toggle' => 'color: {{VALUE}}',
 		    		],
@@ -198,10 +195,7 @@ class MetafansElementorAdvanceFilter extends \Elementor\Widget_Base {
 	    		[
 	    			'label' => esc_html__( 'Background Color', 'plugin-domain' ),
 	    			'type' => \Elementor\Controls_Manager::COLOR,
-	    			'scheme' => [
-	    				'type' => \Elementor\Core\Schemes\Color::get_type(),
-	    				'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-	    			],
+	    			
 	    			'selectors' => [
 	    				'{{WRAPPER}} .tophive-advanced-filter.tophive-advanced-filter-dropdown button.th-exclusive-course-filter-toggle' => 'background-color: {{VALUE}}',
 	    			],
@@ -213,10 +207,7 @@ class MetafansElementorAdvanceFilter extends \Elementor\Widget_Base {
 	    		[
 	    			'label' => esc_html__( 'Hover Background Color', 'plugin-domain' ),
 	    			'type' => \Elementor\Controls_Manager::COLOR,
-	    			'scheme' => [
-	    				'type' => \Elementor\Core\Schemes\Color::get_type(),
-	    				'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-	    			],
+	    			
 	    			'selectors' => [
 	    				'{{WRAPPER}} .tophive-advanced-filter.tophive-advanced-filter-dropdown button.th-exclusive-course-filter-toggle:hover' => 'background-color: {{VALUE}}',
 	    			],
@@ -279,10 +270,7 @@ class MetafansElementorAdvanceFilter extends \Elementor\Widget_Base {
 	    		[
 	    			'label' => esc_html__( 'Container Background Color', 'plugin-domain' ),
 	    			'type' => \Elementor\Controls_Manager::COLOR,
-	    			'scheme' => [
-	    				'type' => \Elementor\Core\Schemes\Color::get_type(),
-	    				'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-	    			],
+	    			
 	    			'selectors' => [
 	    				'{{WRAPPER}} .tophive-advanced-filter.tophive-advanced-filter-dropdown button.th-exclusive-course-filter' => 'background-color: {{VALUE}}',
 	    			],
@@ -312,7 +300,7 @@ class MetafansElementorAdvanceFilter extends \Elementor\Widget_Base {
 		    	[
 		    		'name' => 'filter_dd_select_typo',
 		    		'label' => esc_html__( 'Typography', 'plugin-domain' ),
-		    		'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
+		    		
 		    		'selector' => '{{WRAPPER}} .tophive-advanced-filter.tophive-advanced-filter-dropdown button.th-exclusive-course-filter li',
 		    	]
 		    );
@@ -321,10 +309,7 @@ class MetafansElementorAdvanceFilter extends \Elementor\Widget_Base {
 		    	[
 		    		'label' => esc_html__( 'Dropdown Item Color', 'plugin-domain' ),
 		    		'type' => \Elementor\Controls_Manager::COLOR,
-		    		'scheme' => [
-		    			'type' => \Elementor\Core\Schemes\Color::get_type(),
-		    			'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-		    		],
+		    		
 		    		'selectors' => [
 		    			'{{WRAPPER}} .tophive-advanced-filter.tophive-advanced-filter-dropdown button.th-exclusive-course-filter li' => 'color: {{VALUE}}',
 		    		],
@@ -335,10 +320,7 @@ class MetafansElementorAdvanceFilter extends \Elementor\Widget_Base {
 		    	[
 		    		'label' => esc_html__( 'Selected Item Color', 'plugin-domain' ),
 		    		'type' => \Elementor\Controls_Manager::COLOR,
-		    		'scheme' => [
-		    			'type' => \Elementor\Core\Schemes\Color::get_type(),
-		    			'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-		    		],
+		    		
 		    		'selectors' => [
 		    			'{{WRAPPER}} .tophive-advanced-filter.tophive-advanced-filter-dropdown button.th-exclusive-course-filter li.selected' => 'color: {{VALUE}}',
 		    		],
@@ -350,10 +332,7 @@ class MetafansElementorAdvanceFilter extends \Elementor\Widget_Base {
 	    		[
 	    			'label' => esc_html__( 'Item Background Color', 'plugin-domain' ),
 	    			'type' => \Elementor\Controls_Manager::COLOR,
-	    			'scheme' => [
-	    				'type' => \Elementor\Core\Schemes\Color::get_type(),
-	    				'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-	    			],
+	    			
 	    			'selectors' => [
 	    				'{{WRAPPER}} .tophive-advanced-filter.tophive-advanced-filter-dropdown button.th-exclusive-course-filter li' => 'background-color: {{VALUE}}',
 	    			],
@@ -364,10 +343,7 @@ class MetafansElementorAdvanceFilter extends \Elementor\Widget_Base {
 	    		[
 	    			'label' => esc_html__( 'Selected Item Background Color', 'plugin-domain' ),
 	    			'type' => \Elementor\Controls_Manager::COLOR,
-	    			'scheme' => [
-	    				'type' => \Elementor\Core\Schemes\Color::get_type(),
-	    				'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-	    			],
+	    			
 	    			'selectors' => [
 	    				'{{WRAPPER}} .tophive-advanced-filter.tophive-advanced-filter-dropdown button.th-exclusive-course-filter li.selected' => 'background-color: {{VALUE}}',
 	    			],

@@ -288,10 +288,7 @@ class MetafansElementorCourseCategory extends \Elementor\Widget_Base {
 				[
 					'label' => esc_html__( 'Background Color', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::COLOR,
-					'scheme' => [
-						'type' => \Elementor\Core\Schemes\Color::get_type(),
-						'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-					],
+					
 					'selectors' => [
 						'{{WRAPPER}} .th-course-category-grid .th-course-category-thumb' => 'background-color: {{VALUE}}',
 					],
@@ -362,7 +359,7 @@ class MetafansElementorCourseCategory extends \Elementor\Widget_Base {
 				[
 					'name' => 'title_typography',
 					'label' => esc_html__( 'Typography', WP_MF_CORE_SLUG ),
-					'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
+					
 					'selector' => '{{WRAPPER}} .th-course-category-grid .th-course-category-content h3',
 				]
 			);
@@ -371,10 +368,7 @@ class MetafansElementorCourseCategory extends \Elementor\Widget_Base {
 				[
 					'label' => esc_html__( 'Title Color', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::COLOR,
-					'scheme' => [
-						'type' => \Elementor\Core\Schemes\Color::get_type(),
-						'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-					],
+					
 					'selectors' => [
 						'{{WRAPPER}} .th-course-category-grid .th-course-category-content h3' => 'color: {{VALUE}}',
 					],
@@ -385,10 +379,7 @@ class MetafansElementorCourseCategory extends \Elementor\Widget_Base {
 				[
 					'label' => esc_html__( 'Title Hover Color', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::COLOR,
-					'scheme' => [
-						'type' => \Elementor\Core\Schemes\Color::get_type(),
-						'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-					],
+					
 					'selectors' => [
 						'{{WRAPPER}} .th-course-category-grid:hover .th-course-category-content h3' => 'color: {{VALUE}}',
 					],
@@ -418,7 +409,7 @@ class MetafansElementorCourseCategory extends \Elementor\Widget_Base {
 				[
 					'name' => 'count_typography',
 					'label' => esc_html__( 'Typography', WP_MF_CORE_SLUG ),
-					'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
+					
 					'selector' => '{{WRAPPER}} .th-course-category-grid .th-course-category-content .course-count',
 				]
 			);
@@ -427,10 +418,7 @@ class MetafansElementorCourseCategory extends \Elementor\Widget_Base {
 				[
 					'label' => esc_html__( 'Course Count Color', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::COLOR,
-					'scheme' => [
-						'type' => \Elementor\Core\Schemes\Color::get_type(),
-						'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-					],
+					
 					'selectors' => [
 						'{{WRAPPER}} .th-course-category-grid .th-course-category-content .course-count' => 'color: {{VALUE}}',
 					],

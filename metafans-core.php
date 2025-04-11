@@ -137,7 +137,7 @@ class MetafansCore
 	public static function MetafansElementorWidgetInit(){
 		// $this->includesElem();
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new MetafansElementorTeam() );
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new MetafansElementorTeamCarousel() );
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new MetafansElementorTeamCarousel() ); //HAS AN FIX
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new MetafansElementorBlog() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new MetafansElementorBlogCarousel() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new MetafansElementorCoursesGrid() );

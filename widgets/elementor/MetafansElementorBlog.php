@@ -242,10 +242,7 @@ class MetafansElementorBlog extends \Elementor\Widget_Base {
 				[
 					'label' => esc_html__( 'Arrow Color', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::COLOR,
-					'scheme' => [
-						'type' => \Elementor\Core\Schemes\Color::get_type(),
-						'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-					],
+					
 					'selectors' => [
 						'{{WRAPPER}} .th-blog-pagination-arrow .ec-switch-button i' => 'color: {{VALUE}}',
 					],
@@ -257,10 +254,7 @@ class MetafansElementorBlog extends \Elementor\Widget_Base {
 				[
 					'label' => esc_html__( 'Arrow Background', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::COLOR,
-					'scheme' => [
-						'type' => \Elementor\Core\Schemes\Color::get_type(),
-						'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-					],
+					
 					'selectors' => [
 						'{{WRAPPER}} .th-blog-pagination-arrow .ec-switch-button i, {{WRAPPER}} .th-blog-pagination-arrow .ec-switch-button' => 'background-color: {{VALUE}}',
 					],
@@ -321,10 +315,7 @@ class MetafansElementorBlog extends \Elementor\Widget_Base {
 				[
 					'label' => esc_html__( 'Background Color', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::COLOR,
-					'scheme' => [
-						'type' => \Elementor\Core\Schemes\Color::get_type(),
-						'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-					],
+					
 					'selectors' => [
 						'{{WRAPPER}} .ec-switch-button-next i, {{WRAPPER}} .ec-switch-button-prev i' => 'background-color: {{VALUE}}',
 					],
@@ -337,10 +328,7 @@ class MetafansElementorBlog extends \Elementor\Widget_Base {
 				[
 					'label' => esc_html__( 'Icon Color', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::COLOR,
-					'scheme' => [
-						'type' => \Elementor\Core\Schemes\Color::get_type(),
-						'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-					],
+					
 					'selectors' => [
 						'{{WRAPPER}} .ec-switch-button-next i, {{WRAPPER}} .ec-switch-button-prev i' => 'color: {{VALUE}}',
 					],
@@ -389,10 +377,7 @@ class MetafansElementorBlog extends \Elementor\Widget_Base {
 				[
 					'label' => esc_html__( 'Background Color', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::COLOR,
-					'scheme' => [
-						'type' => \Elementor\Core\Schemes\Color::get_type(),
-						'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-					],
+					
 					'selectors' => [
 						'{{WRAPPER}} .ec-switch-button-next i:hover, {{WRAPPER}} .ec-switch-button-prev i:hover' => 'background-color: {{VALUE}}',
 					],
@@ -405,10 +390,7 @@ class MetafansElementorBlog extends \Elementor\Widget_Base {
 				[
 					'label' => esc_html__( 'Icon Color', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::COLOR,
-					'scheme' => [
-						'type' => \Elementor\Core\Schemes\Color::get_type(),
-						'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-					],
+					
 					'selectors' => [
 						'{{WRAPPER}} .ec-switch-button-next i:hover, {{WRAPPER}} .ec-switch-button-prev i:hover' => 'color: {{VALUE}}',
 					],
@@ -438,10 +420,7 @@ class MetafansElementorBlog extends \Elementor\Widget_Base {
 				[
 					'label' => esc_html__( 'Background Color', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::COLOR,
-					'scheme' => [
-						'type' => \Elementor\Core\Schemes\Color::get_type(),
-						'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-					],
+					
 					'selectors' => [
 						'{{WRAPPER}} .ec-switch-button.disabled i, {{WRAPPER}} .ec-switch-button.disabled i:hover' => 'background-color: {{VALUE}}',
 					],
@@ -453,10 +432,7 @@ class MetafansElementorBlog extends \Elementor\Widget_Base {
 				[
 					'label' => esc_html__( 'Icon Color', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::COLOR,
-					'scheme' => [
-						'type' => \Elementor\Core\Schemes\Color::get_type(),
-						'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-					],
+					
 					'selectors' => [
 						'{{WRAPPER}} .ec-switch-button.disabled i, {{WRAPPER}} .ec-switch-button.disabled i:hover' => 'color: {{VALUE}}',
 					],
@@ -619,10 +595,6 @@ class MetafansElementorBlog extends \Elementor\Widget_Base {
         		[
         			'label' => esc_html__( 'Background', WP_MF_CORE_SLUG ),
         			'type' => \Elementor\Controls_Manager::COLOR,
-        			'scheme' => [
-        				'type' => \Elementor\Core\Schemes\Color::get_type(),
-        				'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-        			],
         			'selectors' => [
         				'{{WRAPPER}} .th-blog-block' => 'background-color: {{VALUE}}',
         			],
@@ -768,10 +740,7 @@ class MetafansElementorBlog extends \Elementor\Widget_Base {
 	        	[
 	        		'label' => esc_html__( 'Title Color', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::COLOR,
-	        		'scheme' => [
-	        			'type' => \Elementor\Core\Schemes\Color::get_type(),
-	        			'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-	        		],
+	        		
 	        		'selectors' => [
 	        			'{{WRAPPER}} .blog-block-title' => 'color: {{VALUE}}',
 	        		],
@@ -783,10 +752,7 @@ class MetafansElementorBlog extends \Elementor\Widget_Base {
 	        	[
 	        		'label' => esc_html__( 'Title Hover Color', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::COLOR,
-	        		'scheme' => [
-	        			'type' => \Elementor\Core\Schemes\Color::get_type(),
-	        			'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-	        		],
+	        		
 	        		'selectors' => [
 	        			'{{WRAPPER}} .blog-block-title:hover' => 'color: {{VALUE}}',
 	        		],
@@ -831,10 +797,7 @@ class MetafansElementorBlog extends \Elementor\Widget_Base {
 	        	[
 	        		'label' => esc_html__( 'Color', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::COLOR,
-	        		'scheme' => [
-	        			'type' => \Elementor\Core\Schemes\Color::get_type(),
-	        			'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-	        		],
+	        		
 	        		'selectors' => [
 	        			'{{WRAPPER}} .th-description' => 'color: {{VALUE}}',
 	        		],
@@ -889,7 +852,7 @@ class MetafansElementorBlog extends \Elementor\Widget_Base {
 	        	[
 	        		'name' => 'blog_meta_content_typography',
 	        		'label' => esc_html__( 'Typography', WP_MF_CORE_SLUG ),
-	        		'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
+	        		// 'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
 	        		'selector' => '{{WRAPPER}} .th-blog-details .th-elem-blog-meta i,{{WRAPPER}} .th-blog-details .th-elem-blog-meta a, {{WRAPPER}} .th-blog-details .th-elem-blog-meta span',
 	        	]
 	        );
@@ -898,10 +861,7 @@ class MetafansElementorBlog extends \Elementor\Widget_Base {
 	        	[
 	        		'label' => esc_html__( 'Color', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::COLOR,
-	        		'scheme' => [
-	        			'type' => \Elementor\Core\Schemes\Color::get_type(),
-	        			'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-	        		],
+	        		
 	        		'selectors' => [
 	        			'{{WRAPPER}} .th-blog-details .th-elem-blog-meta i,{{WRAPPER}} .th-blog-details .th-elem-blog-meta a, {{WRAPPER}} .th-blog-details .th-elem-blog-meta span' => 'color: {{VALUE}}',
 	        		],
@@ -1027,10 +987,7 @@ class MetafansElementorBlog extends \Elementor\Widget_Base {
 	        	[
 	        		'label' => esc_html__( 'Readmore Color', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::COLOR,
-	        		'scheme' => [
-	        			'type' => \Elementor\Core\Schemes\Color::get_type(),
-	        			'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-	        		],
+	        		
 	        		'default' => '#20AD96',
 	        		'selectors' => [
 	        			'{{WRAPPER}} .blog-read-more a' => 'color: {{VALUE}}',
@@ -1042,10 +999,7 @@ class MetafansElementorBlog extends \Elementor\Widget_Base {
 	        	[
 	        		'label' => esc_html__( 'Readmore Color hover', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::COLOR,
-	        		'scheme' => [
-	        			'type' => \Elementor\Core\Schemes\Color::get_type(),
-	        			'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-	        		],
+	        		
 	        		'default' => '#20AD96',
 	        		'selectors' => [
 	        			'{{WRAPPER}} .blog-read-more a:hover' => 'color: {{VALUE}}',
@@ -1073,10 +1027,7 @@ class MetafansElementorBlog extends \Elementor\Widget_Base {
 	        	[
 	        		'label' => esc_html__( 'Author Color', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::COLOR,
-	        		'scheme' => [
-	        			'type' => \Elementor\Core\Schemes\Color::get_type(),
-	        			'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-	        		],
+	        		
 	        		'selectors' => [
 	        			'{{WRAPPER}} .blog-author a' => 'color: {{VALUE}}',
 	        		],
@@ -1104,10 +1055,7 @@ class MetafansElementorBlog extends \Elementor\Widget_Base {
 	        	[
 	        		'label' => esc_html__( 'View Color', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::COLOR,
-	        		'scheme' => [
-	        			'type' => \Elementor\Core\Schemes\Color::get_type(),
-	        			'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-	        		],
+	        		
 	        		'selectors' => [
 	        			'{{WRAPPER}} .blog-view' => 'color: {{VALUE}}',
 	        		],
@@ -1195,6 +1143,7 @@ class MetafansElementorBlog extends \Elementor\Widget_Base {
 		);
 		$args = array(
 			'posts_per_page' => $settings['blog_post_count'],
+			'post_type' => 'post'
 		);
 		if( 'popularity' == $settings['blog_post_order'] ){
 			$args['meta_key'] = 'tophive_get_post_view';
@@ -1205,9 +1154,9 @@ class MetafansElementorBlog extends \Elementor\Widget_Base {
 			$args['offset'] = $settings['blog_post_offset'];
 		}
 
-		if( !empty($settings['select_blog_categories']) ){
-			$args['category__in'] = $settings['select_blog_categories'];
-		}
+		// if( !empty($settings['select_blog_categories']) ){
+		// 	$args['category__in'] = $settings['select_blog_categories'];
+		// }
 
 		$html = '';
 		

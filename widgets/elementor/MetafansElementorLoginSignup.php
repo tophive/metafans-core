@@ -120,7 +120,7 @@
 				[
 					'name' => 'heading_typography',
 					'label' => esc_html__( 'Heading typography', WP_MF_CORE_SLUG ),
-					'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
+					
 					'selector' => '{{WRAPPER}} .tophive-popup-content-wrapper h3',
 				]
 			);
@@ -129,10 +129,7 @@
 				[
 					'label' => esc_html__( 'Heading Typography Color', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::COLOR,
-					'scheme' => [
-						'type' => \Elementor\Core\Schemes\Color::get_type(),
-						'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-					],
+					
 					'selectors' => [
 						'{{WRAPPER}} .tophive-popup-content-wrapper h3' => 'color: {{VALUE}}',
 					],
@@ -152,7 +149,7 @@
 				[
 					'name' => 'meta_font_typography',
 					'label' => esc_html__( 'Meta font typography', WP_MF_CORE_SLUG ),
-					'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
+					
 					'selector' => '{{WRAPPER}} .tophive-popup-content-wrapper .rememberme',
 				]
 			);
@@ -161,10 +158,7 @@
 				[
 					'label' => esc_html__( 'Meta Font Color', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::COLOR,
-					'scheme' => [
-						'type' => \Elementor\Core\Schemes\Color::get_type(),
-						'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-					],
+					
 					'selectors' => [
 						'{{WRAPPER}} .tophive-popup-content-wrapper .rememberme' => 'color: {{VALUE}}',
 					],
@@ -234,7 +228,7 @@
 				[
 					'name' => 'rememberme_typo',
 					'label' => esc_html__( 'Remember me typography', WP_MF_CORE_SLUG ),
-					'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
+					
 					'selector' => '{{WRAPPER}} .th-modal-login label',
 				]
 			  );
@@ -253,7 +247,7 @@
 				[
 					'name' => 'lostpass_typo',
 					'label' => esc_html__( 'Lost password typography', WP_MF_CORE_SLUG ),
-					'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
+					
 					'selector' => '{{WRAPPER}} .switch-lost-pass',
 				]
 			  );
@@ -272,7 +266,7 @@
 				[
 					'name' => 'btn_typo',
 					'label' => esc_html__( 'Button typography', WP_MF_CORE_SLUG ),
-					'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
+					
 					'selector' => '{{WRAPPER}} #tophive-signin-signup button[type="submit"]',
 				]
 			  );
@@ -323,7 +317,7 @@
 				[
 					'name' => 'other_text_typo',
 					'label' => esc_html__( 'Other text typography', WP_MF_CORE_SLUG ),
-					'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
+					
 					'selector' => '{{WRAPPER}} #tophive-signin-signup p.ec-text-center',
 				]
 			  );

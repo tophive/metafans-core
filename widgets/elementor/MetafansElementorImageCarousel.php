@@ -761,10 +761,7 @@ class MetafansElementorImageCarousel extends \Elementor\Widget_Base {
 				'selectors' => [
 					'{{WRAPPER}} .tophive-testimonial__text' => 'color: {{VALUE}}',
 				],
-				'scheme' => [
-					'type' => \Elementor\Core\Schemes\Color::get_type(),
-					'value' => \Elementor\Core\Schemes\Color::COLOR_3,
-				],
+				
 			]
 		);
 
@@ -773,7 +770,7 @@ class MetafansElementorImageCarousel extends \Elementor\Widget_Base {
 			[
 				'name' => 'content_typography',
 				'selector' => '{{WRAPPER}} .tophive-testimonial__text',
-				'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_3,
+				
 			]
 		);
 
@@ -794,10 +791,7 @@ class MetafansElementorImageCarousel extends \Elementor\Widget_Base {
 				'selectors' => [
 					'{{WRAPPER}} .tophive-testimonial__name' => 'color: {{VALUE}}',
 				],
-				'scheme' => [
-					'type' => \Elementor\Core\Schemes\Color::get_type(),
-					'value' => \Elementor\Core\Schemes\Color::COLOR_3,
-				],
+				
 			]
 		);
 
@@ -806,7 +800,7 @@ class MetafansElementorImageCarousel extends \Elementor\Widget_Base {
 			[
 				'name' => 'name_typography',
 				'selector' => '{{WRAPPER}} .tophive-testimonial__name',
-				'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
+				
 			]
 		);
 
@@ -827,10 +821,7 @@ class MetafansElementorImageCarousel extends \Elementor\Widget_Base {
 				'selectors' => [
 					'{{WRAPPER}} .tophive-testimonial__title' => 'color: {{VALUE}}',
 				],
-				'scheme' => [
-					'type' => \Elementor\Core\Schemes\Color::get_type(),
-					'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-				],
+				
 			]
 		);
 
@@ -839,7 +830,6 @@ class MetafansElementorImageCarousel extends \Elementor\Widget_Base {
 			[
 				'name' => 'title_typography',
 				'selector' => '{{WRAPPER}} .tophive-testimonial__title',
-				'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_2,
 			]
 		);
 

@@ -209,10 +209,7 @@ class MetafansElementorAdvancedTabs extends \Elementor\Widget_base
 				[
 					'label' => esc_html__( 'Animator Background Color', 'plugin-domain' ),
 					'type' => \Elementor\Controls_Manager::COLOR,
-					'scheme' => [
-						'type' => \Elementor\Core\Schemes\Color::get_type(),
-						'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-					],
+					
 					'selectors' => [
 						'{{WRAPPER}} .tophive-advanced-tab-container ul.tophive-advanced-tab-nav li a .tab-animator' => 'background-color: {{VALUE}}',
 					],
@@ -242,10 +239,7 @@ class MetafansElementorAdvancedTabs extends \Elementor\Widget_base
 				[
 					'label' => esc_html__( 'Backgound Color', 'plugin-domain' ),
 					'type' => \Elementor\Controls_Manager::COLOR,
-					'scheme' => [
-						'type' => \Elementor\Core\Schemes\Color::get_type(),
-						'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-					],
+					
 					'selectors' => [
 						'{{WRAPPER}} .tophive-advanced-tab-nav' => 'background-color: {{VALUE}}',
 					],
@@ -364,7 +358,7 @@ class MetafansElementorAdvancedTabs extends \Elementor\Widget_base
 					[
 						'name' => 'th_adv_tabs_nav_item_tpyo',
 						'label' => esc_html__( 'Title Typography', 'plugin-domain' ),
-						'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
+						
 						'selector' => '{{WRAPPER}} .text',
 					]
 				);
@@ -383,7 +377,7 @@ class MetafansElementorAdvancedTabs extends \Elementor\Widget_base
 							[
 								'name' => 'th_adv_tabs_nav_item_title_typo',
 								'label' => esc_html__( 'Title Typography', 'plugin-domain' ),
-								'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
+								
 								'selector' => '{{WRAPPER}} .tophive-advanced-tab-container ul.tophive-advanced-tab-nav li a .nav-tab-desc-content .nav-tab-title',
 							]
 						);
@@ -392,10 +386,7 @@ class MetafansElementorAdvancedTabs extends \Elementor\Widget_base
 							[
 								'label' => esc_html__( 'Title Color', 'plugin-domain' ),
 								'type' => \Elementor\Controls_Manager::COLOR,
-								'scheme' => [
-									'type' => \Elementor\Core\Schemes\Color::get_type(),
-									'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-								],
+								
 								'selectors' => [
 									'{{WRAPPER}} .tophive-advanced-tab-container ul.tophive-advanced-tab-nav li a .nav-tab-desc-content .nav-tab-title' => 'color: {{VALUE}}',
 								],
@@ -406,7 +397,7 @@ class MetafansElementorAdvancedTabs extends \Elementor\Widget_base
 							[
 								'name' => 'th_adv_tabs_nav_item_desc_typo',
 								'label' => esc_html__( 'Description Typography', 'plugin-domain' ),
-								'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
+								
 								'selector' => '{{WRAPPER}}.tophive-advanced-tab-container ul.tophive-advanced-tab-nav li a .nav-tab-desc-content .nav-tab-desc',
 							]
 						);
@@ -415,10 +406,7 @@ class MetafansElementorAdvancedTabs extends \Elementor\Widget_base
 							[
 								'label' => esc_html__( 'Description Color', 'plugin-domain' ),
 								'type' => \Elementor\Controls_Manager::COLOR,
-								'scheme' => [
-									'type' => \Elementor\Core\Schemes\Color::get_type(),
-									'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-								],
+								
 								'selectors' => [
 									'{{WRAPPER}} .tophive-advanced-tab-container ul.tophive-advanced-tab-nav li a .nav-tab-desc-content .nav-tab-desc' => 'color: {{VALUE}}',
 								],
@@ -429,10 +417,7 @@ class MetafansElementorAdvancedTabs extends \Elementor\Widget_base
 							[
 								'label' => esc_html__( 'Background Color', 'plugin-domain' ),
 								'type' => \Elementor\Controls_Manager::COLOR,
-								'scheme' => [
-									'type' => \Elementor\Core\Schemes\Color::get_type(),
-									'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-								],
+								
 								'selectors' => [
 									'{{WRAPPER}} .tophive-advanced-tab-container ul.tophive-advanced-tab-nav li a' => 'color: {{VALUE}}',
 								],
@@ -467,10 +452,7 @@ class MetafansElementorAdvancedTabs extends \Elementor\Widget_base
 							[
 								'label' => esc_html__( 'Title Color', 'plugin-domain' ),
 								'type' => \Elementor\Controls_Manager::COLOR,
-								'scheme' => [
-									'type' => \Elementor\Core\Schemes\Color::get_type(),
-									'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-								],
+								
 								'selectors' => [
 									'{{WRAPPER}} .tophive-advanced-tab-container ul.tophive-advanced-tab-nav li a.active .nav-tab-desc-content .nav-tab-title' => 'color: {{VALUE}}',
 								],
@@ -481,10 +463,7 @@ class MetafansElementorAdvancedTabs extends \Elementor\Widget_base
 							[
 								'label' => esc_html__( 'Description Color', 'plugin-domain' ),
 								'type' => \Elementor\Controls_Manager::COLOR,
-								'scheme' => [
-									'type' => \Elementor\Core\Schemes\Color::get_type(),
-									'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-								],
+								
 								'selectors' => [
 									'{{WRAPPER}} .tophive-advanced-tab-container ul.tophive-advanced-tab-nav li a.active .nav-tab-desc-content .nav-tab-desc' => 'color: {{VALUE}}',
 								],
@@ -495,10 +474,7 @@ class MetafansElementorAdvancedTabs extends \Elementor\Widget_base
 							[
 								'label' => esc_html__( 'Background Color', 'plugin-domain' ),
 								'type' => \Elementor\Controls_Manager::COLOR,
-								'scheme' => [
-									'type' => \Elementor\Core\Schemes\Color::get_type(),
-									'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-								],
+								
 								'selectors' => [
 									'{{WRAPPER}} .tophive-advanced-tab-container ul.tophive-advanced-tab-nav li a.active' => 'color: {{VALUE}}',
 								],

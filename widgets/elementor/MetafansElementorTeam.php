@@ -210,10 +210,6 @@
 				[
 					'label' => esc_html__( 'Background', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::COLOR,
-					'scheme' => [
-						'type' => \Elementor\Core\Schemes\Color::get_type(),
-						'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-					],
 					'selectors' => [
 						'{{WRAPPER}} .th-team-block' => 'background-color: {{VALUE}}',
 					],
@@ -335,7 +331,6 @@
 				[
 					'name' => 'th_team_title_typo',
 					'label' => esc_html__( 'Typography', WP_MF_CORE_SLUG ),
-					'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
 					'selector' => '{{WRAPPER}} .th-team-name',
 				]
 			);
@@ -344,10 +339,7 @@
 				[
 					'label' => esc_html__( 'Title Color', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::COLOR,
-					'scheme' => [
-						'type' => \Elementor\Core\Schemes\Color::get_type(),
-						'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-					],
+					
 					'selectors' => [
 						'{{WRAPPER}} .th-team-name' => 'color: {{VALUE}}',
 					],
@@ -379,7 +371,6 @@
 				[
 					'name' => 'th_team_designation_typo',
 					'label' => esc_html__( 'Typography', WP_MF_CORE_SLUG ),
-					'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
 					'selector' => '{{WRAPPER}} .th-team-designation',
 				]
 			);
@@ -388,10 +379,7 @@
 				[
 					'label' => esc_html__( 'Color', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::COLOR,
-					'scheme' => [
-						'type' => \Elementor\Core\Schemes\Color::get_type(),
-						'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-					],
+					
 					'selectors' => [
 						'{{WRAPPER}} .th-team-designation' => 'color: {{VALUE}}',
 					],
@@ -422,7 +410,6 @@
 				[
 					'name' => 'th_team_desc_typo',
 					'label' => esc_html__( 'Typography', WP_MF_CORE_SLUG ),
-					'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
 					'selector' => '{{WRAPPER}} .th-team-description',
 				]
 			);
@@ -431,10 +418,7 @@
 				[
 					'label' => esc_html__( 'Color', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::COLOR,
-					'scheme' => [
-						'type' => \Elementor\Core\Schemes\Color::get_type(),
-						'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-					],
+					
 					'selectors' => [
 						'{{WRAPPER}} .th-team-description' => 'color: {{VALUE}}',
 					],
@@ -466,10 +450,7 @@
 				[
 					'label' => esc_html__( 'Color', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::COLOR,
-					'scheme' => [
-						'type' => \Elementor\Core\Schemes\Color::get_type(),
-						'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-					],
+					
 					'selectors' => [
 						'{{WRAPPER}} ul.th-team-socials li a i' => 'color: {{VALUE}}',
 					],
@@ -480,10 +461,7 @@
 				[
 					'label' => esc_html__( 'Hover Color', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::COLOR,
-					'scheme' => [
-						'type' => \Elementor\Core\Schemes\Color::get_type(),
-						'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-					],
+					
 					'selectors' => [
 						'{{WRAPPER}} ul.th-team-socials li a:hover i' => 'color: {{VALUE}}',
 					],
@@ -494,10 +472,7 @@
 				[
 					'label' => esc_html__( 'background', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::COLOR,
-					'scheme' => [
-						'type' => \Elementor\Core\Schemes\Color::get_type(),
-						'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-					],
+					
 					'selectors' => [
 						'{{WRAPPER}} ul.th-team-socials li a i' => 'background-color: {{VALUE}}',
 					],
@@ -580,10 +555,7 @@
 				[
 					'label' => esc_html__( 'Container Background', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::COLOR,
-					'scheme' => [
-						'type' => \Elementor\Core\Schemes\Color::get_type(),
-						'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-					],
+					
 					'selectors' => [
 						'{{WRAPPER}} ul.th-team-socials' => 'background-color: {{VALUE}}',
 					],

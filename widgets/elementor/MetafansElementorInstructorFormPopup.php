@@ -203,7 +203,7 @@ class MetafansElementorInstructorFormPopup extends \Elementor\Widget_Base {
 			\Elementor\Group_Control_Typography::get_type(),
 			[
 				'name' => 'instructor_btn_typography',
-				'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
+				
 				'selector' => '{{WRAPPER}} .elementor-button',
 			]
 		);
@@ -242,10 +242,7 @@ class MetafansElementorInstructorFormPopup extends \Elementor\Widget_Base {
 			[
 				'label' => esc_html__( 'Background Color', WP_MF_CORE_SLUG ),
 				'type' => \Elementor\Controls_Manager::COLOR,
-				'scheme' => [
-					'type' => \Elementor\Core\Schemes\Color::get_type(),
-					'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-				],
+				
 				'selectors' => [
 					'{{WRAPPER}} .elementor-button' => 'background-color: {{VALUE}};',
 				],

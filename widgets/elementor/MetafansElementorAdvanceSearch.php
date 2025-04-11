@@ -128,10 +128,7 @@ class MetafansElementorAdvanceSearch extends \Elementor\Widget_Base {
 			[
 				'label' => esc_html__( 'Background', WP_MF_CORE_SLUG ),
 				'type' => \Elementor\Controls_Manager::COLOR,
-				'scheme' => [
-					'type' => \Elementor\Core\Schemes\Color::get_type(),
-					'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-				],
+				
 				'selectors' => [
 					'{{WRAPPER}} .tophive-advanced-search-fields' => 'background-color: {{VALUE}}',
 				],
@@ -159,7 +156,7 @@ class MetafansElementorAdvanceSearch extends \Elementor\Widget_Base {
 			\Elementor\Group_Control_Typography::get_type(),
 			[
 				'name' => 'advanced_search_fields_title_typography',
-				'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
+				
 				'selector' => '{{WRAPPER}} .tophive-advanced-search-fields .search-title',
 			]
 		);
@@ -168,10 +165,7 @@ class MetafansElementorAdvanceSearch extends \Elementor\Widget_Base {
 			[
 				'label' => esc_html__( 'Title Color', WP_MF_CORE_SLUG ),
 				'type' => \Elementor\Controls_Manager::COLOR,
-				'scheme' => [
-					'type' => \Elementor\Core\Schemes\Color::get_type(),
-					'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-				],
+				
 				'selectors' => [
 					'{{WRAPPER}} .tophive-advanced-search-fields .search-title' => 'color: {{VALUE}}',
 				],
@@ -201,7 +195,7 @@ class MetafansElementorAdvanceSearch extends \Elementor\Widget_Base {
 			\Elementor\Group_Control_Typography::get_type(),
 			[
 				'name' => 'advanced_search_fields_desc_typography',
-				'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
+				
 				'selector' => '{{WRAPPER}} .tophive-advanced-search-fields .search-desc',
 			]
 		);
@@ -210,10 +204,7 @@ class MetafansElementorAdvanceSearch extends \Elementor\Widget_Base {
 			[
 				'label' => esc_html__( 'Color', WP_MF_CORE_SLUG ),
 				'type' => \Elementor\Controls_Manager::COLOR,
-				'scheme' => [
-					'type' => \Elementor\Core\Schemes\Color::get_type(),
-					'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-				],
+				
 				'selectors' => [
 					'{{WRAPPER}} .tophive-advanced-search-fields .search-desc' => 'color: {{VALUE}}',
 				],
@@ -254,10 +245,7 @@ class MetafansElementorAdvanceSearch extends \Elementor\Widget_Base {
 			[
 				'label' => esc_html__( 'Color', WP_MF_CORE_SLUG ),
 				'type' => \Elementor\Controls_Manager::COLOR,
-				'scheme' => [
-					'type' => \Elementor\Core\Schemes\Color::get_type(),
-					'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-				],
+				
 				'selectors' => [
 					'{{WRAPPER}} .tophive-advanced-search-fields .search-input' => 'color: {{VALUE}}',
 				],
@@ -268,7 +256,7 @@ class MetafansElementorAdvanceSearch extends \Elementor\Widget_Base {
 			[
 				'name' => 'advanced_search_fields_input_content_typography',
 				'label' => esc_html__( 'Typography', WP_MF_CORE_SLUG ),
-				'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
+				
 				'selector' => '{{WRAPPER}} .tophive-advanced-search-fields .search-input',
 			]
 		);
@@ -368,10 +356,7 @@ class MetafansElementorAdvanceSearch extends \Elementor\Widget_Base {
 			[
 				'label' => esc_html__( 'Color', WP_MF_CORE_SLUG ),
 				'type' => \Elementor\Controls_Manager::COLOR,
-				'scheme' => [
-					'type' => \Elementor\Core\Schemes\Color::get_type(),
-					'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-				],
+				
 				'selectors' => [
 					'{{WRAPPER}} .tophive-advanced-search-fields .search-submit' => 'color: {{VALUE}}',
 				],
@@ -383,10 +368,7 @@ class MetafansElementorAdvanceSearch extends \Elementor\Widget_Base {
 			[
 				'label' => esc_html__( 'Background', WP_MF_CORE_SLUG ),
 				'type' => \Elementor\Controls_Manager::COLOR,
-				'scheme' => [
-					'type' => \Elementor\Core\Schemes\Color::get_type(),
-					'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-				],
+				
 				'selectors' => [
 					'{{WRAPPER}} .tophive-advanced-search-fields .search-submit' => 'background-color: {{VALUE}}',
 				],

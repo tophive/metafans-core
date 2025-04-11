@@ -424,6 +424,10 @@ class MetafansElementorBase
 
 	public static function prepareBlogs( $args, $settings, $offset = 0 ){
 		$posts = new \WP_Query($args);
+
+		// echo '<pre>';
+		// print_r($posts);
+		// echo '</pre>';
 		$displayflex = 'thumb-left' == $settings['select_blog_layout'] || 'thumb-right' == $settings['select_blog_layout'] ? 'ec-d-md-flex' : ''; 
 		if($posts->have_posts()){
 			$html = '';
@@ -491,7 +495,7 @@ class MetafansElementorBase
 				}
 			}
 		}else{
-			$html .= '<div class="ec-text-center">' . esc_html__('No Posts have been Found', WP_MF_CORE_SLUG) . '</div>';
+			$html = '<div class="ec-text-center">' . esc_html__('No Posts have been Found', WP_MF_CORE_SLUG) . '</div>';
 		}
 		return $html;
 	}
@@ -535,6 +539,7 @@ class MetafansElementorBase
 	public static function getBlogMeta( $category, $comment, $author, $views, $show_date, $date_format, $id ){
 		$date = '';
 		$html = '';
+		$categories = get_the_category();
 		switch ($date_format) {
 			case 'FjY':
 				$date = get_the_date( 'F j Y', $id );
@@ -554,12 +559,18 @@ class MetafansElementorBase
 				break;
 		}
 		$html .= '<div class="th-elem-blog-meta">';
-		$html .= 'yes' == $category ? '<span class="th-blog-meta-category">
-			<svg width="1.1em" height="1.1em" viewBox="0 0 16 16" class="bi bi-folder" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-			  <path d="M9.828 4a3 3 0 0 1-2.12-.879l-.83-.828A1 1 0 0 0 6.173 2H2.5a1 1 0 0 0-1 .981L1.546 4h-1L.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3v1z"/>
-			  <path fill-rule="evenodd" d="M13.81 4H2.19a1 1 0 0 0-.996 1.09l.637 7a1 1 0 0 0 .995.91h10.348a1 1 0 0 0 .995-.91l.637-7A1 1 0 0 0 13.81 4zM2.19 3A2 2 0 0 0 .198 5.181l.637 7A2 2 0 0 0 2.826 14h10.348a2 2 0 0 0 1.991-1.819l.637-7A2 2 0 0 0 13.81 3H2.19z"/>
-			</svg>
-		<a href="' . get_category_link( get_the_category()[0]->term_id ) . '">'. get_the_category()[0]->name .'</a></span>' : '';
+
+		$html .= 'yes' == $category && !empty($categories) ? 
+			'<span class="th-blog-meta-category">
+				<svg width="1.1em" height="1.1em" viewBox="0 0 16 16" class="bi bi-folder" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+					<path d="M9.828 4a3 3 0 0 1-2.12-.879l-.83-.828A1 1 0 0 0 6.173 2H2.5a1 1 0 0 0-1 .981L1.546 4h-1L.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3v1z"/>
+					<path fill-rule="evenodd" d="M13.81 4H2.19a1 1 0 0 0-.996 1.09l.637 7a1 1 0 0 0 .995.91h10.348a1 1 0 0 0 .995-.91l.637-7A1 1 0 0 0 13.81 4zM2.19 3A2 2 0 0 0 .198 5.181l.637 7A2 2 0 0 0 2.826 14h10.348a2 2 0 0 0 1.991-1.819l.637-7A2 2 0 0 0 13.81 3H2.19z"/>
+				</svg>
+				<a href="' . esc_url(get_category_link($categories[0]->term_id)) . '">' . esc_html($categories[0]->name) . '</a>
+			</span>' 
+		: '';
+
+
 		$html .= 'yes' == $author ? '<span class="th-blog-meta-author">
 			<svg width="1.1em" height="1.1em" viewBox="0 0 16 16" class="bi bi-person" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
 			  <path fill-rule="evenodd" d="M13 14s1 0 1-1-1-4-6-4-6 3-6 4 1 1 1 1h10zm-9.995-.944v-.002.002zM3.022 13h9.956a.274.274 0 0 0 .014-.002l.008-.002c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664a1.05 1.05 0 0 0 .022.004zm9.974.056v-.002.002zM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>

@@ -426,10 +426,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 			// 			[
 			// 				'label' => esc_html__( 'Background Color', WP_MF_CORE_SLUG ),
 			// 				'type' => \Elementor\Controls_Manager::COLOR,
-			// 				'scheme' => [
-			// 					'type' => \Elementor\Core\Schemes\Color::get_type(),
-			// 					'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-			// 				],
+			// 				
 			// 				'selectors' => [
 			// 					'{{WRAPPER}} ul.th-course-categories-filter' => 'background-color: {{VALUE}}',
 			// 				],
@@ -441,10 +438,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 			// 			[
 			// 				'label' => esc_html__( 'Text Color', WP_MF_CORE_SLUG ),
 			// 				'type' => \Elementor\Controls_Manager::COLOR,
-			// 				'scheme' => [
-			// 					'type' => \Elementor\Core\Schemes\Color::get_type(),
-			// 					'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-			// 				],
+			// 				
 			// 				'selectors' => [
 			// 					'{{WRAPPER}} .th-course-categories-filter li' => 'color: {{VALUE}}',
 			// 				],
@@ -456,10 +450,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 			// 			[
 			// 				'label' => esc_html__( 'Item Background', WP_MF_CORE_SLUG ),
 			// 				'type' => \Elementor\Controls_Manager::COLOR,
-			// 				'scheme' => [
-			// 					'type' => \Elementor\Core\Schemes\Color::get_type(),
-			// 					'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-			// 				],
+			// 				
 			// 				'selectors' => [
 			// 					'{{WRAPPER}} .th-course-categories-filter li' => 'background-color: {{VALUE}}',
 			// 				],
@@ -520,7 +511,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 			// 			[
 			// 				'name' => 'thcoursescarousel_filter_text_typo',
 			// 				'label' => esc_html__( 'Text Typography', WP_MF_CORE_SLUG ),
-			// 				'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
+			// 				
 			// 				'selector' => '{{WRAPPER}} .th-course-categories-filter li',
 			// 			]
 			// 		);
@@ -575,10 +566,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 			// 			[
 			// 				'label' => esc_html__( 'Hover Text Color', WP_MF_CORE_SLUG ),
 			// 				'type' => \Elementor\Controls_Manager::COLOR,
-			// 				'scheme' => [
-			// 					'type' => \Elementor\Core\Schemes\Color::get_type(),
-			// 					'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-			// 				],
+			// 				
 			// 				'selectors' => [
 			// 					'{{WRAPPER}} .th-course-categories-filter li:hover, 
 			// 					{{WRAPPER}} .th-course-categories-filter li:focus, 
@@ -591,10 +579,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 			// 			[
 			// 				'label' => esc_html__( 'Text Background Color on Hover', WP_MF_CORE_SLUG ),
 			// 				'type' => \Elementor\Controls_Manager::COLOR,
-			// 				'scheme' => [
-			// 					'type' => \Elementor\Core\Schemes\Color::get_type(),
-			// 					'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-			// 				],
+			// 				
 			// 				'selectors' => [
 			// 					'{{WRAPPER}} .th-course-categories-filter li:hover, 
 			// 					{{WRAPPER}} .th-course-categories-filter li:focus, 
@@ -746,10 +731,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 						[
 							'label' => esc_html__( 'Background Color', WP_MF_CORE_SLUG ),
 							'type' => \Elementor\Controls_Manager::COLOR,
-							'scheme' => [
-								'type' => \Elementor\Core\Schemes\Color::get_type(),
-								'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-							],
+							
 							'selectors' => [
 								'{{WRAPPER}} ul.th-course-trending-popular-filter' => 'background-color: {{VALUE}}',
 							],
@@ -761,10 +743,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 						[
 							'label' => esc_html__( 'Text Color', WP_MF_CORE_SLUG ),
 							'type' => \Elementor\Controls_Manager::COLOR,
-							'scheme' => [
-								'type' => \Elementor\Core\Schemes\Color::get_type(),
-								'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-							],
+							
 							'selectors' => [
 								'{{WRAPPER}} .th-course-trending-popular-filter li' => 'color: {{VALUE}}',
 							],
@@ -776,10 +755,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 						[
 							'label' => esc_html__( 'Item Background', WP_MF_CORE_SLUG ),
 							'type' => \Elementor\Controls_Manager::COLOR,
-							'scheme' => [
-								'type' => \Elementor\Core\Schemes\Color::get_type(),
-								'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-							],
+							
 							'selectors' => [
 								'{{WRAPPER}} .th-course-trending-popular-filter li' => 'background-color: {{VALUE}}',
 							],
@@ -840,7 +816,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 						[
 							'name' => 'thcoursescarousel_filter_text_typo',
 							'label' => esc_html__( 'Text Typography', WP_MF_CORE_SLUG ),
-							'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
+							
 							'selector' => '{{WRAPPER}} .th-course-trending-popular-filter li',
 						]
 					);
@@ -895,10 +871,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 						[
 							'label' => esc_html__( 'Hover Text Color', WP_MF_CORE_SLUG ),
 							'type' => \Elementor\Controls_Manager::COLOR,
-							'scheme' => [
-								'type' => \Elementor\Core\Schemes\Color::get_type(),
-								'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-							],
+							
 							'selectors' => [
 								'{{WRAPPER}} .th-course-trending-popular-filter li:hover, 
 								{{WRAPPER}} .th-course-trending-popular-filter li:focus, 
@@ -911,10 +884,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 						[
 							'label' => esc_html__( 'Text Background Color on Hover', WP_MF_CORE_SLUG ),
 							'type' => \Elementor\Controls_Manager::COLOR,
-							'scheme' => [
-								'type' => \Elementor\Core\Schemes\Color::get_type(),
-								'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-							],
+							
 							'selectors' => [
 								'{{WRAPPER}} .th-course-trending-popular-filter li:hover, 
 								{{WRAPPER}} .th-course-trending-popular-filter li:focus, 
@@ -1004,10 +974,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 		// 		[
 		// 			'label' => esc_html__( 'Background Color', WP_MF_CORE_SLUG ),
 		// 			'type' => \Elementor\Controls_Manager::COLOR,
-		// 			'scheme' => [
-		// 				'type' => \Elementor\Core\Schemes\Color::get_type(),
-		// 				'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-		// 			],
+		// 			
 		// 			'selectors' => [
 		// 				'{{WRAPPER}} .hover-section' => 'background-color: {{VALUE}}',
 		// 			],
@@ -1166,7 +1133,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 		// 		[
 		// 			'name' => 'hi_title_typography',
 		// 			'label' => esc_html__( 'Title Typography', WP_MF_CORE_SLUG ),
-		// 			'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
+		// 			
 		// 			'selector' => '{{WRAPPER}} .hover-info-title',
 		// 			'condition' => ['show_hi_title' => 'yes']
 		// 		]
@@ -1176,10 +1143,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 		// 		[
 		// 			'label' => esc_html__( 'Title Color', WP_MF_CORE_SLUG ),
 		// 			'type' => \Elementor\Controls_Manager::COLOR,
-		// 			'scheme' => [
-		// 				'type' => \Elementor\Core\Schemes\Color::get_type(),
-		// 				'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-		// 			],
+		// 			
 		// 			'selectors' => [
 		// 				'{{WRAPPER}} .hover-info-title' => 'color: {{VALUE}}',
 		// 			],
@@ -1206,7 +1170,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 		// 		[
 		// 			'name' => 'hi_desc_typo',
 		// 			'label' => esc_html__( 'Description Typography', WP_MF_CORE_SLUG ),
-		// 			'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
+		// 			
 		// 			'selector' => '{{WRAPPER}} .hover-info-desc',
 		// 			'condition' => ['show_hi_course_details' => 'yes']
 		// 		]
@@ -1261,7 +1225,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 		// 		[
 		// 			'name' => 'thcoursescarousel_hi_cart_button',
 		// 			'label' => esc_html__( 'Typography', WP_MF_CORE_SLUG ),
-		// 			'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
+		// 			
 		// 			'selector' => '{{WRAPPER}} .hover-info-add-cart',
 		// 			'condition' => ['show_hi_add_to_cart' => 'yes']
 		// 		]
@@ -1271,10 +1235,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 		// 		[
 		// 			'label' => esc_html__( 'Color', WP_MF_CORE_SLUG ),
 		// 			'type' => \Elementor\Controls_Manager::COLOR,
-		// 			'scheme' => [
-		// 				'type' => \Elementor\Core\Schemes\Color::get_type(),
-		// 				'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-		// 			],
+		// 			
 		// 			'default' => '#666',
 		// 			'selectors' => [
 		// 				'{{WRAPPER}} .hover-info-add-cart' => 'color: {{VALUE}}',
@@ -1287,10 +1248,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 		// 		[
 		// 			'label' => esc_html__( 'Background', WP_MF_CORE_SLUG ),
 		// 			'type' => \Elementor\Controls_Manager::COLOR,
-		// 			'scheme' => [
-		// 				'type' => \Elementor\Core\Schemes\Color::get_type(),
-		// 				'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-		// 			],
+		// 			
 		// 			'default' => '#f1f1f1',
 		// 			'selectors' => [
 		// 				'{{WRAPPER}} .hover-info-add-cart' => 'background-color: {{VALUE}}',
@@ -1345,10 +1303,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 		// 		[
 		// 			'label' => esc_html__( 'Color', WP_MF_CORE_SLUG ),
 		// 			'type' => \Elementor\Controls_Manager::COLOR,
-		// 			'scheme' => [
-		// 				'type' => \Elementor\Core\Schemes\Color::get_type(),
-		// 				'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-		// 			],
+		// 			
 		// 			'default' => '#888',
 		// 			'selectors' => [
 		// 				'{{WRAPPER}} .hover-info-add-cart:hover' => 'color: {{VALUE}}',
@@ -1361,10 +1316,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 		// 		[
 		// 			'label' => esc_html__( 'Background', WP_MF_CORE_SLUG ),
 		// 			'type' => \Elementor\Controls_Manager::COLOR,
-		// 			'scheme' => [
-		// 				'type' => \Elementor\Core\Schemes\Color::get_type(),
-		// 				'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-		// 			],
+		// 			
 		// 			'default' => '#666',
 		// 			'selectors' => [
 		// 				'{{WRAPPER}} .hover-info-add-cart:hover' => 'background-color: {{VALUE}}',
@@ -1427,7 +1379,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 		// 		[
 		// 			'name' => 'thcoursescarousel_hi_wish_list_button',
 		// 			'label' => esc_html__( 'Typography', WP_MF_CORE_SLUG ),
-		// 			'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
+		// 			
 		// 			'selector' => '{{WRAPPER}} .hover-info-wishlist a',
 		// 			'condition' => ['show_hi_wishlist' => 'yes']
 		// 		]
@@ -1437,10 +1389,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 		// 		[
 		// 			'label' => esc_html__( 'Color', WP_MF_CORE_SLUG ),
 		// 			'type' => \Elementor\Controls_Manager::COLOR,
-		// 			'scheme' => [
-		// 				'type' => \Elementor\Core\Schemes\Color::get_type(),
-		// 				'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-		// 			],
+		// 			
 		// 			'selectors' => [
 		// 				'{{WRAPPER}} .hover-info-wishlist a' => 'color: {{VALUE}}',
 		// 			],
@@ -1453,10 +1402,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 		// 		[
 		// 			'label' => esc_html__( 'Background', WP_MF_CORE_SLUG ),
 		// 			'type' => \Elementor\Controls_Manager::COLOR,
-		// 			'scheme' => [
-		// 				'type' => \Elementor\Core\Schemes\Color::get_type(),
-		// 				'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-		// 			],
+		// 			
 		// 			'selectors' => [
 		// 				'{{WRAPPER}} .hover-info-wishlist a' => 'background-color: {{VALUE}}',
 		// 			],
@@ -1499,10 +1445,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 		// 		[
 		// 			'label' => esc_html__( 'Color', WP_MF_CORE_SLUG ),
 		// 			'type' => \Elementor\Controls_Manager::COLOR,
-		// 			'scheme' => [
-		// 				'type' => \Elementor\Core\Schemes\Color::get_type(),
-		// 				'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-		// 			],
+		// 			
 		// 			'selectors' => [
 		// 				'{{WRAPPER}} .hover-info-wishlist a:hover, {{WRAPPER}} .hover-info-wishlist a.on' => 'color: {{VALUE}}',
 		// 			],
@@ -1515,10 +1458,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 		// 		[
 		// 			'label' => esc_html__( 'Background', WP_MF_CORE_SLUG ),
 		// 			'type' => \Elementor\Controls_Manager::COLOR,
-		// 			'scheme' => [
-		// 				'type' => \Elementor\Core\Schemes\Color::get_type(),
-		// 				'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-		// 			],
+		// 			
 		// 			'selectors' => [
 		// 				'{{WRAPPER}} .hover-info-wishlist a:hover, {{WRAPPER}} .hover-info-wishlist a.on' => 'background-color: {{VALUE}}',
 		// 			],
@@ -1597,10 +1537,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 				[
 					'label' => esc_html__( 'Background Color', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::COLOR,
-					'scheme' => [
-						'type' => \Elementor\Core\Schemes\Color::get_type(),
-						'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-					],
+					
 					'selectors' => [
 						'{{WRAPPER}} .ec-swiper-button-prev, {{WRAPPER}} .ec-swiper-button-next' => 'background-color: {{VALUE}}',
 					],
@@ -1612,10 +1549,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 				[
 					'label' => esc_html__( 'Color', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::COLOR,
-					'scheme' => [
-						'type' => \Elementor\Core\Schemes\Color::get_type(),
-						'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-					],
+					
 					'selectors' => [
 						'{{WRAPPER}} .ec-swiper-button-prev, {{WRAPPER}} .ec-swiper-button-next' => 'color: {{VALUE}}',
 					],
@@ -1737,10 +1671,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 				[
 					'label' => esc_html__( 'Background Color', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::COLOR,
-					'scheme' => [
-						'type' => \Elementor\Core\Schemes\Color::get_type(),
-						'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-					],
+					
 					'selectors' => [
 						'{{WRAPPER}} .ec-swiper-button-prev:hover, {{WRAPPER}} .ec-swiper-button-next:hover' => 'background-color: {{VALUE}}',
 					],
@@ -1752,10 +1683,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 				[
 					'label' => esc_html__( 'Color', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::COLOR,
-					'scheme' => [
-						'type' => \Elementor\Core\Schemes\Color::get_type(),
-						'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-					],
+					
 					'selectors' => [
 						'{{WRAPPER}} .ec-swiper-button-prev:hover, {{WRAPPER}} .ec-swiper-button-next:hover' => 'color: {{VALUE}}',
 					],
@@ -1838,10 +1766,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 					[
 						'label' => esc_html__( 'Color', WP_MF_CORE_SLUG ),
 						'type' => \Elementor\Controls_Manager::COLOR,
-						'scheme' => [
-							'type' => \Elementor\Core\Schemes\Color::get_type(),
-							'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-						],
+						
 						'selectors' => [
 							'{{WRAPPER}} .ec-swiper-pagination .swiper-pagination-bullet' => 'background-color: {{VALUE}}',
 						],
@@ -1965,10 +1890,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 					[
 						'label' => esc_html__( 'Color', WP_MF_CORE_SLUG ),
 						'type' => \Elementor\Controls_Manager::COLOR,
-						'scheme' => [
-							'type' => \Elementor\Core\Schemes\Color::get_type(),
-							'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-						],
+						
 						'selectors' => [
 							'{{WRAPPER}} .ec-swiper-pagination .swiper-pagination-bullet-active' => 'background-color: {{VALUE}}',
 						],
@@ -2262,10 +2184,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
         		[
         			'label' => esc_html__( 'Background', WP_MF_CORE_SLUG ),
         			'type' => \Elementor\Controls_Manager::COLOR,
-        			'scheme' => [
-        				'type' => \Elementor\Core\Schemes\Color::get_type(),
-        				'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-        			],
+        			
         			'selectors' => [
         				'{{WRAPPER}} .th-course-block' => 'background-color: {{VALUE}}',
         			],
@@ -2399,10 +2318,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 	        	[
 	        		'label' => esc_html__( 'Title Color', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::COLOR,
-	        		'scheme' => [
-	        			'type' => \Elementor\Core\Schemes\Color::get_type(),
-	        			'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-	        		],
+	        		
 	        		'selectors' => [
 	        			'{{WRAPPER}} .course-block-title' => 'color: {{VALUE}}',
 	        		],
@@ -2413,10 +2329,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 	        	[
 	        		'label' => esc_html__( 'Title Hover Color', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::COLOR,
-	        		'scheme' => [
-	        			'type' => \Elementor\Core\Schemes\Color::get_type(),
-	        			'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-	        		],
+	        		
 	        		'selectors' => [
 	        			'{{WRAPPER}} .course-block-title:hover' => 'color: {{VALUE}}',
 	        		],
@@ -2453,7 +2366,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 	        	[
 	        		'name' => 'thcoursescarousel_tag_typography',
 	        		'label' => esc_html__( 'Typography', WP_MF_CORE_SLUG ),
-	        		'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
+	        		
 	        		'selector' => '{{WRAPPER}} .course-tags',
 	        	]
 	        );
@@ -2532,10 +2445,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 				[
 					'label' => esc_html__( 'Color', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::COLOR,
-					'scheme' => [
-						'type' => \Elementor\Core\Schemes\Color::get_type(),
-						'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-					],
+					
 					'selectors' => [
 						'{{WRAPPER}} .th-description' => 'color: {{VALUE}}',
 					],
@@ -2582,10 +2492,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 	        	[
 	        		'label' => esc_html__( 'Price Color', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::COLOR,
-	        		'scheme' => [
-	        			'type' => \Elementor\Core\Schemes\Color::get_type(),
-	        			'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-	        		],
+	        		
 	        		'default' => '#ffffff',
 	        		'selectors' => [
 	        			'{{WRAPPER}} .th-sale-price' => 'color: {{VALUE}}',
@@ -2597,10 +2504,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 	        	[
 	        		'label' => esc_html__( 'Price Color Background', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::COLOR,
-	        		'scheme' => [
-	        			'type' => \Elementor\Core\Schemes\Color::get_type(),
-	        			'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-	        		],
+	        		
 	        		'selectors' => [
 	        			'{{WRAPPER}} .price-section' => 'background-color: {{VALUE}}',
 	        		],
@@ -2735,10 +2639,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 	        	[
 	        		'label' => esc_html__( 'Original Pricing Color', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::COLOR,
-	        		'scheme' => [
-	        			'type' => \Elementor\Core\Schemes\Color::get_type(),
-	        			'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-	        		],
+	        		
 	        		'selectors' => [
 	        			'{{WRAPPER}} .th-original-price' => 'color: {{VALUE}}',
 	        		],
@@ -2816,10 +2717,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 	        	[
 	        		'label' => esc_html__( 'Author Color', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::COLOR,
-	        		'scheme' => [
-	        			'type' => \Elementor\Core\Schemes\Color::get_type(),
-	        			'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-	        		],
+	        		
 	        		'selectors' => [
 	        			'{{WRAPPER}} .course-author a' => 'color: {{VALUE}}',
 	        		],
@@ -2853,10 +2751,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 	        	[
 	        		'label' => esc_html__( 'Course Level Color', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::COLOR,
-	        		'scheme' => [
-	        			'type' => \Elementor\Core\Schemes\Color::get_type(),
-	        			'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-	        		],
+	        		
 	        		'selectors' => [
 	        			'{{WRAPPER}} .course-level' => 'color: {{VALUE}}',
 	        		],
@@ -2908,10 +2803,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 	        	[
 	        		'label' => esc_html__( 'Lessons color', WP_MF_CORE_SLUG ),
 	        		'type' => \Elementor\Controls_Manager::COLOR,
-	        		'scheme' => [
-	        			'type' => \Elementor\Core\Schemes\Color::get_type(),
-	        			'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-	        		],
+	        		
 	        		'selectors' => [
 	        			'{{WRAPPER}} .course-lessons' => 'color: {{VALUE}}',
 	        		],
@@ -3004,10 +2896,7 @@ class MetafansElementorCoursesCarousel extends \Elementor\Widget_Base {
 				[
 					'label' => esc_html__( 'Rating Color', WP_MF_CORE_SLUG ),
 					'type' => \Elementor\Controls_Manager::COLOR,
-					'scheme' => [
-						'type' => \Elementor\Core\Schemes\Color::get_type(),
-						'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-					],
+					
 					'selectors' => [
 						'{{WRAPPER}} .review-stars-rated .review-stars.empty,{{WRAPPER}}  .review-stars-rated .review-stars.filled' => 'color: {{VALUE}}',
 					],

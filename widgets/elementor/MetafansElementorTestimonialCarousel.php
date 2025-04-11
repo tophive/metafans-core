@@ -418,10 +418,7 @@ class MetafansElementorTestimonialCarousel extends \Elementor\Widget_Base {
 			[
 				'label' => esc_html__( 'Color', 'plugin-domain' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
-				'scheme' => [
-					'type' => \Elementor\Core\Schemes\Color::get_type(),
-					'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-				],
+				
 				'selectors' => [
 					'{{WRAPPER}} .th-slider-prev-next span i' => 'color: {{VALUE}}',
 				],
@@ -432,10 +429,7 @@ class MetafansElementorTestimonialCarousel extends \Elementor\Widget_Base {
 			[
 				'label' => esc_html__( 'Background Color', 'plugin-domain' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
-				'scheme' => [
-					'type' => \Elementor\Core\Schemes\Color::get_type(),
-					'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-				],
+				
 				'selectors' => [
 					'{{WRAPPER}} .th-slider-prev-next span i' => 'background-color: {{VALUE}}',
 				],
@@ -446,10 +440,7 @@ class MetafansElementorTestimonialCarousel extends \Elementor\Widget_Base {
 			[
 				'label' => esc_html__( 'Hover Color', 'plugin-domain' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
-				'scheme' => [
-					'type' => \Elementor\Core\Schemes\Color::get_type(),
-					'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-				],
+				
 				'selectors' => [
 					'{{WRAPPER}} .th-slider-prev-next span i:hover' => 'color: {{VALUE}}',
 				],
@@ -460,10 +451,7 @@ class MetafansElementorTestimonialCarousel extends \Elementor\Widget_Base {
 			[
 				'label' => esc_html__( 'Hover Background Color', 'plugin-domain' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
-				'scheme' => [
-					'type' => \Elementor\Core\Schemes\Color::get_type(),
-					'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-				],
+				
 				'selectors' => [
 					'{{WRAPPER}} .th-slider-prev-next span i:hover' => 'background-color: {{VALUE}}',
 				],
@@ -781,10 +769,7 @@ class MetafansElementorTestimonialCarousel extends \Elementor\Widget_Base {
 				'selectors' => [
 					'{{WRAPPER}} .tophive-testimonial__text' => 'color: {{VALUE}}',
 				],
-				'scheme' => [
-					'type' => \Elementor\Core\Schemes\Color::get_type(),
-					'value' => \Elementor\Core\Schemes\Color::COLOR_3,
-				],
+				
 			]
 		);
 
@@ -793,7 +778,7 @@ class MetafansElementorTestimonialCarousel extends \Elementor\Widget_Base {
 			[
 				'name' => 'content_typography',
 				'selector' => '{{WRAPPER}} .tophive-testimonial__text',
-				'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_3,
+				
 			]
 		);
 		$this->add_control(
@@ -832,10 +817,7 @@ class MetafansElementorTestimonialCarousel extends \Elementor\Widget_Base {
 				'selectors' => [
 					'{{WRAPPER}} .tophive-testimonial__name' => 'color: {{VALUE}}',
 				],
-				'scheme' => [
-					'type' => \Elementor\Core\Schemes\Color::get_type(),
-					'value' => \Elementor\Core\Schemes\Color::COLOR_3,
-				],
+				
 			]
 		);
 
@@ -844,7 +826,7 @@ class MetafansElementorTestimonialCarousel extends \Elementor\Widget_Base {
 			[
 				'name' => 'name_typography',
 				'selector' => '{{WRAPPER}} .tophive-testimonial__name',
-				'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
+				
 			]
 		);
 
@@ -865,10 +847,7 @@ class MetafansElementorTestimonialCarousel extends \Elementor\Widget_Base {
 				'selectors' => [
 					'{{WRAPPER}} .tophive-testimonial__title' => 'color: {{VALUE}}',
 				],
-				'scheme' => [
-					'type' => \Elementor\Core\Schemes\Color::get_type(),
-					'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-				],
+				
 			]
 		);
 
@@ -877,7 +856,7 @@ class MetafansElementorTestimonialCarousel extends \Elementor\Widget_Base {
 			[
 				'name' => 'title_typography',
 				'selector' => '{{WRAPPER}} .tophive-testimonial__title',
-				'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_2,
+				
 			]
 		);
 		$this->add_control(
@@ -893,10 +872,7 @@ class MetafansElementorTestimonialCarousel extends \Elementor\Widget_Base {
 			[
 				'label' => esc_html__( 'Color', WP_MF_CORE_SLUG ),
 				'type' => \Elementor\Controls_Manager::COLOR,
-				'scheme' => [
-					'type' => \Elementor\Core\Schemes\Color::get_type(),
-					'value' => \Elementor\Core\Schemes\Color::COLOR_1,
-				],
+				
 				'selectors' => [
 					'{{WRAPPER}} .review-stars-rated .review-stars.empty,{{WRAPPER}}  .review-stars-rated .review-stars.filled' => 'color: {{VALUE}}',
 				],
