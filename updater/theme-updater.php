@@ -126,10 +126,10 @@ class MetafansThemeUpdater{
 		return $theme_data->theme_url;
 	}
 	public function getCurrentVersion(){
-		$request = wp_remote_get( 'https://api.tophivetheme.com/themes/mf-data.php?type=theme_data' );
-		$body = wp_remote_retrieve_body( $request );
-		$theme_data = json_decode($body);
-		return $theme_data->version;
+		// $request = wp_remote_get( 'https://api.tophivetheme.com/themes/mf-data.php?type=theme_data' );
+		// $body = wp_remote_retrieve_body( $request );
+		// $theme_data = json_decode($body);
+		return 4.0;
 	}
 	private static function isUrlValid(){}
 	public static function getInstance(){
