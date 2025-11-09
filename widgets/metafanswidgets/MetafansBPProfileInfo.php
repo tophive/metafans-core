@@ -5,7 +5,7 @@ class MetafansBPProfileInfo extends WP_Widget {
     public function __construct() {
         $widget_options = array(
             'classname' => 'tophive-mf-profile-info-widget',
-            'description' => esc_html__( 'BuddyPress - Metafans profile descriptions', 'WP_MF_CORE_SLUG' )
+            'description' => esc_html__( 'BuddyPress - Metafans profile descriptions', WP_MF_CORE_SLUG )
         );
         parent::__construct('buddypress_profile_desc', 'Buddypress profile info [metafans]', $widget_options);
     }

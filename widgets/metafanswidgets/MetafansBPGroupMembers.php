@@ -5,7 +5,7 @@ class MetafansBPGroupMembers extends WP_Widget {
     public function __construct() {
         $widget_options = array(
             'classname' => 'tophive-mf-groups-members-widget',
-            'description' => esc_html__( 'BuddyPress - Metafans Groups members lists', 'WP_MF_CORE_SLUG' )
+            'description' => esc_html__( 'BuddyPress - Metafans Groups members lists', WP_MF_CORE_SLUG )
         );
         parent::__construct('buddypress_groups_members', 'BuddyPress Group Members', $widget_options);
     }

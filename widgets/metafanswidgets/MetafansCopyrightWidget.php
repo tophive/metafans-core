@@ -5,7 +5,7 @@ class MetafansCopyrightWidget extends WP_Widget {
     public function __construct() {
         $widget_options = array(
             'classname' => 'tophive-mc-recent-post-widget',
-            'description' => esc_html__( 'Fundocean Recent Posts', 'WP_MF_CORE_SLUG' )
+            'description' => esc_html__( 'Fundocean Recent Posts', WP_MF_CORE_SLUG )
         );
         parent::__construct('tophive_fo_recent_post_widget', 'MC Recent Posts', $widget_options);
     }

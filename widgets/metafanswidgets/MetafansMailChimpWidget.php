@@ -5,7 +5,7 @@ class MetafansMailChimpWidget extends WP_Widget {
     public function __construct() {
         $widget_options = array(
             'classname' => 'tophive-mc-mchimp-subs-widget',
-            'description' => esc_html__( 'Fundocean Mailchimp Widget', 'WP_MF_CORE_SLUG' )
+            'description' => esc_html__( 'Fundocean Mailchimp Widget', WP_MF_CORE_SLUG )
         );
         parent::__construct('mchimp-subs', 'MC MailChimp Widget', $widget_options);
         add_filter( 'tophive/customizer/config', array( $this, 'config' ) );
@@ -85,7 +85,7 @@ class MetafansMailChimpWidget extends WP_Widget {
                 <?php  
                     echo __( "Your MailChimp <code>API KEY</code> is not configured yet.You can Configure It <a href='". esc_url( admin_url( '/customize.php?autofocus[section]=tophive_mailchimp_panel_api_key_settings' ) ) ."'>Here</a>", 'tophive' );
                 ?>
-            </p>';
+            </p>
             <?php
         }else{
         ?>
