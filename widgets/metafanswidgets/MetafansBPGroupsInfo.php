@@ -5,7 +5,7 @@ class MetafansBPGroupsInfo extends WP_Widget {
     public function __construct() {
         $widget_options = array(
             'classname' => 'tophive-mf-groups-info-widget',
-            'description' => esc_html__( 'BuddyPress - Metafans Profile descriptions', 'WP_MF_CORE_SLUG' )
+            'description' => esc_html__( 'BuddyPress - Metafans Profile descriptions', WP_MF_CORE_SLUG )
         );
         parent::__construct('buddypress_groups_desc', 'Buddypress about group [metafans]', $widget_options);
     }
