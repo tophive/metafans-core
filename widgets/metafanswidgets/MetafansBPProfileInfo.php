@@ -16,17 +16,16 @@ class MetafansBPProfileInfo extends WP_Widget {
 	        $html .= '<div>';
 	        $html .= '<h4 class="widget-title">'. $instance['title'] .'</h4>';
 	        
-            $args = array(
+            $field_args = array(
                 'field'   => 'User Bio',
                 'user_id' => bp_displayed_user_id()
             );
 
-            $bio = bp_get_profile_field_data( $args );
+            $bio = bp_get_profile_field_data( $field_args );
 
 			$html .= '<p class="ec-mb-0">' . get_the_author_meta('description', bp_displayed_user_id() ) . '</p>';	
 	        // $html .= '</p>';
 	        $html .= '</div>';
-            $html .= '</section>';
 	        $html .= $args['after_widget'];
 		// }
         echo $html;

@@ -1,10 +1,10 @@
 <?php
 /**
- * Plugin Name: Metafans Core | By Metafansthemes
+ * Plugin Name: Metafans Core | By Tophive
  * Plugin URI: https://tophivetheme.com/
  * Description: Metafans Wordpress theme core functionality
- * Version: 1.2
- * Author: Metafans
+ * Version: 1.3
+ * Author: Tophive
  * Author URI: https://themeforest.net/user/tophive
  * License: Envato
  * Text Domain: metafans-core

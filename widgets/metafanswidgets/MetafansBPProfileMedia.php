@@ -24,11 +24,13 @@ class MetafansBPProfileMedia extends WP_Widget {
             if( !empty($activities) ){
                 foreach ($activities as $key => $value) {
                     $images = bp_activity_get_meta( $value[0], 'activity_media', false );
-                    $newImages = $images[0];
-                    $newImages[0]['activity_id'] = $value[0];
-
-                    if( !empty($images) )
-                        array_push($all_images, ...$newImages);
+                    if( !empty($images) && !empty($images[0]) ){
+                        $activity_images = $images[0];
+                        foreach ($activity_images as &$image) {
+                            $image['activity_id'] = $value[0];
+                        }
+                        array_push($all_images, ...$activity_images);
+                    }
                 }
                 array_filter($all_images);
                 $media_html .= '<div class="ec-row bp-image-previewer">';
@@ -37,7 +39,7 @@ class MetafansBPProfileMedia extends WP_Widget {
                     if( !empty($url['thumb']) ){
                         $media_html .= '<div class="ec-col-4 bp-image-single" id="'. $i .'">';
                             $media_html .= '<div class="post-media-single">';
-                                $media_html .= '<a class="media-popup-thumbnail" href="'. $url['thumb'][0] .'" data-id="'. $url['id'] .'" data-activity="'. $url['activity_id'] .'"><img src="'. $url['full'] .'" alt="gm"></a>';
+                                $media_html .= '<a class="media-popup-thumbnail" href="'. $url['thumb'][0] .'" data-id="'. ($url['id'] ?? '') .'" data-activity="'. ($url['activity_id'] ?? '') .'"><img src="'. $url['full'] .'" alt="gm"></a>';
                             $media_html .= '</div>';
                         $media_html .= '</div>';
                     }
