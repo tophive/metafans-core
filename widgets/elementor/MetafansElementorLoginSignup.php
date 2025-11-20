@@ -20,7 +20,7 @@ class MetafansElementorLoginSignup extends \Elementor\Widget_base
 {
   public function get_title()
   {
-    return esc_html__('Login Signup', 'METAFANS_CORE_SLUG');
+    return esc_html__('Login Signup', 'WP_MF_CORE_SLUG');
   }
   public function get_name()
   {
@@ -32,7 +32,7 @@ class MetafansElementorLoginSignup extends \Elementor\Widget_base
   }
   public function get_categories()
   {
-    return ['METAFANS_CORE_SLUG'];
+    return ['WP_MF_CORE_SLUG'];
   }
   public function get_keywords()
   {
@@ -50,14 +50,14 @@ class MetafansElementorLoginSignup extends \Elementor\Widget_base
     $this->start_controls_section(
       'th_team_section',
       [
-        'label' => esc_html__('Signin/Signup', 'METAFANS_CORE_SLUG'),
+        'label' => esc_html__('Signin/Signup', 'WP_MF_CORE_SLUG'),
         'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
       ]
     );
     $this->add_control(
       'th_login_signup_padding',
       [
-        'label' => esc_html__('Padding', 'METAFANS_CORE_SLUG'),
+        'label' => esc_html__('Padding', 'WP_MF_CORE_SLUG'),
         'type' => \Elementor\Controls_Manager::DIMENSIONS,
         'size_units' => ['px', '%', 'em'],
         'selectors' => [
@@ -68,7 +68,7 @@ class MetafansElementorLoginSignup extends \Elementor\Widget_base
     $this->add_control(
       'th_login_signup_margin',
       [
-        'label' => esc_html__('Margin', 'METAFANS_CORE_SLUG'),
+        'label' => esc_html__('Margin', 'WP_MF_CORE_SLUG'),
         'type' => \Elementor\Controls_Manager::DIMENSIONS,
         'size_units' => ['px', '%', 'em'],
         'selectors' => [
@@ -79,7 +79,7 @@ class MetafansElementorLoginSignup extends \Elementor\Widget_base
     $this->add_control(
       'border_rad',
       [
-        'label' => esc_html__('Border Radius', 'METAFANS_CORE_SLUG'),
+        'label' => esc_html__('Border Radius', 'WP_MF_CORE_SLUG'),
         'type' => \Elementor\Controls_Manager::DIMENSIONS,
         'size_units' => ['px', '%', 'em'],
         'selectors' => [
@@ -91,7 +91,7 @@ class MetafansElementorLoginSignup extends \Elementor\Widget_base
       \Elementor\Group_Control_Box_Shadow::get_type(),
       [
         'name' => 'th_login_signup_box_shadow',
-        'label' => esc_html__('Box Shadow', 'METAFANS_CORE_SLUG'),
+        'label' => esc_html__('Box Shadow', 'WP_MF_CORE_SLUG'),
         'selector' => '{{WRAPPER}} .tophive-popup-content-wrapper',
       ]
     );
@@ -107,26 +107,26 @@ class MetafansElementorLoginSignup extends \Elementor\Widget_base
     $this->add_control(
       'th_login_signup_login_title',
       [
-        'label' => esc_html__('Login Form title', 'METAFANS_CORE_SLUG'),
+        'label' => esc_html__('Login Form title', 'WP_MF_CORE_SLUG'),
         'type' => \Elementor\Controls_Manager::TEXT,
-        'default' => esc_html__('Default title', 'METAFANS_CORE_SLUG'),
-        'placeholder' => esc_html__('Type your title here', 'METAFANS_CORE_SLUG'),
+        'default' => esc_html__('Default title', 'WP_MF_CORE_SLUG'),
+        'placeholder' => esc_html__('Type your title here', 'WP_MF_CORE_SLUG'),
       ]
     );
     $this->add_control(
       'th_login_signup_login_recover_pass_title',
       [
-        'label' => esc_html__('Recover Password Form title', 'METAFANS_CORE_SLUG'),
+        'label' => esc_html__('Recover Password Form title', 'WP_MF_CORE_SLUG'),
         'type' => \Elementor\Controls_Manager::TEXT,
-        'default' => esc_html__('Default title', 'METAFANS_CORE_SLUG'),
-        'placeholder' => esc_html__('Type your title here', 'METAFANS_CORE_SLUG'),
+        'default' => esc_html__('Default title', 'WP_MF_CORE_SLUG'),
+        'placeholder' => esc_html__('Type your title here', 'WP_MF_CORE_SLUG'),
       ]
     );
     $this->add_group_control(
       \Elementor\Group_Control_Typography::get_type(),
       [
         'name' => 'heading_typography',
-        'label' => esc_html__('Heading typography', 'METAFANS_CORE_SLUG'),
+        'label' => esc_html__('Heading typography', 'WP_MF_CORE_SLUG'),
 
         'selector' => '{{WRAPPER}} .tophive-popup-content-wrapper h3',
       ]
@@ -134,7 +134,7 @@ class MetafansElementorLoginSignup extends \Elementor\Widget_base
     $this->add_control(
       'heading_typography_color',
       [
-        'label' => esc_html__('Heading Typography Color', 'METAFANS_CORE_SLUG'),
+        'label' => esc_html__('Heading Typography Color', 'WP_MF_CORE_SLUG'),
         'type' => \Elementor\Controls_Manager::COLOR,
 
         'selectors' => [
@@ -145,17 +145,17 @@ class MetafansElementorLoginSignup extends \Elementor\Widget_base
     $this->add_control(
       'th_login_signup_register_title',
       [
-        'label' => esc_html__('Register title', 'METAFANS_CORE_SLUG'),
+        'label' => esc_html__('Register title', 'WP_MF_CORE_SLUG'),
         'type' => \Elementor\Controls_Manager::TEXT,
-        'default' => esc_html__('Default title', 'METAFANS_CORE_SLUG'),
-        'placeholder' => esc_html__('Type your title here', 'METAFANS_CORE_SLUG'),
+        'default' => esc_html__('Default title', 'WP_MF_CORE_SLUG'),
+        'placeholder' => esc_html__('Type your title here', 'WP_MF_CORE_SLUG'),
       ]
     );
     $this->add_group_control(
       \Elementor\Group_Control_Typography::get_type(),
       [
         'name' => 'meta_font_typography',
-        'label' => esc_html__('Meta font typography', 'METAFANS_CORE_SLUG'),
+        'label' => esc_html__('Meta font typography', 'WP_MF_CORE_SLUG'),
 
         'selector' => '{{WRAPPER}} .tophive-popup-content-wrapper .rememberme',
       ]
@@ -163,7 +163,7 @@ class MetafansElementorLoginSignup extends \Elementor\Widget_base
     $this->add_control(
       'meta_font_color',
       [
-        'label' => esc_html__('Meta Font Color', 'METAFANS_CORE_SLUG'),
+        'label' => esc_html__('Meta Font Color', 'WP_MF_CORE_SLUG'),
         'type' => \Elementor\Controls_Manager::COLOR,
 
         'selectors' => [
@@ -174,7 +174,7 @@ class MetafansElementorLoginSignup extends \Elementor\Widget_base
     $this->add_control(
       'th_login_signup_register_redirect',
       [
-        'label' => esc_html__('Redirect page after login/signup', 'METAFANS_CORE_SLUG'),
+        'label' => esc_html__('Redirect page after login/signup', 'WP_MF_CORE_SLUG'),
         'type' => \Elementor\Controls_Manager::SELECT,
         'default' => 'solid',
         'options' => $this->get_pages_list(),
@@ -187,7 +187,7 @@ class MetafansElementorLoginSignup extends \Elementor\Widget_base
     $this->start_controls_section(
       'th_signin_signup_style_section',
       [
-        'label' => esc_html__('Signin/Signup', 'METAFANS_CORE_SLUG'),
+        'label' => esc_html__('Signin/Signup', 'WP_MF_CORE_SLUG'),
         'tab' => \Elementor\Controls_Manager::TAB_STYLE,
       ]
     );
@@ -195,14 +195,14 @@ class MetafansElementorLoginSignup extends \Elementor\Widget_base
       \Elementor\Group_Control_Border::get_type(),
       [
         'name' => 'input_border',
-        'label' => esc_html__('Input field Border', 'METAFANS_CORE_SLUG'),
+        'label' => esc_html__('Input field Border', 'WP_MF_CORE_SLUG'),
         'selector' => '{{WRAPPER}} #tophive-signin-signup .th-form-field input, #tophive-signin-signup select.th-form-field',
       ]
     );
     $this->add_control(
       'input_back_color',
       [
-        'label' => esc_html__('Input background Color', 'METAFANS_CORE_SLUG'),
+        'label' => esc_html__('Input background Color', 'WP_MF_CORE_SLUG'),
         'type' => \Elementor\Controls_Manager::COLOR,
         'selectors' => [
           '{{WRAPPER}} #tophive-signin-signup .th-form-field input, #tophive-signin-signup select.th-form-field' => 'background-color: {{VALUE}} !important',
@@ -212,7 +212,7 @@ class MetafansElementorLoginSignup extends \Elementor\Widget_base
     $this->add_control(
       'input_text_color',
       [
-        'label' => esc_html__('Input Text Color', 'METAFANS_CORE_SLUG'),
+        'label' => esc_html__('Input Text Color', 'WP_MF_CORE_SLUG'),
         'type' => \Elementor\Controls_Manager::COLOR,
         'selectors' => [
           '{{WRAPPER}} #tophive-signin-signup .th-form-field input, #tophive-signin-signup select.th-form-field' => 'color: {{VALUE}} !important',
@@ -222,7 +222,7 @@ class MetafansElementorLoginSignup extends \Elementor\Widget_base
     $this->add_control(
       'input_border_radius',
       [
-        'label' => esc_html__('Input Border Radius', 'METAFANS_CORE_SLUG'),
+        'label' => esc_html__('Input Border Radius', 'WP_MF_CORE_SLUG'),
         'type' => \Elementor\Controls_Manager::DIMENSIONS,
         'size_units' => ['px', '%', 'em'],
         'selectors' => [
@@ -234,7 +234,7 @@ class MetafansElementorLoginSignup extends \Elementor\Widget_base
       \Elementor\Group_Control_Typography::get_type(),
       [
         'name' => 'rememberme_typo',
-        'label' => esc_html__('Remember me typography', 'METAFANS_CORE_SLUG'),
+        'label' => esc_html__('Remember me typography', 'WP_MF_CORE_SLUG'),
 
         'selector' => '{{WRAPPER}} .th-modal-login label',
       ]
@@ -242,7 +242,7 @@ class MetafansElementorLoginSignup extends \Elementor\Widget_base
     $this->add_control(
       'rememberme_color',
       [
-        'label' => esc_html__('Remember Color', 'METAFANS_CORE_SLUG'),
+        'label' => esc_html__('Remember Color', 'WP_MF_CORE_SLUG'),
         'type' => \Elementor\Controls_Manager::COLOR,
         'selectors' => [
           '{{WRAPPER}} .th-modal-login label' => 'color: {{VALUE}}',
@@ -253,7 +253,7 @@ class MetafansElementorLoginSignup extends \Elementor\Widget_base
       \Elementor\Group_Control_Typography::get_type(),
       [
         'name' => 'lostpass_typo',
-        'label' => esc_html__('Lost password typography', 'METAFANS_CORE_SLUG'),
+        'label' => esc_html__('Lost password typography', 'WP_MF_CORE_SLUG'),
 
         'selector' => '{{WRAPPER}} .switch-lost-pass',
       ]
@@ -261,7 +261,7 @@ class MetafansElementorLoginSignup extends \Elementor\Widget_base
     $this->add_control(
       'lostpass_color',
       [
-        'label' => esc_html__('Lost password Color', 'METAFANS_CORE_SLUG'),
+        'label' => esc_html__('Lost password Color', 'WP_MF_CORE_SLUG'),
         'type' => \Elementor\Controls_Manager::COLOR,
         'selectors' => [
           '{{WRAPPER}} .switch-lost-pass' => 'color: {{VALUE}}',
@@ -272,7 +272,7 @@ class MetafansElementorLoginSignup extends \Elementor\Widget_base
       \Elementor\Group_Control_Typography::get_type(),
       [
         'name' => 'btn_typo',
-        'label' => esc_html__('Button typography', 'METAFANS_CORE_SLUG'),
+        'label' => esc_html__('Button typography', 'WP_MF_CORE_SLUG'),
 
         'selector' => '{{WRAPPER}} #tophive-signin-signup button[type="submit"]',
       ]
@@ -280,7 +280,7 @@ class MetafansElementorLoginSignup extends \Elementor\Widget_base
     $this->add_control(
       'btn_color',
       [
-        'label' => esc_html__('Button Color', 'METAFANS_CORE_SLUG'),
+        'label' => esc_html__('Button Color', 'WP_MF_CORE_SLUG'),
         'type' => \Elementor\Controls_Manager::COLOR,
         'selectors' => [
           '{{WRAPPER}}  #tophive-signin-signup button[type="submit"]' => 'color: {{VALUE}}',
@@ -290,7 +290,7 @@ class MetafansElementorLoginSignup extends \Elementor\Widget_base
     $this->add_control(
       'btn_padding',
       [
-        'label' => esc_html__('Button Padding', 'METAFANS_CORE_SLUG'),
+        'label' => esc_html__('Button Padding', 'WP_MF_CORE_SLUG'),
         'type' => \Elementor\Controls_Manager::DIMENSIONS,
         'size_units' => ['px', '%', 'em'],
         'selectors' => [
@@ -301,7 +301,7 @@ class MetafansElementorLoginSignup extends \Elementor\Widget_base
     $this->add_control(
       'btn_border_radius',
       [
-        'label' => esc_html__('Button Border Radius', 'METAFANS_CORE_SLUG'),
+        'label' => esc_html__('Button Border Radius', 'WP_MF_CORE_SLUG'),
         'type' => \Elementor\Controls_Manager::DIMENSIONS,
         'size_units' => ['px', '%', 'em'],
         'selectors' => [
@@ -312,7 +312,7 @@ class MetafansElementorLoginSignup extends \Elementor\Widget_base
     $this->add_control(
       'btn_bg_color',
       [
-        'label' => esc_html__('Button Background Color', 'METAFANS_CORE_SLUG'),
+        'label' => esc_html__('Button Background Color', 'WP_MF_CORE_SLUG'),
         'type' => \Elementor\Controls_Manager::COLOR,
         'selectors' => [
           '{{WRAPPER}}  #tophive-signin-signup button[type="submit"]' => 'background-color: {{VALUE}}',
@@ -323,7 +323,7 @@ class MetafansElementorLoginSignup extends \Elementor\Widget_base
       \Elementor\Group_Control_Typography::get_type(),
       [
         'name' => 'other_text_typo',
-        'label' => esc_html__('Other text typography', 'METAFANS_CORE_SLUG'),
+        'label' => esc_html__('Other text typography', 'WP_MF_CORE_SLUG'),
 
         'selector' => '{{WRAPPER}} #tophive-signin-signup p.ec-text-center',
       ]
@@ -331,7 +331,7 @@ class MetafansElementorLoginSignup extends \Elementor\Widget_base
     $this->add_control(
       'other_text_color',
       [
-        'label' => esc_html__('Other text Color', 'METAFANS_CORE_SLUG'),
+        'label' => esc_html__('Other text Color', 'WP_MF_CORE_SLUG'),
         'type' => \Elementor\Controls_Manager::COLOR,
         'selectors' => [
           '{{WRAPPER}}  #tophive-signin-signup p.ec-text-center,  #tophive-signin-signup p.ec-text-center a b,#tophive-signin-signup p.ec-text-center a' => 'color: {{VALUE}}',
@@ -372,7 +372,7 @@ class MetafansElementorLoginSignup extends \Elementor\Widget_base
 
           <div class="resetpass-segment ec-py-5">
             <h3 class="ec-text-center ec-mb-4">
-              <?php esc_html_e('Set Your New Password', 'METAFANS_CORE_SLUG'); ?>
+              <?php esc_html_e('Set Your New Password', 'WP_MF_CORE_SLUG'); ?>
             </h3>
 
             <form id="tophive-reset-pass-form" method="post">
@@ -380,13 +380,13 @@ class MetafansElementorLoginSignup extends \Elementor\Widget_base
               <input type="hidden" name="key" value="<?php echo esc_attr($key); ?>">
 
               <div class="ec-mb-3">
-                <input type="password" name="new_password" class="ec-form-control" placeholder="<?php esc_attr_e('New Password', 'METAFANS_CORE_SLUG'); ?>" required>
+                <input type="password" name="new_password" class="ec-form-control" placeholder="<?php esc_attr_e('New Password', 'WP_MF_CORE_SLUG'); ?>" required>
               </div>
               <div class="ec-mb-3">
-                <input type="password" name="confirm_password" class="ec-form-control" placeholder="<?php esc_attr_e('Confirm Password', 'METAFANS_CORE_SLUG'); ?>" required>
+                <input type="password" name="confirm_password" class="ec-form-control" placeholder="<?php esc_attr_e('Confirm Password', 'WP_MF_CORE_SLUG'); ?>" required>
               </div>
               <button type="submit" class="ec-btn ec-btn-primary">
-                <?php esc_html_e('Reset Password', 'METAFANS_CORE_SLUG'); ?>
+                <?php esc_html_e('Reset Password', 'WP_MF_CORE_SLUG'); ?>
               </button>
             </form>
           </div>
