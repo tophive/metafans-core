@@ -30,10 +30,9 @@ class MetafansElementorLoginSignup extends \Elementor\Widget_base
   {
     return 'eicon-user-circle-o';
   }
-  public function get_categories()
-  {
-    return ['WP_MF_CORE_SLUG'];
-  }
+  public function get_categories() {
+		return [ WP_MF_CORE_SLUG ];
+	}
   public function get_keywords()
   {
     return ['login', 'signin', 'signup'];
