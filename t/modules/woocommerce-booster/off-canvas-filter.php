@@ -256,7 +256,7 @@ class MetafansCoreCustomizer_Module_WC_Off_Canvas_Filter extends MetafansCoreCus
 				'description'   => __( 'Widgets in this area will be shown on product catalog and product archives pages.', 'tophive-pro' ),
 				'before_widget' => '<section id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</section>',
-				'before_title'  => '<h4 class="widget-title">',
+				'before_title'  => '<h2 class="widget-title">',
 				'after_title'   => '</h4>',
 			)
 		);

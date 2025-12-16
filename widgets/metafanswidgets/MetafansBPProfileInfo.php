@@ -1,12 +1,18 @@
 <?php
-
+/**
+ * BuddyPress Profile Info Widget
+ *
+ * @package     Tophive
+ * @subpackage  Widgets
+ * @author      Tophive Themes
+ */
 class MetafansBPProfileInfo extends WP_Widget {
  
     public function __construct()
   {
     $widget_options = array(
-      'classname' => 'tophive-one-profile-info-widget',
-      'description' => esc_html__('BuddyPress - One profile', 'ONE_CORE_SLUG')
+      'classname' => 'tophive-profile-info-widget',
+      'description' => esc_html__('BuddyPress Profile', 'WP_MF_CORE_SLUG')
     );
     parent::__construct('buddypress_profile', 'Buddypress Profile', $widget_options);
   }
@@ -42,7 +48,7 @@ class MetafansBPProfileInfo extends WP_Widget {
 
     // Fallback if user has no avatar
     if (empty($avatar_html)) {
-      $pla_url = get_template_directory_uri() . '/assets/images/people.jpg';
+      $pla_url = get_template_directory_uri() . '/assets/images/people.webp';
       $avatar_html = "<img src='{$pla_url}' alt='User Avatar' />";
     }
 
@@ -56,34 +62,28 @@ class MetafansBPProfileInfo extends WP_Widget {
     $html .= "<a href='{$domain}'>{$name}</a>"; //profile link
     $html .= "</div>";
 
+    //Location field in BuddyPress xProfile
+
+    $html .= "<div class='widget-profile-location'>";
+    $location = bp_get_profile_field_data([
+      'field'   => 'Location',
+      'user_id' => $profile_id,
+    ]);
+    if ($location) {
+      $html .= '<p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                      <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+                      <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                    </svg> ' . $location . ' 
+                </p>';
+    }
+    $html .= "•";
     //designation
     $designation = get_user_meta($profile_id, 'designation', true);
     $html .= "<div class='widget-profile-designation'>";
     $html .= "<p> {$designation} </p>";
     $html .= "</div>";
-
-    //FOLLOW/ING INFO
-    $html .= '<div class="widget-profile-meta-info member_meta_info_con">';
-
-    // total number of posts
-    if (function_exists('bp_activity_get')) {
-      $activities = bp_activity_get(['filter' => ['user_id' => $profile_id], 'count_total' => true, 'per_page' => 1, 'show_hidden' => false]);
-      $activity_count = isset($activities['total']) ? intval($activities['total']) : 0;
-      $html .= "<p> <span> {$activity_count} </span> <span> Posts </span> </p>";
-    }
-
-    //total follower
-    $_follow_count = Tophive_BP_Members::get_instance()->get_following_count($profile_id);
-    $html .= "<p> <span> {$_follow_count} </span> <span> Following </span> </p>";
-
-    //total friend
-    if (function_exists('friends_get_total_friend_count')) {
-      $friend_count = friends_get_total_friend_count($profile_id);
-      $html .= "<p> <span> {$friend_count} </span> <span> Friends </span> </p>";
-    }
-
-    $html .= '</div>'; // END FOLLOW/ING INFO
-
+    $html .= "</div>"; // END location ═══════
 
     // ❯❯❯❯ Profile Tab
 
@@ -111,7 +111,7 @@ class MetafansBPProfileInfo extends WP_Widget {
         </svg>'
       ]
     ];
-
+    
     $html .= "<div class='widget-profile-action-btns'>";
     foreach ($tabs as $label => $data) {
       $tab_link = $base_link . $data['slug'];
@@ -119,15 +119,42 @@ class MetafansBPProfileInfo extends WP_Widget {
     }
     $html .= "</div>"; // END Profile Tab ═══════
 
+    // Get user description
+    $desc = get_the_author_meta('description', $profile_id, false);
+
+    if (! empty($desc)) {  // If the description is empty, nothing is rendered, keeping your profile card clean.
+      $html .= "<div class='widget-profile-about'>";
+      $html .= "<p>{$desc}</p>";
+      $html .= "</div>";
+    }
+
+    // ❯❯❯❯ FOLLOW/ING INFO
+    $html .= '<div class="widget-profile-meta-info member_meta_info_con">';
+    // total number of posts
+    if (function_exists('bp_activity_get')) {
+      $activities = bp_activity_get(['filter' => ['user_id' => $profile_id], 'count_total' => true, 'per_page' => 1, 'show_hidden' => false]);
+      $activity_count = isset($activities['total']) ? intval($activities['total']) : 0;
+      $html .= "<p> <span> {$activity_count} </span> <span> " . esc_html__('Posts', 'WP_MF_CORE_SLUG') . " </span> </p>";
+    }
+    //total follower
+    $_follow_count = Tophive_BP_Members::get_instance()->get_following_count($profile_id);
+    $html .= "<p> <span> {$_follow_count} </span> <span> " . esc_html__('Following', 'WP_MF_CORE_SLUG') . " </span> </p>";
+    //total friend
+    if (function_exists('friends_get_total_friend_count')) {
+      $friend_count = friends_get_total_friend_count($profile_id);
+      $html .= "<p> <span> {$friend_count} </span> <span> " . esc_html__('Friends', 'WP_MF_CORE_SLUG') . " </span> </p>";
+    }
+    $html .= '</div>'; // END FOLLOW/ING INFO
+
     /*
     //action btn
     $current_user = get_current_user_id();
     if (Tophive_BP_Members::get_instance()->is_already_following($current_user, $profile_id)) {
       $status = 'following';
-      $text   = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16"><path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/></svg>' . esc_html__(' Following', 'ONE_CORE_SLUG');
+      $text   = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16"><path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/></svg>' . esc_html__(' Following', 'WP_MF_CORE_SLUG');
     } else {
       $status = '';
-      $text = esc_html__('+ Follow', 'ONE_CORE_SLUG');
+      $text = esc_html__('+ Follow', 'WP_MF_CORE_SLUG');
     }
     $follow_btn = "<a href='' class='bp-th-follow-button' data-follower-id='{$profile_id}' data-following='{$status}' data-following-id='{$current_user}'> {$text} </a>";
 
@@ -143,37 +170,27 @@ class MetafansBPProfileInfo extends WP_Widget {
     $html .= "</div>";
     */
 
-    // Get user description
-    $desc = get_the_author_meta('description', $profile_id, false);
+    // ❯❯❯❯ Forum Stats Info (If bbPress is active)
+    $html .= '<div class="ec-mt-sm-3 forum_meta_info_con">';
 
-    if (! empty($desc)) {  // If the description is empty, nothing is rendered, keeping your profile card clean.
-      $html .= "<div class='widget-profile-about'>";
-      $html .= '<h4>About us</h4>';
-      $html .= "<p>{$desc}</p>";
-      $html .= "</div>";
+    // total forum topics
+    if (function_exists('bbp_get_user_topic_count_raw')) {
+      $topic_count = bbp_get_user_topic_count_raw($profile_id);
+      $html .= "<p> <span> {$topic_count} </span> <span> " . esc_html__('Topics Created', 'WP_MF_CORE_SLUG') . " </span> </p>";
     }
+
+    // total forum replies
+    if (function_exists('bbp_get_user_reply_count_raw')) {
+      $reply_count = bbp_get_user_reply_count_raw($profile_id);
+      $html .= "<p> <span> {$reply_count} </span> <span> " . esc_html__('Replies', 'WP_MF_CORE_SLUG') . " </span> </p>";
+    }
+
+    $html .= '</div>'; // END Forum Stats Info
 
     //end main container div
     $html .= '</div>';
     $html .= $args['after_widget'];
     echo $html;
-  }
-
-  public function form($instance)
-  {
-    /*
-    $profile_id = ! empty($instance['profile_id']) ? $instance['profile_id'] : '';
-    <div class="mchimp-subs_form">
-      <p>
-        <label for="<?php echo $this->get_field_id('profile_id'); ?>">Profile Id:</label>
-        <input
-          id="<?php echo $this->get_field_id('profile_id'); ?>"
-          type="text"
-          name="<?php echo $this->get_field_name('profile_id'); ?>"
-          value="<?php echo esc_attr($profile_id); ?>" />
-      </p>
-    </div>
-  */
   }
 
   public function update($new_instance, $old_instance)

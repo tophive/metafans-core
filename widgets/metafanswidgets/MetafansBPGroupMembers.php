@@ -13,7 +13,7 @@ class MetafansBPGroupMembers extends WP_Widget {
         global $wpdb;
     	if (bp_is_groups_component() && bp_is_single_item() ) {
 	        $html = $args['before_widget'];
-	        $html .= '<h4 class="widget-title">'. $instance['title'] .'</h4>';
+	        $html .= '<h2 class="widget-title">'. $instance['title'] .'</h2>';
 	        $group_id =  bp_get_group_id();
             
             $members_query = $wpdb->get_results("SELECT user_id from {$wpdb->base_prefix}bp_groups_members where group_id={$group_id}");

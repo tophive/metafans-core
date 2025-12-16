@@ -16,7 +16,7 @@ class MetafansBPProfileMedia extends WP_Widget
     // if ( bp_is_profile_component() ) {
     $html = $args['before_widget'];
     $html .= '<div>';
-    $html .= '<h4 class="widget-title">' . $instance['title'] . '</h4>';
+    $html .= '<h2 class="widget-title">' . $instance['title'] . '</h2>';
 
     global $wpdb;
     $user_id = bp_displayed_user_id();

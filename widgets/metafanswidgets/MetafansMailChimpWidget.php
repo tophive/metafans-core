@@ -44,7 +44,7 @@ class MetafansMailChimpWidget extends WP_Widget {
     public function widget( $args, $instance ) {
         $html = $args['before_widget'];
         $html .= '<div>';
-        $html .= '<h4 class="widget-title">'. $instance['title'] .'</h4>';
+        $html .= '<h2 class="widget-title">'. $instance['title'] .'</h2>';
         if( !empty( $instance['description'] )){
             $html .= '<p class="widget-description ec-mb-3">'. $instance['description'] .'</p>';
         }

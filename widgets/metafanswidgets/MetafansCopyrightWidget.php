@@ -29,7 +29,7 @@ class MetafansCopyrightWidget extends WP_Widget {
         $post_query = new WP_Query($params);
         $html .= '<div class="th-mc-posts-widget-'. $id .'">';
         if( !empty($instance['title']) ){
-            $html .= '<h4 class="widget-title">'. $instance['title'] .'</h4>';
+            $html .= '<h2 class="widget-title">'. $instance['title'] .'</h2>';
         }
         $html .= '<div class="ec-container-mega-widget">';
         $html .= '<div class="ec-row">';

@@ -211,13 +211,13 @@ body .tophive-mc-mchimp-subs-widget .newsletter-submit-form .newsletter-submit:h
     overflow: hidden;
     border-radius: var(--radius) !important;
     padding: 0;
-    background: transparent;
+    background: var(--white);
     margin-bottom: 1em !important;
 }
 /* container wrap */
 .widget .widget-profile-container {
   margin: 0;
-  padding: 14px;
+  padding: 10px;
 }
 
 /* profile banner */
@@ -256,10 +256,10 @@ body .tophive-mc-mchimp-subs-widget .newsletter-submit-form .newsletter-submit:h
 /* profile name */
 .widget .widget-profile-container .widget-profile-name {
   margin-top: 15px;
-  min-height: 40px;
+  min-height: 0;
 
   a {
-    font-size: var(--font-16);
+    font-size: 20px;
     font-weight: 600;
     color: var(--gray-900);
     text-decoration: none;
@@ -272,9 +272,36 @@ body .tophive-mc-mchimp-subs-widget .newsletter-submit-form .newsletter-submit:h
   }
 }
 
+/* profile location */
+.widget-profile-container .widget-profile-location {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  margin-top: 4px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed var(--color-border);
+
+  p {
+    font-size: var(--font-13);
+    color: var(--gray-500);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    /* location icon */
+    svg {
+      width: 14px;
+      height: 14px;
+      fill: var(--gray-400);
+    }
+  }
+}
+
 /* profile designation */
 .widget .widget-profile-container .widget-profile-designation {
-  margin-top: -18px;
+  margin-top: 0;
 
   p {
     font-size: var(--font-12);
@@ -288,7 +315,8 @@ body .tophive-mc-mchimp-subs-widget .newsletter-submit-form .newsletter-submit:h
   gap: 20px;
 
   margin: 20px 0 0;
-  padding-bottom: 10px;
+  padding: 10px 0;
+  border-top: 1px dashed var(--color-border);
   border-bottom: 1px dashed var(--color-border);
 
   p {
@@ -324,6 +352,28 @@ body .tophive-mc-mchimp-subs-widget .newsletter-submit-form .newsletter-submit:h
   p {
     font-size: var(--font-13);
     margin: 0;
+  }
+}
+
+/* forums data */
+.widget .forum_meta_info_con {
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+  border-radius: var(--btn-radius);
+  background: var(--gray-100);
+  border: none;
+}
+
+.widget .forum_meta_info_con {
+  & p {
+    margin: 0;
+
+    span:first-child {
+      font-size: var(--font-16);
+      font-weight: 600;
+      color: var(--gray-900);
+    }
   }
 }
 

@@ -13,7 +13,7 @@ class MetafansBPGroupsInfo extends WP_Widget {
     	if (bp_is_groups_component() && bp_is_single_item() ) {
 	        $html = $args['before_widget'];
 	        $html .= '<div>';
-	        $html .= '<h4 class="widget-title">'. $instance['title'] .'</h4>';
+	        $html .= '<h2 class="widget-title">'. $instance['title'] .'</h2>';
 	        
 	        	$group = groups_get_group( array( 'group_id' => bp_get_group_id()) );	
 	        	

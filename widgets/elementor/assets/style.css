@@ -8534,6 +8534,18 @@ body .th-course-trending-popular-filter.filter-vertical li:last-child {
     background-color: rgba(0, 0, 0, 0.02);
   }
 }
+
+.mc-title {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 600;
+  transition: all .03s ease;
+}
+
+.mc-title:hover {
+  color: var(--brand-color) !important;
+}
+
 .th-blog-thumb img {
   object-fit: cover;
   height: 100% !important;
@@ -10431,18 +10443,8 @@ body.rtl .tophive-advanced-search-form .search-submit {
   img {
   width: 100%;
 }
-.tophive-advanced-tab-container
-  .tophive-advanced-tab-content
-  .tophive-advanced-tab-content-panel
-  .description {
-}
 
 /*----- BBPRESS ----------*/
-/*----- BBPRESS ----------*/
-.tophive-advanced-forum-tab-container {
-}
-.tophive-advanced-forum-tab-container .tophive-forum-tabs {
-}
 .tophive-advanced-forum-tab-container .tophive-forum-tabs ul {
   margin: 0;
   margin-bottom: 30px;

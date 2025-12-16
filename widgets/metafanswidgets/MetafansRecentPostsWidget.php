@@ -11,7 +11,7 @@ class MetafansRecentPostsWidget extends WP_Widget {
     }
     function img_left_layout( $id ){
         $spacing = is_rtl() ? 'ec-pr-3' : 'ec-pl-3';
-        return '<a class="theme-primary-color-head-hover text-decoration-none" href="'. get_permalink( $id ) .'">
+        return '<a class="text-decoration-none" href="'. get_permalink( $id ) .'">
             <div class="ec-d-flex ec-mb-3">
                 <div class="ec-w-25">
                     <div class="th-post-widget-thumb">
@@ -20,7 +20,7 @@ class MetafansRecentPostsWidget extends WP_Widget {
                 </div>
                 <div class="ec-w-75 '. $spacing .'">
                     <p class="widget-blog-date ec-mb-1"><small>'. get_the_date('F j, Y', $id) .'</small></p>
-                    <h6><small>'. get_the_title( $id ) .'</small></h6>
+                    <h3 class="mc-title">'. get_the_title( $id ) .'</h3>
                     <span class="mc-blog-readmore">'. esc_html__( 'Read more', WP_MF_CORE_SLUG ) .'<i class="ti-arrow-right"></i></span>
                 </div>
             </div>
@@ -28,11 +28,11 @@ class MetafansRecentPostsWidget extends WP_Widget {
     }        
     function img_right_layout( $id ){
         $spacing = is_rtl() ? 'ec-pl-3' : 'ec-pr-3';
-        return '<a class="theme-primary-color-head-hover text-decoration-none" href="'. get_permalink($id) .'">
+        return '<a class="text-decoration-none" href="'. get_permalink($id) .'">
             <p class="widget-blog-date ec-mb-1"><small>'. get_the_date('F j, Y', $id) .'</small></p>
             <div class="ec-d-flex ec-mb-3">
                 <div class="ec-w-75 ec-pr-2">
-                    <h6><small>'. get_the_title($id) .'</small></h6>
+                    <h3 class="mc-title">'. get_the_title($id) .'</h3>
                     <span class="mc-blog-readmore">'. esc_html__( 'Read more', WP_MF_CORE_SLUG ) .'<i class="ti-arrow-right"></i></span>
                 </div>
                 <div class="ec-w-25">
@@ -44,7 +44,7 @@ class MetafansRecentPostsWidget extends WP_Widget {
         </a>';    
     } 
     function img_top_layout($id){
-        return '<a class="theme-primary-color-head-hover text-decoration-none" href="'. get_permalink( $id ) .'">
+        return '<a class="text-decoration-none" href="'. get_permalink( $id ) .'">
             <div class="ec-mb-3">
                 <div>
                     <div class="th-post-widget-thumb ec-mb-2">
@@ -53,7 +53,7 @@ class MetafansRecentPostsWidget extends WP_Widget {
                 </div>
                 <div>
                     <p class="widget-blog-date ec-mb-0 mt-n1"><small>'. get_the_date('F j, Y', $id) .'</small></p>
-                    <h6><small>'. get_the_title( $id ) .'</small></h6>
+                    <h3 class="mc-title">'. get_the_title( $id ) .'</h3>
                     <span class="mc-blog-readmore">'. esc_html__( 'Read more', WP_MF_CORE_SLUG ) .'<i class="ti-arrow-right"></i></span>
                 </div>
             </div>
@@ -97,7 +97,7 @@ class MetafansRecentPostsWidget extends WP_Widget {
         $post_query = new WP_Query($params);
         $html .= '<div class="th-mc-posts-widget-'. $id .'">';
         if( !empty($instance['title']) ){
-            $html .= '<h4 class="widget-title">'. $instance['title'] .'</h4>';
+            $html .= '<h2 class="widget-title">'. $instance['title'] .'</h2>';
         }
         $html .= '<div class="ec-container-mega-widget">';
         $html .= '<div class="ec-row">';
@@ -111,7 +111,7 @@ class MetafansRecentPostsWidget extends WP_Widget {
                                 $html .= get_the_post_thumbnail( get_the_ID(), 'post-thumbnail', array('class' => 'rounded-sm') );
                             $html .= '</div>';
                             $html .= '<p class="widget-blog-date ec-mb-0 ec-mt-n1"><small>'. get_the_date('F j, Y', get_the_ID()) .'</small></p>';
-                            $html .= '<a class="text-decoration-none" href="'. get_the_permalink() .'"><h5 class="ec-mb-3">'. get_the_title() .'</h5></a>';
+                            $html .= '<a class="text-decoration-none ec-mb-3 mc-title" href="'. get_the_permalink() .'">'. get_the_title() .'</a>';
                             $html .= '<span class="mc-blog-readmore">'. esc_html__( 'Read more', WP_MF_CORE_SLUG ) .'<i class="ti-arrow-right"></i></span>';
                         $html .= '</div>';
                     }else{

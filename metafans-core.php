@@ -3,7 +3,7 @@
  * Plugin Name: Metafans Core | By Tophive
  * Plugin URI: https://tophivetheme.com/
  * Description: Metafans Wordpress theme core functionality
- * Version: 1.4
+ * Version: 1.5
  * Author: Tophive
  * Author URI: https://themeforest.net/user/tophive
  * License: Envato
