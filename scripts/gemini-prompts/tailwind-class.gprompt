@@ -1,0 +1,9 @@
+name: tailwind-class
+description: "Generates Tailwind CSS utility classes for a component"
+variables:
+  - component
+  - theme
+prompt: |
+  Create a Tailwind CSS class setup for the "{{component}}" component.
+  Follow the "{{theme}}" theme (colors, spacing, typography).
+  Include responsive variants and hover/focus states.

@@ -1,0 +1,7 @@
+{
+  "greeting": "👋 Hello from Tophive CLI!",
+  "build-summary": "Provide a detailed summary of the current plugin build status.",
+  "help": "List all available Gemini CLI commands and their description.",
+  "status": "Show the status of the Gemini agent and last GPT responses.",
+  "generate-report": "Generate a full report of assets and build files."
+}

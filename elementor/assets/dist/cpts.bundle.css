@@ -1,0 +1,41 @@
+/*!*********************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./assets/css/cpts.scss ***!
+  \*********************************************************************************************************************************************************/
+.display-conditions-container {
+  padding: 20px 100px;
+}
+.display-conditions-container .main-controls {
+  margin: 20px 0 10px;
+  padding: 20px;
+  border: 1px dashed #ddd;
+  border-radius: 5px;
+  width: 80%;
+}
+.display-conditions-container .main-controls h4 {
+  margin: 0;
+}
+.display-conditions-container .main-controls .single-control {
+  margin-bottom: 20px;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 1fr 3fr 2fr 1fr;
+}
+.display-conditions-container .main-controls .single-control select {
+  width: 100%;
+  border: 1px dotted #ccc;
+  padding: 4px 15px;
+}
+.display-conditions-container .main-controls .single-control .hidden {
+  display: none;
+}
+.display-conditions-container .main-controls .single-control .dropdown_rules {
+  display: flex;
+  gap: 20px;
+}
+.display-conditions-container .main-controls svg {
+  width: 25px;
+  height: 25px;
+  margin: 5px 0;
+  cursor: pointer;
+  z-index: 99;
+}

@@ -1,0 +1,10 @@
+name: tailwind-gsap-component
+description: "Generates a UI component with Tailwind CSS + GSAP animation"
+variables:
+  - component_name
+  - theme
+  - animation
+prompt: |
+  Create a UI component "{{component_name}}" using Tailwind CSS following the "{{theme}}" theme.
+  Add GSAP animation: "{{animation}}" triggered on scroll or hover.
+  Provide clean HTML, JS, and SCSS code snippets ready to integrate.

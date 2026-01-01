@@ -1,0 +1,12 @@
+# Task
+Refactor and optimize the Elementor widget code at {{filePath}}.
+
+# Requirements
+- Follow WordPress and PSR-12 coding standards.
+- Remove redundancy, improve readability, and modernize array syntax.
+- Optimize performance for render and controls.
+- Do not remove Elementor-specific APIs.
+- Keep backward compatibility intact.
+
+# Output
+Full refactored PHP file.
