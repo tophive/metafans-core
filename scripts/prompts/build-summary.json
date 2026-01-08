@@ -1,0 +1,5 @@
+{
+  "command": "build-summary",
+  "description": "Provide a detailed summary of the current plugin build status",
+  "prompt": "Provide a detailed summary of the current plugin build status."
+}

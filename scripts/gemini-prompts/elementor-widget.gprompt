@@ -1,0 +1,10 @@
+name: elementor-widget
+description: "Generates a new Elementor widget with PHP, JS, and CSS scaffolding"
+variables:
+  - widget_name
+  - features
+prompt: |
+  Create a fully functional Elementor widget named "{{widget_name}}".
+  Include PHP registration code, JS frontend interactions, and minimal CSS styling.
+  Features: {{features}}.
+  Provide clear comments in the code.

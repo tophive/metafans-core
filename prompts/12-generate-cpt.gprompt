@@ -1,0 +1,23 @@
+name: generate-cpt
+description: "Generates the PHP code for a WordPress Custom Post Type."
+variables:
+  - singular_name
+  - plural_name
+  - post_type_key
+prompt: |
+  You are an expert WordPress developer. Your task is to generate the complete PHP code required to register a new Custom Post Type (CPT).
+
+  CPT Details:
+  - Singular Name: {{singular_name}}
+  - Plural Name: {{plural_name}}
+  - Post Type Key: {{post_type_key}}
+
+  Requirements:
+  1.  The code must use the `register_post_type` function, hooked into the `init` action.
+  2.  Generate all standard labels (name, singular_name, menu_name, etc.) based on the provided names.
+  3.  Set the CPT to be public, show in the admin UI, have an archive, and support the title, editor, and thumbnail fields.
+  4.  Use the namespace `TophiveCore\CPT`.
+  5.  The code should be a single, self-contained PHP snippet, including the `<?php` tag.
+  6.  Ensure the text domain 'tophive-core' is used for localization in all labels.
+
+  Return the result as a single, valid JSON object with one key: "code". The value should be the full PHP code as a string.

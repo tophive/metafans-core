@@ -1,0 +1,8 @@
+name: seo-content
+description: "Generates SEO-friendly content"
+variables:
+  - topic
+  - keyword
+prompt: |
+  Write a well-structured SEO-friendly article about {{topic}}.
+  Include the main keyword "{{keyword}}" naturally in headings and content.

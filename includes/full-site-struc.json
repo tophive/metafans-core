@@ -1,0 +1,28 @@
+{
+  "plugins": [
+    {
+      "Name": "Elementor",
+      "PluginURI": "https:\/\/elementor.com\/?utm_source=wp-plugins&utm_campaign=plugin-uri&utm_medium=wp-dash",
+      "Version": "3.27.6",
+      "Description": "The Elementor Website Builder has it all: drag and drop page builder, pixel perfect design, mobile responsive editing, and more. Get started now!",
+      "Title": "Elementor",
+      "download_link": "/Users/nurhosain/Downloads/elementor.3.28.3.zip",
+      "AuthorName": "Elementor.com",
+      "path": "elementor\/elementor.php"
+    }
+  ],
+  "pages": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "posts": [],
+  "menus": 11,
+  "customizer": 12
+}

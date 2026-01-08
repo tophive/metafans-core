@@ -1,0 +1,16 @@
+{
+  "name": "Tophive Core",
+  "paths": {
+    "widgets": "elementor/includes/widgets",
+    "widgetJS": "elementor/assets/js/widgets",
+    "widgetSCSS": "elementor/assets/css/widgets",
+    "widgetRegistration": "elementor/includes/elements.php",
+    "cpts": "includes/cpts",
+    "cptLoader": "includes/cpt-loader.php",
+    "taxonomies": "includes/taxonomies",
+    "taxonomyLoader": "includes/taxonomy-loader.php",
+    "tests": "tests",
+    "docs": "docs",
+    "fallbackProvider": "gemini"
+  }
+}

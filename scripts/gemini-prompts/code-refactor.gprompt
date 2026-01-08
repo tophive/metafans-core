@@ -1,0 +1,9 @@
+name: code-refactor
+description: "Refactors given code for readability and best practices"
+variables:
+  - language
+  - code_snippet
+prompt: |
+  Refactor the following {{language}} code:
+  {{code_snippet}}
+  Ensure readability, proper indentation, and best practices.

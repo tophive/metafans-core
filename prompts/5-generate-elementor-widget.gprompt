@@ -1,0 +1,30 @@
+name: generate-elementor-widget
+description: "Generates the PHP, JS, and SCSS files for a new Elementor widget."
+variables:
+  - widget_name
+  - widget_description
+prompt: |
+  You are an expert WordPress and Elementor plugin developer. Your task is to generate the complete code for a new Elementor widget.
+
+  Widget Name: {{widget_name}}
+  Widget Description: {{widget_description}}
+
+  Please generate the following files:
+  1.  **php**: The main PHP class for the widget. It should extend `\Elementor\Widget_Base`. Include basic controls in `_register_controls()` and a simple structure in `render()`. Use the namespace `TophiveCore\Elementor\Widgets`.
+  2.  **js**: (Optional) If the widget requires JavaScript for frontend interactivity, provide the JS code. The code should be wrapped in a class or function and be ready to be initialized by Elementor's frontend hooks. If no JS is needed, return an empty string.
+  3.  **scss**: (Optional) Provide basic SCSS styling for the widget. Use a class name based on the widget slug. If no custom styling is needed, return an empty string.
+
+  Follow these best practices:
+  - Sanitize all outputs in the `render()` method.
+  - Use Elementor's control types correctly.
+  - Ensure the PHP code is well-documented and follows WordPress coding standards.
+  - The widget slug should be a lowercase, hyphenated version of the name.
+
+  Return the result as a single, valid JSON object with the keys "php", "js", and "scss".
+
+  Example JSON structure:
+  {
+    "php": "<?php\nnamespace TophiveCore\\Elementor\\Widgets;\n\nclass My_Widget extends \\Elementor\\Widget_Base { ... }",
+    "js": "class MyWidgetHandler extends elementorModules.frontend.handlers.Base { ... }",
+    "scss": ".my-widget { color: red; }"
+  }

@@ -1,0 +1,1 @@
+// AI generation failed for feature-parallax. This is a placeholder.

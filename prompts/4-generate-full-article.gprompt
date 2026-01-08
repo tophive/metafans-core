@@ -1,0 +1,18 @@
+name: generate-full-article
+description: "Generates a full blog article including title, content, summary, and tags from a given topic."
+variables:
+  - field
+prompt: |
+  You are an expert content writer and SEO specialist. Your task is to generate a complete, high-quality blog article based on the provided topic.
+  
+  The article should be well-structured, engaging, and optimized for search engines.
+  
+  Topic: {{field}}
+  
+  Please generate the following components:
+  1.  **title**: A compelling and SEO-friendly title for the article.
+  2.  **article**: The full content of the article in Markdown format. It should include headings, paragraphs, and lists where appropriate. The tone should be professional but accessible.
+  3.  **summary**: A concise, one-paragraph summary of the article, suitable for a meta description.
+  4.  **tags**: An array of 3-5 relevant keywords or tags as strings.
+  
+  Return the result as a single, valid JSON object with the keys "title", "article", "summary", and "tags".

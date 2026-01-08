@@ -1,0 +1,12 @@
+# Task
+Scan and fix deprecated or outdated syntax in {{filePath}}.
+
+# Requirements
+- Update all deprecated Elementor, WordPress, and PHP APIs.
+- Replace removed functions or hooks with their current equivalents.
+- Fix SCSS mixin or keyframe syntax for modern SASS (Dart Sass 1.70+).
+- Ensure backward compatibility with PHP 8.2+ and WordPress 6.7+.
+- Remove or refactor warnings safely without functional regression.
+
+# Output
+Full corrected file, ready for production.

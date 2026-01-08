@@ -1,0 +1,6 @@
+{
+  "create-component": {
+    "description": "Generate a React/Next.js component",
+    "template": "Create a {componentType} named {name} with props {props}."
+  }
+}

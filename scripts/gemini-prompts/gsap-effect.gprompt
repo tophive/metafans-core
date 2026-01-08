@@ -1,0 +1,12 @@
+name: gsap-effect
+description: "Generates a GSAP animation script"
+variables:
+  - target
+  - effect
+  - duration
+  - trigger
+prompt: |
+  Write a GSAP animation for element "{{target}}".
+  Effect: {{effect}}, duration: {{duration}} seconds.
+  Trigger animation on "{{trigger}}" event.
+  Provide JS code only.

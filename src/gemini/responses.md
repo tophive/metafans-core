@@ -1,0 +1,3 @@
+# Response Templates
+
+## Build Success
