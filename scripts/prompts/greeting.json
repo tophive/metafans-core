@@ -1,0 +1,5 @@
+{
+  "command": "greeting",
+  "description": "Say hello from Gemini CLI",
+  "prompt": "Hello from Tophive Gemini CLI!"
+}

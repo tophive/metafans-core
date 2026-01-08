@@ -1,0 +1,335 @@
+@mixin ripples($color, $growthField) {
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: var(--tophive-ripple-color, $color);
+      z-index: -1;
+      animation-name: ripples; 
+      animation-duration: var(--tophive-ripple-animation-duration, 2s);
+      animation-timing-function: cubic-bezier(.65,0,.34,1);
+      animation-iteration-count: infinite;
+    }
+    @keyframes ripples {
+      0% {
+        transform: scale(1);
+      }
+      100% {
+        transform: scale(var(--tophive-ripple-growth-field, $growthField));
+        opacity: 0
+      }
+    }
+}
+
+@mixin transform($x, $y, $scale, $rotate, $skew){
+    transform: translateX($x) translateY($y) skew($skew) scale($scale);
+    rotate: $rotate;
+}
+
+@mixin tophiveAnimateShadow($name1: "tophiveShadowAnim"){
+    & {
+        animation: 
+            #{$name1} var(--tophive-animate-duration, 1s) var(--tophive-animate-timing, ease-in-out) var(--tophive-animate-iteration, infinite) alternate;
+    }
+
+    @keyframes #{$name1} {
+        from {
+            bottom: var(--tophive-animated-shadow-distance-from, -65px);
+            width: var(--tophive-animated-shadow-width-from, 70%);
+            height: var(--tophive-animated-shadow-height-from, 40px);
+            filter: blur(var(--tophive-animated-shadow-blur-from, 20px));
+            border-radius: var(--tophive-animated-shadow-radius-from, 50%);
+            background-color: var(--tophive-animated-shadow-color-from, #999);
+        }
+        to {
+            bottom: var(--tophive-animated-shadow-distance-to, -65px);
+            width: var(--tophive-animated-shadow-width-to, 70%);
+            height: var(--tophive-animated-shadow-height-to, 40px);
+            filter: blur(var(--tophive-animated-shadow-blur-to, 20px));
+            border-radius: var(--tophive-animated-shadow-radius-to, 50%);
+            background-color: var(--tophive-animated-shadow-color-to, #999);
+        }
+    }
+}
+
+@mixin tophiveAnimateMultiple($name1: "tophiveBgAnimate", $name2: "tophivePositionAnimate") {
+    & {
+        animation: 
+            #{$name1} var(--tophive-bg-speed, 5s) ease-in-out infinite,
+            #{$name2} var(--tophive-animate-duration, 1s) var(--tophive-animate-timing, ease-in-out) var(--tophive-animate-iteration, infinite) alternate;
+    }
+    @keyframes #{$name1} {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+    @keyframes #{$name2} {
+        from {
+            transform: translateX(var(--tophive-animate-translatex-from, 0px))
+                       translateY(var(--tophive-animate-translatey-from, 0px))
+                       scale(var(--tophive-animate-scale-from, 1))
+                       rotate(var(--tophive-animate-rotate-from, 0deg))
+                       skew(var(--tophive-animate-skew-from, 0deg));
+            opacity: var(--tophive-animate-opacity-from, 1);
+        }
+        to {
+            transform: translateX(var(--tophive-animate-translatex-to, 0px))
+                       translateY(var(--tophive-animate-translatey-to, 0px))
+                       scale(var(--tophive-animate-scale-to, 1))
+                       rotate(var(--tophive-animate-rotate-to, 0deg))
+                       skew(var(--tophive-animate-skew-to, 0deg));
+            opacity: var(--tophive-animate-opacity-to, 1);
+        }
+    }
+}
+
+@mixin defaultIconWidth(){
+    i, svg{
+        width: 20px;
+        height: 20px;       
+    }
+}
+
+
+@mixin hidden(){
+    opacity: 0;
+    visibility: hidden;
+}
+@mixin visible(){
+    opacity: 1;
+    visibility: visible;
+}
+
+@mixin defaultTransition(){
+    transition: all 0.4s ease;
+}
+
+@mixin fullWidthOverlay(){
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+$btn-sizes: (
+    "xsm": (0.6em, 1em),
+    "sm": (0.85em, 1.3em),
+    "lg": (1.3em, 2.7em),
+    "xlg": (1.5em, 3.5em)
+);
+
+@mixin btn-reset {
+    --btn-pt: 0 !important;
+    --btn-pe: 0 !important;
+    --btn-pb: 0 !important;
+    --btn-ps: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+    overflow: visible;
+}
+
+@mixin keyframes-animations {
+    @keyframes stickySlideDown {
+        0% {
+            transform: translateY(-100%)
+        }
+    
+        to {
+            transform: translateY(0)
+        }
+    }
+    
+    @keyframes stickySlideOut {
+        to {
+            transform: translateY(-100%)
+        }
+    }
+    
+    @keyframes lqdMegamenuSlideReveal {
+        0% {
+            transform: rotateX(-15deg);
+            opacity: 0
+        }
+    
+        to {
+            transform: rotateX(0);
+            opacity: 1
+        }
+    }
+    
+    @keyframes lqdMegamenuSlideIn {
+        0% {
+            transform: translateX(var(--th-megamenu-slide-from-val, 0));
+            opacity: 0
+        }
+    
+        to {
+            transform: translateX(0);
+            opacity: 1
+        }
+    }
+    
+    @keyframes lqdMegamenuSlideOut {
+        0% {
+            transform: translateX(0);
+            opacity: 1
+        }
+    
+        to {
+            transform: translateX(var(--th-megamenu-slide-to-val, 0));
+            opacity: 0
+        }
+    }
+    
+    @keyframes spin {
+        to {
+            transform: rotate(360deg)
+        }
+    }
+    
+    @keyframes fadeIn {
+        0% {
+            opacity: 0
+        }
+    
+        to {
+            opacity: 1
+        }
+    }
+    
+    @keyframes lqdBackToTopArrow {
+        40% {
+            transform: translateY(-15px);
+            opacity: 0
+        }
+    
+        41% {
+            transform: translateY(15px)
+        }
+    
+        to {
+            transform: translateY(0);
+            opacity: 1
+        }
+    }
+    
+    @keyframes wave {
+        0%,to {
+            transform: translateX(0)
+        }
+    
+        50% {
+            transform: translateX(-50%)
+        }
+    }
+    
+    @keyframes th-spinner-classical {
+        0% {
+            transform: rotate(0deg)
+        }
+    
+        to {
+            transform: rotate(360deg)
+        }
+    }
+    
+    @keyframes th-wrap-sliding-in {
+        0% {
+            transform: translate3d(5vw,0,0)
+        }
+    
+        to {
+            transform: translate3d(0,0,0)
+        }
+    }
+    
+    @keyframes th-spinner-rotate {
+        0% {
+            transform: rotate(0deg)
+        }
+    
+        to {
+            transform: rotate(360deg)
+        }
+    }
+    
+    @keyframes th-spinner-dash {
+        0% {
+            stroke-dasharray: 1,200;
+            stroke-dashoffset: 0
+        }
+    
+        50% {
+            stroke-dasharray: 130,200;
+            stroke-dashoffset: -40
+        }
+    
+        to {
+            stroke-dasharray: 130,200;
+            stroke-dashoffset: -170
+        }
+    }
+    
+    @keyframes btnIconRipple {
+        0% {
+            border-width: 4px;
+            transform: scale(1)
+        }
+    
+        80% {
+            border-width: 1px;
+            transform: scale(1.35)
+        }
+    
+        to {
+            opacity: 0
+        }
+    }
+    
+    @keyframes btnHoverTxtLiquidXAlt {
+        50% {
+            opacity: 0;
+            transform: translateX(.3em)
+        }
+    
+        51% {
+            opacity: 0;
+            transform: translateX(-.3em)
+        }
+    
+        to {
+            opacity: 1;
+            transform: translateX(0)
+        }
+    }
+    
+    @keyframes btnHoverTxtLiquidX {
+        50% {
+            opacity: 0;
+            transform: translateX(-.3em)
+        }
+    
+        51% {
+            opacity: 0;
+            transform: translateX(.3em)
+        }
+    
+        to {
+            opacity: 1;
+            transform: translateX(0)
+        }
+    }
+}

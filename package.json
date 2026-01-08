@@ -1,0 +1,88 @@
+{
+  "name": "tophive-core",
+  "version": "1.0.0",
+  "description": "Tophive core plugin with Gemini CLI integration",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "webpack:dev": "webpack --mode development -w",
+    "webpack:prod": "webpack --mode production",
+
+    "sass:app": "sass assets/css/app.scss assets/build/app.css --embed-source-map",
+    "sass:elementor": "sass assets/css/elementor.scss assets/build/elementor.css --embed-source-map",
+    "sass:cpts": "sass assets/css/cpts.scss assets/build/cpts.css --embed-source-map",
+    "sass:tailwind": "cp assets/css/tailwind.css assets/build/tailwind.css",
+
+    "postcss:app": "postcss assets/build/app.css -o assets/build/app.css -w",
+    "postcss:elementor": "postcss assets/build/elementor.css -o assets/build/elementor.css -w",
+    "postcss:cpts": "postcss assets/build/cpts.css -o assets/build/cpts.css -w",
+    "postcss:tailwind": "postcss assets/build/tailwind.css -o assets/build/tailwind.css -w",
+
+    "watch:dev": "npm-run-all --parallel webpack:dev sass:app sass:elementor sass:cpts sass:tailwind postcss:app postcss:elementor postcss:cpts postcss:tailwind start:elementor",
+    "start": "npm run watch:dev",
+    "start:elementor": "cd elementor && npm start",
+
+    "build:sass": "sass assets/css/app.scss assets/build/app.css --no-source-map && sass assets/css/elementor.scss assets/build/elementor.css --no-source-map && sass assets/css/cpts.scss assets/build/cpts.css --no-source-map && cp assets/css/tailwind.css assets/build/tailwind.css",
+    "build:postcss": "postcss assets/build/*.css --base assets/build --use autoprefixer --dir assets/build",
+    "build:elementor": "cd elementor && npm run build",
+    
+    "gen:build-file": "node build.js",
+    "gen:all": "node scripts/generate-all.js",
+    "gen:all:gemini": "node scripts/generate-all.js --provider=gemini",
+
+    "build": "npm-run-all -s webpack:prod build:sass build:postcss build:elementor gen:build-file",
+
+    "start:agent": "node scripts/welcome.js",
+    "agent:build": "node scripts/gemini-agent-build.js",
+    "agent:watch": "node scripts/gemini-agent-build.js --watch",
+    "test": "phpunit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tophive/tophive-core.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tophive/tophive-core/issues"
+  },
+  "homepage": "https://github.com/tophive/tophive-core#readme",
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "@radix-ui/react-tabs": "^1.1.4",
+    "archiver": "^7.0.1",
+    "cli-table3": "^0.6.5",
+    "directory-tree": "^3.5.2",
+    "dotenv": "^17.2.3",
+    "inquirer": "^9.3.5",
+    "gradient-string": "^2.0.2",
+    "lucide-react": "^0.539.0",
+    "openai": "^6.7.0",
+    "ora": "^8.0.1",
+    "picocolors": "^1.0.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "simple-git": "^3.28.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.22.5",
+    "@babel/preset-env": "^7.22.5",
+    "@babel/preset-react": "^7.22.5",
+    "@tailwindcss/postcss": "^4.1.12",
+    "autoprefixer": "^10.4.21",
+    "babel-loader": "^9.1.2",
+    "css-loader": "^7.1.2",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.5.6",
+    "postcss-cli": "^11.0.1",
+    "postcss-loader": "^8.2.0",
+    "sass": "^1.93.2",
+    "sass-loader": "^16.0.6",
+    "style-loader": "^4.0.0",
+    "tailwindcss": "^4.1.12",
+    "webpack": "^5.86.0",
+    "webpack-cli": "^5.1.4"
+  },
+  "private": true
+}

@@ -1,0 +1,27 @@
+{
+  "greeting": {
+    "title": "Greeting",
+    "description": "Displays a friendly message from the Tophive Gemini Agent.",
+    "response": "👋 Hello from the Tophive Gemini CLI! Ready to assist with builds, UI generation, or automation tasks."
+  },
+  "build": {
+    "title": "Build Process",
+    "description": "Runs the Gemini build system to compile and generate AI-ready markdown.",
+    "response": "🚀 Running Gemini build process... Output will be saved in `/assets/build/gemini.md`."
+  },
+  "list": {
+    "title": "List Commands",
+    "description": "Lists all available Gemini CLI commands and their purposes.",
+    "response": "📜 Available commands:\n- greeting: Display welcome message\n- build: Generate Gemini markdown build\n- list: Show all commands\n- help: Show usage instructions\n- test: Verify Gemini setup"
+  },
+  "help": {
+    "title": "Help Menu",
+    "description": "Provides detailed help instructions for the Gemini CLI.",
+    "response": "🧩 Usage:\n- npm run gemini:cli -- <command>\n- npm run gemini:greet\n- npm run gemini:build\n- npm run gemini:list\n\n💡 Use Ctrl+C to exit interactive chat mode."
+  },
+  "test": {
+    "title": "System Test",
+    "description": "Runs a test to confirm Gemini CLI functionality.",
+    "response": "✅ Gemini CLI test successful! All core files are intact and ready for operation."
+  }
+}

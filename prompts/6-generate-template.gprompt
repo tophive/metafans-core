@@ -1,0 +1,11 @@
+# Task
+Generate an HTML render template for the Elementor widget {{widgetName}}.
+
+# Requirements
+- Use dynamic Elementor control data placeholders.
+- Follow accessibility (ARIA, role attributes).
+- Compatible with WordPress `esc_html()`, `esc_attr()`, etc.
+- Lightweight, semantic markup.
+
+# Output
+Pure HTML/PHP template only.

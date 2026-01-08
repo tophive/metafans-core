@@ -1,0 +1,11 @@
+# Task
+Generate the `register_controls()` section for Elementor widget {{widgetName}}.
+
+# Requirements
+- Include text, image, switcher, select, and color controls as examples.
+- Follow Elementor Controls Manager API.
+- Use `$this->add_control()` and `$this->add_group_control()` where needed.
+- Include responsive and style tabs.
+
+# Output
+PHP code snippet (register_controls only).

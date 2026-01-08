@@ -1,0 +1,12 @@
+# Task
+Create a GSAP animation timeline for Elementor widget {{widgetName}}.
+
+# Requirements
+- Use GSAP 3+ syntax with timeline chaining.
+- Include enter/exit animations (scroll-based or intersection observer).
+- Add reusable hooks for Elementor’s frontend triggers.
+- Ensure smooth, performant animations (GPU-accelerated, no layout thrashing).
+- Structure for modular import into widget JS.
+
+# Output
+Pure JS (ES module) defining a `create{{widgetName}}Timeline()` function.

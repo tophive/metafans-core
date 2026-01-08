@@ -1,0 +1,11 @@
+# Task
+Generate PHPUnit tests for Elementor widget {{widgetName}}.
+
+# Requirements
+- Test widget registration, controls, and rendering output.
+- Use WP_Mock or similar mock framework.
+- Follow WordPress testing standards.
+- Place tests under `/tests/widgets/{{widgetName}}Test.php`.
+
+# Output
+PHP test file.
