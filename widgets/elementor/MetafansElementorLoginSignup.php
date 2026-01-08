@@ -1,21 +1,17 @@
 <?php
-
-
+/**
+ * Login Signup Page (Elementor Elements)
+ * Since Version 1.0.0
+ * @package wordpress
+ * @subpackage MetaFans
+ *
+ */
 namespace METAFANSCORE\widgets\elementor;
 
 if (! defined('ABSPATH')) {
   exit; // Exit if accessed directly
 }
 
-/**
- **
- * One elementor team class
- * Since Version 1.0.0
- * @package wordpress
- * @subpackage MasterClass
- *
- *
- */
 class MetafansElementorLoginSignup extends \Elementor\Widget_base
 {
   public function get_title()
