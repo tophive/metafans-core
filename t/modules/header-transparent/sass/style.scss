@@ -1,0 +1,168 @@
+@import "../../../assets/sass/mixins";
+@import "../../../assets/sass/vars";
+
+// Transparent Header
+.is-header-transparent {
+    #masthead {
+        position: absolute;
+        top: 0px;
+        width: 100%;
+        z-index: 60;
+	}
+	
+	#page-cover {
+		#page-breadcrumb {
+			&.breadcrumb--after_header {
+				padding-top: 0;
+				background-color: transparent;
+			}
+
+			&.breadcrumb--inside {
+				background-color: transparent;
+			}
+		}
+	}
+    
+}
+
+.site-branding {
+    .site-img-logo-tran {
+        display: none;
+    }
+}
+.is-header-transparent {
+    .header--transparent {
+        .nav-menu-desktop.style-border-top .nav-menu > li:hover > a .link-before:before,
+        .nav-menu-desktop.style-border-top .nav-menu > li:focus > a .link-before:before,
+        .nav-menu-desktop.style-border-bottom .nav-menu > li:hover > a .link-before:before,
+        .nav-menu-desktop.style-border-bottom .nav-menu > li:focus > a .link-before:before,
+        .nav-menu-desktop.style-border-bottom .nav-menu > li.current-menu-item > a .link-before:before,
+        .nav-menu-desktop.style-border-bottom .nav-menu > li.current-menu-ancestor > a .link-before:before
+        {
+            background-color: currentColor;
+        }
+        .site-branding {
+            &.has-tran-logo {
+                .site-img-logo {
+                    display: none;
+                }
+                .site-img-logo-tran {
+                    display: block;
+                }
+            }
+        }
+
+    }
+    .sticky-active {
+        .header--transparent {
+            .site-branding {
+                &.has-tran-logo {
+                    .site-img-logo {
+                        display: none;
+                    }
+                    &.no-sticky-logo {
+                        .site-img-logo {
+                            display: block;
+                        }
+                    }
+                    .site-img-logo-tran {
+                        display: none;
+                    }
+                    .site-img-logo-sticky {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Transparent Skin
+.header--row.header--transparent .dark-mode,
+.header--row.header--transparent .light-mode {
+    background: transparent !important;
+    box-shadow: none;
+}
+
+.header--row.header--transparent .light-mode,
+.header--row.header--transparent {
+
+    color: $light_color;
+
+    .builder-contact--item {
+        color: $light_color;
+    }
+
+    // Header items
+    .nav-menu-desktop {
+        &.style-border-top,
+        &.style-border-bottom,
+        &.style-full-height,
+        &.style-plain {
+            .nav-menu {
+                > li {
+                    > a {
+                        &:hover, &:focus {
+                            color: $light_color_link_hover;
+                            background: transparent;
+                        }
+                    }
+                    &.current-menu-item, &.current-menu-ancestor {
+                        > a {
+                            color: $light_color_link_hover;
+                            background: transparent;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // Site identity
+    .site-title,
+    .site-title a {
+        color: $light_color_link_hover;
+    }
+
+    .tophive-builder-social-icons.color-custom li a,
+    .search-icon,
+    .menu-mobile-toggle,
+    .nav-menu > li > a,
+    .icon-box a,
+    .builder-contact--item a,
+    .item--html a {
+        color: $light_color_link;
+        &:hover {
+            color: $light_color_link_hover;
+        }
+    }
+
+    .cart-item-link {
+        color: $light_color_link;
+        .cart-icon {
+            color: $light_color_link_hover;
+        }
+        &:hover {
+            color: $light_color_link_hover;
+        }
+    }
+
+    // Only for dark mode
+    .header-search_box-item {
+        .search-field {
+            background: white(0.3);
+            border-color: $light_color_border;
+            color: $light_color_link;
+            &::placeholder {
+                color: $light_color_link;
+            }
+        }
+        .search-submit {
+            color: $light_color_link;
+            &:hover {
+                color: $light_color_link_hover;
+            }
+        }
+    }
+
+}

@@ -1,1 +1,0 @@
-// AI generation failed for feature-hover. This is a placeholder.

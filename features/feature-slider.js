@@ -1,1 +1,0 @@
-// AI generation failed for feature-slider. This is a placeholder.

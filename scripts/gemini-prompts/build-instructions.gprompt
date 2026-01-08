@@ -1,7 +1,0 @@
-name: build-instructions
-description: "Generates instructions for building the Tophive plugin"
-variables:
-  - environment
-prompt: |
-  Provide step-by-step instructions to build the Tophive plugin in a "{{environment}}" setup.
-  Include npm scripts, Sass compilation, PostCSS, webpack, and Gemini prompt integration.

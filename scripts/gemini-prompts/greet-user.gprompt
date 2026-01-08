@@ -1,7 +1,0 @@
-name: greet-user
-description: "Generates a friendly greeting message"
-variables:
-  - user_name
-prompt: |
-  Write a friendly greeting message for {{user_name}}.
-  Make it personal and engaging.

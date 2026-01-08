@@ -1,9 +1,0 @@
-name: css-to-scss
-description: "Converts plain CSS to SCSS using variables and mixins"
-variables:
-  - css_snippet
-prompt: |
-  Convert this CSS to SCSS:
-  {{css_snippet}}
-  Use variables for repeated colors, spacing, and fonts.
-  Include mixins where necessary.

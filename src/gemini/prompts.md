@@ -1,3 +1,0 @@
-# Prompt Library
-
-## Welcome Prompt

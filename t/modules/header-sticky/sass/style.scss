@@ -1,0 +1,61 @@
+@import "../../../assets/sass/vars";
+@import "../../../assets/sass/mixins";
+// Sticky Header
+#masthead {
+    &.sticky {
+        #masthead-inner {
+            > .header--row {
+                display: none;
+                &.header--sticky {
+                    display: block;
+                    @each $mq-key, $mq-value in $gl-devices-list {
+                        @media #{$mq-value} { //_#{$mq-key}
+                            &.hide-on-#{$mq-key},
+                            .tophive-grid .hide-on-#{$mq-key} { display: none; }
+                        }
+                    }
+                }
+            }
+            z-index: 60;
+            position: fixed;
+            top: 0;
+            left: 0px;
+            width: 100%;
+            transform: translateY(-100%);
+        }
+        &.sticky-active {
+            #masthead-inner {
+                transition: all .3s;
+                transform: translateY(0);
+            }
+            &.sticky-hiding {
+                #masthead-inner {
+                    transform: translateY(-120%);
+                }
+            }
+
+            .header--row-inner {
+                box-shadow: none;
+            }
+        }
+    }
+}
+
+
+// Logo Sticky
+.site-branding {
+    .site-img-logo-sticky {
+        display: none;
+    }
+}
+// sticky-active
+.sticky .site-branding {
+    &.has-sticky-logo {
+        .site-img-logo {
+            display: none;
+        }
+        .site-img-logo-sticky {
+            display: block;
+        }
+    }
+}
