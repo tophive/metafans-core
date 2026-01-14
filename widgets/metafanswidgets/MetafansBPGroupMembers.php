@@ -11,6 +11,7 @@ class MetafansBPGroupMembers extends WP_Widget {
     }
     public function widget( $args, $instance ) {
         global $wpdb;
+        $html = '';
     	if (bp_is_groups_component() && bp_is_single_item() ) {
 	        $html = $args['before_widget'];
 	        $html .= '<h2 class="widget-title">'. $instance['title'] .'</h2>';

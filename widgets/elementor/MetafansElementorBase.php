@@ -75,10 +75,10 @@ class MetafansElementorBase
 		$textcolor = $color[1];
 
     	$terms = get_the_terms( $id , 'course_category' );
-		return  $show ?
-        		'<span class="th-course-category"><p class="course-category ec-d-inline-block" style="background:'. $bg .';color:'. $textcolor .'">'.$terms[0]->name.'</p></span>' 
-        		: 
-        		'';
+		if ( $show && ! empty( $terms ) && is_array( $terms ) ) {
+			return '<span class="th-course-category"><p class="course-category ec-d-inline-block" style="background:'. $bg .';color:'. $textcolor .'">'.$terms[0]->name.'</p></span>';
+		}
+		return '';
 	}
 	public static function getCoursePrice( $showPrice, $price ){
         return $showPrice ? '<div class="price-section"><p class="th-sale-price">' . $price . '</p></div>' : '';        
@@ -165,8 +165,9 @@ class MetafansElementorBase
 			if($rating && function_exists('learn_press_get_course_rate')){
 	        	$html .= '<div class="ec-col">';
 	                // Course Ratings
-                    $rated = learn_press_get_course_rate(get_the_ID(), false )['rated'];    
-                    $item = learn_press_get_course_rate(get_the_ID(), false )['total'];    
+                    $course_rate = learn_press_get_course_rate(get_the_ID(), false );
+                    $rated = isset( $course_rate['rated'] ) ? $course_rate['rated'] : 0;
+                    $item = isset( $course_rate['total'] ) ? $course_rate['total'] : 0;    
                     
                     
                     if ($item > 999 && $item <= 999999) {
@@ -200,7 +201,10 @@ class MetafansElementorBase
 		    'meta_key' => '_wp_page_template',
 		    'meta_value' => 'page-instructor.php'
 		));
-		return '<a href="'. esc_url( trailingslashit(site_url()) ) . get_post($pages[0]->ID)->post_name . '/' . $instructor_slug .'">' . $instructor_img . get_the_author_meta( 'display_name', $instructor_id ) .'</a>';
+		if ( ! empty( $pages ) ) {
+			return '<a href="'. esc_url( trailingslashit(site_url()) ) . get_post($pages[0]->ID)->post_name . '/' . $instructor_slug .'">' . $instructor_img . get_the_author_meta( 'display_name', $instructor_id ) .'</a>';
+		}
+		return '';
 	}
 	public static function getCourseLessons(){
 		if(function_exists('learn_press_get_course')){		
@@ -210,21 +214,19 @@ class MetafansElementorBase
 		return $lessons;
 	}
 	public static function deliverCoursesAjaxRequest(){
-		if( isset($_REQUEST) ){
-
-			$settings = $_REQUEST['settings'];
-			$offset = isset($_REQUEST['offset']) ? $_REQUEST['offset'] : 0;
-			$category = isset($_REQUEST['category']) ? $_REQUEST['category'] : 'all';
-			
-			$sort = isset($_REQUEST['sort']) ? $_REQUEST['sort'] : '';
-			$style = isset($_REQUEST['style']) ? $_REQUEST['style'] : '';
-			$type = isset($_REQUEST['type']) ? $_REQUEST['type'] : '';
+		$settings = isset($_REQUEST['settings']) ? $_REQUEST['settings'] : array();
+		$offset = isset($_REQUEST['offset']) ? absint($_REQUEST['offset']) : 0;
+		$category = isset($_REQUEST['category']) ? sanitize_text_field($_REQUEST['category']) : 'all';
+		$sort = isset($_REQUEST['sort']) ? sanitize_text_field($_REQUEST['sort']) : '';
+		$style = isset($_REQUEST['style']) ? sanitize_text_field($_REQUEST['style']) : '';
+		$type = isset($_REQUEST['type']) ? sanitize_text_field($_REQUEST['type']) : '';
+		$courses_count = isset($settings['courses_count']) ? absint($settings['courses_count']) : 10;
 
 
 			$args = array(
 				'post_type' => 'lp_course',
 				'post_status' => 'publish',
-				'posts_per_page' => $settings['courses_count'],
+				'posts_per_page' => $courses_count,
 				'offset' => $offset
 			);
 
@@ -259,7 +261,6 @@ class MetafansElementorBase
 			}else{
 				$response = self::prepareCourses($args, $settings, $offset, $category);
 			}
-		}
 		echo $response;
 		die();
 	}
@@ -287,26 +288,25 @@ class MetafansElementorBase
 		return $html;
 	}
 	public static function deliverPostsAjaxRequest(){
-		if( isset($_REQUEST) ){
-			$settings = $_REQUEST['settings'];
-			$offset = isset($_REQUEST['offset']) ? $_REQUEST['offset'] : 0;
-			$category = isset($_REQUEST['category']) ? $_REQUEST['category'] : 'all';
+		$settings = isset($_REQUEST['settings']) ? $_REQUEST['settings'] : array();
+		$offset = isset($_REQUEST['offset']) ? absint($_REQUEST['offset']) : 0;
+		$category = isset($_REQUEST['category']) ? sanitize_text_field($_REQUEST['category']) : 'all';
+		$blog_post_count = isset($settings['blog_post_count']) ? absint($settings['blog_post_count']) : 10;
 
-			$args = array(
-				'posts_per_page' => $settings['blog_post_count'],
-				'offset' => $offset
+		$args = array(
+			'posts_per_page' => $blog_post_count,
+			'offset' => $offset
+		);
+		if($category !== 'all'){
+			$args['tax_query'] = array(
+				array(
+					'taxonomy' => 'category',
+					'field'    => 'term_id',
+					'terms'    => $category,
+				)
 			);
-			if($category !== 'all'){
-				$args['tax_query'] = array(
-					array(
-						'taxonomy' => 'category',
-						'field'    => 'term_id',
-			            'terms'    => $category,
-					)
-				);
-			}
-			$response = self::prepareBlogs($args, $settings, $offset);
 		}
+		$response = self::prepareBlogs($args, $settings, $offset);
 		wp_send_json( $response );
 	}
 	public static function prepareCourses( $args, $settings, $offset = 0, $category = '' ){
@@ -624,8 +624,8 @@ class MetafansElementorBase
 
 	/*------------------------ ADVANCED AJAX SEARCH ----------------------*/
 	public function tophiveAdvancedSearch(){
-		$text = $_REQUEST['text'];
-		$post_type = $_REQUEST['post_type'];
+		$text = isset($_REQUEST['text']) ? sanitize_text_field($_REQUEST['text']) : '';
+		$post_type = isset($_REQUEST['post_type']) ? sanitize_text_field($_REQUEST['post_type']) : 'post';
 
 		$args = array(
 			'post_status' => 'publish',
@@ -681,13 +681,13 @@ class MetafansElementorBase
 		if( !class_exists('bbPress') ){
 			return;
 		}
-		$post_info = $_REQUEST['data'];
+		$post_info = isset($_REQUEST['data']) && is_array($_REQUEST['data']) ? $_REQUEST['data'] : array();
 
 		$post_data = array();
 
-		$post_data['post_title'] = $post_info[0]['value'];
-		$post_data['post_content'] = $post_info[3]['value'];
-		$post_data['post_parent'] = $post_info[1]['value'];
+		$post_data['post_title'] = isset($post_info[0]['value']) ? sanitize_text_field($post_info[0]['value']) : '';
+		$post_data['post_content'] = isset($post_info[3]['value']) ? wp_kses_post($post_info[3]['value']) : '';
+		$post_data['post_parent'] = isset($post_info[1]['value']) ? absint($post_info[1]['value']) : '';
 		$post_data['comment_status'] = 'open';
 
 		$post_id = 0;

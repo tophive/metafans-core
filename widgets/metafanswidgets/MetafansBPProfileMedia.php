@@ -45,8 +45,8 @@ class MetafansBPProfileMedia extends WP_Widget
           break;
         }
 
-        if (!empty($url['thumb']) && isset($url['full']) && isset($url['attachment_id']) && isset($url['activity_id'])) {
-          $media_html .= "<img class='media-popup-thumbnail bp-image-single' src='{$url['full']} ' alt='gm' href={$url['full']} data-id={$url['attachment_id']} data-activity={$url['activity_id']}>";
+        if (!empty($url['thumb']) && isset($url['url']) && isset($url['id']) && isset($url['activity_id'])) {
+          $media_html .= "<img class='media-popup-thumbnail bp-image-single' src='{$url['url']} ' alt='gm' href={$url['url']} data-id={$url['id']} data-activity={$url['activity_id']}>";
           $i++;
         }
       }

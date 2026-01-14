@@ -44,7 +44,9 @@ class MetafansMailChimpWidget extends WP_Widget {
     public function widget( $args, $instance ) {
         $html = $args['before_widget'];
         $html .= '<div>';
-        $html .= '<h2 class="widget-title">'. $instance['title'] .'</h2>';
+        if( !empty( $instance['title'] ) ){
+            $html .= '<h2 class="widget-title">'. $instance['title'] .'</h2>';
+        }
         if( !empty( $instance['description'] )){
             $html .= '<p class="widget-description ec-mb-3">'. $instance['description'] .'</p>';
         }
@@ -114,9 +116,9 @@ class MetafansMailChimpWidget extends WP_Widget {
  
     public function update( $new_instance, $old_instance ) {
         $instance = $old_instance;
-        $instance[ 'title' ] = strip_tags( $new_instance[ 'title' ] );
-        $instance[ 'description' ] = strip_tags( $new_instance[ 'description' ] );
-        $instance[ 'post_count' ] = strip_tags( $new_instance[ 'post_count' ] );
+        $instance['title'] = !empty($new_instance['title']) ? strip_tags($new_instance['title']) : '';
+        $instance['description'] = !empty($new_instance['description']) ? strip_tags($new_instance['description']) : '';
+        $instance['post_count'] = !empty($new_instance['post_count']) ? strip_tags($new_instance['post_count']) : '';
         return $instance;
     }
  

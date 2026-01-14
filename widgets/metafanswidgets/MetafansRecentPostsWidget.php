@@ -81,6 +81,7 @@ class MetafansRecentPostsWidget extends WP_Widget {
         $id = rand();
         $post_layout = ! empty( $instance['post_layout'] ) ? $instance['post_layout'] : 'one-col';
         $post_img_pos = ! empty( $instance['post_img_pos'] ) ? $instance['post_img_pos'] : 'img-left';
+		$post_count = ! empty( $instance['post_count'] ) ? absint( $instance['post_count'] ) : 3;
 
         $post_date = ! empty( $instance['post_date'] ) ? $instance['post_date'] : false;
         $read_more = ! empty( $instance['read_more'] ) ? $instance['read_more'] : false;
@@ -92,7 +93,7 @@ class MetafansRecentPostsWidget extends WP_Widget {
         $params = array(
             'post_type' => 'post',
             'post_status' => 'publish',
-            'posts_per_page' => $instance['post_count']
+            'posts_per_page' => $post_count
         );
         $post_query = new WP_Query($params);
         $html .= '<div class="th-mc-posts-widget-'. $id .'">';
@@ -232,12 +233,12 @@ class MetafansRecentPostsWidget extends WP_Widget {
  
     public function update( $new_instance, $old_instance ) {
         $instance = $old_instance;
-        $instance[ 'title' ] = strip_tags( $new_instance[ 'title' ] );
-        $instance[ 'post_count' ] = strip_tags( $new_instance[ 'post_count' ] );
-        $instance[ 'post_date' ] = !empty($new_instance[ 'post_date' ]) ? strip_tags( $new_instance[ 'post_date' ] ) : false;
-        $instance[ 'read_more' ] = !empty($new_instance[ 'read_more' ]) ? strip_tags( $new_instance[ 'read_more' ] ) : false;
-        $instance[ 'post_layout' ] = strip_tags( $new_instance[ 'post_layout' ] );
-        $instance[ 'post_img_pos' ] = strip_tags( $new_instance[ 'post_img_pos' ] );
+		$instance['title'] = ! empty($new_instance['title']) ? strip_tags($new_instance['title']) : '';
+		$instance['post_count'] = ! empty($new_instance['post_count']) ? absint($new_instance['post_count']) : 3;
+		$instance['post_date'] = ! empty($new_instance['post_date']);
+		$instance['read_more'] = ! empty($new_instance['read_more']);
+		$instance['post_layout'] = ! empty($new_instance['post_layout']) ? strip_tags($new_instance['post_layout']) : 'one-col';
+		$instance['post_img_pos'] = ! empty($new_instance['post_img_pos']) ? strip_tags($new_instance['post_img_pos']) : 'img-left';
         return $instance;
     }
  

@@ -196,7 +196,7 @@ class MetafansBPProfileInfo extends WP_Widget {
   public function update($new_instance, $old_instance)
   {
     $instance = $old_instance;
-    $instance['profile_id'] = strip_tags($new_instance['profile_id']);
+    $instance['profile_id'] = !empty($new_instance['profile_id']) ? strip_tags($new_instance['profile_id']) : '';
     return $instance;
   }
  

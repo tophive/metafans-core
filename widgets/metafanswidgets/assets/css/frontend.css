@@ -389,9 +389,9 @@ body .tophive-mc-mchimp-subs-widget .newsletter-submit-form .newsletter-submit:h
   a.bp-profile-link {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 4px;
   
-    padding: 4px 10px;
+    padding: 4px 8px;
     border-radius: var(--btn-radius);
     
     font-size: var(--font-12);

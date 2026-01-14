@@ -10,10 +10,13 @@ class MetafansBPGroupsInfo extends WP_Widget {
         parent::__construct('buddypress_groups_desc', 'Buddypress about group [metafans]', $widget_options);
     }
     public function widget( $args, $instance ) {
+		$html = '';
     	if (bp_is_groups_component() && bp_is_single_item() ) {
 	        $html = $args['before_widget'];
 	        $html .= '<div>';
-	        $html .= '<h2 class="widget-title">'. $instance['title'] .'</h2>';
+			if ( ! empty( $instance['title'] ) ) {
+				$html .= '<h2 class="widget-title">' . esc_html( $instance['title'] ) . '</h2>';
+			}
 	        
 	        	$group = groups_get_group( array( 'group_id' => bp_get_group_id()) );	
 	        	
@@ -45,7 +48,7 @@ class MetafansBPGroupsInfo extends WP_Widget {
  
     public function update( $new_instance, $old_instance ) {
         $instance = $old_instance;
-        $instance[ 'title' ] = strip_tags( $new_instance[ 'title' ] );
+        $instance['title'] = ! empty($new_instance['title']) ? strip_tags( $new_instance['title'] ) : '';
         return $instance;
     }
  
